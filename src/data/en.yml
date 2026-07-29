@@ -1,0 +1,916 @@
+# generic info
+lang: en
+language: English
+cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/
+
+gtm: GTM-NDW6MV6
+
+# page metadata
+meta:
+  title: Strategic Plan | UNDP
+  image: social-thumbnail.jpg
+
+breadcrumb:
+  home:
+    label: Strategic Plan 2026-2029
+    path:
+  partnerships:
+    label: Partnerships for progress
+    path: partnerships
+  futuresmart:
+    label: Future-smart operations
+    path: futuresmart
+
+menu:
+  what-do: What we do 
+  how-work: How we work
+  investing: Investing in UNDP
+  looking-ahead: Looking ahead
+
+langVersions:
+  - name: English
+    lang: en
+    #download: false
+    asset: UNDP-Strategic-Plan-English.pdf
+    visual-pdf: UNDP-Strategic-Plan-English-Summary.pdf
+    currentLang: true
+    web: true
+  - name: Español
+    lang: es
+    #download: false
+    asset: UNDP-Strategic-Plan-Spanish.pdf
+    web: true
+  - name: Français
+    lang: fr
+    #download: false
+    asset: UNDP-Strategic-Plan-French.pdf
+    web: true
+  - name: Русский
+    lang: ru
+    #download: true
+    asset: UNDP-Strategic-Plan-Russian.pdf
+    web: false
+  - name: 中文
+    lang: zh
+    #download: true
+    asset: UNDP-Strategic-Plan-Chinese.pdf
+    web: false
+  - name: العربية
+    lang: ar
+    #download: true
+    asset: UNDP-Strategic-Plan-Arabic.pdf
+    web: false
+
+buttons:
+  read-more: Read more
+  read-less: Show less
+  back: back
+  learn: Learn more
+  close: Close
+  
+
+footer:
+  name: >
+    United Nations <br>
+    Development Programme
+  copyright: © 2025 United Nations Development Programme
+  terms: Terms of Use
+  terms-link: https://www.undp.org/copyright-terms-use
+  facebook: https://www.facebook.com/UNDP
+  linkedin: https://www.linkedin.com/company/undp/
+  instagram: https://www.instagram.com/undp/
+  twitter-x: https://x.com/UNDP
+  youtube: https://www.youtube.com/user/UNDP
+
+header:
+  title: >
+    Strategic Plan
+    <br>
+    2026-2029
+
+  language_button_label: "Select Language"
+  menu_icon_label: "Toggle Navigation Menu"
+  nav_toggle: "Menu"
+  download_button: "Download"
+
+  popup:
+    title: Download documents
+    visual: Visual Summary 
+    bw: Strategic Plan | full document
+    lang: Language
+
+
+
+
+
+# ****************************************************************************************************
+# ****************************************************************************************************
+# ****************************************************************************************************
+
+homepage:
+  hero:
+    title: >
+      Strategic Plan
+      <br> 2026-2029
+    subtitle: >
+      Supporting countries’ progress towards human development
+  intro:
+    para1: >
+      For six decades, UNDP has shaped the progress of human development, providing integrated support at scale to improve lives for millions of people worldwide.
+    para2: >
+      UNDP will continue to support countries’ progress towards high human development, while protecting the planet. Four strategic objectives – prosperity for all, effective governance, crisis resilience and healthy planet – define its strategic direction, powered by three accelerators: digital and AI transformation; gender equality; and sustainable finance. All are underpinned by a commitment to human rights and to leaving no one behind.
+    para3: >
+      The Strategic Plan sharpens the focus on what UNDP does best: supporting systemic change, through integrated development solutions driven by national priorities.
+
+  # ************************* What we have learned *************************
+
+  action:
+    heading: What we've learned
+    intro: >
+      In designing the Strategic Plan, <span class="text-extrabold">UNDP consulted more widely than ever, with over 600 partners in 116 countries</span>. The Plan draws on extensive data and lessons learned: the independent evaluation and midterm review of the Strategic Plan 2022-2025, an independent review of the UNDP business model, and <a href="https://docs.aiddata.org/reports/ltl-2025/full-report.min.html " target="_blank">a survey of 11,000 development partners</a> in 147 countries.
+      These <span class="text-extrabold">observations</span> influenced the Plan’s design:
+    
+    swiper:
+      trust-matters:
+        title: "Trust matters"
+        body: "UNDP is the only UN agency consistently ranked among the top five development partners by leaders we work with. Recognizing the importance of national ownership, UNDP works alongside partners, evolving in step with their development priorities. Partners value UNDP’s reach at all levels and across myriad government agencies, through longstanding relationships built on mutual trust."
+
+      integrated-approach:
+        title: "Focus on the integrated approach"
+        body: "Partners want expert support where issues intersect, like reducing poverty by increasing job opportunities or promoting women’s rights. This approach works: the midterm review found UNDP impact increased by 3% for every 10% increase in its cross-sectoral approach."
+
+      systems-not-sectors:
+        title: "Look at systems, not sectors"
+        body: "The evaluation recognized UNDP’s systems approach as “the most significant driver of structural transformation” - while noting there is further to go. This is now encapsulated in our portfolio policy and practice, rallying multiple partners and assets around a common mission."
+
+      implementation-policy-support:
+        title: "High regard for implementation and policy support"
+        body: "Our influence grew over the last decade. 98% of private sector leaders surveyed rated UNDP support for implementation as quite or very helpful. 91% of government leaders said the same."
+
+      core-resources:
+        title: "Long-term impact depends on core resources"
+        body: "Declining core funding makes it hard for UNDP to stay flexible, apply integrated solutions and promote lasting change. Sustainable core funding is crucial for UNDP to achieve meaningful development impact."
+
+      risk-awareness:
+        title: "Risk-awareness for resilience"
+        body: "Incorporating risk awareness in all our work has significantly helped UNDP to build resilience. Our ability to stay and deliver in crisis and complex settings helps to sustain development efforts where others might retreat. Our influence among leaders in fragile situations has grown."
+
+      future-skills:
+        title: "Future skills to stay ahead"
+        body: "Over half of UNDP projects now include a digital component. UNDP achieved an exceptional performance rating among 51 UN organizations on digital, data, strategic foresight, innovation and behavioural science. Investments in these areas are building a futures-thinking, learning-oriented culture."
+
+    
+
+  # ************************* Investing in UNDP *************************
+
+  value:
+    heading: Investing in UNDP
+    overline: Financing value
+    intro: The Strategic Plan leverages investment in UNDP infrastructure built over 60 years. 
+    icons:
+      countries: >
+        Operating across <span class="text-extrabold" style="color: #F1439A;">170 countries and territories</span>
+      hubs: >
+        <span class="text-extrabold" style="color: #4339CB;">Regional hubs:</span> Addis Ababa, Amman, Bangkok, Istanbul, Panama
+      un-system: >
+        <span class="text-extrabold" style="color: #FF800B;">Hosting UN system assets:</span><br> MPTFO, UNCDF, UNOSSC, UNV
+      rating: Rated by 90% of leaders as “very helpful” or “quite helpful”
+      money: 92 cents of every dollar reaching development programmes
+      transparency: >
+        Consistently top-ranked in the <span class="text-extrabold" style="color: #EC5038;">Aid Transparency Index</span> since 2011
+
+    para1: >
+      UNDP strategy is grounded in ensuring that <span class="text-extrabold"> every dollar delivers maximum development impact</span> and that <span class="text-extrabold">UNDP remains a reliable partner</span> in an uncertain world. 
+    para2: >
+      In a challenging funding environment, since early 2025 UNDP has adopted austerity measures to reduce operational expenditures, optimize the use of resources and enhance resource mobilization. Meanwhile, investments with high potential returns, like programme pipeline development and digital and AI capabilities, continue. 
+    para3: >
+      <span class="text-extrabold">Core (regular) resources</span> are UNDP’s financial foundation, making it possible to plan long-term, respond rapidly, drive innovation and reach those furthest behind: an investment in multilateralism. Yet core contributions have declined to just 12% of total resources. Rebuilding core is essential to preserve UNDP’s impartiality, global reach and capacity to serve countries based on their needs. 
+
+
+  # ************************* Overarching goal *************************
+
+  goal:
+    heading: Overarching goal
+    copy:
+      para1: >
+        UNDP works with countries to expand people’s choices for a fairer, sustainable future, as envisioned by the 2030 Agenda for Sustainable Development: a future where no country has to choose between human development and the health of the planet, where prosperity and sustainability advance together, leaving no one behind. This is humanity’s next frontier, and with the right support, it is within reach.
+      para2: >
+        Through integrated, evidence-driven action aligned with national priorities, UNDP works to accelerate human development while easing the pressures on the planet. Accompanying countries in this direction is the overarching goal of the Strategic Plan.
+
+  # ************************* Strategic framework / what we do *************************
+
+  framework:
+    overline: Creating value
+    heading: What we do 
+    intro:
+      para1: >
+        The Strategic Plan is designed around fewer, integrated results, to focus more sharply on what the evidence shows UNDP does best: delivering change at a systems level, through integrated solutions driven by national priorities.
+      para2: >
+        A framework of four <span class="text-extrabold">strategic objectives, powered by three accelerators of progress</span>, captures the impact UNDP makes on people’s lives and our contribution to human development. The framework capitalizes on the organization’s strengths; emphasizes the interconnectedness of the objectives and accelerators; and allows scope to craft development offers tailored to country priorities.
+    infographic: "infographic-01.svg"
+    infographic-mobile: "infographic-01-mobile.svg"
+
+  # ************************* Strategic objectives *************************
+
+  objectives:
+    heading: Strategic objectives
+    intro: >
+      Four strategic objectives – prosperity for all, effective governance, crisis resilience and healthy planet – define UNDP’s strategic direction.
+
+    buttons:
+      prosperity: Prosperity <br> for all 
+      governance: Effective <br> governance
+      resilience: Crisis <br>resilience
+      planet: Healthy <br> planet
+
+  # ************************* Pathways to human development *************************
+
+  human-dev:
+    heading: Pathways to human development
+    intro: >
+      The strategic objectives and accelerators collectively advance human development while reducing planetary pressures, as measured by the <a class="text-extrabold" href="https://hdr.undp.org/planetary-pressures-adjusted-human-development-index#/indicies/PHDI " target="_blank">Planetary Pressures-adjusted Human Development Index</a>.
+    infographic: "infographic-02.jpg"
+    infographic-mobile: "infographic-02-mobile.jpg"
+
+  # ************************* Accelerators *************************
+
+  accelerators:
+    heading: Accelerators
+    intro: >
+      Digital and AI transformation, gender equality and sustainable finance are powerful accelerators driving progress toward systemic change.
+    list:
+      item1: >
+        Digital advancements expand opportunities, improve public services, enhance civic engagement and speed up response to crisis.
+      item2: >
+        When women are empowered through laws and public policies, societies are more resilient, economies grow faster, poverty and inequality decrease.
+      item3: >
+        Better alignment of capital flows with sustainable development priorities can unlock new pathways to prosperity and a healthy planet.
+
+    buttons:
+      digital: Digital and AI transformation
+      gender:  Gender <br> Equality
+      finance: Sustainable <br> Finance
+    
+    digital:
+      title: Digital and AI transformation
+      content: >
+            <p>Rapid digital advancements and the rise of AI are transforming economies, governance and societies.
+              Yet with opportunity comes risk: threats to cyber-security, data privacy, algorithmic bias and the
+              growing environmental impact of digital technologies. One in three people worldwide is still
+              offline. This lends urgency to UNDP support to countries working towards meaningful connectivity in
+              an open, free and secure digital future.</p>    
+
+              <p>UNDP’s broad expertise and country-driven approach allow us to support holistic digital
+              transformation in an integrated, systemic way.</p>
+
+              <p>UNDP has worked with over 120 countries to leverage digital technologies to support their
+              development. This includes helping institutions and people develop the capabilities to access and
+              use digital technology and data; and supporting countries to implement robust digital public
+              infrastructure, like digital payment and secure digital ID systems.</p>
+
+              <p>With our partners we work on policies, regulations and development planning that ensure safe,
+              secure and responsible use of digital and emerging technologies. We are scaling up efforts to
+              address digital harms, including online disinformation and polarization. And we promote sustainable
+              solutions to power digital infrastructure at lower environmental cost.</p>
+    gender:
+      title: Gender Equality
+      content: >
+          <p>Realizing women’s rights and equal opportunities is integral to sustainable development and can accelerate results across the board. Complementing the work of UN-Women, UNDP designs its interventions for a deliberate impact on gender equality, seen by partners as one of its most effective areas of work. UNDP meets or exceeds 94% of the targets of the UN System-Wide Action Plan.</p>
+
+          <p>Through its trusted relationships with governments, UNDP is well placed to help advance women’s empowerment across all dimensions of development.</p>
+
+          <ul>
+            <li>UNDP accelerates the leadership and equal participation of women in public institutions, elected positions, the judiciary and the private sector.</li>
+            <li>UNDP works to enhance women’s economic opportunities through entrepreneurship, job creation and capacity-building, and to recognize, reduce and redistribute women’s unpaid care work.</li>
+            <li>In crisis settings, UNDP reflects the interests and voice of women and girls.</li>
+          </ul>
+
+          <p>Demand is growing to help drive systemic change that overturns barriers limiting opportunities for women. We work with national governments, sharing successful approaches across countries and regions, and with local governments, which are closer to citizens and can turn national policies into real benefits for women and men.</p>
+    finance:
+      title: Sustainable Finance
+      content: >
+        <p>The development financing gap is not just a financial shortfall; it reflects the misalignment of capital flows with sustainable development priorities. Correcting this requires a shift from scaling development assistance to transforming development financing systems. The differentiating value of UNDP lies in:</p>
+
+        <ul>
+          <li>Bridging public and private finance systems</li>
+          <li>Bringing together development and financial actors to align investment with sustainable development at country level</li>
+        </ul>
+
+        <p>UNDP works at the intersections of finance, governance, climate, nature and development to accelerate development and expand investment opportunities in emerging and developing economies.</p>
+
+        <p>We work with countries to strengthen their regulatory, institutional and policy frameworks, making financial governance more stable and capital allocation more transparent. Integrated national financing frameworks in 86 countries have mobilized $16 billion in new finance and aligned over $32 billion with sustainable development.</p>
+
+        <p>We work with development finance institutions and the private sector to scale financing instruments such as blended finance, green bonds, sustainability-linked loans and insurance-backed investments. We help governments mobilise domestic resources through progressive taxation, SDG-aligned budgeting and results-based fiscal policies.</p>
+
+                  
+  
+  # ************************* Systems approach *************************
+
+  delivering-value:
+    
+    heading: The systems approach
+    list:
+      item1: >
+        Governments and development partners are looking for new ways to navigate rapid change: going beyond short-term, sector-based approaches to change underlying social, economic and financial systems.
+      item2: >
+        UNDP is already working alongside governments in 80 countries on structural challenges like societal trust and urban transformation. 
+        From this learning we have developed a <span class="text-extrabold"><a href="https://www.undp.org/systems-portfolio" target="blank">portfolio policy and practice</a> that supports system transformation</span>: bringing diverse partners together in a coordinated set of interventions towards a common goal. Portfolios in the Philippines and Viet Nam, for example, are rethinking the “produce-consume-dispose” model, creating a healthier environment and revealing options for new livelihoods.
+      item3: >
+        This systems approach - central to implementing the Strategic Plan - calls for collaboration, new partnerships and longer-term funding from multiple partners.
+
+  # ************************* Comparative advantages *************************
+
+  advantages:
+    overline: Delivering value
+    heading: How we work
+    intro: >
+      UNDP has a unique combination of capabilities and experience. 
+      <br>
+      According to independent evaluations, reviews, partners and observers, these are our most distinctive strengths:
+
+    swiper:
+      global-reach:
+        title: "Global reach, local impact"
+        body: "Partners value the UNDP combination of global reach and local presence in 170 countries and territories - especially in small countries and challenging contexts with few agencies on the ground."
+
+      partnerships-catalyst:
+        title: "Partnerships catalyst"
+        body: "UNDP connects partners across the UN system and beyond, integrating efforts across sectors and amplifying results for development."
+
+      deep-expertise:
+        title: "Deep expertise"
+        body: "Specialist expertise built over decades in governance, environment, crisis and poverty is complemented by growing capabilities in newer areas like systems change and integrated digital solutions."
+
+      integrated-solutions:
+        title: "Integrated solutions"
+        body: "The ability of UNDP to “connect the dots” across sectors underpins our design of integrated development solutions and support to governments’ own integrated planning and financing frameworks."
+
+      thought-leadership:
+        title: "Thought leadership"
+        body: "Our knowledge products, like the Human Development Report and multidimensional development indices, are considered credible, rigorous assets for policymakers."
+
+      systems-advantage:
+        title: "Systems advantage"
+        body: "With our investments in data, innovation, digital and strategic foresight, the portfolio approach is helping UNDP and its partners make sense of rapid change. Initiatives to co-create portfolios with sister agencies are starting to redefine how the UN can work together for systemic change."
+
+      anchor-in-crisis:
+        title: "An anchor in crisis"
+        body: "UNDP stays and delivers in crisis. It connects actors across the humanitarian/development/peace spectrum to lay the foundations for longer-term development from day one."
+
+      policy-operational:
+        title: "Policy plus operational"
+        body: "Combining policy and operational expertise adds up to stronger development results. For example, UNDP expertise in procurement and governance means it can support countries’ elections management seamlessly from policy to planning to implementation."
+
+      value-at-scale:
+        title: "Value at scale"
+        body: "Providing shared services in finance, human resources, IT and procurement to over 70 UN entities, UNDP creates economies of scale for the entire UNDS."
+
+
+  # ************************* Future-smart *************************
+
+  future-smart:
+    heading: Future-smart operations
+    copy: >
+      Over the last 8 years, UNDP has modernized its operations so that 92 cents of every dollar now reach programmes and services. UNDP continues to increase its efficiency and effectiveness, building a leaner, faster, more responsive organization.
+    cta:
+      label: Read more
+      link: futuresmart-operations
+      
+  
+  # ************************* Partnerships *************************
+
+  partnerships:
+    heading: Partnerships for progress
+    copy: >
+      UNDP connects partners across the UN system and beyond, integrating efforts across sectors and amplifying results for development. Partners value UNDP as a convener and enabler, an honest broker building consensus between stakeholders, and a catalyst for public-private partnerships.
+    
+    cta:
+      label: Read more
+      link: partnerships
+
+  # ************************* Looking ahead *************************
+
+  looking-ahead:
+    heading: Looking ahead
+    intro: >
+      With geopolitical shifts, economic volatility and emerging ideas from the UN80 Initiative, there are many possible futures ahead for development cooperation. A solid foundation for UNDP’s continued impact and reliability in a fast-changing world, the Strategic Plan is:
+    icons:
+      complexity:
+        heading: Built for complexity
+        text: Assuming that disruption will continue, the systems approach and strategic foresight capabilities equip UNDP to navigate complexity.
+      demand:
+        heading: Demand-driven
+        text: Grounded in our partners’ current and future needs, with the flexibility to change as needs evolve.
+      adaptive:
+        heading: Adaptive
+        text: Enabling UNDP to respond pragmatically to different scenarios, including fluctuations in funding. The Plan allows for expansion or consolidation of programmatic elements as opportunities emerge or constraints materialize, while maintaining the integrity of UNDP’s offer.
+    copy: >
+      UNDP offers the platform to co-invest in action that advances global prosperity while protecting the planet. 
+      <span class="text-extrabold">A joint endeavour between UNDP and Member States</span>, the success of the Plan will depend on shared resolve and collaboration.
+
+# ****************************************************************************************************
+
+futuresmart-page:
+  intro:
+    para1: >
+      Over the last eight years, UNDP has significantly modernized its operations:
+          <span class="text-extrabold">92 cents of every dollar now reach programmes and services</span>. Some
+          highlights:
+    para2: >
+      Building on the recommendations of the 2024 independent Business Model Review, further improvements will
+          shape a <span class="text-extrabold">leaner, faster, more responsive</span> UNDP
+
+
+    icons:
+      quantum: >
+        The <span class="text-extrabold">Quantum enterprise resource planning system</span>, now shared by 10 UN
+            agencies
+      automation: >
+         <span class="text-extrabold">Automation of some 3,000 business processes</span> through a stronger global
+          shared services platform
+      operation: >
+                  Acting as the <span class="text-extrabold">operational backbone</span> for 70+ UN entities in 121 countries
+
+      carbon-footprint: > 
+         Energy improvements putting us on track to <span class="text-extrabold">reduce our carbon footprint by
+            half</span> by 2030.
+  
+  subtopics:
+    people-culture:
+      heading: People and culture
+      copy: >
+        In Phase 3 of the People for 2030 Strategy, UNDP will continue building an organizational culture
+              founded on engagement, continuous learning and a growth mindset. We use data to optimise productivity
+              and performance, while better aligning human capital with organisational goals through a new internal
+              talent market.
+    digital-data:
+      heading: Data, digital and AI
+      copy: >
+        UNDP is applying AI-driven analytics to transform complex data into actionable insights and support
+              better integrated programming and policies. A new Digital, AI and Innovation Hub will strengthen
+              collaboration across teams and with other agencies, and accelerate innovation.
+    
+    business-transformation:
+      heading: Business transformation
+      copy: >
+        The Quantum ERP system, global shared services and modern human resources management continue to
+              increase efficiency, effectiveness and value for money, while upholding accountability and transparency.
+
+    risk-management:
+      heading:  Risk management
+      copy: >
+        UNDP has a well-established enterprise risk management framework. We will more proactively embed risk
+              management across all programming and operations to identify risks earlier and manage them better. Risks
+              to implementing the Strategic Plan will be regularly reviewed and the Executive Board kept informed.
+    results:
+      heading: Commitment to results
+      copy: >
+        UNDP impact measurement frameworks have evolved to include more sophisticated metrics like the
+              Multidimensional Poverty Index and the Planetary Pressures-adjusted Human Development Index. UNDP
+              continues to refine these to better capture how our interventions change people’s lives. 
+    
+    transparency:
+      heading: Transparency and accountability
+      copy: >
+        Building on its clean audits of $100 billion in development spending over 20 years and its top-tier
+              ranking in the Aid Transparency Index since 2011, UNDP is advancing real-time, data-driven accountability.
+              New initiatives include next-generation digital platforms for real-time performance monitoring. We publish
+              not only successes, but lessons from failures: a culture of continuous improvement.
+
+# ****************************************************************************************************
+
+partnerships-page:
+  title: >
+    Part&shy;ner&shy;ships for progress
+  ecosystem:
+    title: >
+      Partnership <br> <span style="font-weight: 350;">ecosystem</span>
+    infographic: "partnerships-ecosystem.png"
+    copy: 
+      column1:
+        para1: UNDP’s longstanding relationships with its government partners remain fundamental to delivering results.
+          Governments provide the resources UNDP needs to deliver its country programming, coordinated with UN country
+          teams, tailored to local context.
+        para2: The private sector is an indispensable partner for achieving systemic transformation. UNDP works with the
+          private sector to align business innovation, capital and expertise with national development priorities.
+        para3: We amplify our impact by leveraging blended finance and sustainability-linked bonds, while partnering with
+          international financial institutions to provide complementary technical assistance and financin
+
+      column2:
+        para1: We expand the resources, expertise and experience available to our partners by fostering south-south and
+          triangular cooperation and helping governments tap into the diverse resources of other UN agencies.
+        para2: We continue to diversify our partnerships with philanthropies, the private sector, IFIs, academia, civil
+          society and NGOs, helping engage a broader range of stakeholders in development.
+  unds:
+    heading: The United Nations Development System
+    copy:
+      para1: >
+        The 2024 quadrennial comprehensive policy review of operational activities for development of the UN system
+          highlights the need for coherence, efficiency, effectiveness and accountability. UNDP leverages its expertise,
+          networks and worldwide presence to contribute to these collective efforts.
+      para2: >
+        Under country leadership, UNDP aligns its country programmes with national priorities, deriving its country
+          programme outcomes from UN Sustainable Development Cooperation Frameworks. Working with country teams, led by
+          resident coordinators, we deliver integrated, evidence-based programming that addresses complex development
+          issues, drawing on our foresight and systems-thinking expertise.
+      para3: >
+        UNDP remains the largest participant in UN pooled funds and joint programmes, with over $240 million in joint
+          programming. Complementarity is crucial. We cultivate cross-agency synergies in policy design, programme
+          delivery and reporting mechanisms to avoid duplication and fragmentation of efforts.
+      para4: >
+        The development impact of the UNDS is multiplied by assets hosted by UNDP that provide services and expertise
+          to the system:
+    
+    unv:
+        logo: "unv.png"
+        alt: "UN Volunteers logo"
+        title: "MORE PEOPLE:"
+        copy: "In 2024, <strong>14,631 UN Volunteers</strong> from 181 nationalities served 59 UN entities in 169 countries."
+    
+    uncdf:
+        logo: "uncdf.png"
+        alt: "UNCDF logo"
+        title: "MORE INVESTMENT:"
+        copy: "By integrating <strong>UN Capital Development Fund</strong> financial capabilities and instruments into its programming, UNDP supports sustainable growth, job creation and economic opportunities for all."
+    mptf:
+        logo: "mptf.png"
+        alt: "Multi-Partner Trust Fund Office logo"
+        title: "MORE JOINT WORK:"
+        copy: "The <strong>Multi-Partner Trust Fund Office</strong> pools financing — over $1&nbsp;billion per year — for stronger results at scale."
+    
+    unossc:
+        logo: "unossc.png"
+        alt: "UNOSSC logo"
+        title: "MORE COOPERATION:"
+        copy: "The <strong>UN Office for South-South Cooperation</strong> fosters high human development through technology development and transfer, financial cooperation, peer learning and capacity-building, particularly in digital and governance innovation."
+
+  
+# ****************************************************************************************************
+
+popups: 
+  prosperity:
+    heading: Prosperity for all
+    copy:
+      para1: Extreme poverty remains a daily reality for 9% of people worldwide.
+      para2: >
+        UNDP focusses on creating prosperity for all, while maintaining our strong footprint in poverty and
+            inequality programming and our commitment to leave no-one behind. This shift aligns with our partners'
+            changing aspirations: moving beyond the goalpost of a minimum poverty line to build dynamic, resilient
+            economies and societies where everyone can thrive.
+      overline-icons: UNDP helps to reduce poverty and create prosperity by
+      icon1: expanding opportunities for people and businesses to access productive assets, decent jobs and
+                livelihoods and build human capital
+      icon2:  enhancing protection from shocks, crises and multidimensional vulnerability, through risk reduction,
+                access to essential services and social protection
+      para3: Prosperity for all must include enhancing women’s economic opportunities and overcoming barriers to their
+            full economic participation, including access to property rights, financial services and equal pay.
+      para4: Countries follow different development pathways, so UNDP adapts its work to country contexts and population
+            groups. Progress towards prosperity is measured using multidimensional measures that assess both economic
+            opportunities and people's expanded capabilities, including inequality-adjusted and gender-adjusted human
+            development indices.
+
+  governance:
+    heading: Effective Governance
+    copy:
+      para1: Accountable, inclusive and effective governance is central to human development. UNDP develops accountable,
+            people-centred and rights-based governance, in line with the intergovernmental principles of effective
+            governance for sustainable development.
+      para2: >
+        UNDP’s capacity to integrate governance into all its work, as a core dimension of systemic change, gives us
+            a head start in tackling the interconnected challenges of sustainable development.
+     
+      para3: Using systems thinking, innovation and strategic foresight, UNDP helps countries develop more agile,
+            anticipatory governance and policymaking and provide responsive services and economic opportunities -
+            including digital public infrastructure and increased access to services through digitalization and AI.
+
+      para4: Democratic governance, human rights and the rule of law are fundamental for thriving societies and
+            economies, for sustaining peace and human security. Demand is growing for UNDP support in political
+            dialogues and electoral processes, including in transitional and crisis contexts. Partnerships with national
+            and local governments, parliaments and civil society help build an open public sphere where everyone can
+            participate. 
+      para5: In conflict and violence-affected settings, UNDP fosters social cohesion and strengthens community security
+            and local peacebuilding, through dialogue, insider mediation and area-based approaches.
+    
+  crisis:
+    heading: Crisis Resilience
+    copy:
+      para1: While crises differ widely, the threat they pose to human development and human security is significant and
+            rising. From day one of a crisis, UNDP focuses on protecting development gains and reducing risk, laying the
+            groundwork for recovery and eventual exit from reliance on humanitarian assistance.
+      para2: >
+        UNDP acts as a “bridge-builder” between the humanitarian, development and peacebuilding systems, helping UN
+            country teams and humanitarian teams, led by resident coordinators and humanitarian coordinators, maintain
+            continuity across response phases and advance long-term development.
+     
+      para3: UNDP plays a key role in stabilisation and early recovery, including expanding women’s economic
+            opportunities and their voice in decision-making. UNDP also supports young people’s participation in
+            democratic governance and amplifies their voices in peace processes.
+
+      para4: The UNDP commitment to “stay and deliver” in the toughest environments enables consistent engagement
+            through all phases of crisis. Strong operational capabilities and a global footprint allow us to deliver
+            services at scale, even in remote and high-risk areas. Longstanding relationships and local networks allow
+            us to operate in crisis-affected or politically complex settings where others are unable to stay.
+  
+  planet:
+    heading: Healthy Planet
+    copy:
+      para1: No sustainable development is possible without a healthy planet.
+      para2: >
+        UNDP is a leading connector at the nexus of planet and development, delivering integrated solutions to the
+            challenges of climate change, disasters, biodiversity loss, energy, chemicals and waste, while advancing
+            development priorities on governance, prosperity and resilience.
+      para3: UNDP aims to translate global commitments - under the Paris Agreement, Kunming-Montreal Global Biodiversity
+            Framework, Montreal Protocol and other international agreements - into effective local action. We support
+            countries to assess their options for achieving just and sustainable transitions and harness new ideas to
+            tackle the financing challenge.
+      overline-icons: >
+        UNDP works with:
+      icon1: countries to improve policy coherence around their national pledges and deliver these commitments in
+                ways that respond to local context
+      icon2:  governments, civil society, financial institutions and the private sector, to co-invest in action that
+                promotes prosperity while protecting the planet.
+      para4: Through Climate Promise 2025, UNDP has created a platform to engage the UN system to support
+            countries’ climate goals and strategies.
+
+
+  digital:
+    heading: Digital and AI transformation
+    copy:
+      para1: >
+         Rapid digital advancements and the rise of AI are transforming economies, governance and societies. Yet
+            with opportunity comes risk: threats to cyber-security, data privacy, algorithmic bias and the growing
+            environmental impact of digital technologies. One in three people worldwide is still offline. This lends
+            urgency to UNDP support to countries working towards meaningful connectivity in an open, free and secure
+            digital future.
+      para2: >
+       UNDP’s broad expertise and country-driven approach allow us to support holistic digital transformation in
+            an integrated, systemic way.
+      para3: >
+        UNDP has worked with over 120 countries to leverage digital technologies to support their development. This
+            includes helping institutions and people develop the capabilities to access and use digital technology and
+            data; and supporting countries to implement robust digital public infrastructure, like digital payment and
+            secure digital ID systems.
+
+      para4: >
+        With our partners we work on policies, regulations and development planning that ensure safe, secure and
+            responsible use of digital and emerging technologies. We are scaling up efforts to address digital harms,
+            including online disinformation and polarization. And we promote sustainable solutions to power digital
+            infrastructure at lower environmental cost.
+
+  gender:
+    heading: Gender equality
+    copy:
+      para1:  >
+        Realizing women’s rights and equal opportunities is integral to sustainable development and can accelerate
+            results across the board. Complementing the work of UN-Women, UNDP designs its interventions for a
+            deliberate impact on gender equality, seen by partners as one of its most effective areas of work. UNDP
+            meets or exceeds 94% of the targets of the UN System-Wide Action Plan.
+      para2: >
+        Through its trusted relationships with governments, UNDP is well placed to help advance women’s empowerment
+            across all dimensions of development. 
+     
+      icon1: UNDP accelerates the leadership and equal participation of women in public institutions, elected
+                positions, the judiciary and the private sector.
+      icon2: UNDP works to enhance women’s economic opportunities through entrepreneurship, job creation and
+                capacity-building, and to recognize, reduce and redistribute women’s unpaid care work.
+      icon3:  In crisis settings, UNDP reflects the interests and voice of women and girls.
+     
+      para3: >
+        Demand is growing to help drive systemic change that overturns barriers limiting opportunities for women.
+            We work with national governments, sharing successful approaches across countries and regions, and with
+            local governments, which are closer to citizens and can turn national policies into real benefits for women
+            and men.
+
+  finance:
+    heading: Sustainable finance
+    copy:
+      para1:  >
+        The development financing gap is not just a financial shortfall; it reflects the misalignment of capital
+            flows with sustainable development priorities. Correcting this requires a shift from scaling development
+            assistance to transforming development financing systems. The differentiating value of UNDP lies in:
+      icon1: bridging public and private finance systems
+      icon2: bringing together development and financial actors to align investment with sustainable development at
+                country level
+      para2: >
+        UNDP works at the intersections of finance, governance, climate, nature and development to accelerate
+            development and expand investment opportunities in emerging and developing economies.
+      para3: >
+        We work with countries to strengthen their regulatory, institutional and policy frameworks, making
+            financial governance more stable and capital allocation more transparent. Integrated national financing
+            frameworks in 86 countries have mobilized $16 billion in new finance and aligned over $32 billion with
+            sustainable development.  
+      para4: >
+        We work with development finance institutions and the private sector to scale financing instruments such as blended finance, green bonds, sustainability-linked loans and insurance-backed investments. We help governments mobilise domestic resources through progressive taxation, SDG-aligned budgeting and results-based fiscal policies.
+
+
+# ****************************************************************************************************
+# ****************************************************************************************************
+# ****************************************************************************************************
+
+
+content:
+  homepage: 
+    countries:
+      overline: Our presence
+      headline: Global, Regional, Local
+      bodytext: UNDP combines global reach and local impact with its presence in 170 countries and territories worldwide.
+    
+    world-offices:
+  
+      hq:
+        title: "Headquarters"
+        offices:
+          - "New York headquarters"
+
+      centres:
+        title: "Policy and Programme Centres"
+        offices:
+              - "Doha (Partnership and Technical Advice Office)"
+              - "Istanbul International Centre for Private Sector in Development"
+              - "Global Policy Centre for Governance"
+              - "Rome Centre for Sustainable Development"
+              - "Seoul Policy Centre"
+              - "Singapore Global Centre for Technology, Innovation and Sustainable Development"
+
+      representation_offices:
+        title: "Representation Offices"
+        offices:
+              - "Brussels Representation Office (covering European Union)"
+              - "Geneva Representation Office"
+              - "Germany Representation Office"
+              - "Nordic Representation Office (covering Denmark, Finland, Iceland, Norway, Sweden)"
+              - "Tokyo Representation Office"
+              - "Washington Representation Office"
+
+      
+
+      africa:
+        title: "Africa"
+        bold: "Addis Ababa Regional Service Centre"
+        offices:
+              - "Angola"
+              - "Benin"
+              - "Botswana"
+              - "Burkina Faso"
+              - "Burundi"
+              - "Cameroon"
+              - "Cape Verde"
+              - "Central African Republic"
+              - "Chad"
+              - "Comoros"
+              - "Côte d'Ivoire"
+              - "Democratic Republic of the Congo"
+              - "Equatorial Guinea"
+              - "Eritrea"
+              - "Eswatini"
+              - "Ethiopia"
+              - "Gabon"
+              - "The Gambia"
+              - "Ghana"
+              - "Guinea"
+              - "Guinea-Bissau"
+              - "Kenya"
+              - "Lesotho"
+              - "Liberia"
+              - "Madagascar"
+              - "Malawi"
+              - "Mali"
+              - "Mauritania"
+              - "Mauritius and Seychelles"
+              - "Mozambique"
+              - "Namibia"
+              - "Niger"
+              - "Nigeria"
+              - "Republic of the Congo"
+              - "Rwanda"
+              - "São Tomé and Príncipe"
+              - "Senegal"
+              - "Sierra Leone"
+              - "South Africa"
+              - "South Sudan"
+              - "Togo"
+              - "Uganda"
+              - "United Republic of Tanzania"
+              - "Zambia"
+              - "Zimbabwe"
+
+      arab-states:
+        title: "Arab States"
+        bold: "Amman Regional Hub"
+        offices:
+              - "Algeria"
+              - "Bahrain"
+              - "Djibouti"
+              - "Egypt"
+              - "Iraq"
+              - "Jordan"
+              - "Kuwait"
+              - "Lebanon"
+              - "Libya"
+              - "Morocco"
+              - "Programme of Assistance to the Palestinian People"
+              - "Saudi Arabia"
+              - "Somalia"
+              - "Sudan"
+              - "Syrian Arab Republic"
+              - "Tunisia"
+              - "Yemen"
+
+     
+      asia-pacific:
+        title: "Asia and the Pacific"
+        bold: "Bangkok Regional Hub"
+        offices:
+              - "Afghanistan"
+              - "Bangladesh"
+              - "Bhutan"
+              - "Cambodia"
+              - "China"
+              - "Democratic People’s Republic of Korea"
+              - "India"
+              - "Indonesia"
+              - "Iran, Islamic Republic of"
+              - "Lao People’s Democratic Republic"
+              - "Malaysia (covering Brunei Darussalam, Malaysia, Singapore)"
+              - "Maldives"
+              - "Mongolia"
+              - "Myanmar"
+              - "Nepal"
+              - "Pacific Office in Fiji (covering Federated States of Micronesia, Fiji, Kiribati, the Marshall Islands, Nauru, Palau, Solomon Islands, Tonga, Tuvalu, Vanuatu)"
+              - "Pakistan"
+              - "Papua New Guinea"
+              - "Philippines"
+              - "Samoa (covering Cook Islands, Niue, Samoa, Tokelau)"
+              - "Sri Lanka"
+              - "Thailand"
+              - "Timor-Leste"
+              - "Viet Nam"
+
+      europe-central-asia:
+        title: "Europe and Central Asia"
+        bold: "Istanbul Regional Hub"
+        offices:
+              - "Albania"
+              - "Armenia"
+              - "Azerbaijan"
+              - "Belarus"
+              - "Bosnia and Herzegovina"
+              - "Cyprus"
+              - "Georgia"
+              - "Kazakhstan"
+              - "Kosovo (as per UN Security Council Resolution 1244 [1999])"
+              - "Kyrgyzstan"
+              - "Moldova"
+              - "Montenegro"
+              - "North Macedonia"
+              - "Serbia"
+              - "Tajikistan"
+              - "Türkiye"
+              - "Turkmenistan"
+              - "Ukraine"
+              - "Uzbekistan"
+
+      latin-america:
+        title: "Latin America and the Caribbean"
+        bold: "Panama Regional Hub"
+        offices:
+              - "Argentina"
+              - "Barbados and the Eastern Caribbean (covering Anguilla, Antigua and Barbuda, Barbados, the British Virgin Islands, Dominica, Grenada, Montserrat, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines)"
+              - "Belize"
+              - "Bolivia"
+              - "Brazil"
+              - "Chile"
+              - "Colombia"
+              - "Costa Rica"
+              - "Cuba"
+              - "Dominican Republic"
+              - "Ecuador"
+              - "El Salvador"
+              - "Guatemala"
+              - "Guyana"
+              - "Haiti"
+              - "Honduras"
+              - "Jamaica (covering the Bahamas, Bermuda, Cayman Islands, Jamaica, Turks and Caicos Islands)"
+              - "Mexico"
+              - "Panama"
+              - "Paraguay"
+              - "Peru"
+              - "Suriname"
+              - "Trinidad and Tobago (covering Aruba, Curacao, Sint Maarten, Trinidad and Tobago)"
+              - "Uruguay"
+              - "Venezuela"            
+
+
+     
+    pastReports:
+      title: Our Past Strategic Plans
+      image: mockup-old-AR-compressed.png
+      text: >
+        Explore how each Strategic Plan shaped UNDP’s vision and priorities.
+        
+      selectMenu:
+        label: Year
+        options: 
+          C: 2022-2025
+          B: 2018-2021
+          A: 2014-2017

@@ -1,0 +1,822 @@
+# generic info
+lang: es
+language: Español
+cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/
+
+gtm: GTM-NDW6MV6
+
+# page metadata
+meta:
+  title: Plan Estratégico | PNUD
+  image: social-thumbnail-sp.jpg
+
+breadcrumb:
+  home:
+    label: Plan Estratégico 2026-2029
+    path:
+  partnerships:
+    label: Alianzas para el progreso
+    path: partnerships
+  futuresmart:
+    label: Operaciones inteligentes preparadas para el futuro 	
+    path: futuresmart
+
+menu:
+  what-do: Qué hacemos
+  how-work: Cómo trabajamos
+  investing: Inversión en PNUD
+  looking-ahead: Perspectivas para el futuro
+
+
+
+langVersions:
+  - name: English
+    lang: en
+    #download: false
+    asset: UNDP-Strategic-Plan-English.pdf
+    visual-pdf: UNDP-Strategic-Plan-English-Summary.pdf  
+    web: true
+  - name: Español
+    lang: es
+    #download: false
+    asset: UNDP-Strategic-Plan-Spanish.pdf
+    web: true
+    currentLang: true
+  - name: Français
+    lang: fr
+    #download: false
+    asset: UNDP-Strategic-Plan-French.pdf
+    web: true
+  - name: Русский
+    lang: ru
+    #download: true
+    asset: UNDP-Strategic-Plan-Russian.pdf
+    web: false
+  - name: 中文
+    lang: zh
+    #download: true
+    asset: UNDP-Strategic-Plan-Chinese.pdf
+    web: false
+  - name: العربية
+    lang: ar
+    #download: true
+    asset: UNDP-Strategic-Plan-Arabic.pdf
+    web: false
+
+buttons:
+  read-more: Leer más
+  read-less: Leer menos
+  back: atrás
+  learn: Más información
+
+footer:
+  name: >
+    Programa de las Naciones Unidas  <br>
+    para el Desarrollo
+  copyright: © 2025 Programa de las Naciones Unidas para el Desarrollo
+  terms: Términos de Uso
+  terms-link: https://www.undp.org/es/derechos-de-autor-y-condiciones-de-uso
+  facebook: https://www.facebook.com/PNUD/
+  linkedin: https://www.linkedin.com/company/united-nations-development-programme
+  instagram: https://www.instagram.com/undp/
+  twitter-x: https://x.com/pnud/
+  youtube: https://www.youtube.com/user/UNDP
+
+header:
+  title: >
+   Plan Estratégico 
+   <br> 2026-2029
+
+  language_button_label: "Seleccionar idioma"
+  menu_icon_label: "Toggle Navigation Menu"
+  nav_toggle: "Menu"
+  download_button: "Descargar"
+
+  popup: 
+    title: Descargar documentos
+    visual: Resumen visual
+    bw: Plan Estratégico | documento completo
+
+# ****************************************************************************************************
+# ****************************************************************************************************
+# ****************************************************************************************************
+
+homepage:
+  hero:
+    title: >
+      Plan Estratégico 
+      <br> 2026-2029
+    subtitle: >
+      Apoyando el progreso de los países hacia el desarrollo humano
+  intro:
+    para1: >
+      A lo largo de seis decenios, el PNUD ha dado forma al progreso del desarrollo humano proporcionando apoyo integrado a gran escala para mejorar la vida de millones de personas en todo el mundo.
+    para2: >
+      El PNUD seguirá apoyando el avance de los países hacia un alto nivel de desarrollo humano, al tiempo que protege el planeta. Cuatro objetivos estratégicos —prosperidad para todas las personas, gobernanza eficaz, resiliencia ante las crisis y planeta sano— definen sus directrices estratégicas, impulsadas por tres aceleradores: la transformación digital y de la inteligencia artificial (IA), la igualdad de género y la financiación sostenible. Todas ellas se basan en el compromiso con los derechos humanos y con el principio de no dejar a nadie atrás. 
+    para3: >
+      El Plan Estratégico se centra en lo que mejor hace el PNUD: apoyar el cambio sistémico mediante soluciones integradas de desarrollo motivadas por las prioridades nacionales. 
+
+  # ************************* What we have learned *************************
+
+  action:
+    heading: Qué hemos aprendido
+    intro: >
+      Para diseñar el Plan Estratégico, <span class="text-extrabold"> el PNUD realizó más consultas que nunca, con unos 600 asociados de 116 países</span>. El plan se basa en una gran cantidad de datos y enseñanzas extraídas: la evaluación independiente y el examen de mitad de período del Plan Estratégico 2022-2025, una revisión independiente del modelo institucional del PNUD y <a href="https://docs.aiddata.org/reports/ltl-2025/full-report.min.html" target="blank">una encuesta a 11.000 asociados para el desarrollo</a> en 147 países.
+    
+      Las <span class="text-extrabold"> observaciones</span> siguientes influyeron en el diseño del plan:
+    
+    swiper:
+      trust-matters:
+        title: "La confianza importa"
+        body: 
+          El PNUD es el único organismo de las Naciones Unidas clasificado sistemáticamente entre los cinco principales asociados para el desarrollo por los líderes con los que trabajamos. Al reconocer la importancia de la apropiación nacional, el PNUD trabaja junto a sus asociados y evoluciona al ritmo de las prioridades de estos en materia de desarrollo. Los asociados valoran el alcance del PNUD, a todos los niveles y en multitud de organismos gubernamentales, a través de relaciones duraderas basadas en la confianza mutua. 
+      integrated-approach:
+        title: "Enfatizar el enfoque integrado"
+        body: "Los asociados desean contar con el apoyo de expertos en los puntos de intersección de los diferentes temas, como la reducción de la pobreza mediante el aumento de las oportunidades de empleo o la promoción de los derechos de las mujeres. Este planteamiento funciona: el examen de mitad de período constató que el impacto del PNUD aumentaba un 3 % por cada 10 % de intensificación de su enfoque intersectorial."
+
+      systems-not-sectors:
+        title: "Hay que fijarse en los sistemas, no en los sectores"
+        body: "La evaluación reconoció que el enfoque sistémico del PNUD es “el motor más importante de la transformación estructural”, aunque señaló que todavía queda mucho por hacer. Ello se plasma en nuestra política y prácticas de cartera, que reúnen a múltiples asociados y activos en torno a una misión común."
+
+      implementation-policy-support:
+        title: "Gran importancia del apoyo normativo y a la ejecución"
+        body: "Nuestra influencia creció en el último decenio. El 98 % de los dirigentes del sector privado encuestados calificaron el apoyo del PNUD a la ejecución como bastante o muy útil. El 91 % de los responsables gubernamentales compartían esta opinión."
+
+      core-resources:
+        title: El impacto a largo plazo depende de los recursos básicos
+        body: 
+          La disminución de la financiación básica dificulta la flexibilidad del PNUD, la aplicación de soluciones integradas y la promoción de cambios duraderos. La obtención de recursos ordinarios sostenibles es fundamental para que el PNUD tenga una incidencia significativa en el desarrollo.
+
+      risk-awareness:
+        title: "Conciencia del riesgo para la resiliencia"
+        body: "La integración de la concienciación sobre los riesgos en toda nuestra labor ha ayudado significativamente al PNUD a fomentar la resiliencia. Nuestra capacidad para permanecer y cumplir en contextos complejos y de crisis ayuda a mantener los esfuerzos de desarrollo cuando otros agentes podrían retirarse. Nuestra influencia entre los líderes en situaciones frágiles ha aumentado."
+
+      future-skills:
+        title: "Capacidades orientadas al futuro para seguir en cabeza"
+        body: "Hoy en día, más de la mitad de los proyectos del PNUD incluyen un componente digital. El PNUD obtuvo una calificación del desempeño excepcional entre las 51 organizaciones de las Naciones Unidas en materia de digitalización, datos, previsión estratégica, innovación y ciencias del comportamiento. Las inversiones en estas áreas están creando una cultura centrada en el aprendizaje y en el pensamiento orientado al futuro."
+
+    
+  # ************************* Investing in UNDP *************************
+
+  value:
+    heading: Inversión en PNUD
+    overline: 
+      Financiar la creación de valor
+    intro: El Plan Estratégico aprovecha las inversiones en infraestructura del PNUD durante 60 años. 
+    icons:
+      countries: >
+        Opera en <br><span class="text-extrabold" style="color: #F1439A;">170 países y territorios</span><br><br>
+      hubs: >
+        <span class="text-extrabold" style="color: #4339CB;">Centros regionales</span> Addis Abeba, Ammán, Bangkok, Estambul, Panamá
+      un-system: >
+        <span class="text-extrabold" style="color: #FF800B;">Centraliza activos del sistema de las Naciones Unidas: </span><br> OFFAM, FNUDC, UNOSSC, VNU
+      rating: Valorado por el 90 % de los líderes como “muy útil” o "bastante útil" 
+      money: 92 centavos de cada dólar llegan a los programas de desarrollo 
+      transparency: >
+        Clasificado sistemáticamente en el  <span class="text-extrabold" style="color: #EC5038;">el índice de transparencia de la ayuda</span> desde 2011
+
+  
+    para1: >
+        La estrategia del PNUD se basa en garantizar que <span class="text-extrabold">cada dólar tenga el máximo impacto en el desarrollo</span> y que <span class="text-extrabold">el PNUD siga siendo un asociado fiable</span> en un mundo incierto. 
+    para2: >
+        En un entorno de financiación complejo, el PNUD ha adoptado desde principios de 2025 una serie de medidas de austeridad con el objetivo de reducir los gastos operacionales, optimizar el uso de recursos y mejorar su movilización. Entretanto, continúan las inversiones en áreas con alto potencial de retorno, como el desarrollo de la cartera de programas y las capacidades digitales y de IA. 
+    para3: >
+        Los <span class="text-extrabold">recursos ordinarios (básicos)</span> constituyen la base financiera del PNUD, que le permite llevar a cabo una planificación a largo plazo, responder con rapidez, impulsar la innovación y llegar a quienes se están quedando más atrás: una inversión en multilateralismo. Sin embargo, las contribuciones a los recursos ordinarios han descendido a tan solo un 12 % de los recursos totales. Es esencial restaurar estos fondos para preservar la imparcialidad, el alcance mundial y la capacidad del PNUD de atender a los países en función de sus necesidades. 
+
+  # ************************* Overarching goal *************************
+
+  goal:
+    heading: Objetivo general
+    copy:
+      para1: >
+         El Programa de las Naciones Unidas para el Desarrollo (PNUD) trabaja con los diferentes países para que las personas tengan más posibilidades de disfrutar de un futuro más justo y sostenible, tal como se prevé en la Agenda 2030 para el Desarrollo Sostenible: un futuro en el que ningún país tenga que elegir entre el desarrollo humano y la salud del planeta, en el que la prosperidad y la sostenibilidad avancen juntas sin dejar a nadie atrás. Es la próxima frontera de la humanidad y, con el apoyo adecuado, está a nuestro alcance. 
+      para2: >
+       Mediante una acción integrada, basada en datos y alineada con las prioridades nacionales, el PNUD trabaja para acelerar el desarrollo humano y, al mismo tiempo, aliviar las presiones sobre el planeta. El objetivo general del Plan Estratégico es acompañar a los países en esta dirección.
+
+  # ************************* Strategic framework / what we do *************************
+
+  framework:
+    overline: Crear valor
+    heading: Qué hacemos
+    intro:
+      para1: >
+        El Plan Estratégico se ha diseñado en torno a un menor número de resultados integrados para centrarse más claramente en lo que los datos demuestran que el PNUD hace mejor: lograr cambios a nivel de los sistemas mediante soluciones integradas motivadas por las prioridades nacionales. 
+      para2: >
+        Un marco de <span class="text-extrabold">cuatro objetivos estratégicos, impulsados por tres aceleradores del progreso</span>, captan el efecto que tiene el PNUD en la vida de las personas y su contribución al desarrollo humano. Dicho marco aprovecha los puntos fuertes de la organización, hace hincapié en la interconexión de los objetivos y los aceleradores, y permite crear opciones de desarrollo adaptadas a las prioridades de cada país. 
+    infographic: "infographic-01-sp.svg"
+    infographic-mobile: "infographic-01-mobile-sp.svg"
+
+  # ************************* Strategic objectives *************************
+
+  objectives:
+    heading: Objetivos estratégicos
+    intro: >
+      Cuatro objetivos estratégicos —prosperidad para todas las personas, gobernanza eficaz, resiliencia ante las crisis y planeta sano— definen las directrices estratégicas del PNUD.
+
+    buttons:
+      prosperity: Prosperidad para todas las personas
+      governance: Gobernanza <br>eficaz
+      resilience: Resiliencia ante <br>las crisis
+      planet: Planeta <br> sano
+
+  # ************************* Pathways to human development *************************
+
+  human-dev:
+    heading: Caminos al desarrollo humano
+    intro: >
+      Los objetivos estratégicos y los aceleradores impulsan colectivamente el desarrollo humano al tiempo que reducen las presiones planetarias, medidas por el <a href="https://hdr.undp.org/planetary-pressures-adjusted-human-development-index?_gl=1*l4da30*_ga*MTc4OTU4NTIzNy4xNzM4ODU3OTgw*_ga_3W7LPK0WP1*czE3NTg1MTg3MTIkbzE3OSRnMSR0MTc1ODUyMzk0MSRqMjQkbDAkaDA.#/indicies/PHDI" target="_blank" class="text-extrabold">índice de desarrollo humano ajustado por las presiones planetarias (IDHP)</a>. 
+    infographic: "infographic-02-sp.jpg"
+    infographic-mobile: "infographic-02-mobile-sp.jpg"
+
+  # ************************* Accelerators *************************
+
+  accelerators:
+    heading: Aceleradores
+    intro: >
+      La transformación digital y de la IA, la igualdad de género y la financiación sostenible son potentes aceleradores que impulsan el progreso hacia un cambio sistémico. 
+    list:
+      item1: >
+        Digital advancements expand opportunities, improve public services, enhance civic engagement and speed up response to crisis.
+      item2: >
+        When women are empowered through laws and public policies, societies are more resilient, economies grow faster, poverty and inequality decrease.
+      item3: >
+        Better alignment of capital flows with sustainable development priorities can unlock new pathways to prosperity and a healthy planet.
+    buttons:
+      digital: Transformación digital y de la IA
+      gender:  Igualdad <br>de género
+      finance: Financiación sostenible
+    
+    
+    digital:
+      title: Digital and AI transformation
+      content: >
+            <p>Rapid digital advancements and the rise of AI are transforming economies, governance and societies.
+              Yet with opportunity comes risk: threats to cyber-security, data privacy, algorithmic bias and the
+              growing environmental impact of digital technologies. One in three people worldwide is still
+              offline. This lends urgency to UNDP support to countries working towards meaningful connectivity in
+              an open, free and secure digital future.</p>    
+
+              <p>UNDP’s broad expertise and country-driven approach allow us to support holistic digital
+              transformation in an integrated, systemic way.</p>
+
+              <p>UNDP has worked with over 120 countries to leverage digital technologies to support their
+              development. This includes helping institutions and people develop the capabilities to access and
+              use digital technology and data; and supporting countries to implement robust digital public
+              infrastructure, like digital payment and secure digital ID systems.</p>
+
+              <p>With our partners we work on policies, regulations and development planning that ensure safe,
+              secure and responsible use of digital and emerging technologies. We are scaling up efforts to
+              address digital harms, including online disinformation and polarization. And we promote sustainable
+              solutions to power digital infrastructure at lower environmental cost.</p>
+    gender:
+      title: Gender Equality
+      content: >
+          <p>Realizing women’s rights and equal opportunities is integral to sustainable development and can accelerate results across the board. Complementing the work of UN-Women, UNDP designs its interventions for a deliberate impact on gender equality, seen by partners as one of its most effective areas of work. UNDP meets or exceeds 94% of the targets of the UN System-Wide Action Plan.</p>
+
+          <p>Through its trusted relationships with governments, UNDP is well placed to help advance women’s empowerment across all dimensions of development.</p>
+
+          <ul>
+            <li>UNDP accelerates the leadership and equal participation of women in public institutions, elected positions, the judiciary and the private sector.</li>
+            <li>UNDP works to enhance women’s economic opportunities through entrepreneurship, job creation and capacity-building, and to recognize, reduce and redistribute women’s unpaid care work.</li>
+            <li>In crisis settings, UNDP reflects the interests and voice of women and girls.</li>
+          </ul>
+
+          <p>Demand is growing to help drive systemic change that overturns barriers limiting opportunities for women. We work with national governments, sharing successful approaches across countries and regions, and with local governments, which are closer to citizens and can turn national policies into real benefits for women and men.</p>
+    finance:
+      title: Sustainable Finance
+      content: >
+        <p>The development financing gap is not just a financial shortfall; it reflects the misalignment of capital flows with sustainable development priorities. Correcting this requires a shift from scaling development assistance to transforming development financing systems. The differentiating value of UNDP lies in:</p>
+
+        <ul>
+          <li>Bridging public and private finance systems</li>
+          <li>Bringing together development and financial actors to align investment with sustainable development at country level</li>
+        </ul>
+
+        <p>UNDP works at the intersections of finance, governance, climate, nature and development to accelerate development and expand investment opportunities in emerging and developing economies.</p>
+
+        <p>We work with countries to strengthen their regulatory, institutional and policy frameworks, making financial governance more stable and capital allocation more transparent. Integrated national financing frameworks in 86 countries have mobilized $16 billion in new finance and aligned over $32 billion with sustainable development.</p>
+
+        <p>We work with development finance institutions and the private sector to scale financing instruments such as blended finance, green bonds, sustainability-linked loans and insurance-backed investments. We help governments mobilise domestic resources through progressive taxation, SDG-aligned budgeting and results-based fiscal policies.</p>
+
+                  
+  
+  # ************************* Systems approach *************************
+
+
+  delivering-value:
+    
+    heading: El enfoque sistémico
+    list:
+      item1: >
+        Los Gobiernos y los asociados para el desarrollo buscan nuevas formas de hacer frente a los rápidos cambios, mediante la superación de los planteamientos sectoriales a corto plazo con el objetivo de transformar los sistemas sociales, económicos y financieros subyacentes.  
+      item2: >
+        El PNUD trabaja ya junto a los Gobiernos de 80 países para hacer frente a desafíos estructurales como la confianza social y la transformación urbana. A partir de este aprendizaje hemos elaborado una <span class="text-extrabold"><a target="blank" href="https://www.undp.org/systems-portfolio">política y unas prácticas de cartera</a> que fomentan la transformación del sistema</span>: reúnen a diversos asociados en un conjunto coordinado de intervenciones en aras de un objetivo común. Las carteras de Filipinas y Viet Nam, por ejemplo, replantean el modelo “producir-consumir-eliminar”, por lo que crean un medio ambiente más sano y abren posibilidades de nuevos medios de vida. 
+      item3: >
+        Dicho enfoque sistémico, crucial para la aplicación del Plan Estratégico, requiere colaboración, nuevas alianzas y financiación a largo plazo por parte de múltiples asociados. 
+
+  # ************************* Comparative advantages *************************
+
+  advantages:
+    overline: Aportar valor
+    heading: Cómo trabajamos
+    intro: >
+      El PNUD cuenta con una combinación única de capacidades y experiencia. 
+      <br>
+      Las evaluaciones, revisiones, asociados y observadores independientes consideran que nuestros puntos fuertes más distintivos son los siguientes:
+
+    swiper:
+      global-reach:
+        title: "Alcance mundial, impacto local"
+        body: "Los asociados valoran la combinación de alcance mundial y presencia local del PNUD en 170 países y territorios, especialmente en países pequeños y contextos complicados con un reducido número de organismos sobre el terreno."
+
+      partnerships-catalyst:
+        title: "Impulsor de alianzas"
+        body: "El PNUD conecta a asociados de todo el sistema de las Naciones Unidas y de fuera de él, integrando los esfuerzos en todos los sectores y amplificando los resultados para el desarrollo."
+
+      deep-expertise:
+        title: "Amplios conocimientos técnicos"
+        body: "Los conocimientos especializados acumulados durante decenios en materia de gobernanza, medio ambiente, crisis y pobreza se complementan con capacidades cada vez mayores en ámbitos más novedosos, como el cambio sistémico y las soluciones digitales integradas."
+
+      integrated-solutions:
+        title: "Soluciones integradas"
+        body: "La capacidad del PNUD para “unir los puntos” entre sectores sustenta nuestro diseño de soluciones de desarrollo integradas y el apoyo a los marcos integrados de planificación y financiación de los propios Gobiernos."
+
+      thought-leadership:
+        title: "Liderazgo intelectual"
+        body: 
+          Nuestros productos de conocimiento, como el <i>Informe sobre Desarrollo Humano</i> y los índices de desarrollo multidimensional, se consideran activos fiables y rigurosos para los responsables de la formulación de políticas. 
+
+      systems-advantage:
+        title: "Ventaja de los sistemas"
+        body: "Gracias a nuestras inversiones en datos, innovación y previsión digital y estratégica, el enfoque de cartera está ayudando al PNUD y sus asociados a dar sentido a los rápidos cambios. Las iniciativas de creación conjunta de carteras con organismos hermanos están empezando a redefinir el modo en que las Naciones Unidas pueden colaborar para lograr un cambio sistémico."
+
+      anchor-in-crisis:
+        title: "Un ancla en la que apoyarse en situaciones de crisis"
+        body: "En situaciones de crisis, el PNUD permanece y cumple. Conecta a agentes de los ámbitos humanitario, del desarrollo y de la paz para sentar las bases de un desarrollo a largo plazo desde el primer día."
+
+      policy-operational:
+        title: "Políticas y operaciones"
+        body: "La combinación de experiencia en materia de políticas y operaciones se traduce en mejores resultados de desarrollo. Por ejemplo, los conocimientos especializados del PNUD en adquisiciones y gobernanza le permiten apoyar la gestión electoral de los países con total fluidez, desde la política hasta la planificación y la ejecución."
+
+      value-at-scale:
+        title: "Valor a gran escala"
+        body: "Al prestar servicios compartidos de finanzas, recursos humanos, tecnología de la información y adquisiciones a más de 70 entidades de las Naciones Unidas, el PNUD crea economías de escala destinadas a todo el sistema de las Naciones Unidas para el desarrollo."
+
+
+  # ************************* Future-smart *************************
+
+  future-smart:
+    heading: Operaciones inteligentes preparadas para el futuro 	
+    copy: >
+      Durante los últimos ocho años, el PNUD ha modernizado sus operaciones de modo que en la actualidad llegan a los programas y servicios 92 centavos de cada dólar invertido. El PNUD sigue aumentando su eficiencia y su eficacia mediante la creación de una organización más ágil, más rápida y con mayor capacidad de respuesta.	
+    
+    cta:
+      label: Leer más
+      link: futuresmart-operations
+
+  # ************************* Partnerships *************************
+
+  partnerships:
+    heading: Alianzas para el progreso
+    copy: >
+      El PNUD conecta a asociados de todo el sistema de las Naciones Unidas y de fuera de él, integrando los esfuerzos en todos los sectores y amplificando los resultados para el desarrollo. Los asociados valoran al PNUD por su poder facilitador y de convocatoria, como intermediario honesto que crea consenso entre las partes interesadas y como impulsor de alianzas público-privadas.
+    cta:
+      label: Leer más
+      link: partnerships
+
+
+  # ************************* Looking ahead *************************
+
+  looking-ahead:
+    heading: Perspectivas para el futuro
+    intro: >
+      Debido a los cambios geopolíticos, la volatilidad económica y las ideas surgidas de la Iniciativa ONU80, la cooperación para el desarrollo se enfrenta a numerosos futuros posibles. El Plan Estratégico, una base sólida para que el PNUD siga siendo fiable y logrando resultados en un mundo que cambia con rapidez, está:
+    icons:
+      complexity:
+        heading: Diseñado para hacer frente a la complejidad
+        text: 
+          Dado que supone que las perturbaciones continuarán, el enfoque sistémico y las capacidades de previsión estratégica equipan al PNUD para desenvolverse en esa complejidad.
+      demand:
+        heading: Basado en la demanda
+        text: Se basa en las necesidades actuales y futuras de nuestros asociados, con flexibilidad para cambiar según su evolución. 
+      adaptive:
+        heading: Preparado para adaptarse
+        text: Facilita que el PNUD responda de forma pragmática a diferentes escenarios, incluidas las fluctuaciones en la financiación. El plan permite la expansión o la consolidación de elementos programáticos a medida que surjan oportunidades o limitaciones, manteniendo al mismo tiempo la integridad de la oferta del PNUD. 
+    copy: >
+      El PNUD ofrece la plataforma necesaria para realizar inversiones conjuntas en acciones que promuevan la prosperidad mundial mientras protegen el planeta. El éxito del plan, un <span class="text-extrabold">esfuerzo conjunto entre el PNUD y los Estados miembros</span>, dependerá de la determinación y la colaboración compartidas.
+
+# ****************************************************************************************************
+# ****************************************************************************************************
+# ****************************************************************************************************
+
+
+
+# ****************************************************************************************************
+
+futuresmart-page:
+  intro:
+    para1: >
+     Durante los últimos ocho años, el PNUD ha modernizado sus operaciones de manera significativa: 
+     <span class="text-extrabold">92 centavos de cada dólar se destinan ahora a programas y servicios</span>. 
+     Los siguientes son algunos de los aspectos más destacados:
+
+    para2: >
+     Gracias a las recomendaciones de la revisión independiente del modelo institucional, realizada en 2024, las nuevas mejoras configurarán un PNUD 
+     <span class="text-extrabold">más ágil, más rápido y con mayor capacidad de respuesta</span>. 
+    icons:
+      quantum: >
+        El <span class="text-extrabold">sistema de planificación de los recursos institucionales Quantum</span>, que actualmente comparten 10 organismos de las Naciones Unidas
+      automation: >
+        La <span class="text-extrabold">automatización de unos 3.000 procesos institucionales</span> mediante una plataforma global de servicios compartidos más sólida
+      operation: >
+        La actuación como <span class="text-extrabold">eje operacional</span> para más de 70 entidades de las Naciones Unidas en 121 países
+      carbon-footprint: > 
+        
+        La introducción de mejoras energéticas que nos colocan en la senda adecuada para  <span class="text-extrabold">reducir nuestra huella de carbono a la mitad</span> de aquí a 2030
+
+  subtopics:
+    people-culture:
+      heading: Personas y cultura
+      copy: >
+        En la tercera fase de la estrategia “People for 2030”, el PNUD seguirá construyendo una cultura organizativa basada en el compromiso, el aprendizaje continuo y una mentalidad de crecimiento. Utilizamos datos para optimizar la productividad y el rendimiento, al tiempo que adecuamos mejor el capital humano a los objetivos de la organización mediante un nuevo mercado interno de talento.
+   
+    digital-data:
+      heading: Datos, tecnología digital e IA
+      copy: >
+        El PNUD utiliza análisis basados en IA para transformar datos complejos en información práctica y apoyar una programación y unas políticas mejor integradas. El nuevo Centro Digital, de IA y de Innovación reforzará la colaboración entre los diversos equipos y con otros organismos, además de acelerar la innovación.
+    
+    business-transformation:
+      heading: Transformación institucional
+      copy: >
+        El sistema de planificación de los recursos institucionales Quantum, los servicios globales compartidos y la gestión moderna de los recursos humanos siguen aumentando la eficiencia, la eficacia y la optimización de los recursos, preservando al mismo tiempo la rendición de cuentas y la transparencia. 
+
+    risk-management:
+      heading:  Gestión del riesgo
+      copy: >
+        El PNUD cuenta con un marco de gestión del riesgo institucional bien establecido. Integraremos de manera más proactiva la gestión de riesgos en todos los programas y operaciones con el objetivo de identificar antes los riesgos y gestionarlos mejor. Los riesgos en la aplicación del Plan Estratégico se examinarán periódicamente y se mantendrá informada a la Junta Ejecutiva.
+    
+    results:
+      heading: Compromiso con el logro de resultados
+      copy: >
+        Los marcos de evaluación del impacto del PNUD han evolucionado para incluir parámetros más sofisticados, como el índice de pobreza multidimensional y el índice de desarrollo humano ajustado por las presiones planetarias. El PNUD sigue perfeccionando estos mecanismos para captar mejor la forma en que sus intervenciones cambian la vida de las personas. 
+    
+    transparency:
+      heading: Transparencia y rendición de cuentas
+      copy: >
+        Sobre la base de sus auditorías sin reservas de 100.000 millones de dólares en gasto para el desarrollo a lo largo de 20 años y su clasificación en el nivel superior del índice de transparencia de la ayuda desde 2011, el PNUD avanza en la rendición de cuentas en tiempo real y basada en datos. Las nuevas iniciativas incluyen plataformas digitales de nueva generación para la supervisión del rendimiento en tiempo real. No publicamos solo los éxitos, sino también las enseñanzas extraídas de los fracasos, una cultura de mejora continua.
+
+# ****************************************************************************************************
+
+partnerships-page:
+  title: >
+    Alianzas para el progreso
+  ecosystem:
+    title: >
+      Ecosistema  <span style="font-weight: 350;">de <br> alianzas </span>
+    infographic: "partnerships-ecosystem-sp.png"
+    copy: 
+      column1:
+        para1: Las relaciones de larga data del PNUD con sus <span class="text-extrabold">asociados gubernamentales</span> siguen siendo fundamentales en la obtención de resultados. Los Gobiernos proporcionan los recursos que el PNUD necesita para ejecutar sus programas de los países, coordinados con los equipos de las Naciones Unidas en los países y adaptados al contexto local. 
+        para2: El <span class="text-extrabold">sector privado</span> es un asociado indispensable para lograr la transformación sistémica. El PNUD colabora con el sector privado a fin de ajustar la innovación empresarial, el capital y los conocimientos especializados a las prioridades nacionales de desarrollo. 
+        para3: Amplificamos nuestra incidencia aprovechando la financiación combinada y los bonos vinculados a la sostenibilidad, al tiempo que nos asociamos con las <span class="text-extrabold"> instituciones financieras internacionales</span> (IFI) para proporcionar asistencia técnica y financiación complementarias.
+
+      column2:
+        para1: Ampliamos los recursos, los conocimientos especializados y la experiencia de los que disponen nuestros asociados mediante el fomento de la cooperación Sur-Sur y triangular, así como la ayuda a los Gobiernos para aprovechar los diversos recursos de otros <span class="text-extrabold">organismos de las Naciones Unidas</span>.
+        para2: Continuamos diversificando nuestras alianzas con organizaciones filantrópicas, el sector privado, las IFI, el mundo académico, la sociedad civil y las organizaciones no gubernamentales (ONG), de modo que contribuimos a <span class="text-extrabold"> implicar a una mayor variedad de partes interesadas en el desarrollo</span>. 
+  unds:
+    heading: El sistema de las Naciones Unidas para el desarrollo 
+    copy:
+      para1: >
+        La revisión cuadrienal general de la política relativa a las actividades operacionales del sistema de las Naciones Unidas para el desarrollo, llevada a cabo en 2024, pone de relieve la necesidad de coherencia, eficiencia, eficacia y rendición de cuentas. El PNUD aprovecha sus conocimientos técnicos, sus redes y su presencia mundial para contribuir a estos esfuerzos colectivos.
+      para2: >
+        Bajo el liderazgo de los países, el PNUD alinea sus programas para los países con las prioridades nacionales a partir de los resultados de dichos programas obtenidos de los Marcos de Cooperación de las Naciones Unidas para el Desarrollo Sostenible. En colaboración con los equipos en los países, dirigidos por los coordinadores residentes, ejecutamos programas integrados y con base empírica que abordan cuestiones de desarrollo complejas, aprovechando nuestra experiencia en previsión y pensamiento sistémico. 
+      para3: >
+        El PNUD sigue siendo el mayor participante en los fondos mancomunados y programas conjuntos de las Naciones Unidas, con más de 240 millones de dólares en programación conjunta. La complementariedad es crucial. Cultivamos sinergias interinstitucionales en el diseño de políticas, la ejecución de programas y los mecanismos de elaboración de informes para evitar la duplicación y la fragmentación de esfuerzos. 
+      para4: >
+        La incidencia del sistema de las Naciones Unidas para el desarrollo se multiplica gracias a los activos alojados por el PNUD, que proporcionan servicios y conocimientos especializados al sistema:
+    
+    unv:
+        logo: "unv-sp.png"
+        alt: "UN Volunteers logo"
+        title: "Más personas:"
+        copy: en 2024, 14.631 <span class="text-extrabold">Voluntarios de las Naciones Unidas</span> (VNU), de 181 nacionalidades, prestaron servicio a 59 entidades de las Naciones Unidas en 169 países.
+    
+    uncdf:
+        logo: "uncdf.png"
+        alt: "UNCDF logo"
+        title: "Más inversión:"
+        copy: al integrar las capacidades e instrumentos financieros del <span class="text-extrabold">Fondo de las Naciones Unidas para el Desarrollo de la Capitalización</span> (FNUDC) en su programación, el PNUD fomenta el crecimiento sostenible, la creación de empleo y las oportunidades económicas para todas las personas. 
+    
+    mptf:
+        logo: "mptf.png"
+        alt: "Multi-Partner Trust Fund Office logo"
+        title: "Más trabajo conjunto:"
+        copy: la <span class="text-extrabold">Oficina de los Fondos Fiduciarios de Asociados Múltiples</span> (OFFAM) crea un fondo mancomunado, con una dotación superior a 1.000 millones de dólares al año, para obtener resultados más sólidos a gran escala.
+    
+    unossc:
+        logo: "unossc.png"
+        alt: "UNOSSC logo"
+        title: "Más cooperación:"
+        copy: la <span class="text-extrabold">Oficina de las Naciones Unidas para la Cooperación Sur-Sur</span> (UNOSSC) promueve un alto nivel de desarrollo humano mediante el desarrollo y la transferencia de tecnología, la cooperación financiera, el aprendizaje entre iguales y la creación de capacidades, especialmente en innovación digital y de gobernanza.
+
+  
+# ****************************************************************************************************
+
+popups: 
+  prosperity:
+    heading: Prosperity for all
+    copy:
+      para1: La pobreza extrema sigue siendo una realidad cotidiana para el 9 % de la población mundial. 
+      para2: >
+        El PNUD se centra en la creación de prosperidad para todas las personas, sin abandonar nuestro firme empeño por los programas contra la pobreza y la desigualdad y nuestro compromiso de no dejar a nadie atrás. Este cambio supone una adaptación a la evolución de las aspiraciones de nuestros asociados, que van más allá del objetivo de un umbral mínimo de pobreza para construir economías y sociedades dinámicas y resilientes en las que todas las personas puedan prosperar. 
+      overline-icons: >
+        El PNUD contribuye a reducir la pobreza y a crear prosperidad mediante:
+      icon1: la ampliación de las oportunidades de las personas y las empresas para acceder a activos productivos, empleos y medios de vida dignos, así como para desarrollar el capital humano
+      icon2:  la mejora de la protección frente a las perturbaciones, las crisis y la vulnerabilidad multidimensional por medio de la reducción de riesgos, acceso a servicios esenciales y protección social
+      para3: La prosperidad para todas las personas debe incluir la mejora de las oportunidades económicas de las mujeres y la superación de los obstáculos a su plena participación económica, incluido su acceso a los derechos de propiedad, los servicios financieros y la igualdad salarial. 
+      para4: Los países siguen diferentes vías de desarrollo, por lo que el PNUD adapta su trabajo a los contextos y grupos de población de cada país. El progreso hacia la prosperidad se mide utilizando parámetros multidimensionales que evalúan tanto las oportunidades económicas como la expansión de las capacidades de las personas, incluidos los índices de desarrollo humano ajustados por la desigualdad y por el género. 
+
+  governance:
+    heading: Gobernanza eficaz
+    copy:
+      para1: Una gobernanza responsable, inclusiva y eficaz es fundamental para el desarrollo humano. El PNUD promueve una gobernanza responsable, centrada en las personas y basada en los derechos, en consonancia con los principios intergubernamentales de gobernanza eficaz para el desarrollo sostenible. 
+      para2: >
+        La capacidad del PNUD para integrar la gobernanza en todo su trabajo, como dimensión central del cambio sistémico, nos confiere una ventaja a la hora de abordar los desafíos interconectados que plantea el desarrollo sostenible.
+      para3: Gracias al pensamiento sistémico, la innovación y la prospectiva estratégica, el PNUD ayuda a los países a desarrollar una gobernanza y formulación de políticas más ágiles y anticipatorias, así como a proporcionar oportunidades económicas y servicios que respondan a las necesidades, entre ellos, una infraestructura pública digital y un mayor acceso a los servicios a través de la digitalización y la IA.
+      para4: La gobernanza democrática, los derechos humanos y el estado de derecho son fundamentales para que las sociedades y las economías prosperen, además de contribuir a mantener la paz y la seguridad humana. Se observa un aumento de la demanda de apoyo del PNUD en los diálogos políticos y los procesos electorales, incluso en contextos de transición y crisis. Las alianzas con gobiernos locales y nacionales, parlamentos y la sociedad civil ayudan a construir una esfera pública abierta en la que todas las personas puedan participar.
+      para5: En situaciones de conflicto y violencia, el PNUD fomenta la cohesión social y refuerza la seguridad comunitaria y la consolidación de la paz local mediante el diálogo, la mediación interna y los enfoques basados en zonas.
+    
+  crisis:
+    heading: Resiliencia ante las crisis
+    copy:
+      para1: Aunque las crisis son muy diversas, la amenaza que suponen para el desarrollo humano y la seguridad de las personas es significativa y va en aumento. Desde el primer día de una crisis, el PNUD se centra en proteger los logros en materia de desarrollo y reducir el riesgo, sentando las bases para la recuperación y para dejar de depender de la ayuda humanitaria.
+      para2: >
+        Actúa como “constructor de puentes” entre los sistemas humanitario, de desarrollo y de consolidación de la paz, ayudando a los equipos de las Naciones Unidas y humanitarios en los países, dirigidos por los coordinadores residentes y humanitarios, a mantener la continuidad en todas las fases de la respuesta y a avanzar en el desarrollo a largo plazo.
+     
+      para3: El PNUD desempeña un papel clave en la estabilización y la recuperación temprana, que incluye la ampliación de las oportunidades económicas de las mujeres y su influencia en la toma de decisiones. Asimismo, el PNUD fomenta la participación de la juventud en la gobernanza democrática y amplifica sus voces en los procesos de paz.
+
+      para4: El compromiso del PNUD de “permanecer y cumplir” en los entornos más difíciles permite mantener una implicación constante en todas las fases de una crisis. Una sólida capacidad operacional y una presencia mundial nos permiten prestar servicios a escala, incluso en zonas remotas y de alto riesgo. Las relaciones de larga data y las redes locales facilitan que operemos en entornos afectados por conflictos o políticamente complejos donde otros agentes no pueden permanecer.
+  
+  planet:
+    heading: Planeta sano
+    copy:
+      para1: El desarrollo sostenible no es posible sin un planeta sano.
+      para2: >
+        El PNUD es uno de los principales conectores en el nexo entre planeta y desarrollo, aporta soluciones integradas a los desafíos que plantean el cambio climático, las catástrofes, la pérdida de biodiversidad, la energía, los productos químicos y los desechos, al tiempo que promueve las prioridades de desarrollo en materia de gobernanza, prosperidad y resiliencia. 
+      para3: El PNUD pretende traducir los compromisos globales, contraídos en virtud del Acuerdo de París, el Marco Mundial de Biodiversidad de Kunming-Montreal, el Protocolo de Montreal y otros acuerdos internacionales, en acciones eficaces a nivel local. Ayudamos a los países a evaluar sus opciones para lograr transiciones justas y sostenibles, así como a aprovechar nuevas ideas encaminadas a abordar el reto de la financiación. 
+      overline-icons: >
+       El PNUD trabaja con las siguientes entidades:
+      icon1: los países, a fin de mejorar la coherencia de las políticas en torno a sus promesas nacionales y cumplir estos compromisos de forma que respondan al contexto local
+      icon2: los Gobiernos, la sociedad civil, las instituciones financieras y el sector privado, con el objetivo de invertir conjuntamente en acciones que promuevan la prosperidad y, al mismo tiempo, protejan el planeta
+      para4: A través de la iniciativa Climate Promise 2025, el PNUD ha creado una plataforma para involucrar al sistema de las Naciones Unidas en el apoyo a los objetivos y estrategias climáticas de los países.
+
+
+  digital:
+    heading: Transformación digital y de la IA
+    copy:
+      para1: >
+         Los rápidos avances digitales y el auge de la IA están transformando las economías, la gobernanza y las sociedades. Sin embargo, las oportunidades vienen acompañadas de riesgos: amenazas para la ciberseguridad, la privacidad de los datos, el sesgo algorítmico y el creciente impacto ambiental de las tecnologías digitales. Una de cada tres personas en el mundo sigue sin tener conexión a Internet. Esto hace más urgente el apoyo del PNUD a los países que trabajan por una conectividad significativa en un futuro digital abierto, libre y seguro. 
+      para2: >
+       Los vastos conocimientos especializados del PNUD y su enfoque orientado a los países nos permiten apoyar la transformación digital holística de un modo integrado y sistémico. 
+      para3: >
+        El PNUD ha trabajado con más de 120 países para aprovechar las tecnologías digitales en respaldo de su desarrollo. Ello incluye ayudar a instituciones y particulares a desarrollar las capacidades necesarias para acceder a la tecnología y los datos digitales y utilizarlos, así como apoyar a los países en la implantación de una infraestructura pública digital sólida, como los sistemas digitales de pago e identificación seguros.
+      para4: >
+        Trabajamos con nuestros asociados en políticas, normativas y planes de desarrollo que garanticen un uso seguro y responsable de las tecnologías digitales y emergentes. También estamos intensificando nuestros esfuerzos por hacer frente a los perjuicios digitales, incluida la desinformación y la polarización en línea. Además, promovemos soluciones sostenibles para suministrar electricidad a la infraestructura digital con un menor costo ambiental.
+        
+
+  gender:
+    heading: Igualdad de género
+    copy:
+      para1:  >
+        La realización de los derechos de las mujeres y la igualdad de oportunidades forman parte integrante del desarrollo sostenible y pueden acelerar los resultados en todos los ámbitos. Como complemento de la labor de ONU-Mujeres, el PNUD diseña sus intervenciones de manera que tengan una repercusión deliberada en la igualdad de género, considerada por los asociados como una de las áreas en las que su trabajo resulta más eficaz. El PNUD cumple o supera el 94 % de los objetivos del Plan de Acción para Todo el Sistema de las Naciones Unidas.
+      para2: >
+        A través de sus relaciones de confianza con los Gobiernos, el PNUD está en disposición de ayudar a promover el empoderamiento de las mujeres en todas las dimensiones del desarrollo sostenible. 
+     
+      icon1: El PNUD acelera el liderazgo y la participación igualitaria de las mujeres en las instituciones públicas, los cargos electos, el poder judicial y el sector privado. 
+      icon2: El PNUD trabaja para mejorar las oportunidades económicas de las mujeres a través de la iniciativa empresarial, la creación de empleo y el fomento de la capacidad, así como para reconocer, reducir y redistribuir el trabajo de cuidados no remunerado que realizan las mujeres. 
+      icon3: En contextos de crisis, el PNUD refleja los intereses y la voz de las mujeres y las niñas. 
+     
+      para3: >
+        Crece la demanda de ayuda para impulsar un cambio sistémico que derribe las barreras que limitan las oportunidades de las mujeres. Trabajamos con los Gobiernos nacionales, compartiendo los enfoques que han tenido éxito en los distintos países y regiones, y con los gobiernos locales, que están más cerca de los ciudadanos y pueden convertir las políticas nacionales en beneficios reales para mujeres y hombres. 
+
+  finance:
+    heading: Financiación sostenible
+    copy:
+      para1:  >
+        El déficit de financiación para el desarrollo no es solo un déficit financiero; refleja la falta de adecuación de los flujos de capital a las prioridades del desarrollo sostenible. A fin de corregir esta situación es necesario pasar de la ampliación de la asistencia para el desarrollo a la transformación de sus sistemas de financiación. El valor diferencial del PNUD reside en las siguientes acciones:
+      icon1: tender puentes entre los sistemas de financiación pública y privada
+      icon2: reunir a los agentes financieros y del desarrollo para alinear la inversión con el desarrollo sostenible a nivel nacional
+      para2: >
+        El PNUD trabaja en las intersecciones de la financiación, la gobernanza, el clima, la naturaleza y el desarrollo con el objetivo de acelerar este último y ampliar las oportunidades de inversión en las economías emergentes y en desarrollo.
+      para3: >
+       Colaboramos con los países para reforzar sus marcos reguladores, institucionales y normativos, de forma que mejore la estabilidad de la gobernanza financiera y la transparencia de la asignación de capitales. Los marcos nacionales de financiación integrados en 86 países ya han permitido movilizar 16.000 millones de dólares de los Estados Unidos en nueva financiación y alinear más de 32.000 millones de dólares con el desarrollo sostenible.   
+      para4: >
+        Trabajamos con las instituciones de financiación del desarrollo y con el sector privado para desarrollar a mayor escala determinados instrumentos de financiación, como la financiación mixta, los bonos verdes, los préstamos vinculados a la sostenibilidad y las inversiones respaldadas por seguros. Ayudamos a los Gobiernos a movilizar recursos nacionales a través de impuestos progresivos, presupuestos alineados con los Objetivos de Desarrollo Sostenible (ODS) y políticas fiscales basadas en resultados.
+
+
+# ****************************************************************************************************
+# ****************************************************************************************************
+# ****************************************************************************************************
+
+
+content:
+  homepage: 
+    countries:
+      overline: Nuestra presencia
+      headline: Mundial, Regional y Local
+      bodytext: El PNUD combina su alcance global con un impacto local gracias a su presencia en 170 países y territorios en todo el mundo.
+    
+    world-offices:
+  
+      hq:
+        title: "Sede"
+        offices:
+          - "Sede de Nueva York"
+
+      centres:
+        title: "Centros de Políticas y Programas"
+        offices:
+          - "Centro de Desarrollo Sostenible de Roma"
+          - "Centro Internacional de Estambul para el Sector Privado en el Desarrollo"
+          - "Centro de Políticas de Seúl"
+          - "Centro de Política Global para la Gobernanza"
+          - "Centro Mundial de Singapur de Tecnología, Innovación y Desarrollo Sostenible"
+          - "Doha (Oficina de Alianzas y Asesoramiento Técnico)"
+
+      representation_offices:
+        title: "Oficinas de Representación"
+        offices:
+          - "Oficina de Representación en Bruselas (cubre la Unión Europea)"
+          - "Oficina de Representación en Ginebra"
+          - "Oficina de Representación en Alemania"
+          - "Oficina de Representación para los Países Nórdicos (incluye Dinamarca, Finlandia, Islandia, Noruega y Suecia)"
+          - "Oficina de Representación en Tokio"
+          - "Oficina de Representación en Washington"
+      
+
+      africa:
+        title: "África"
+        bold: "Centro Regional de Servicios de Addis Abeba"
+        offices:
+          - "Angola"
+          - "Benin"
+          - "Botswana"
+          - "Burkina Faso"
+          - "Burundi"
+          - "Cabo Verde"
+          - "Camerún"
+          - "Chad"
+          - "Comoras"
+          - "Côte d’Ivoire"
+          - "Eritrea"
+          - "Eswatini"
+          - "Etiopía"
+          - "Gabón"
+          - "Gambia"
+          - "Ghana"
+          - "Guinea"
+          - "Guinea-Bissau"
+          - "Guinea Ecuatorial"
+          - "Kenya"
+          - "Lesotho"
+          - "Liberia"
+          - "Madagascar"
+          - "Malawi"
+          - "Malí"
+          - "Mauritania"
+          - "Mauricio y Seychelles"
+          - "Mozambique"
+          - "Namibia"
+          - "Níger"
+          - "Nigeria"
+          - "República Centroafricana"
+          - "República Democrática del Congo"
+          - "República Democrática del Congo"
+          - "República Unida de Tanzanía"
+          - "Rwanda"
+          - "Santo Tomé y Príncipe"
+          - "Senegal"
+          - "Sierra Leona"
+          - "Sudáfrica"
+          - "Sudán del Sur"
+          - "Togo"
+          - "Uganda"
+          - "Zambia"
+          - "Zimbabwe"
+
+      arab-states:
+        title: "Estados Árabes"
+        bold: "Centro Regional de Ammán"
+        offices:
+          - "Arabia Saudita"
+          - "Argelia"
+          - "Bahrein"
+          - "Djibouti"
+          - "Egipto"
+          - "Iraq"
+          - "Jordania"
+          - "Kuwait"
+          - "Líbano"
+          - "Libia"
+          - "Marruecos"
+          - "Programa de Asistencia al Pueblo Palestino"
+          - "República Árabe Siria"
+          - "Somalia"
+          - "Sudán"
+          - "Túnez"
+          - "Yemen"
+
+     
+      asia-pacific:
+        title: "Asia y el Pacífico "
+        bold: "Centro Regional de Bangkok"
+        offices:
+          - "Afganistán"
+          - "Bangladesh"
+          - "Bhután"
+          - "Camboya"
+          - "China"
+          - "Filipinas"
+          - "India"
+          - "Indonesia"
+          - "Irán (República Islámica del)"
+          - "Malasia (incluye Brunei Darussalam, Malasia y Singapur)"
+          - "Maldivas"
+          - "Mongolia"
+          - "Myanmar"
+          - "Nepal"
+          - "Oficina para el Pacífico en Fiji (incluye los Estados Federados de Micronesia, Fiji, las Islas Marshall, las Islas Salomón, Kiribati, Nauru, Palau, Tonga, Tuvalu y Vanuatu)"
+          - "Pakistán"
+          - "Papua Nueva Guinea"
+          - "República Democrática Popular Lao"
+          - "República Popular Democrática de Corea"
+          - "Samoa (incluye las Islas Cook, Niue, Samoa y Tokelau)"
+          - "Sri Lanka"
+          - "Tailandia"
+          - "Timor-Leste"
+          - "Viet Nam"
+
+      europe-central-asia:
+        title: "Europa y Asia Central"
+        bold: "Centro Regional de Estambul"
+        offices:
+          - "Albania"
+          - "Armenia"
+          - "Azerbaiyán"
+          - "Belarús"
+          - "Bosnia y Herzegovina"
+          - "Chipre"
+          - "Georgia"
+          - "Kazajstán"
+          - "Kosovo (en virtud de la Resolución 1244 [1999] del Consejo de Seguridad de las Naciones Unidas)"
+          - "Kirguistán"
+          - "Macedonia del Norte"
+          - "Moldova"
+          - "Montenegro"
+          - "Serbia"
+          - "Tayikistán"
+          - "Türkiye"
+          - "Turkmenistán"
+          - "Ucrania"
+          - "Uzbekistán"
+
+      latin-america:
+        title: "América Latina y el Caribe"
+        bold: "Centro Regional de Panamá"
+        offices:
+          - "Barbados y Caribe Oriental (incluye Anguila, Antigua y Barbuda, Barbados, Dominica, Granada, las Islas Vírgenes Británicas, Montserrat, Saint Kitts y Nevis, San Vicente y las Granadinas, y Santa Lucía)"
+          - "Belice"
+          - "Bolivia"
+          - "Brasil"
+          - "Chile"
+          - "Colombia"
+          - "Costa Rica"
+          - "Cuba"
+          - "Ecuador"
+          - "El Salvador"
+          - "Guatemala"
+          - "Guyana"
+          - "Haití"
+          - "Honduras"
+          - "Jamaica (incluye las Bahamas, las Bermudas, las Islas Caimán, las Islas Turcas y Caicos, y Jamaica)"
+          - "México"
+          - "Panamá"
+          - "Paraguay"
+          - "Perú"
+          - "República Dominicana"
+          - "Suriname"
+          - "Trinidad y Tabago (incluye Aruba, Curaçao, Sint Maarten, y Trinidad y Tabago)"
+          - "Uruguay"
+          - "Venezuela"
+      
+     
+    pastReports:
+      text: >
+        Explora cómo la visión y las prioridades del PNUD han evolucionado con cada Plan Estratégico.
+  
+      selectMenu:
+        label: AÑO
+        options: 
+          C: 2022-2025
+          B: 2018-2021
+          A: 2014-2017

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// Uncomment following two sections if you would like to build custom CSS bundle including Design System elements
+// otherwise enable individual css references in the data/ds.yml file
+
+// 1. include basic Design System elements
+// @import 'node_modules/normalize.css/normalize';
+// @import 'design-system';
+
+// 2. local variables and settings
+// @import 'settings';
+// @import 'fonts';
+
+// custom style
+@use 'style';
+
