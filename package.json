@@ -1,0 +1,60 @@
+{
+  "name": "@undp/design-system-starter-template",
+  "version": "1.4.5",
+  "description": "Boilerplate starting project for sites using UNDP Design System",
+  "main": "gulpfile.mjs",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --production"
+  },
+  "author": "Jura Khrapunov <jura.khrapunov@undp.org>",
+  "license": "MIT",
+  "dependencies": {
+    "@undp/design-system": "^1.4.0",
+    "glightbox": "^3.2.0",
+    "gsap": "^3.12.5",
+    "jquery": "^4.0.0-beta.2",
+    "normalize.css": "^8.0.1",
+    "swiper": "^11.1.15"
+  },
+  "devDependencies": {
+    "@sequencemedia/gulp-postcss": "^1.0.250",
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.10.15",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^3.0.3",
+    "cssnano": "^7.0.6",
+    "cssnano-preset-default": "^7.0.6",
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-swc": "^2.2.0",
+    "panini": "latest",
+    "rimraf": "^5.0.1",
+    "sass": "^1.56.1",
+    "sass-embedded": "^1.81.0",
+    "swc-loader": "^0.2.6",
+    "terser-webpack-plugin": "^5.3.11",
+    "uncss": "^0.17.3",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undp/design-system-starter-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/undp/design-system-starter-template/issues",
+    "email": "jura.khrapunov@undp.org"
+  },
+  "private": true,
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}
