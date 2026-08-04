@@ -59,3 +59,12 @@ $(document).ready(function() {
    accordion(); 
    tabs();
 });
+
+import chartManager from './charts/chartManager';
+
+// Initialize any charts declared via data-chart-type attributes
+document.addEventListener('DOMContentLoaded', function () {
+  chartManager.initCharts(document);
+});
+
+expandToSize('.pagehero-full');

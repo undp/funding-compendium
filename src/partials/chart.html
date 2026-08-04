@@ -1,0 +1,19 @@
+<!-- Reusable chart partial
+     Usage: include this partial and set data-chart-type and optional data-* attributes
+     Example attributes:
+       data-chart-type="resources-by-funding-type"
+       data-years='["2025","2024"]'
+       data-usd='{"Other resources":[4598,4344],"Regular resources":[442,581]}'
+       data-other="91,88" data-regular="9,12"
+-->
+<div class="chart-wrapper">
+  <div
+    class="echarts"
+    data-chart-type="resources-by-funding-type"
+    data-years='["2025","2024"]'
+    data-usd='{"Other resources":[4598,4344],"Regular resources":[442,581]}'
+    data-other="91,88"
+    data-regular="9,12"
+    style="width:100%;height:400px;"
+  ></div>
+</div>

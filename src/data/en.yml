@@ -22,10 +22,10 @@ breadcrumb:
     path: futuresmart
 
 menu:
-  what-do: What we do 
-  how-work: How we work
-  investing: Investing in UNDP
-  looking-ahead: Looking ahead
+  what-do: Funding landscape
+  how-work: Regular resrources
+  investing: Other resources & Partnerships
+
 
 langVersions:
   - name: English
@@ -208,33 +208,50 @@ homepage:
       These <span class="text-extrabold">observations</span> influenced the Plan’s design:
     
     swiper:
-      trust-matters:
-        title: "Trust matters"
-        body: "UNDP is the only UN agency consistently ranked among the top five development partners by leaders we work with. Recognizing the importance of national ownership, UNDP works alongside partners, evolving in step with their development priorities. Partners value UNDP’s reach at all levels and across myriad government agencies, through longstanding relationships built on mutual trust."
+      flexible-foundation:
+        title: "Flexible foundation for impact"
+        body: "Core funding provides UNDP with flexible, predictable resources that enable it to respond rapidly to emerging challenges while maintaining a focus on long-term development goals in 170 countries and territories."
 
-      integrated-approach:
-        title: "Focus on the integrated approach"
-        body: "Partners want expert support where issues intersect, like reducing poverty by increasing job opportunities or promoting women’s rights. This approach works: the midterm review found UNDP impact increased by 3% for every 10% increase in its cross-sectoral approach."
+      reaching-most-in-need:
+        title: "Reaching those most in need"
+        body: >
+          "The lion's share of the core programme budget is channelled through country programmes. In 2022–2025, over 80 percent of these resources (TRAC-1, TRAC-2 and TRAC-3) were allocated to least developed countries, and over 70 percent to low-income countries, prioritizing the "last mile"—the poorest and most excluded populations."
 
-      systems-not-sectors:
-        title: "Look at systems, not sectors"
-        body: "The evaluation recognized UNDP’s systems approach as “the most significant driver of structural transformation” - while noting there is further to go. This is now encapsulated in our portfolio policy and practice, rallying multiple partners and assets around a common mission."
+      multiplier-effect:
+        title: "Multiplier effect"
+        body: "Core funding acts as a catalyst for additional investment. A programme established with core resources as seed funding can subsequently scale up by mobilizing other resources. In 2025, $1 of regular resources mobilized an additional $10 in other resources. In Gaza, core funding enabled UNDP to remove 225,000 tonnes of debris for 1.3 million people."
 
-      implementation-policy-support:
-        title: "High regard for implementation and policy support"
-        body: "Our influence grew over the last decade. 98% of private sector leaders surveyed rated UNDP support for implementation as quite or very helpful. 91% of government leaders said the same."
+      crisis-readiness:
+        title: "Crisis readiness and response"
+        body: "UNDP spends 52 percent of its resources in fragile contexts, investing in all 61 countries defined as fragile by the OECD. Core resources enable early warning analysis, crisis prevention advocacy and immediate responses to conflicts and disasters. In Ukraine, UNDP's core-funded presence supported the assessment of 94,000 km² of potentially mine-contaminated land, including over 36,000 km² of agricultural land, while expanding access to digital public services for 466,101 internally displaced people and strengthening both recovery and resilience."
 
-      core-resources:
-        title: "Long-term impact depends on core resources"
-        body: "Declining core funding makes it hard for UNDP to stay flexible, apply integrated solutions and promote lasting change. Sustainable core funding is crucial for UNDP to achieve meaningful development impact."
+      pioneering-innovation:
+        title: "Pioneering innovative approaches to development"
+        body: "Core funding enables UNDP to push the boundaries on frontier development issues. For example, it supports the Accelerator Labs Network, which has identified over 6,000 grass-roots solutions to development challenges across 115 countries. It also sustains the Human Development Report Office, which spearheads cutting-edge research, promotes new ideas and advocates for practical policy changes."
 
-      risk-awareness:
-        title: "Risk-awareness for resilience"
-        body: "Incorporating risk awareness in all our work has significantly helped UNDP to build resilience. Our ability to stay and deliver in crisis and complex settings helps to sustain development efforts where others might retreat. Our influence among leaders in fragile situations has grown."
+      governance-electoral:
+        title: "Governance and electoral support"
+        body: "From 2022–2025, UNDP supported processes involving 911.3 million registered voters across 78 elections in 51 countries. In the Philippines, for example, core funding enabled UNDP to support the uptake of digital tools to increase transparency in campaign financing and strengthen voter education, reaching 2,260 voters, including youth, women, Indigenous communities and traditional leaders."
 
-      future-skills:
-        title: "Future skills to stay ahead"
-        body: "Over half of UNDP projects now include a digital component. UNDP achieved an exceptional performance rating among 51 UN organizations on digital, data, strategic foresight, innovation and behavioural science. Investments in these areas are building a futures-thinking, learning-oriented culture."
+      digital-transformation:
+        title: "Digital transformation"
+        body: "With core resources, UNDP helps countries harness digital technologies to improve governance, service delivery and inclusion. In 2025, UNDP supported digital transformation in over 130 countries, enabling 49 million people to benefit from digital services and technologies while helping governments strengthen digital public infrastructure and innovative solutions for sustainable development."
+
+      climate-action:
+        title: "Climate action at scale"
+        body: "As the largest UN provider of climate assistance, UNDP helps nations strengthen their environmental commitments, secure vital financing and implement equitable energy transitions. Initially launched with core resources, UNDP's Climate Promise has grown to support 90 percent of developing countries in designing and implementing ambitious Nationally Determined Contributions."
+
+      operational-excellence:
+        title: "Operational excellence"
+        body: "Core funding maintains UNDP's global infrastructure and quality standards, supporting independent oversight functions, including evaluation, ethics and development effectiveness. In 2024, UNDP received its 19th consecutive clean audit from the UN Board of Auditors, having stewarded over $100 billion in total revenue over 20 years while maintaining the highest standards of accountability and transparency."
+
+      efficiency-un-system:
+        title: "Efficiency across the UN system"
+        body: "Core resources also drive greater efficiency and improve coordination across the entire UN system. UNDP is the single largest contributor to the UN Resident Coordinator System. It delivers dependable services to over 70 UN entities and manages 136 UN common premises globally, providing common services at the country level."
+
+      trust-transformation:
+        title: "Trust and transformation"
+        body: "By investing in core funding, partners support a model that promotes national agency, reduces dependency and creates lasting, transformative change."
 
     
 

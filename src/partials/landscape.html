@@ -1,0 +1,642 @@
+<!--************************* Cover Hero *************************  -->
+
+
+<div class="homepage-hero-full" data-undpds-component="expandToSize" data-selector=".homepage-hero-full">
+
+  <div class="overlay-grey">
+    <!--- <img src="{{@root.root}}assets/img/cover.jpg" alt="abstract image" />-->
+
+    <video loop muted playsinline autoplay poster="{{@root.root}}assets/img/cover.jpg">
+      <source src="{{@root.root}}assets/img/cover.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video element
+    </video>
+  </div>
+<div class="grid-x homepage-hero-content">
+  <div class="cell large-7 medium-9 medium-offset-1">
+
+    <!--<
+    nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb white medium-offset-1 inviewport">
+      <ul>
+        <li><a href="#" aria-label="Home">Home</a></li>
+        <li aria-current="Page Title">Funding landscape</li>
+      </ul>
+    </nav>
+    -->
+
+    <h4 class="color-white" tabindex="0" data-viewport="true">
+      UNDP Funding Compendium 2025
+    </h4>
+    <h1 class="color-white" tabindex="0" data-viewport="true">
+      Funding landscape
+    </h1>
+    
+
+    <h4 class="color-white" tabindex="0" data-viewport="true"></h4>
+    <a class="button" role="" style="visibility: hidden;"></a>
+
+  </div>
+</div>
+</div>
+
+<!---
+
+<div
+  class="pagehero-full"
+  data-undpds-component="expandToSize"
+  data-selector=".pagehero-full"
+  data-initialized="expandToSize"
+>
+  <div class="overlay-grey">
+    <img
+      class="mobile-position-center"
+      alt="{{@root.root}}assets/img/cover.jpg"
+      src="{{@root.root}}assets/img/cover.jpg"
+    />
+  </div>
+  <nav
+    aria-label="breadcrumbs"
+    data-viewport="true"
+    class="breadcrumb white medium-offset-1 inviewport"
+  >
+    <ul>
+      <li><a href="#" aria-label="Home">Home</a></li>
+      <li><a href="#" aria-label="Second-level">Second-level</a></li>
+      <li><a href="#" aria-label="Third-level">Third-level</a></li>
+      <li aria-current="Page Title">Page Title</li>
+    </ul>
+  </nav>
+  <div class="pagehero-content medium-offset-1">
+    <div class="content-box color-white">
+      <h2 class="inviewport" tabindex="0" data-viewport="true">
+        The sdgs in action
+      </h2>
+      <p class="subtitle">
+        Subtitle or excerpt of the story goes below and it is two lines
+      </p>
+    </div>
+  </div>
+</div>-->
+
+<!--************************* Foreword  *************************  -->
+
+<section class="section foreword">
+
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc1">
+
+    <div class="grid-x grid-padding-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-7 ">
+        <h6>{{homepage.foreword.overline}}</h6>
+
+        <h2>{{homepage.foreword.headline}}</h2>
+
+        <h3>{{homepage.foreword.subhead}}</h3><br>
+
+        <div id="foreword">
+          {{{homepage.foreword.copy-part1}}}
+
+          <!-- Additional content initially hidden -->
+          <div id="additionalText_foreword" style="display: none;">
+            {{{homepage.foreword.copy-part2}}}
+          </div>
+
+          <!-- "Read more" link for more content -->
+          <span class="text-extrabold">
+            <a id="readMore_foreword" href="#">{{buttons.read-more}}</a>
+          </span>
+        </div>
+      </div>
+      <div class="small-12 medium-8 large-4  medium-text-center">
+
+
+
+        <br>
+        <img alt="Achim Steiner" src="{{@root.root}}assets/img/photo-susan.png" style="margin-bottom: 7px; width: 70%;">
+        <small style="margin-top: 0;">{{{content.homepage.foreword.photo-credit}}}</small>
+        <!--<br><br>
+                        <img alt="Achim Steiner" src="{{@root.root}}assets/img/signature.png" style="margin-bottom: 7px; width: 60%;">-->
+        <br>
+        <span style="color: black;">
+
+          <strong>{{{homepage.foreword.name}}}</strong><br>
+          <small>{{{homepage.foreword.position-title}}}</small>
+
+
+        </span>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!--************************* Executive summary  *************************  -->
+
+<section class="section">
+
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
+
+    <div class="grid-x grid-padding-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-12 ">
+
+        <h2>{{homepage.exec-summary.headline}}</h2>
+
+        <div>
+          {{{homepage.exec-summary.copy}}}<br>
+        </div>
+
+        <div class="tabs inviewport" data-viewport="true" data-undpds-component="tabs" data-tabs-initialized="true"
+          data-initialized="tabs">
+          <ul data-deep-link="true" data-tabs="true" id="tablist_1" role="tablist">
+
+            <li class="tabs-title is-active" role="tab" aria-selected="true" aria-controls="tab-1" id="tablist_1-tab-1"
+              tabindex="-1">
+              <a href="#tab-1">total annual contributions<sup>1</sup> to UNDP</a>
+            </li>
+
+            <li class="tabs-title" role="tab" aria-selected="false" aria-controls="tab-2" id="tablist_1-tab-2"
+              tabindex="0">
+              <a href="#tab-2">regular resources</a>
+            </li>
+
+            <li class="tabs-title" role="tab" aria-selected="false" aria-controls="tab-3" id="tablist_1-tab-3"
+              tabindex="1">
+              <a href="#tab-3">other resources</a>
+            </li>
+
+          </ul>
+
+          <div class="tabs-content" data-tabs-content="tablist_1">
+            <div id="tab-1" role="tabpanel" class="tabs-panel is-active" aria-labelledby="tablist_1-tab-1"
+              aria-hidden="false" hidden="">
+              <div class="grid-x grid-margin-x">
+                <div class="cell medium-12 large-12">
+                  <p style="background-color: aliceblue; padding: 5%; font-size: 1.2em; color: darkblue;">
+                    Annual contributions increased to $5 billion in 2025, up by 2 percent from $4.9 billion in 2024.
+                    <br>Of this total, $1.8 billion (36 percent) was from donor country governments;
+                    <br>$1.6 billion (32 percent) was from multilateral partners
+                    <br>and $1.6 billion (32 percent) was from programme country governments.
+
+                    <br>
+                  <p>
+
+                    <small style="color: grey;">
+                      <sup>1</sup>
+                      In 2019, UNDP refined its accounting policy on IPSAS 23 (non-exchange) revenues. Under this
+                      policy, UNDP records the full value of funding agreements when they are signed, even when cash has
+                      not been received for the majority of contribution agreements. Any uncollected cash associated
+                      with funding agreements is held as a receivable. Under UNDP financial regulations and rules, UNDP
+                      is permitted to spend only up to the amount of cash received. In this document, where appliable,
+                      “annual contributions” are therefore aligned with past revenue recognition policies for
+                      contributions (i.e., cash received in a reporting year, plus receivables due in a reporting year).
+
+                  </p> </small>
+
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="tab-2" role="tabpanel" class="tabs-panel" aria-labelledby="tablist_1-tab-2" aria-hidden="true">
+              <div class="grid-x grid-margin-x">
+
+                <div class="cell medium-12 large-12">
+                  <p style="background-color: mintcream; padding: 5%; font-size: 1.2em; color: forestgreen;">
+                    Annual contributions to regular resources decreased to $442 million, down by 24 percent from $581
+                    million in 2024.
+                    <br>Their share of total annual contributions decreased to 9 percent from 12 percent in 2024 and
+                    remains far below the Funding Compact target of 30 percent.
+                    <br>Multi-year commitments amounted to $165 million, or 37 percent of regular resources
+                    contributions, down from 40 percent in 2024.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="tab-3" role="tabpanel" class="tabs-panel" aria-labelledby="tablist_1-tab-3" aria-hidden="true"
+              hidden="">
+              <div class="grid-x grid-margin-x">
+
+                <div class="cell medium-12 large-12">
+                  <p style="background-color: papayawhip; padding: 5%; font-size: 1.2em; color: orangered;">
+                    Annual contributions to other resources increased to $4.6 billion, up by 6 percent from $4.3 billion
+                    in 2024.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!--************************* Commitment to transparency and accountability  *************************  -->
+
+<section class="section">
+
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
+
+    <div class="grid-x grid-padding-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-12">
+
+        <h2>{{homepage.transparency.headline}}</h2>
+        <br>
+
+        <h5 style="color: #0468B1;">A long-standing commitment to transparency</h5>
+        <p>
+          As a member of the International Aid Transparency Initiative (IATI) since its creation in 2008,
+          UNDP has led outreach efforts with partner countries and UN agencies to champion the aid transparency
+          standard and make it relevant for national development planning, public financial management and mutual
+          accountability of aid, development and humanitarian funding. UNDP ranked <strong>sixth overall</strong> in the
+          <a href="https://www.publishwhatyoufund.org/the-index/2024/" target="_blank">2024 Aid Transparency Index</a>
+          and was the <strong>second most transparent UN agency</strong>.
+        </p>
+
+        <p>UNDP’s <a href="https://open.undp.org/" target="_blank">Transparency Portal</a> allows open, comprehensive
+          public access to data on over 4,000 UNDP
+          projects, with links to profile pages for every donor. The portal also shows UNDP’s contribution to
+          the SDGs and offers an online training platform on the IATI Standard.</p>
+
+        <br><br>
+
+      </div>
+
+
+
+      <div class="small-12 medium-6 large-5 ">
+        <h5 style="color: #0468B1;">Promoting transparency across the UN system</h5>
+        <p>
+          UNDP actively participated in defining and implementing a set of
+          <a href="https://unsdg.un.org/sites/default/files/2022-04/UN_DataStandards_Digital_March2022.pdf"
+            target="_blank">
+            UN data standards
+          </a>
+          for system-wide financial reporting.
+        </p>
+      </div>
+
+      <div class="small-12 medium-6 large-6">
+        <h5 style="color: #0468B1;">Audit reports</h5>
+        <p>
+          UNDP has been
+          <a href="https://www.undp.org/content/undp/en/home/accountability/audit/disclosure-of-internal-audit-reports.html"
+            target="_blank">
+            publishing audit reports
+          </a> issued by the Office of Audit and Investigations since 2012,
+          and has obtained its 19th consecutive unqualified (clean) audit from the UN Board of Auditors.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!--************************* Resources by funding type  *************************  -->
+
+<section class="section" style="background-color: aliceblue;">
+
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
+
+    <div class="grid-x grid-padding-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-12">
+
+        <h2>Resources by funding type</h2>
+        <h4>Regular and other resources, 2025</h4>
+      </div>
+
+
+
+    </div>
+
+    <div class="grid-x grid-padding-x align-justify align-center align-self-middle">
+
+      <div class="cell small-12 medium-12 large-4">
+        <div>
+          <br><br><br>
+          <p>
+            <strong>Annual contributions increased to $5 billion in 2025,</strong>
+            up by 2 percent from $4.9 billion in 2024.
+          </p>
+          <p>
+            <strong style="color: #4A90C2;">Annual contributions to regular resources decreased to $442 million,</strong>
+            down by 24 percent from $581 million in 2024.
+          </p>
+          <p>
+            <strong style="color: #6FB544;">Annual contributions to other resources increased to $4.6 billion, </strong>
+            up by 6 percent from $4.3 billion in 2024.
+          </p>
+        </div>
+      </div>
+
+      <div class="cell small-12 medium-12 large-7">
+        <div class="echarts" data-chart-type="resources-by-funding-type" data-years='["2025","2024"]'
+          data-usd='{"Other resources":[4598,4344],"Regular resources":[442,581]}' data-other="91,88"
+          data-regular="9,12" style="width:100%;height: 400px;">
+        </div>
+      </div>
+
+
+    
+
+
+    </div>
+
+
+
+
+
+
+    <div class="cell small-12 medium-12 large-12">
+      <br><br>
+      <p>Regular resources are critical to UNDP's ability to prioritize countries' needs, respond swiftly in crises
+        and maintain
+        high standards of accountability and transparency. They also allow UNDP to sustain country presence and
+        upstream policy
+        expertise that other types of funding cannot support. Regular resources also carry strong catalytic value,
+        mobilizing additional
+        resources for development. Insufficient regular resources would therefore severely compromise UNDP's unique
+        ability to respond rapidly
+        to emergencies and address critical needs that other funding sources do not cover. The continued decline in
+        regular resources also has
+        serious implications for UNDP's ability to deliver the intended results of the Strategic Plan, restore and
+        accelerate progress towards
+        the SDGs and maintain robust oversight and accountability systems.</p>
+
+        <br>
+
+      <p><span class="text-extrabold">Trends in regular and other resources, 2022–2025</span><br>
+        UNDP maintained broadly stable annual contributions throughout the period covered by the 2022–2025 Strategic
+        Plan, averaging approximately $4.9 billion per year.
+        Annual contributions reached a peak of $5.0 billion in both 2023 and 2025.</p>
+
+
+      <div class="chart-wrapper">
+        <div class="echarts" data-chart-type="trends-in-resources" data-years='["2022", "2023", "2024", "2025"]'
+          data-regular-resources='[591, 566, 581, 442]' data-other-resources='[4343, 4422, 4344, 4598]'
+          data-totals='[4934, 4988, 4925, 5040]' data-regular-percentages='[12, 11, 12, 9]'
+          data-other-percentages='[88, 89, 88, 91]' style="width:100%;height:500px;"></div>
+      </div>
+
+      
+
+
+
+    </div>
+  </div>
+
+
+
+</section>
+
+
+
+<!--************************* Resources by funding partner  *************************  -->
+
+<section class="section">
+
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
+  
+    <div class="grid-x grid-padding-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-12">
+  
+        <h2>Resources by funding partner</h2>
+        <h4>Regular and other resources, 2025</h4>
+      </div>
+  
+    </div>
+
+
+    <div class="grid-x grid-padding-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-4">
+  
+        <p>
+          <br>
+          <br>
+          <br>
+          UNDP values all types of funding received from its partners—including Member States, 
+          multilateral organizations, non-governmental organizations, private and philanthropic 
+          organizations and financing institutions—as these resources enable it to deliver on its 
+          commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total, 
+          36 percent was contributed by donor country governments, 32 percent by multilateral organizations 
+          and 32 percent by programme country governments.</p>
+      </div>
+      <div class="cell small-12 medium-12 large-7">
+  
+        <div class="chart-wrapper">
+          <div class="echarts" data-chart-type="contribution-by-donor-category" data-donor-governments="1814"
+            data-programme-governments="1588" data-vertical-funds="825" data-pooled-funds="234" data-european-union="313"
+            data-other-multilaterals="266" style="width:100%;height:800px;"></div>
+        </div>
+      </div>
+        <div class="echarts" data-chart-type="contributions-by-donor-resource" style="width:100%;height:1000px;"></div>
+     
+    </div>
+
+  </div>
+
+</section>
+
+
+<!--************************* Resources by funding channel *************************  -->
+
+<section class="section padded" style="background-color: aliceblue;">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12 medium-12 large-12">
+        <h3>The case for regular (“core”) resources in 2025</h3><br><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sipwer What we've learned-->
+  <div
+    class="stats-slider swiper-slider-0 swiper-initialized swiper-horizontal swiper-backface-hidden swiper-pointer-events"
+    data-swiper-slides-view-mobile="1.2" data-swiper-slides-view-tablet="2.2" data-swiper-slides-view-desktop="3.2"
+    data-swiper-offset="0">
+
+    <div class="swiper-wrapper sp-swiper"
+      style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(0px, 0px, 0px); cursor: url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODEiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA4MSAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik02OS41IDFMNzkuNSA5Ljk5NzgxTTc5LjUgOS45OTc4MUw2OS41IDE5TTc5LjUgOS45OTc4MUwwIDkuOTk3ODEiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPg0KPC9zdmc+DQo=&quot;), auto;"
+      id="swiper-wrapper-8e10ba336415d0d9c" aria-live="polite">
+
+
+      <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 11"
+        style="width: 566.562px; margin-right: 20px; padding-left: 17px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.flexible-foundation.title}}</h4>
+            <p>{{homepage.action.swiper.flexible-foundation.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="2 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.reaching-most-in-need.title}}</h4>
+            <p>{{homepage.action.swiper.reaching-most-in-need.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="3 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.multiplier-effect.title}}</h4>
+            <p>{{homepage.action.swiper.multiplier-effect.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="4 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.crisis-readiness.title}}</h4>
+            <p>{{homepage.action.swiper.crisis-readiness.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="5 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.pioneering-innovation.title}}</h4>
+            <p>{{homepage.action.swiper.pioneering-innovation.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="6 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.governance-electoral.title}}</h4>
+            <p>{{homepage.action.swiper.governance-electoral.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="7 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.digital-transformation.title}}</h4>
+            <p>{{homepage.action.swiper.digital-transformation.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="8 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.climate-action.title}}</h4>
+            <p>{{homepage.action.swiper.climate-action.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="9 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.operational-excellence.title}}</h4>
+            <p>{{homepage.action.swiper.operational-excellence.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="10 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.efficiency-un-system.title}}</h4>
+            <p>{{homepage.action.swiper.efficiency-un-system.body}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" role="group" aria-label="11 / 11" style="width: 566.562px; margin-right: 20px;">
+        <div data-undpds-component="stats-cards" data-options='{"selector":".stats-card h2"}' style="display: none;">
+        </div>
+        <div class="stats-card small">
+          <div class="stats-card-content">
+            <h4 tabindex="0" data-viewport="false">{{homepage.action.swiper.trust-transformation.title}}</h4>
+            <p>{{homepage.action.swiper.trust-transformation.body}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br><br>
+    <div class="swiper-scrollbar swiper-scrollbar-horizontal" style="z-index: 1 !important">
+      <div class="swiper-scrollbar-drag" style="width: 370.937px; transform: translate3d(0px, 0px, 0px);"></div>
+    </div>
+
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  </div>
+
+</section>
+
+
+<!-- ********************************************************************************************************************************************************************************  -->
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const statsSwiper = new Swiper('.stats-slider', {
+      slidesPerView: "auto",
+      centeredSlides: false,
+      spaceBetween: 0,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const readMoreLink = document.getElementById("readMore_foreword");
+    const additionalText = document.getElementById("additionalText_foreword");
+
+    if (readMoreLink && additionalText) {
+      readMoreLink.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Toggle the display of the additional text
+        if (additionalText.style.display === "none" || additionalText.style.display === "") {
+          additionalText.style.display = "block";
+          readMoreLink.textContent = "{{buttons.read-less}}"; // Change button text
+        } else {
+          additionalText.style.display = "none";
+          readMoreLink.textContent = "{{buttons.read-more}}"; // Change button text back
+        }
+      });
+    }
+  });
+</script>
