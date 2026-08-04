@@ -7,12 +7,12 @@ gtm: GTM-NDW6MV6
 
 # page metadata
 meta:
-  title: Strategic Plan | UNDP
+  title: Funding Compendium 2025 | UNDP
   image: social-thumbnail.jpg
 
 breadcrumb:
   home:
-    label: Strategic Plan 2026-2029
+    label: Funding Compendium 2025
     path:
   partnerships:
     label: Partnerships for progress
@@ -84,9 +84,12 @@ footer:
 
 header:
   title: >
-    Strategic Plan
+    Funding 
     <br>
-    2026-2029
+    Compendium 
+    <br>
+    2025
+   
 
   language_button_label: "Select Language"
   menu_icon_label: "Toggle Navigation Menu"
@@ -110,10 +113,11 @@ header:
 homepage:
   hero:
     title: >
-      Strategic Plan
-      <br> 2026-2029
+      Funding 
+      Compendium 
+      2025
     subtitle: >
-      Supporting countries’ progress towards human development
+      Lorem ipsum
   intro:
     para1: >
       For six decades, UNDP has shaped the progress of human development, providing integrated support at scale to improve lives for millions of people worldwide.
@@ -121,6 +125,79 @@ homepage:
       UNDP will continue to support countries’ progress towards high human development, while protecting the planet. Four strategic objectives – prosperity for all, effective governance, crisis resilience and healthy planet – define its strategic direction, powered by three accelerators: digital and AI transformation; gender equality; and sustainable finance. All are underpinned by a commitment to human rights and to leaving no one behind.
     para3: >
       The Strategic Plan sharpens the focus on what UNDP does best: supporting systemic change, through integrated development solutions driven by national priorities.
+
+  # ************************* Foreword *************************
+
+  
+  foreword:
+      overline: Foreword
+      headline: Investing in a stable and sustainable future
+      subhead: 
+      copy-part1: >
+        <p>For 60 years, countries and communities have actively sought out the United Nations Development Programme’s (UNDP) support to turn ambition into reality, risk into resilience, build prosperity, protect the planet, and prevent crises.</p>
+        <p>This Funding Compendium provides an overview of the financing UNDP uses to do that work. It also demonstrates the remarkable returns donors achieve on their investments and highlights where additional support can multiply that impact.</p>
+        <p>When we strengthen democratic institutions, we reduce the likelihood of political upheaval. When we support economic opportunities in fragile communities, we reduce the lure of extremism. Our climate disaster preparedness prevents humanitarian catastrophes that could potentially displace millions of people. Restoring basic services after conflict creates conditions for lasting peace rather than renewed violence. In essence, UNDP helps to ‘de-risk’ the world’s political, social, and financial operating environment.</p>
+
+
+      copy-part2: >
+        <p>As part of the United Nations family and with our partners, UNDP continues to deliver measurable results where they matter most. We have enabled over 800 million registered voters to participate in 57 elections across 43 countries since 2022, protecting democracy at a time when it is under siege globally. In the same period, we have supported governments to reach more than 100 million people with essential services like electricity and water, and helped over 19 million displaced people regain livelihoods and access justice. More than half of the UNDP’s total annual budget is allocated to fragile and crisis settings as we stay and deliver in some of the world’s most challenging contexts: Afghanistan, Gaza, Haiti, Myanmar, Sudan, Ukraine, when others cannot.</p>
+
+        <p>It proves how development cooperation works, delivering extraordinary results over the past six decades. Extreme poverty rates are at historic lows, life expectancy is at record highs, and nearly 70 percent of people are now connected online. These achievements represent not just major leaps forward in human development, but the kind of structural stability that prevents local problems from escalating into global crises.</p>
+
+        <p>Drawing on six decades of experience, UNDP’s next Strategic Plan 2026-29 focuses on four objectives: prosperity for all, effective governance, crisis resilience, and planetary health. The objectives will be accelerated by digital and AI transformation, gender equality, and sustainable finance.</p>
+
+        <p>At a time when cuts in Official Development Assistance (ODA) are undermining our collective ability to respond, UNDP is delivering exceptional value. We transformed $581 million in core funding and fuelled $4.8 billion in life-changing development outcomes in 2024.</p>
+
+        <p>For every $1 of core funding, UNDP has unlocked $7 in additional resources for countries and catalysed nearly $60 in public and private investments in the Sustainable Development Goals (SDGs), including key areas like tackling poverty, enhancing climate action, and advancing gender equality. But we face unprecedented challenges: rising inequality, record levels of conflict, accelerating climate impacts, and mounting economic pressures. These interconnected crises will cost far more to fix later than to prevent now.</p>
+
+        <p>We are grateful to our partners who sustained their investment in UNDP throughout 2024, particularly the 10 core contributors who increased their support during this challenging period and those who make multi-year commitments, which give us the certainty for planning.</p>
+
+        <p>Additional investment will give much more in terms of the outcomes needed. We ask our partners to continue - and increase - their investment in UNDP. Without UNDP’s continued presence and resources, the stability we have helped build over six decades will be at serious risk. The world’s most vulnerable people and places depend on our collective resolve.</p>
+      photo-credit: >
+        Photo: Fouad Juez
+
+      name: Susan Brown
+      position-title: >
+        Assistant Secretary-General and Assistant Administrator <br>
+        Bureau of External Relations and Advocacy <br>
+        United Nations Development Programme
+
+  
+    # ************************* Executive Summary *************************
+
+  
+  exec-summary:
+      headline: Executive Summary
+      copy: >
+        <p>The Funding Compendium presents the annual contributions received by UNDP from its funding partners through various channels. These include regular (core) resources and other resources and range from softly earmarked thematic funds to tightly earmarked funds for specific programmes or projects.</p>
+        <p>The year 2025 tested UNDP’s agility, resilience and ability to respond to complexity. During the global decline in official development assistance (ODA) in 2025, UNDP’s annual contributions from its partners remained broadly stable at $5 billion, a 2 percent increase compared to 2024. However, despite this overall stability, the quality of funding continued to deteriorate. In 2025, regular resources declined to $442 million, down by 24 percent from $581 million in 2024.</p>
+        <p>Despite the record-low level of regular resources received in 2025, UNDP delivered $4.9 billion in programme expenditure, allocated 91 cents of every programmatic dollar to development activities and continued to demonstrate the catalytic value of regular resources by mobilizing approximately $10 in other resources for every $1 of core funding.</p>
+        <p>The declining trend in regular resources increasingly constrains UNDP’s ability to adequately support country programming, respond to crises, invest in innovation and maintain the institutional capabilities that underpin integrated development solutions.</p>
+
+  
+      # ************************* 2025 Highlights  *************************
+
+  
+  highlights:
+    headline: 2025 Financial Highlights
+    
+  
+  
+    
+    # ************************* Executive Summary *************************
+
+  
+  transparency:
+      headline: Commitment to transparency and accountability
+      copy: >
+        <p>The Funding Compendium presents the annual contributions received by UNDP from its funding partners through various channels. These include regular (core) resources and other resources and range from softly earmarked thematic funds to tightly earmarked funds for specific programmes or projects.</p>
+        <p>The year 2025 tested UNDP’s agility, resilience and ability to respond to complexity. During the global decline in official development assistance (ODA) in 2025, UNDP’s annual contributions from its partners remained broadly stable at $5 billion, a 2 percent increase compared to 2024. However, despite this overall stability, the quality of funding continued to deteriorate. In 2025, regular resources declined to $442 million, down by 24 percent from $581 million in 2024.</p>
+        <p>Despite the record-low level of regular resources received in 2025, UNDP delivered $4.9 billion in programme expenditure, allocated 91 cents of every programmatic dollar to development activities and continued to demonstrate the catalytic value of regular resources by mobilizing approximately $10 in other resources for every $1 of core funding.</p>
+        <p>The declining trend in regular resources increasingly constrains UNDP’s ability to adequately support country programming, respond to crises, invest in innovation and maintain the institutional capabilities that underpin integrated development solutions.</p>
+
+
+
+
 
   # ************************* What we have learned *************************
 
@@ -480,69 +557,38 @@ futuresmart-page:
 # ****************************************************************************************************
 
 partnerships-page:
-  title: >
-    Part&shy;ner&shy;ships for progress
-  ecosystem:
-    title: >
-      Partnership <br> <span style="font-weight: 350;">ecosystem</span>
-    infographic: "partnerships-ecosystem.png"
-    copy: 
-      column1:
-        para1: UNDP’s longstanding relationships with its government partners remain fundamental to delivering results.
-          Governments provide the resources UNDP needs to deliver its country programming, coordinated with UN country
-          teams, tailored to local context.
-        para2: The private sector is an indispensable partner for achieving systemic transformation. UNDP works with the
-          private sector to align business innovation, capital and expertise with national development priorities.
-        para3: We amplify our impact by leveraging blended finance and sustainability-linked bonds, while partnering with
-          international financial institutions to provide complementary technical assistance and financin
-
-      column2:
-        para1: We expand the resources, expertise and experience available to our partners by fostering south-south and
-          triangular cooperation and helping governments tap into the diverse resources of other UN agencies.
-        para2: We continue to diversify our partnerships with philanthropies, the private sector, IFIs, academia, civil
-          society and NGOs, helping engage a broader range of stakeholders in development.
+  
   unds:
-    heading: The United Nations Development System
+    heading: Support to United Nations system programmes, offices and initiatives
     copy:
       para1: >
-        The 2024 quadrennial comprehensive policy review of operational activities for development of the UN system
-          highlights the need for coherence, efficiency, effectiveness and accountability. UNDP leverages its expertise,
-          networks and worldwide presence to contribute to these collective efforts.
+         In 2025, UNDP continued to serve as the institutional platform for four UN entities, delivering critical services across the UN system.
       para2: >
-        Under country leadership, UNDP aligns its country programmes with national priorities, deriving its country
-          programme outcomes from UN Sustainable Development Cooperation Frameworks. Working with country teams, led by
-          resident coordinators, we deliver integrated, evidence-based programming that addresses complex development
-          issues, drawing on our foresight and systems-thinking expertise.
-      para3: >
-        UNDP remains the largest participant in UN pooled funds and joint programmes, with over $240 million in joint
-          programming. Complementarity is crucial. We cultivate cross-agency synergies in policy design, programme
-          delivery and reporting mechanisms to avoid duplication and fragmentation of efforts.
-      para4: >
-        The development impact of the UNDS is multiplied by assets hosted by UNDP that provide services and expertise
-          to the system:
+        <strong>Support to United Nations organizations: </strong>
+        UNDP continued to be the operational backbone of the UN system in 2025. It disbursed $2.3 billion in 109 currencies through its payroll system, 54 percent of which was on behalf of partner UN organizations. UNDP supported $3.2 billion in financial transactions for 70 UN entities and other agencies in 170 countries. In addition, UNDP provided common premises for other agencies in 130 countries, enabling them to access common services, including travel management. 
     
     unv:
         logo: "unv.png"
         alt: "UN Volunteers logo"
-        title: "MORE PEOPLE:"
-        copy: "In 2024, <strong>14,631 UN Volunteers</strong> from 181 nationalities served 59 UN entities in 169 countries."
+        title: "United Nations Volunteers"
+        copy: "The UN Volunteers programme promotes volunteerism to support peace and development worldwide. During 2025, 17,169 UN Volunteers from 182 countries supported 59 partner UN entities in their peace and development activities in 172 countries."
     
     uncdf:
         logo: "uncdf.png"
         alt: "UNCDF logo"
-        title: "MORE INVESTMENT:"
-        copy: "By integrating <strong>UN Capital Development Fund</strong> financial capabilities and instruments into its programming, UNDP supports sustainable growth, job creation and economic opportunities for all."
+        title: "UN Capital Development Fund"
+        copy: In 2025, the UN Capital Development Fund provided $6 million in loans and $3.1 million in guarantees, leveraging and catalysing a total of $50 million in financing to support development solutions in 19 countries. Through UNCDF-enabled solutions, 3.3 million people were reached, of whom two-thirds were women.
     mptf:
         logo: "mptf.png"
         alt: "Multi-Partner Trust Fund Office logo"
-        title: "MORE JOINT WORK:"
-        copy: "The <strong>Multi-Partner Trust Fund Office</strong> pools financing — over $1&nbsp;billion per year — for stronger results at scale."
+        title: "Multi-Partner Trust Fund Office "
+        copy: The Multi-Partner Trust Fund Office transferred $1.06 billion to participating UN and non-UN entities in 2025, supporting development, climate and environment, and peace and transition outcomes for sustainable development progress. As a system-wide UN asset, the MPTF disbursed over $860 million to 41 UN entities and 111 countries in 2025.
     
     unossc:
         logo: "unossc.png"
         alt: "UNOSSC logo"
-        title: "MORE COOPERATION:"
-        copy: "The <strong>UN Office for South-South Cooperation</strong> fosters high human development through technology development and transfer, financial cooperation, peer learning and capacity-building, particularly in digital and governance innovation."
+        title: "UN Office for South–South Cooperation "
+        copy: In 2025, the UN Office for South–South Cooperation supported 41 UN resolutions and decisions that incorporated South–South and triangular cooperation modalities. It also facilitated the implementation of South–South and triangular cooperation trust fund projects across 50 developing countries.
 
   
 # ****************************************************************************************************

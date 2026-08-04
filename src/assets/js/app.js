@@ -16,7 +16,7 @@ import { select } from '@undp/design-system/stories/assets/js/select';
  import { expandToSize } from '@undp/design-system/stories/assets/js/animation';
 // import { statsHover } from '@undp/design-system/stories/assets/js/stats';
 import { langSwitch } from '@undp/design-system/stories/assets/js/lang-switcher';
-
+import { tabs } from '@undp/design-system/stories/assets/js/tabs';
 
 window.jQuery = $;
 
@@ -54,3 +54,8 @@ $(document).ready(function() {
 
 // Language switcher
 langSwitch();
+
+$(document).ready(function() { 
+   accordion(); 
+   tabs();
+});
