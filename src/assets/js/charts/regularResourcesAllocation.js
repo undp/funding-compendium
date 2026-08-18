@@ -7,31 +7,31 @@ export function initRegularResourcesAllocation(el, echarts) {
       name: 'Country activities',
       value: 1393,
       styleKey: 'country',
-      itemStyle: { color: '#4472C4' }
+      itemStyle: { color: RESOURCE_COLORS.regular }
     },
     {
       name: 'Regional activities',
       value: 83,
       styleKey: 'regional',
-      itemStyle: { color: '#ED7D31' }
+      itemStyle: { color: SECONDARY_COLORS[0] }
     },
     {
       name: 'Global activities',
       value: 19,
       styleKey: 'global',
-      itemStyle: { color: '#A5A5A5' }
+      itemStyle: { color: SECONDARY_COLORS[1] }
     },
     {
       name: 'Consolidated Development Effectiveness',
       value: 83,
       styleKey: 'effectiveness',
-      itemStyle: { color: '#FFC000' }
+      itemStyle: { color: SECONDARY_COLORS[2] }
     },
     {
       name: 'UN Development Coordination - SRC',
       value: 40,
       styleKey: 'coordination',
-      itemStyle: { color: '#5B9BD5' }
+      itemStyle: { color: SECONDARY_COLORS[3] }
     }
   ];
 
@@ -135,17 +135,17 @@ export function initRegularResourcesAllocation(el, echarts) {
               lineHeight: 18
             },
 
-            country: valueStyle('#4472C4'),
-            regional: valueStyle('#ED7D31'),
+            country: valueStyle(RESOURCE_COLORS.regular),
+            regional: valueStyle(SECONDARY_COLORS[0]),
 
             // Slightly darker than the actual slice
             // for accessibility/readability on white.
-            global: valueStyle('#7F7F7F'),
+            global: valueStyle(SECONDARY_COLORS[1]),
 
             // Darker yellow/orange for better contrast.
-            effectiveness: valueStyle('#C18400'),
+            effectiveness: valueStyle(SECONDARY_COLORS[2]),
 
-            coordination: valueStyle('#5B9BD5')
+            coordination: valueStyle(SECONDARY_COLORS[3])
           }
         },
 
@@ -244,3 +244,4 @@ export function initRegularResourcesAllocation(el, echarts) {
 }
 
 export default initRegularResourcesAllocation;
+import { RESOURCE_COLORS, SECONDARY_COLORS } from './chartColors';

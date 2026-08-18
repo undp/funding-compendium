@@ -124,7 +124,7 @@ export function initMultiYearPledges(el, echarts) {
         stack: 'total',
         barWidth: 48,
         data: multiYear,
-        itemStyle: { color: '#006EB5' },
+        itemStyle: { color: SECONDARY_COLORS[0] },
         label: {
           show: true,
           position: 'inside',
@@ -141,7 +141,7 @@ export function initMultiYearPledges(el, echarts) {
         stack: 'total',
         barWidth: 48,
         data: nonMultiYear,
-        itemStyle: { color: '#00C4B3' },
+        itemStyle: { color: SECONDARY_COLORS[1] },
         label: {
           show: true,
           position: 'inside',
@@ -180,10 +180,10 @@ export function initMultiYearPledges(el, echarts) {
         symbolSize: 9,
         lineStyle: {
           width: 3,
-          color: '#E84A5F'
+          color: SECONDARY_COLORS[2]
         },
         itemStyle: {
-          color: '#E84A5F',
+          color: SECONDARY_COLORS[2],
           borderColor: '#ffffff',
           borderWidth: 2
         },
@@ -192,7 +192,7 @@ export function initMultiYearPledges(el, echarts) {
           position: 'top',
           distance: 8,
           formatter: '{c}%',
-          color: '#E84A5F',
+          color: SECONDARY_COLORS[2],
           fontSize: 12,
           fontWeight: 700
         },
@@ -213,3 +213,4 @@ export function initMultiYearPledges(el, echarts) {
 }
 
 export default initMultiYearPledges;
+import { SECONDARY_COLORS } from './chartColors';

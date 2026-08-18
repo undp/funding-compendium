@@ -82,10 +82,10 @@ export function initThematicWindowContributions(el, echarts) {
       symbolSize: 9,
       lineStyle: {
         width: 3,
-        color: '#688FA5'
+        color: SECONDARY_COLORS[0]
       },
       itemStyle: {
-        color: '#688FA5',
+        color: SECONDARY_COLORS[0],
         borderColor: '#ffffff',
         borderWidth: 2
       },
@@ -99,7 +99,7 @@ export function initThematicWindowContributions(el, echarts) {
         fontWeight: 700
       },
       areaStyle: {
-        color: 'rgba(104, 143, 165, 0.08)'
+        color: 'rgba(61, 153, 153, 0.10)'
       },
       emphasis: { scale: 1.3 }
     }]
@@ -114,3 +114,4 @@ export function initThematicWindowContributions(el, echarts) {
 }
 
 export default initThematicWindowContributions;
+import { SECONDARY_COLORS } from './chartColors';

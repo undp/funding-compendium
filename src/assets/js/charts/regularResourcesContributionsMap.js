@@ -113,11 +113,11 @@ export function initRegularResourcesContributionsMap(el, echarts) {
           fontSize: 11
         },
         pieces: [
-          { min: 50000000, label: 'USD 50M+', color: '#006EB5' },
-          { min: 25000000, max: 49999999, label: 'USD 25–50M', color: '#3A8BC2' },
-          { min: 10000000, max: 24999999, label: 'USD 10–25M', color: '#69A9D1' },
-          { min: 1000000, max: 9999999, label: 'USD 1–10M', color: '#97C7E2' },
-          { min: 1, max: 999999, label: 'Below USD 1M', color: '#C6E1EF' }
+          { min: 50000000, label: 'USD 50M+', color: RESOURCE_COLORS.regular },
+          { min: 25000000, max: 49999999, label: 'USD 25–50M', color: '#CDDC4C' },
+          { min: 10000000, max: 24999999, label: 'USD 10–25M', color: '#D8E478' },
+          { min: 1000000, max: 9999999, label: 'USD 1–10M', color: '#E4ECA5' },
+          { min: 1, max: 999999, label: 'Below USD 1M', color: '#EFF4D2' }
         ],
         outOfRange: { color: '#ECEFF1' }
       },
@@ -146,7 +146,7 @@ export function initRegularResourcesContributionsMap(el, echarts) {
             color: '#111'
           },
           itemStyle: {
-            areaColor: '#F6C343',
+            areaColor: '#A8B819',
             borderColor: '#333',
             borderWidth: 1
           }
@@ -162,3 +162,4 @@ export function initRegularResourcesContributionsMap(el, echarts) {
 }
 
 export default initRegularResourcesContributionsMap;
+import { RESOURCE_COLORS } from './chartColors';

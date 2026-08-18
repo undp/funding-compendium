@@ -291,7 +291,7 @@ export function initContributionByDonorCategory(el, echarts) {
               donorGovernments,
 
             itemStyle: {
-              color: '#4A77C3'
+              color: CATEGORY_COLORS[0]
             }
           },
 
@@ -303,7 +303,7 @@ export function initContributionByDonorCategory(el, echarts) {
               programmeGovernments,
 
             itemStyle: {
-              color: '#F47B2A'
+              color: CATEGORY_COLORS[1]
             }
           },
 
@@ -315,7 +315,7 @@ export function initContributionByDonorCategory(el, echarts) {
               multilateral,
 
             itemStyle: {
-              color: '#B88D00'
+              color: CATEGORY_COLORS[2]
             }
           }
         ]
@@ -557,7 +557,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             itemStyle: {
               color:
-                '#FFC20E'
+                CATEGORY_COLORS[3]
             }
           },
 
@@ -570,7 +570,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             itemStyle: {
               color:
-                '#5B9BD5'
+                CATEGORY_COLORS[4]
             }
           },
 
@@ -583,7 +583,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             itemStyle: {
               color:
-                '#70AD47'
+                CATEGORY_COLORS[5]
             }
           },
 
@@ -596,7 +596,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             itemStyle: {
               color:
-                '#666666'
+                CATEGORY_COLORS[6]
             }
           }
         ]
@@ -623,3 +623,4 @@ export function initContributionByDonorCategory(el, echarts) {
 }
 
 export default initContributionByDonorCategory;
+import { CATEGORY_COLORS } from './chartColors';

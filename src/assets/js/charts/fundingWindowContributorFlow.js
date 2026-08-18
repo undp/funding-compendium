@@ -12,29 +12,29 @@ const nodes = [
   { name: 'Iceland', itemStyle: { color: '#5D7485' } },
   { name: 'Switzerland', itemStyle: { color: '#5D7485' } },
   { name: 'United Kingdom', itemStyle: { color: '#5D7485' } },
-  { name: GOV, itemStyle: { color: '#006EB5' } },
-  { name: NATURE, itemStyle: { color: '#00A86B' } },
-  { name: GENDER, itemStyle: { color: '#E94B87' } },
-  { name: POVERTY, itemStyle: { color: '#F5A623' } }
+  { name: GOV, itemStyle: { color: SECONDARY_COLORS[0] } },
+  { name: NATURE, itemStyle: { color: SECONDARY_COLORS[1] } },
+  { name: GENDER, itemStyle: { color: SECONDARY_COLORS[2] } },
+  { name: POVERTY, itemStyle: { color: SECONDARY_COLORS[3] } }
 ];
 
 const links = [
-  { source: 'Germany', target: GOV, value: 7.818899, lineStyle: { color: '#006EB5' } },
-  { source: 'Germany', target: NATURE, value: 40.673081, lineStyle: { color: '#00A86B' } },
-  { source: 'Denmark', target: GOV, value: 30.567018, lineStyle: { color: '#006EB5' } },
-  { source: 'Denmark', target: NATURE, value: 3.820877, lineStyle: { color: '#00A86B' } },
-  { source: 'Sweden', target: GOV, value: 14.466790, lineStyle: { color: '#006EB5' } },
-  { source: 'Sweden', target: NATURE, value: 5.943536, lineStyle: { color: '#00A86B' } },
-  { source: 'Luxembourg', target: GOV, value: 1.116828, lineStyle: { color: '#006EB5' } },
-  { source: 'Luxembourg', target: NATURE, value: 0.446731, lineStyle: { color: '#00A86B' } },
-  { source: 'Luxembourg', target: GENDER, value: 1.340193, lineStyle: { color: '#E94B87' } },
-  { source: 'Luxembourg', target: POVERTY, value: 0.223366, lineStyle: { color: '#F5A623' } },
-  { source: 'Republic of Korea', target: GOV, value: 1.873777, lineStyle: { color: '#006EB5' } },
-  { source: 'Republic of Korea', target: NATURE, value: 0.760881, lineStyle: { color: '#00A86B' } },
-  { source: 'Iceland', target: GOV, value: 0.386282, lineStyle: { color: '#006EB5' } },
-  { source: 'Iceland', target: NATURE, value: 2.217161, lineStyle: { color: '#00A86B' } },
-  { source: 'Switzerland', target: GOV, value: 1.735, lineStyle: { color: '#006EB5' } },
-  { source: 'United Kingdom', target: NATURE, value: 1.658941, lineStyle: { color: '#00A86B' } }
+  { source: 'Germany', target: GOV, value: 7.818899, lineStyle: { color: SECONDARY_COLORS[0] } },
+  { source: 'Germany', target: NATURE, value: 40.673081, lineStyle: { color: SECONDARY_COLORS[1] } },
+  { source: 'Denmark', target: GOV, value: 30.567018, lineStyle: { color: SECONDARY_COLORS[0] } },
+  { source: 'Denmark', target: NATURE, value: 3.820877, lineStyle: { color: SECONDARY_COLORS[1] } },
+  { source: 'Sweden', target: GOV, value: 14.466790, lineStyle: { color: SECONDARY_COLORS[0] } },
+  { source: 'Sweden', target: NATURE, value: 5.943536, lineStyle: { color: SECONDARY_COLORS[1] } },
+  { source: 'Luxembourg', target: GOV, value: 1.116828, lineStyle: { color: SECONDARY_COLORS[0] } },
+  { source: 'Luxembourg', target: NATURE, value: 0.446731, lineStyle: { color: SECONDARY_COLORS[1] } },
+  { source: 'Luxembourg', target: GENDER, value: 1.340193, lineStyle: { color: SECONDARY_COLORS[2] } },
+  { source: 'Luxembourg', target: POVERTY, value: 0.223366, lineStyle: { color: SECONDARY_COLORS[3] } },
+  { source: 'Republic of Korea', target: GOV, value: 1.873777, lineStyle: { color: SECONDARY_COLORS[0] } },
+  { source: 'Republic of Korea', target: NATURE, value: 0.760881, lineStyle: { color: SECONDARY_COLORS[1] } },
+  { source: 'Iceland', target: GOV, value: 0.386282, lineStyle: { color: SECONDARY_COLORS[0] } },
+  { source: 'Iceland', target: NATURE, value: 2.217161, lineStyle: { color: SECONDARY_COLORS[1] } },
+  { source: 'Switzerland', target: GOV, value: 1.735, lineStyle: { color: SECONDARY_COLORS[0] } },
+  { source: 'United Kingdom', target: NATURE, value: 1.658941, lineStyle: { color: SECONDARY_COLORS[1] } }
 ];
 
 const graphicText = (left, top, text, font, fill = '#303944') => ({
@@ -104,16 +104,16 @@ export function initFundingWindowContributorFlow(el, echarts) {
     graphic: [
       graphicText(30, 82, 'CONTRIBUTORS', '700 11px', '#7A838F'),
       graphicText('73%', 82, 'FUNDING WINDOWS', '700 11px', '#7A838F'),
-      graphicCircle(120, '#00A86B'),
+      graphicCircle(120, SECONDARY_COLORS[1]),
       graphicText('75%', 116, 'Nature, Climate\nand Energy', '11px'),
       graphicText('75%', 151, '$55.5m', '700 13px', '#232E3D'),
-      graphicCircle(210, '#006EB5'),
+      graphicCircle(210, SECONDARY_COLORS[0]),
       graphicText('75%', 206, 'Governance, Peacebuilding,\nCrisis and Resilience', '11px'),
       graphicText('75%', 241, '$58.0m', '700 13px', '#232E3D'),
-      graphicCircle(300, '#E94B87'),
+      graphicCircle(300, SECONDARY_COLORS[2]),
       graphicText('75%', 296, "Gender Equality and\nWomen's Empowerment", '11px'),
       graphicText('75%', 331, '$1.34m', '700 13px', '#232E3D'),
-      graphicCircle(390, '#F5A623'),
+      graphicCircle(390, SECONDARY_COLORS[3]),
       graphicText('75%', 386, 'Poverty and Inequality', '11px'),
       graphicText('75%', 411, '$0.22m', '700 13px', '#232E3D')
     ],
@@ -158,3 +158,4 @@ export function initFundingWindowContributorFlow(el, echarts) {
 }
 
 export default initFundingWindowContributorFlow;
+import { SECONDARY_COLORS } from './chartColors';

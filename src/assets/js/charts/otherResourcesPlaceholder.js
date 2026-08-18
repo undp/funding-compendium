@@ -37,8 +37,8 @@ export function initOtherResourcesPlaceholder(el, echarts) {
       type: 'bar',
       data: values,
       barMaxWidth: 48,
-      itemStyle: { color: '#006EB5' },
-      emphasis: { itemStyle: { color: '#E94E87' } }
+      itemStyle: { color: RESOURCE_COLORS.other },
+      emphasis: { itemStyle: { color: RESOURCE_COLORS.other, opacity: 0.82 } }
     }]
   });
 
@@ -51,3 +51,4 @@ export function initOtherResourcesPlaceholder(el, echarts) {
 }
 
 export default initOtherResourcesPlaceholder;
+import { RESOURCE_COLORS } from './chartColors';

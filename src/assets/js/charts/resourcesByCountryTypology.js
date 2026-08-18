@@ -6,12 +6,12 @@ export function initResourcesByCountryTypology(el, echarts) {
     {
       name: 'Low-income countries (LICs)',
       value: 987,
-      itemStyle: { color: '#4A90C2' }
+      itemStyle: { color: RESOURCE_COLORS.regular }
     },
     {
       name: 'Middle-income countries (MICs)',
       value: 288,
-      itemStyle: { color: '#A9D18E' }
+      itemStyle: { color: SECONDARY_COLORS[0] }
     }
   ];
 
@@ -158,3 +158,4 @@ export function initResourcesByCountryTypology(el, echarts) {
 }
 
 export default initResourcesByCountryTypology;
+import { RESOURCE_COLORS, SECONDARY_COLORS } from './chartColors';

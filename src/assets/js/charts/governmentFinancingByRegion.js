@@ -105,11 +105,11 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       splitLine: { lineStyle: { color: '#E8EAED' } }
     },
     series: [
-      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 62, itemStyle: { color: '#E86A5A' } },
-      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 62, itemStyle: { color: '#F2A65A' } },
-      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 62, itemStyle: { color: '#7E78C6' } },
-      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 62, itemStyle: { color: '#D783B5' } },
-      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 62, itemStyle: { color: '#65A6A0' } },
+      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[0] } },
+      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[1] } },
+      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[2] } },
+      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[3] } },
+      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[4] } },
       {
         name: 'Total',
         type: 'bar',
@@ -141,3 +141,4 @@ export function initGovernmentFinancingByRegion(el, echarts) {
 }
 
 export default initGovernmentFinancingByRegion;
+import { CATEGORY_COLORS } from './chartColors';

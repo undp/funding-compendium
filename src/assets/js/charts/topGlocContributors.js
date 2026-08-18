@@ -116,7 +116,7 @@ export function initTopGlocContributors(el, echarts) {
         stack: 'total',
         barWidth: 22,
         data: arrears,
-        itemStyle: { color: '#4F7FA3' }
+        itemStyle: { color: SECONDARY_COLORS[0] }
       },
       {
         name: 'Current year payment',
@@ -124,7 +124,7 @@ export function initTopGlocContributors(el, echarts) {
         stack: 'total',
         barWidth: 22,
         data: currentYear,
-        itemStyle: { color: '#83AFA8' }
+        itemStyle: { color: SECONDARY_COLORS[1] }
       },
       {
         name: 'In-kind',
@@ -132,7 +132,7 @@ export function initTopGlocContributors(el, echarts) {
         stack: 'total',
         barWidth: 22,
         data: inKind,
-        itemStyle: { color: '#D6B879' }
+        itemStyle: { color: SECONDARY_COLORS[2] }
       },
       {
         name: 'Total',
@@ -168,3 +168,4 @@ export function initTopGlocContributors(el, echarts) {
 }
 
 export default initTopGlocContributors;
+import { SECONDARY_COLORS } from './chartColors';

@@ -125,11 +125,7 @@ export function initTopCoreContributors(el, echarts) {
       data: values,
       barWidth: 12,
       itemStyle: {
-        color: function (params) {
-          if (params.dataIndex === 0) return '#006EB5';
-          if (params.dataIndex < 5) return '#00AEEF';
-          return '#73D2DE';
-        },
+        color: RESOURCE_COLORS.regular,
         borderRadius: 0
       },
       label: {
@@ -143,7 +139,7 @@ export function initTopCoreContributors(el, echarts) {
         }
       },
       emphasis: {
-        itemStyle: { color: '#E94E87' },
+        itemStyle: { color: RESOURCE_COLORS.regular, opacity: 0.82 },
         label: {
           color: '#232E3D',
           fontWeight: 700
@@ -164,3 +160,4 @@ export function initTopCoreContributors(el, echarts) {
 }
 
 export default initTopCoreContributors;
+import { RESOURCE_COLORS } from './chartColors';

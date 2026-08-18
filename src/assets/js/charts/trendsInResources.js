@@ -183,7 +183,7 @@ export function initTrendsInResources(el, echarts) {
         barWidth: '66%',
         data: regularResources,
         itemStyle: {
-          color: '#4A90C2',
+          color: RESOURCE_COLORS.regular,
           borderRadius: 0
         },
         label: {
@@ -214,7 +214,7 @@ export function initTrendsInResources(el, echarts) {
         barWidth: '66%',
         data: otherResources,
         itemStyle: {
-          color: '#6FB544',
+          color: RESOURCE_COLORS.other,
           borderRadius: 0
         },
         label: {
@@ -246,11 +246,11 @@ export function initTrendsInResources(el, echarts) {
         smooth: false,
         z: 10,
         lineStyle: {
-          color: 'orange',
+          color: SECONDARY_COLORS[2],
           width: 5
         },
         itemStyle: {
-          color: 'orange'
+          color: SECONDARY_COLORS[2]
         },
         label: {
           show: true,
@@ -291,3 +291,4 @@ export function initTrendsInResources(el, echarts) {
 }
 
 export default initTrendsInResources;
+import { RESOURCE_COLORS, SECONDARY_COLORS } from './chartColors';

@@ -80,9 +80,9 @@ export function initTopPooledFundMemberStates(el, echarts) {
       barWidth: 15,
       itemStyle: {
         color: function (params) {
-          if (params.dataIndex === 0) return '#006EB5';
-          if (params.dataIndex <= 3) return '#5B93B5';
-          return '#9DB6C4';
+          if (params.dataIndex === 0) return SECONDARY_COLORS[0];
+          if (params.dataIndex <= 3) return SECONDARY_COLORS[1];
+          return SECONDARY_COLORS[2];
         }
       },
       label: {
@@ -95,7 +95,7 @@ export function initTopPooledFundMemberStates(el, echarts) {
         fontWeight: 700
       },
       emphasis: {
-        itemStyle: { color: '#006EB5' }
+        itemStyle: { color: SECONDARY_COLORS[3] }
       }
     }]
   });
@@ -109,3 +109,4 @@ export function initTopPooledFundMemberStates(el, echarts) {
 }
 
 export default initTopPooledFundMemberStates;
+import { SECONDARY_COLORS } from './chartColors';

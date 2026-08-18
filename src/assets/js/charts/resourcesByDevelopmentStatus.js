@@ -6,12 +6,12 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
     {
       name: 'Least developed countries (LDCs)',
       value: 1061,
-      itemStyle: { color: '#4A90C2' }
+      itemStyle: { color: RESOURCE_COLORS.regular }
     },
     {
       name: 'Non-least developed countries',
       value: 214,
-      itemStyle: { color: '#A9D18E' }
+      itemStyle: { color: SECONDARY_COLORS[0] }
     }
   ];
 
@@ -158,3 +158,4 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
 }
 
 export default initResourcesByDevelopmentStatus;
+import { RESOURCE_COLORS, SECONDARY_COLORS } from './chartColors';

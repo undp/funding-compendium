@@ -10,17 +10,7 @@ const data = [
   { name: 'Others', value: 9734086, percent: 3 }
 ];
 
-const colors = [
-  '#006EB5',
-  '#1B7FBD',
-  '#3A8FC5',
-  '#58A0CD',
-  '#76B0D5',
-  '#94C1DE',
-  '#B1D1E6',
-  '#CEE2EF',
-  '#E5F0F6'
-];
+const colors = CATEGORY_COLORS.slice(0, data.length);
 
 export function initIfiContributionsDonut(el, echarts) {
   const chart = echarts.init(el);
@@ -130,3 +120,4 @@ export function initIfiContributionsDonut(el, echarts) {
 }
 
 export default initIfiContributionsDonut;
+import { CATEGORY_COLORS } from './chartColors';

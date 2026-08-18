@@ -339,7 +339,7 @@ export function initContributionsByDonorResource(el, echarts) {
         data: regularResources,
 
         itemStyle: {
-          color: '#4A90C2',
+          color: RESOURCE_COLORS.regular,
           borderRadius: 0
         },
 
@@ -357,7 +357,7 @@ export function initContributionsByDonorResource(el, echarts) {
         data: otherResources,
 
         itemStyle: {
-          color: '#6FB544',
+          color: RESOURCE_COLORS.other,
           borderRadius: 0
         },
 
@@ -412,3 +412,4 @@ export function initContributionsByDonorResource(el, echarts) {
 }
 
 export default initContributionsByDonorResource;
+import { RESOURCE_COLORS } from './chartColors';

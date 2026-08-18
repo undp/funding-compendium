@@ -117,7 +117,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
         stack: 'total',
         data: direct,
         barWidth: 20,
-        itemStyle: { color: '#006EB5' },
+        itemStyle: { color: SECONDARY_COLORS[0] },
         emphasis: { focus: 'series' }
       },
       {
@@ -126,7 +126,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
         stack: 'total',
         data: indirect,
         barWidth: 20,
-        itemStyle: { color: '#78C6A3' },
+        itemStyle: { color: SECONDARY_COLORS[1] },
         emphasis: { focus: 'series' }
       },
       {
@@ -160,3 +160,4 @@ export function initTopIfiRecipientCountries(el, echarts) {
 }
 
 export default initTopIfiRecipientCountries;
+import { SECONDARY_COLORS } from './chartColors';

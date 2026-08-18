@@ -108,12 +108,12 @@ export function initEuContributionsByRegion(el, echarts) {
       splitLine: { lineStyle: { color: '#E8EAED' } }
     },
     series: [
-      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 90, itemStyle: { color: '#2F6B8A' } },
-      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: '#55B6A9' } },
-      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 90, itemStyle: { color: '#C99A3D' } },
-      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 90, itemStyle: { color: '#D66B8C' } },
-      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 90, itemStyle: { color: '#7FAF68' } },
-      { name: 'Global', type: 'bar', stack: 'total', data: global, barWidth: 90, itemStyle: { color: '#8A78B8' } },
+      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[0] } },
+      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[1] } },
+      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[2] } },
+      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[3] } },
+      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[4] } },
+      { name: 'Global', type: 'bar', stack: 'total', data: global, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[5] } },
       {
         name: 'Total',
         type: 'line',
@@ -150,3 +150,4 @@ export function initEuContributionsByRegion(el, echarts) {
 }
 
 export default initEuContributionsByRegion;
+import { CATEGORY_COLORS } from './chartColors';

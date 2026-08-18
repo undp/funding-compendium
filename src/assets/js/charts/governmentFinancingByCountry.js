@@ -23,7 +23,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       
-      subtext: '2024 · $ millions · Last updated 26 June 2026',
+      subtext: '$ millions · Last updated 26 June 2026',
       left: 0,
       top: 0,
       textStyle: {

@@ -107,7 +107,7 @@ export function initVerticalFundContributions(el, echarts) {
         barWidth: 20,
         barGap: '15%',
         barCategoryGap: '38%',
-        itemStyle: { color: '#F3B27F' },
+        itemStyle: { color: SECONDARY_COLORS[0] },
         label: {
           show: true,
           position: 'right',
@@ -123,7 +123,7 @@ export function initVerticalFundContributions(el, echarts) {
         type: 'bar',
         data: values2025,
         barWidth: 20,
-        itemStyle: { color: '#666666' },
+        itemStyle: { color: SECONDARY_COLORS[1] },
         label: {
           show: true,
           position: 'right',
@@ -146,3 +146,4 @@ export function initVerticalFundContributions(el, echarts) {
 }
 
 export default initVerticalFundContributions;
+import { SECONDARY_COLORS } from './chartColors';

@@ -7,31 +7,31 @@ export function initResourcesByRegion(el, echarts) {
       name: 'Africa',
       value: 870,
       percent: 68,
-      color: '#3F7CAC'
+      color: RESOURCE_COLORS.regular
     },
     {
       name: 'Asia and the Pacific',
       value: 182,
       percent: 14,
-      color: '#5BAF8B'
+      color: SECONDARY_COLORS[0]
     },
     {
       name: 'Arab States',
       value: 128,
       percent: 10,
-      color: '#E7A23B'
+      color: SECONDARY_COLORS[1]
     },
     {
       name: 'Latin America and the Caribbean',
       value: 52,
       percent: 4,
-      color: '#D8647C'
+      color: SECONDARY_COLORS[2]
     },
     {
       name: 'Europe and the CIS',
       value: 43,
       percent: 3,
-      color: '#8066A8'
+      color: SECONDARY_COLORS[3]
     }
   ];
 
@@ -155,3 +155,4 @@ export function initResourcesByRegion(el, echarts) {
 }
 
 export default initResourcesByRegion;
+import { RESOURCE_COLORS, SECONDARY_COLORS } from './chartColors';

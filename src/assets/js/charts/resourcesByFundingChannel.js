@@ -81,13 +81,13 @@ export function initResourcesByFundingChannel(el, echarts) {
   // ======================================================
 
   const colors = {
-    'Third party cost sharing': '#F5A64A',
-    'Government financing': '#BC6872',
-    'Vertical funds': '#6391A8',
-    'Regular resources': '#88AA7F',
-    'United Nations pooled funds': '#9183A3',
-    'Reimbursable support services': '#D2B886',
-    'Thematic funds': '#AD7A45'
+    'Third party cost sharing': CATEGORY_COLORS[0],
+    'Government financing': CATEGORY_COLORS[1],
+    'Vertical funds': CATEGORY_COLORS[2],
+    'Regular resources': RESOURCE_COLORS.regular,
+    'United Nations pooled funds': CATEGORY_COLORS[3],
+    'Reimbursable support services': CATEGORY_COLORS[4],
+    'Thematic funds': CATEGORY_COLORS[5]
   };
 
   const seriesOrder = [
@@ -1090,3 +1090,4 @@ export function initResourcesByFundingChannel(el, echarts) {
 
   });
 }
+import { RESOURCE_COLORS, CATEGORY_COLORS } from './chartColors';

@@ -115,11 +115,7 @@ export function initTopUnPooledFunds(el, echarts) {
       data: values,
       barWidth: 15,
       itemStyle: {
-        color: function (params) {
-          if (params.dataIndex === 0) return '#5B2C83';
-          if (params.dataIndex <= 4) return '#8C62AA';
-          return '#C3AAD1';
-        }
+        color: SECONDARY_COLORS[1]
       },
       label: {
         show: true,
@@ -131,7 +127,7 @@ export function initTopUnPooledFunds(el, echarts) {
         fontWeight: 600
       },
       emphasis: {
-        itemStyle: { color: '#3E1D5A' }
+        itemStyle: { color: CATEGORY_COLORS[9] }
       }
     }]
   });
@@ -145,3 +141,4 @@ export function initTopUnPooledFunds(el, echarts) {
 }
 
 export default initTopUnPooledFunds;
+import { SECONDARY_COLORS, CATEGORY_COLORS } from './chartColors';

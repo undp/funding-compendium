@@ -16,10 +16,7 @@ const values = [
   3.465347, 2.620811, 2.3, 2.217801, 2.130149
 ];
 
-const palette = [
-  '#D54E68', '#DB607B', '#E0728D', '#D983A0', '#C985A6',
-  '#B982AA', '#A980AB', '#987FA8', '#897DA2', '#7B7A99'
-];
+const palette = CATEGORY_COLORS.slice(0, donors.length);
 
 export function initTopPrivateSectorContributors(el, echarts) {
   const chart = echarts.init(el);
@@ -113,3 +110,4 @@ export function initTopPrivateSectorContributors(el, echarts) {
 }
 
 export default initTopPrivateSectorContributors;
+import { CATEGORY_COLORS } from './chartColors';

@@ -94,7 +94,7 @@ export function initIfiContributionsByType(el, echarts) {
         barWidth: 66,
         barGap: '8%',
         barCategoryGap: '28%',
-        itemStyle: { color: '#78C6A3' },
+        itemStyle: { color: SECONDARY_COLORS[0] },
         label: {
           show: true,
           position: 'inside',
@@ -110,7 +110,7 @@ export function initIfiContributionsByType(el, echarts) {
         type: 'bar',
         data: direct,
         barWidth: 66,
-        itemStyle: { color: '#006EB5' },
+        itemStyle: { color: SECONDARY_COLORS[1] },
         label: {
           show: true,
           position: 'inside',
@@ -160,3 +160,4 @@ export function initIfiContributionsByType(el, echarts) {
 }
 
 export default initIfiContributionsByType;
+import { SECONDARY_COLORS } from './chartColors';

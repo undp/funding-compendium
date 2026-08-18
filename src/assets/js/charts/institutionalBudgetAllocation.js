@@ -7,25 +7,25 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
       name: 'Management',
       value: 654.2,
       percent: 60.58,
-      color: '#006EB5'
+      color: SECONDARY_COLORS[0]
     },
     {
       name: 'Development/humanitarian activities',
       value: 301.4,
       percent: 28,
-      color: '#00C4B3'
+      color: SECONDARY_COLORS[1]
     },
     {
       name: 'Independent oversight and assurance activities',
       value: 80.2,
       percent: 7.43,
-      color: '#B6D600'
+      color: SECONDARY_COLORS[2]
     },
     {
       name: 'Special purpose',
       value: 44.1,
       percent: 4,
-      color: '#B14EFF'
+      color: SECONDARY_COLORS[3]
     }
   ];
 
@@ -164,3 +164,4 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
 }
 
 export default initInstitutionalBudgetAllocation;
+import { SECONDARY_COLORS } from './chartColors';

@@ -128,7 +128,7 @@ export function initResourcesByFundingType(el, echarts) {
         data: regularPercentages,
 
         itemStyle: {
-          color: '#4A90C2',
+          color: RESOURCE_COLORS.regular,
           borderRadius: 0
         },
 
@@ -177,7 +177,7 @@ export function initResourcesByFundingType(el, echarts) {
         data: otherPercentages,
 
         itemStyle: {
-          color: '#6FB544',
+          color: RESOURCE_COLORS.other,
           borderRadius: 0
         },
 
@@ -234,3 +234,4 @@ export function initResourcesByFundingType(el, echarts) {
 }
 
 export default initResourcesByFundingType;
+import { RESOURCE_COLORS } from './chartColors';

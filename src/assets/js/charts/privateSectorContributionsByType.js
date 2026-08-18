@@ -105,7 +105,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: privateCompanies,
         barWidth: 86,
-        itemStyle: { color: '#D35478' },
+        itemStyle: { color: SECONDARY_COLORS[0] },
         label: {
           show: true,
           position: 'inside',
@@ -121,7 +121,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: foundations,
         barWidth: 86,
-        itemStyle: { color: '#A764B7' },
+        itemStyle: { color: SECONDARY_COLORS[1] },
         label: {
           show: true,
           position: 'inside',
@@ -137,7 +137,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: ngos,
         barWidth: 86,
-        itemStyle: { color: '#776CC7' },
+        itemStyle: { color: SECONDARY_COLORS[2] },
         label: {
           show: true,
           position: 'inside',
@@ -153,7 +153,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: academic,
         barWidth: 86,
-        itemStyle: { color: '#A8A4DF' },
+        itemStyle: { color: SECONDARY_COLORS[3] },
         label: { show: false }
       },
       {
@@ -187,3 +187,4 @@ export function initPrivateSectorContributionsByType(el, echarts) {
 }
 
 export default initPrivateSectorContributionsByType;
+import { SECONDARY_COLORS } from './chartColors';

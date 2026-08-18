@@ -130,7 +130,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
       type: 'bar',
       data: values,
       barWidth: 16,
-      itemStyle: { color: '#6E93AA' },
+      itemStyle: { color: RESOURCE_COLORS.other },
       label: {
         show: true,
         position: 'right',
@@ -141,7 +141,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
         fontWeight: 600
       },
       emphasis: {
-        itemStyle: { color: '#4F7FA3' }
+        itemStyle: { color: RESOURCE_COLORS.other, opacity: 0.82 }
       }
     }]
   });
@@ -155,3 +155,4 @@ export function initTopOtherResourcesContributors(el, echarts) {
 }
 
 export default initTopOtherResourcesContributors;
+import { RESOURCE_COLORS } from './chartColors';

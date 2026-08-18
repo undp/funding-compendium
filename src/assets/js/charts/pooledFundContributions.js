@@ -113,7 +113,7 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: climate,
-        itemStyle: { color: '#56B4A9' }
+        itemStyle: { color: SECONDARY_COLORS[0] }
       },
       {
         name: 'Development',
@@ -121,7 +121,7 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: development,
-        itemStyle: { color: '#6E91C9' }
+        itemStyle: { color: SECONDARY_COLORS[1] }
       },
       {
         name: 'Humanitarian',
@@ -129,7 +129,7 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: humanitarian,
-        itemStyle: { color: '#E8A34F' }
+        itemStyle: { color: SECONDARY_COLORS[2] }
       },
       {
         name: 'Peace and transition',
@@ -137,7 +137,7 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: peace,
-        itemStyle: { color: '#A879B2' }
+        itemStyle: { color: SECONDARY_COLORS[3] }
       },
       {
         name: 'UNDP Total',
@@ -170,3 +170,4 @@ export function initPooledFundContributions(el, echarts) {
 }
 
 export default initPooledFundContributions;
+import { SECONDARY_COLORS } from './chartColors';
