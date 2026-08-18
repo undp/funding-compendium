@@ -6,15 +6,15 @@
   <div class="overlay-grey">
     <!--- <img src="{{@root.root}}assets/img/cover.jpg" alt="abstract image" />-->
 
-    <video loop muted playsinline autoplay poster="{{@root.root}}assets/img/cover.jpg">
-      <source src="{{@root.root}}assets/img/cover.mp4" type="video/mp4">
+    <video loop muted playsinline autoplay poster="{{@root.root}}assets/img/cover-landscape.jpg">
+      <source src="{{@root.root}}assets/img/cover-landscape.jpg" type="video/mp4">
       Your browser does not support the HTML5 video element
     </video>
   </div>
-<div class="grid-x homepage-hero-content">
-  <div class="cell large-7 medium-9 medium-offset-1">
+  <div class="grid-x homepage-hero-content">
+    <div class="cell large-7 medium-9 medium-offset-1">
 
-    <!--<
+      <!--<
     nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb white medium-offset-1 inviewport">
       <ul>
         <li><a href="#" aria-label="Home">Home</a></li>
@@ -23,19 +23,19 @@
     </nav>
     -->
 
-    <h4 class="color-white" tabindex="0" data-viewport="true">
-      UNDP Funding Compendium 2025
-    </h4>
-    <h1 class="color-white" tabindex="0" data-viewport="true">
-      Funding landscape
-    </h1>
-    
+      <h4 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
+        UNDP Funding Compendium 2025
+      </h4>
+      <h1 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
+        Funding landscape
+      </h1>
 
-    <h4 class="color-white" tabindex="0" data-viewport="true"></h4>
-    <a class="button" role="" style="visibility: hidden;"></a>
 
+      <h4 class="color-white" tabindex="0" data-viewport="true"></h4>
+      <a class="button" role="" style="visibility: hidden;"></a>
+
+    </div>
   </div>
-</div>
 </div>
 
 <!---
@@ -135,7 +135,7 @@
 
 <section class="section">
 
-  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
+  <div class="grid-container section padded" data-magellan-target="toc2">
 
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12 ">
@@ -168,64 +168,320 @@
           </ul>
 
           <div class="tabs-content" data-tabs-content="tablist_1">
+
+            <!-- =====================================================
+       TAB 1: TOTAL ANNUAL CONTRIBUTIONS
+       ===================================================== -->
+
             <div id="tab-1" role="tabpanel" class="tabs-panel is-active" aria-labelledby="tablist_1-tab-1"
-              aria-hidden="false" hidden="">
+              aria-hidden="false">
+
               <div class="grid-x grid-margin-x">
-                <div class="cell medium-12 large-12">
-                  <p style="background-color: aliceblue; padding: 5%; font-size: 1.2em; color: darkblue;">
-                    Annual contributions increased to $5 billion in 2025, up by 2 percent from $4.9 billion in 2024.
-                    <br>Of this total, $1.8 billion (36 percent) was from donor country governments;
-                    <br>$1.6 billion (32 percent) was from multilateral partners
-                    <br>and $1.6 billion (32 percent) was from programme country governments.
+                <div class="cell small-12">
 
-                    <br>
-                  <p>
+                  <div class="contributions-summary">
 
-                    <small style="color: grey;">
-                      <sup>1</sup>
-                      In 2019, UNDP refined its accounting policy on IPSAS 23 (non-exchange) revenues. Under this
-                      policy, UNDP records the full value of funding agreements when they are signed, even when cash has
-                      not been received for the majority of contribution agreements. Any uncollected cash associated
-                      with funding agreements is held as a receivable. Under UNDP financial regulations and rules, UNDP
-                      is permitted to spend only up to the amount of cash received. In this document, where appliable,
-                      “annual contributions” are therefore aligned with past revenue recognition policies for
-                      contributions (i.e., cash received in a reporting year, plus receivables due in a reporting year).
+                    <div class="grid-x contribution-grid align-justify">
 
-                  </p> </small>
+                      <!-- LEFT: TOTAL -->
+                      <div class="cell small-12 large-4 contributions-total">
 
-                  </p>
+                        <div class="grid-x total-row">
+
+                          <div class="cell shrink">
+                            <div class="total-value">
+                              $5<span>billion</span>
+                            </div>
+
+                            <div class="total-caption">
+                              in annual contributions in 2025
+                            </div>
+                          </div>
+
+                          <div class="cell auto increase-wrap">
+                            <div class="increase">
+                              <strong>↑2%</strong>
+                              <span>up from $4.9 billion in 2024</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <!-- RIGHT: BREAKDOWN -->
+                      <div class="cell small-12 large-6 contributions-breakdown">
+
+                        <div class="breakdown-label">
+                          OF THIS TOTAL
+                        </div>
+
+                        <div class="grid-x breakdown-grid">
+
+                          <!-- Donor country governments -->
+                          <div class="cell small-12 medium-4 breakdown-item">
+
+                            <div class="breakdown-percent">
+                              36%
+                            </div>
+
+                            <div class="breakdown-title">
+                              Donor country<br>
+                              governments
+                            </div>
+
+                            <div class="breakdown-value">
+                              $1.8 billion
+                            </div>
+
+                          </div>
+
+
+                          <!-- Multilateral partners -->
+                          <div class="cell small-12 medium-4 breakdown-item">
+
+                            <div class="breakdown-percent">
+                              32%
+                            </div>
+
+                            <div class="breakdown-title">
+                              Multilateral<br>
+                              partners
+                            </div>
+
+                            <div class="breakdown-value">
+                              $1.6 billion
+                            </div>
+
+                          </div>
+
+
+                          <!-- Programme country governments -->
+                          <div class="cell small-12 medium-4 breakdown-item">
+
+                            <div class="breakdown-percent">
+                              32%
+                            </div>
+
+                            <div class="breakdown-title">
+                              Programme country<br>
+                              governments
+                            </div>
+
+                            <div class="breakdown-value">
+                              $1.6 billion
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+                  <!-- Footnote -->
+                  <small class="tab-footnote">
+                    <sup>1</sup>
+                    In 2019, UNDP refined its accounting policy on IPSAS 23
+                    (non-exchange) revenues. Under this policy, UNDP records the full
+                    value of funding agreements when they are signed, even when cash
+                    has not been received for the majority of contribution agreements.
+                    Any uncollected cash associated with funding agreements is held as
+                    a receivable. Under UNDP financial regulations and rules, UNDP is
+                    permitted to spend only up to the amount of cash received. In this
+                    document, where applicable, “annual contributions” are therefore
+                    aligned with past revenue recognition policies for contributions
+                    (i.e., cash received in a reporting year, plus receivables due in a
+                    reporting year).
+                  </small>
+
                 </div>
-
               </div>
+
             </div>
+
+
+
+            <!-- =====================================================
+     TAB 2: REGULAR RESOURCES
+     ===================================================== -->
 
             <div id="tab-2" role="tabpanel" class="tabs-panel" aria-labelledby="tablist_1-tab-2" aria-hidden="true">
-              <div class="grid-x grid-margin-x">
 
-                <div class="cell medium-12 large-12">
-                  <p style="background-color: mintcream; padding: 5%; font-size: 1.2em; color: forestgreen;">
-                    Annual contributions to regular resources decreased to $442 million, down by 24 percent from $581
-                    million in 2024.
-                    <br>Their share of total annual contributions decreased to 9 percent from 12 percent in 2024 and
-                    remains far below the Funding Compact target of 30 percent.
-                    <br>Multi-year commitments amounted to $165 million, or 37 percent of regular resources
-                    contributions, down from 40 percent in 2024.
-                  </p>
+              <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+
+                  <div class="contributions-summary regular-summary">
+
+                    <div class="grid-x contribution-grid align-justify">
+
+                      <!-- LEFT: MAIN FIGURE -->
+                      <div class="cell small-12 large-4 contributions-total">
+
+                        <div class="grid-x total-row">
+
+                          <div class="cell shrink">
+
+                            <div class="total-value">
+                              $442<span>million</span>
+                            </div>
+
+                            <div class="total-caption">
+                              in regular resources in 2025
+                            </div>
+
+                          </div>
+
+                          <div class="cell auto increase-wrap">
+
+                            <div class="increase decrease">
+                              <strong>↓24%</strong>
+                              <span>down from $581 million in 2024</span>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+
+                      <!-- RIGHT: SUPPORTING METRICS -->
+                      <div class="cell small-12 large-6 contributions-breakdown">
+
+                        <div class="breakdown-label">
+                          REGULAR RESOURCES
+                        </div>
+
+                        <div class="grid-x breakdown-grid">
+
+                          <!-- Share of total -->
+                          <div class="cell small-12 medium-4 breakdown-item">
+
+                            <div class="breakdown-percent">
+                              9%
+                            </div>
+
+                            <div class="breakdown-title">
+                              share of total<br>
+                              annual contributions
+                            </div>
+
+                            <div class="breakdown-value">
+                              down from 12% in 2024
+                            </div>
+
+                          </div>
+
+
+                          <!-- Funding Compact target -->
+                          <div class="cell small-12 medium-4 breakdown-item">
+
+                            <div class="breakdown-percent">
+                              30%
+                            </div>
+
+                            <div class="breakdown-title">
+                              Funding Compact<br>
+                              target
+                            </div>
+
+                            <div class="breakdown-value">
+                              current share remains below target
+                            </div>
+
+                          </div>
+
+
+                          <!-- Multi-year commitments -->
+                          <div class="cell small-12 medium-4 breakdown-item">
+
+                            <div class="breakdown-percent">
+                              37%
+                            </div>
+
+                            <div class="breakdown-title">
+                              of regular resources were<br>
+                              multi-year commitments
+                            </div>
+
+                            <div class="breakdown-value">
+                              $165 million · down from 40%
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
                 </div>
               </div>
-            </div>
-            <div id="tab-3" role="tabpanel" class="tabs-panel" aria-labelledby="tablist_1-tab-3" aria-hidden="true"
-              hidden="">
-              <div class="grid-x grid-margin-x">
 
-                <div class="cell medium-12 large-12">
-                  <p style="background-color: papayawhip; padding: 5%; font-size: 1.2em; color: orangered;">
-                    Annual contributions to other resources increased to $4.6 billion, up by 6 percent from $4.3 billion
-                    in 2024.
-                  </p>
+            </div>
+
+
+            <!-- =====================================================
+     TAB 3: OTHER RESOURCES
+     ===================================================== -->
+
+            <div id="tab-3" role="tabpanel" class="tabs-panel" aria-labelledby="tablist_1-tab-3" aria-hidden="true">
+
+              <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+
+                  <div class="contributions-summary other-summary">
+
+                    <div class="grid-x contribution-grid ">
+
+                      <!-- MAIN FIGURE -->
+                      <div class="cell small-12 large-12 contributions-total">
+
+                        <div class="grid-x total-row">
+
+                          <div class="cell shrink">
+
+                            <div class="total-value">
+                              $4.6<span>billion</span>
+                            </div>
+
+                            <div class="total-caption">
+                              in other resources in 2025
+                            </div>
+
+                          </div>
+
+
+                          <!-- INCREASE -->
+                          <div class="cell auto increase-wrap">
+
+                            <div class="increase">
+                              <strong>↑6%</strong>
+                              <span>up from $4.3 billion in 2024</span>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
                 </div>
               </div>
+
             </div>
+
           </div>
         </div>
 
@@ -302,7 +558,7 @@
 
 <!--************************* Resources by funding type  *************************  -->
 
-<section class="section" style="background-color: aliceblue;">
+<section class="section" style="background-color: seashell;">
 
   <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
 
@@ -327,7 +583,8 @@
             up by 2 percent from $4.9 billion in 2024.
           </p>
           <p>
-            <strong style="color: #4A90C2;">Annual contributions to regular resources decreased to $442 million,</strong>
+            <strong style="color: #4A90C2;">Annual contributions to regular resources decreased to $442
+              million,</strong>
             down by 24 percent from $581 million in 2024.
           </p>
           <p>
@@ -340,20 +597,10 @@
       <div class="cell small-12 medium-12 large-7">
         <div class="echarts" data-chart-type="resources-by-funding-type" data-years='["2025","2024"]'
           data-usd='{"Other resources":[4598,4344],"Regular resources":[442,581]}' data-other="91,88"
-          data-regular="9,12" style="width:100%;height: 400px;">
+          data-regular="9,12" style="width:100%;height: 500px;">
         </div>
       </div>
-
-
-    
-
-
     </div>
-
-
-
-
-
 
     <div class="cell small-12 medium-12 large-12">
       <br><br>
@@ -371,7 +618,7 @@
         accelerate progress towards
         the SDGs and maintain robust oversight and accountability systems.</p>
 
-        <br>
+      <br>
 
       <p><span class="text-extrabold">Trends in regular and other resources, 2022–2025</span><br>
         UNDP maintained broadly stable annual contributions throughout the period covered by the 2022–2025 Strategic
@@ -386,14 +633,8 @@
           data-other-percentages='[88, 89, 88, 91]' style="width:100%;height:500px;"></div>
       </div>
 
-      
-
-
-
     </div>
   </div>
-
-
 
 </section>
 
@@ -404,41 +645,55 @@
 <section class="section">
 
   <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
-  
+
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
-  
         <h2>Resources by funding partner</h2>
-        <h4>Regular and other resources, 2025</h4>
       </div>
-  
+    </div>
+
+    <div class="grid-x align-justify align-middle">
+
+      <div class="cell small-12 medium-12 large-6">
+        <h4>Regular and other resources, 2025</h4>
+        <p>
+          UNDP values all types of funding received from its partners—including Member States,
+          multilateral organizations, non-governmental organizations, private and philanthropic
+          organizations and financing institutions—as these resources enable it to deliver on its
+          commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total,
+          36 percent was contributed by donor country governments, 32 percent by multilateral organizations
+          and 32 percent by programme country governments.
+        </p>
+      </div>
+
+      <div class="cell small-12 medium-12 large-6">
+        <div class="chart-wrapper" style="display:flex; justify-content:center;">
+          <div class="echarts" data-chart-type="contribution-by-donor-category" data-donor-governments="1814"
+            data-programme-governments="1588" data-vertical-funds="825" data-pooled-funds="234"
+            data-european-union="313" data-other-multilaterals="266"
+            style="width:100%; height:500px; padding-left: 10%;">
+          </div>
+        </div>
+      </div>
     </div>
 
 
-    <div class="grid-x grid-padding-x align-justify align-self-middle">
-      <div class="cell small-12 medium-12 large-4">
-  
+    <div class="grid-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-12">
+        <h4>Top 30 resource partners, 2025
+        </h4>
         <p>
-          <br>
-          <br>
-          <br>
-          UNDP values all types of funding received from its partners—including Member States, 
-          multilateral organizations, non-governmental organizations, private and philanthropic 
-          organizations and financing institutions—as these resources enable it to deliver on its 
-          commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total, 
-          36 percent was contributed by donor country governments, 32 percent by multilateral organizations 
-          and 32 percent by programme country governments.</p>
-      </div>
-      <div class="cell small-12 medium-12 large-7">
-  
-        <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="contribution-by-donor-category" data-donor-governments="1814"
-            data-programme-governments="1588" data-vertical-funds="825" data-pooled-funds="234" data-european-union="313"
-            data-other-multilaterals="266" style="width:100%;height:800px;"></div>
-        </div>
-      </div>
+          In 2025, UNDP’s top 30 resource partners contributed $4.1 billion, or 82 percent of total annual
+          contributions. These partners provided 89 percent of regular resources and 81 percent of other resource
+          contributions.
+        </p>
+
         <div class="echarts" data-chart-type="contributions-by-donor-resource" style="width:100%;height:1000px;"></div>
-     
+
+      </div>
+
+
+
     </div>
 
   </div>
@@ -450,14 +705,209 @@
 
 <section class="section padded" style="background-color: aliceblue;">
   <div class="grid-container">
+
+    <div class="grid-x align-justify align-self-middle">
+      <div class="cell small-12 medium-12 large-12">
+        <h2>Resources by funding channel
+        </h2>
+        <p>
+          In 2025, UNDP benefited from increases in government development financing (17 percent) and third-party
+          cost-sharing (7 percent).
+        </p>
+
+        <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;"></div>
+
+      </div>
+    </div>
+
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-12 large-12">
-        <h3>The case for regular (“core”) resources in 2025</h3><br><br>
+        <br><br>
+        <h3>The case for regular (“core”) resources in 2025</h3>
       </div>
+
+      <div class="grid-x grid-margin-x resource-grid">
+
+        <!-- =====================================================
+       PRIMARY RESOURCE TYPES
+       ===================================================== -->
+
+        <div class="cell small-12">
+
+          <!-- REGULAR RESOURCES -->
+          <div class="resource-item resource-primary resource-blue">
+            <div class="resource-icon">
+                            <img src="/assets/img/icons/core-funding.svg" alt="">
+
+            </div>
+
+            <div class="resource-content">
+              <h4>Regular (core) resources</h4>
+              <p>
+                Unearmarked funds that provide a flexible foundation for delivering
+                results across the Strategic Plan.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- OTHER RESOURCES -->
+          <div class="resource-item resource-primary resource-green">
+            <div class="resource-icon">
+                            <img src="/assets/img/icons/other-resources-target.svg" alt="">
+
+            </div>
+
+            <div class="resource-content">
+              <h4>Other resources</h4>
+              <p>
+                Earmarked funds that support specific themes, programmes or projects.<br>
+                These include:
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- =====================================================
+       OTHER RESOURCES — SUBCATEGORIES
+       ===================================================== -->
+
+        <!-- LEFT COLUMN -->
+        <div class="cell small-12 large-6">
+
+          <!-- GOVERNMENT FINANCING -->
+          <div class="resource-item resource-sub resource-teal">
+            <div class="resource-icon">
+              <img src="/assets/img/icons/government.svg" alt="">
+            </div>
+
+            <div class="resource-content">
+              <h4>Government financing</h4>
+              <p>
+                Voluntary funding through which programme country governments entrust
+                domestic resources or loans from financial institutions to UNDP to
+                support development initiatives in their respective countries.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- THEMATIC FUNDS -->
+          <div class="resource-item resource-sub resource-turquoise">
+            <div class="resource-icon">
+              <img src="/assets/img/icons/thematic.svg" alt="">
+
+            </div>
+
+            <div class="resource-content">
+              <h4>Thematic funds</h4>
+              <p>
+                Softly earmarked pooled funds that support the achievement of outcomes
+                aligned with the Strategic Plan and address issues that cut across
+                thematic areas.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- THIRD-PARTY COST-SHARING -->
+          <div class="resource-item resource-sub resource-orange">
+            <div class="resource-icon">
+              <img src="/assets/img/icons/third-party.svg" alt="">
+            </div>
+
+            <div class="resource-content">
+              <h4>Third-party cost-sharing</h4>
+              <p>
+                Earmarked contributions for a specific programme, project, region,
+                or country.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
+        <div class="cell small-12 large-6">
+
+          <!-- UN POOLED FUNDS -->
+          <div class="resource-item resource-sub resource-blue">
+            <div class="resource-icon">
+              <img src="/assets/img/icons/united-nations.svg" alt="">
+
+            </div>
+
+            <div class="resource-content">
+              <h4>UN pooled funds</h4>
+              <p>
+                UN inter-agency financing mechanisms that support clearly defined
+                programmatic scopes and results frameworks, enabling global and local
+                responses to humanitarian, development, environmental and peace-related
+                challenges.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- VERTICAL FUNDS -->
+          <div class="resource-item resource-sub resource-teal">
+            <div class="resource-icon">
+              <img src="/assets/img/icons/vertical-badge.svg" alt="">
+
+            </div>
+
+            <div class="resource-content">
+              <h4>Vertical funds</h4>
+              <p>
+                Earmarked funds focused on a single area of development, such as
+                health or the environment.
+              </p>
+            </div>
+          </div>
+
+
+          <!-- REIMBURSABLE SUPPORT SERVICES -->
+          <div class="resource-item resource-sub resource-purple">
+            <div class="resource-icon">
+              <img src="/assets/img/icons/reimbursable.svg" alt="">
+
+            </div>
+
+            <div class="resource-content">
+              <h4>Reimbursable support services</h4>
+              <p>
+                Funds received for management and support services, including services
+                provided by UN Volunteers and the Junior Professional Officer (JPO)
+                Programme.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12 medium-12 large-12">
+        <br><br>
+        <h3>UNDP funding types and channels</h3><br><br>
+      </div>
+
+
+
+
     </div>
   </div>
 
-  <!-- Sipwer What we've learned-->
+  <!-- Sipwer -->
   <div
     class="stats-slider swiper-slider-0 swiper-initialized swiper-horizontal swiper-backface-hidden swiper-pointer-events"
     data-swiper-slides-view-mobile="1.2" data-swiper-slides-view-tablet="2.2" data-swiper-slides-view-desktop="3.2"

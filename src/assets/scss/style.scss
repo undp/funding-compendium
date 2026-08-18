@@ -34,8 +34,7 @@
 
   .stats-card {
     height: 100%;
-
-
+    background-color: white;
   }
 
   h4 {
@@ -50,6 +49,16 @@
 
     h4 {
       color: white;
+    }
+  }
+
+  /* Override hover for white background stats cards */
+  .stats-card[style*="background-color: white"]:hover {
+    background-color: #f0f0f0;
+    color: #222222;
+
+    h4 {
+      color: #0468B1;
     }
   }
 }
@@ -472,3 +481,560 @@ html {
     }
 }
 
+
+
+************************************************************************
+/* =========================================================
+   FUNDING TABS
+   ========================================================= */
+
+/* Tabs content container */
+.tabs-content {
+  border: 0;
+  background: transparent;
+}
+
+.tabs-panel {
+  padding: 0;
+}
+
+
+/* =========================================================
+   CONTRIBUTION SUMMARY
+   ========================================================= */
+
+.contributions-summary {
+  width: 100%;
+  box-sizing: border-box;
+  background: #e5f2fc;
+  padding: 3.5rem 3rem;
+  color: #111;
+}
+
+
+/* Main two-column layout */
+
+.contribution-grid {
+  width: 100%;
+  align-items: center;
+}
+
+.contributions-total {
+  padding-right: 3rem;
+}
+
+.contributions-breakdown {
+  padding-left: 2rem;
+}
+
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.total-row {
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+.total-value {
+  color: #2464bc;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.total-value span {
+  display: inline-block;
+  margin-left: 0.12em;
+  font-size: 0.4em;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.total-caption {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #111;
+}
+
+
+/* Increase */
+
+.increase-wrap {
+  display: flex;
+  align-items: flex-end;
+}
+
+.increase {
+  margin-left: 2.5rem;
+  padding-bottom: 0.15rem;
+  white-space: nowrap;
+}
+
+.increase strong {
+  display: block;
+  color: #2464bc;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.increase span {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #111;
+}
+
+
+/* =========================================================
+   BREAKDOWN
+   ========================================================= */
+
+.breakdown-label {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.breakdown-grid {
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.breakdown-item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+}
+
+.breakdown-item:first-child {
+  padding-left: 0;
+}
+
+.breakdown-item:last-child {
+  padding-right: 0;
+}
+
+.breakdown-item + .breakdown-item {
+  border-left: 1px solid #d3dfeb;
+}
+
+.breakdown-percent {
+  color: #2464bc;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.breakdown-title {
+  min-height: rem;
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #111;
+}
+
+.breakdown-value {
+  display: inline-block;
+  margin-top: 2.2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #2464bc;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111;
+}
+
+
+/* =========================================================
+   TAB SUPPORTING COPY
+   Use class="tab-summary-text"
+   instead of inline styles
+   ========================================================= */
+
+.tab-summary-text {
+  margin: 0;
+  padding: 5%;
+  background: #e5f2fc;
+  color: #000f9f;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+
+/* Regular resources tab */
+
+#tab-2 .tab-summary-text {
+  background: mintcream;
+  color: forestgreen;
+}
+
+
+/* Other resources tab */
+
+#tab-3 .tab-summary-text {
+  background: papayawhip;
+  color: orangered;
+}
+
+
+/* =========================================================
+   FOOTNOTE
+   ========================================================= */
+
+.tab-footnote {
+  display: block;
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tab-footnote sup {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLET
+   Foundation large breakpoint: 64rem
+   ========================================================= */
+
+@media screen and (max-width: 63.9375em) {
+
+  .contributions-summary {
+    padding: 2.5rem 2rem;
+  }
+
+  .contributions-total {
+    padding-right: 0;
+  }
+
+  .contributions-breakdown {
+    margin-top: 3rem;
+    padding-left: 0;
+  }
+
+  .total-value {
+    font-size: 5.5rem;
+  }
+
+  .breakdown-grid {
+    flex-wrap: nowrap;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   Foundation medium breakpoint: 40rem
+   ========================================================= */
+
+@media screen and (max-width: 39.9375em) {
+
+  .contributions-summary {
+    padding: 2rem 1.5rem;
+  }
+
+
+  /* Total */
+
+  .total-row {
+    flex-wrap: wrap;
+  }
+
+  .total-value {
+    font-size: 4.5rem;
+  }
+
+  .total-value span {
+    font-size: 0.38em;
+  }
+
+  .increase-wrap {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .increase {
+    margin: 1.75rem 0 0;
+    white-space: normal;
+  }
+
+  .increase strong {
+    font-size: 2.5rem;
+  }
+
+
+  /* Breakdown */
+
+  .contributions-breakdown {
+    margin-top: 2.5rem;
+  }
+
+  .breakdown-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .breakdown-grid {
+    flex-wrap: wrap;
+  }
+
+  .breakdown-item {
+    padding: 1.5rem 0;
+  }
+
+  .breakdown-item + .breakdown-item {
+    border-top: 1px solid #d3dfeb;
+    border-left: 0;
+  }
+
+  .breakdown-percent {
+    font-size: 2.75rem;
+  }
+
+  .breakdown-title {
+    min-height: 0;
+  }
+
+
+  /* Supporting text */
+
+  .tab-summary-text {
+    padding: 2rem 1.5rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media screen and (max-width: 25rem) {
+
+  .total-value {
+    font-size: 3.75rem;
+  }
+
+  .contributions-summary {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+}
+
+
+/* =========================================================
+   TAB 2 — REGULAR RESOURCES / GREEN
+   ========================================================= */
+
+#tab-2 .contributions-summary {
+  background: #eaf6e8;
+}
+
+#tab-2 .total-value,
+#tab-2 .increase strong,
+#tab-2 .breakdown-percent {
+  color: #3f7f45;
+}
+
+#tab-2 .breakdown-value {
+  border-top-color: #3f7f45;
+}
+
+#tab-2 .breakdown-item + .breakdown-item {
+  border-left-color: rgba(63, 127, 69, 0.18);
+}
+
+
+/* Mobile divider */
+
+@media screen and (max-width: 39.9375em) {
+
+  #tab-2 .breakdown-item + .breakdown-item {
+    border-left: 0;
+    border-top-color: rgba(63, 127, 69, 0.18);
+  }
+
+}
+
+/* =========================================================
+   TAB 3 — OTHER RESOURCES / ORANGE
+   ========================================================= */
+
+#tab-3 .contributions-summary {
+  background: #fff1e6;
+
+  padding: 8% 8%; 
+  
+}
+
+#tab-3 .total-value,
+#tab-3 .increase strong {
+  color: #d95f18;
+}
+
+/* ================================================================================================================== */
+
+.resource-grid {
+  margin-top: 1.5rem;
+}
+
+.resource-item {
+  --resource-color: #006eb5;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   PRIMARY LEVEL
+   ========================= */
+
+.resource-primary {
+  padding: 1.45rem 0;
+}
+
+.resource-primary .resource-icon {
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+}
+
+.resource-primary .resource-content h4 {
+  font-size: 1.2rem;
+  color: var(--resource-color);
+}
+
+
+/* =========================
+   SUBCATEGORY LEVEL
+   ========================= */
+
+.resource-sub {
+  padding-left: 1.5rem;
+  gap: 0.9rem;
+}
+
+.resource-sub .resource-icon {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+}
+
+.resource-sub .resource-content h4 {
+  font-size: 1.05rem;
+  color: #222;
+}
+
+/*
+.resource-sub::before {
+  content: "";
+  width: 3px;
+  align-self: stretch;
+  background: rgba(0, 0, 0, 0.08);
+  margin-right: 0.2rem;
+}*/
+
+
+/* ICONS */
+
+.resource-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--resource-color);
+  color: #fff;
+}
+
+.resource-icon::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+}
+
+.resource-icon img {
+  width: 70%;
+  height: 65%;
+  object-fit: contain;
+  
+}
+
+.resource-icon:has(img)::before {
+  display: none;
+}
+
+/* CONTENT */
+
+.resource-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.resource-content h4 {
+  margin: 0 0 0.25rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.resource-content p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+
+/* COLORS */
+
+.resource-blue {
+  --resource-color: #006eb5;
+}
+
+.resource-green {
+  --resource-color: #6ba539;
+}
+
+.resource-teal {
+  --resource-color: #008b95;
+}
+
+.resource-turquoise {
+  --resource-color: #27aab7;
+}
+
+.resource-orange {
+  --resource-color: #f47b20;
+}
+
+.resource-purple {
+  --resource-color: #5c4aa5;
+}
+
+.chart-source {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #555;
+  text-align: center;
+}

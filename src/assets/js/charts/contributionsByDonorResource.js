@@ -125,7 +125,7 @@ export function initContributionsByDonorResource(el, echarts) {
     },
 
     title: {
-      text: 'Contributions by donor and resource type',
+      /*text: 'Contributions by donor and resource type',*/
       left: 0,
       top: 0,
       textStyle: {
@@ -181,7 +181,7 @@ export function initContributionsByDonorResource(el, echarts) {
         const item = chartData[index];
         const total = item.other + item.regular;
 
-        return `
+        let html = `
           <div style="
             min-width: 240px;
             font-family: 'ProximaNova', Arial, sans-serif;
@@ -193,7 +193,10 @@ export function initContributionsByDonorResource(el, echarts) {
             ">
               ${item.donor}
             </div>
+        `;
 
+        if (item.regular > 0) {
+          html += `
             <div style="margin-bottom: 6px;">
               <span style="font-weight: 600;">
                 Regular resources
@@ -202,7 +205,11 @@ export function initContributionsByDonorResource(el, echarts) {
                 USD ${formatExact(item.regular)}
               </span>
             </div>
+          `;
+        }
 
+        if (item.other > 0) {
+          html += `
             <div style="margin-bottom: 9px;">
               <span style="font-weight: 600;">
                 Other resources
@@ -211,7 +218,10 @@ export function initContributionsByDonorResource(el, echarts) {
                 USD ${formatExact(item.other)}
               </span>
             </div>
+          `;
+        }
 
+        html += `
             <div style="
               border-top: 1px solid #e5e5e5;
               padding-top: 8px;
@@ -221,6 +231,8 @@ export function initContributionsByDonorResource(el, echarts) {
             </div>
           </div>
         `;
+
+        return html;
       }
     },
 

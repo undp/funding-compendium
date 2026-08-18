@@ -149,7 +149,7 @@ export function initResourcesByFundingType(el, echarts) {
             percent: {
               fontFamily: 'ProximaNova, Arial, sans-serif',
               color: '#ffffff',
-              fontSize: 14,
+              fontSize: 10,
               fontWeight: 'bold',
               lineHeight: 17,
               align: 'center'

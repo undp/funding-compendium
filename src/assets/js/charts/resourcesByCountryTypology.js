@@ -1,0 +1,159 @@
+// Initializes the regular resources by country typology donut chart.
+// el: DOM element
+// echarts: imported ECharts namespace
+export function initResourcesByCountryTypology(el, echarts) {
+  const data = [
+    {
+      name: 'Low-income countries (LICs)',
+      value: 987,
+      itemStyle: { color: '#4A90C2' }
+    },
+    {
+      name: 'Middle-income countries (MICs)',
+      value: 288,
+      itemStyle: { color: '#A9D18E' }
+    }
+  ];
+
+  const percentages = {
+    'Low-income countries (LICs)': 77,
+    'Middle-income countries (MICs)': 23
+  };
+
+  const displayValues = {
+    'Low-income countries (LICs)': '$987M',
+    'Middle-income countries (MICs)': '$288M'
+  };
+
+  const shortLabels = {
+    'Low-income countries (LICs)': 'LICs',
+    'Middle-income countries (MICs)': 'MICs'
+  };
+
+  const option = {
+    tooltip: {
+      trigger: 'item',
+      formatter: function (params) {
+        const pct = percentages[params.name];
+
+        return `
+          <strong>${params.name}</strong><br>
+          ${displayValues[params.name]}<br>
+          ${pct}% of programmatic resources
+        `;
+      }
+    },
+
+    series: [
+      {
+        type: 'pie',
+        radius: ['54%', '78%'],
+        center: ['50%', '45%'],
+        startAngle: 90,
+        avoidLabelOverlap: true,
+        itemStyle: {
+          borderColor: '#fff',
+          borderWidth: 3
+        },
+        label: {
+          show: true,
+          position: 'outside',
+          alignTo: 'edge',
+          edgeDistance: 10,
+          bleedMargin: 5,
+          formatter: function (params) {
+            const pct = percentages[params.name];
+
+            return (
+              `{name|${shortLabels[params.name]}}\n` +
+              `{value|${displayValues[params.name]}}  ` +
+              `{pct|${pct}%}`
+            );
+          },
+          rich: {
+            name: {
+              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontSize: 15,
+              fontWeight: 700,
+              color: '#333',
+              lineHeight: 20
+            },
+            value: {
+              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontSize: 14,
+              color: '#555'
+            },
+            pct: {
+              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontSize: 14,
+              fontWeight: 700,
+              color: '#333'
+            }
+          }
+        },
+        labelLine: {
+          show: true,
+          length: 18,
+          length2: 20
+        },
+        data
+      },
+      {
+        type: 'pie',
+        radius: [0, '1%'],
+        center: ['50%', '45%'],
+        silent: true,
+        tooltip: {
+          show: false
+        },
+        labelLine: {
+          show: false
+        },
+        label: {
+          show: true,
+          position: 'center',
+          formatter: '{total|$1.275B}\n{caption|Total}',
+          rich: {
+            total: {
+              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontSize: 26,
+              fontWeight: 700,
+              color: '#333',
+              lineHeight: 34,
+              align: 'center'
+            },
+            caption: {
+              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontSize: 14,
+              fontWeight: 400,
+              color: '#777',
+              lineHeight: 22,
+              align: 'center'
+            }
+          }
+        },
+        data: [
+          {
+            value: 1,
+            itemStyle: {
+              color: 'transparent'
+            }
+          }
+        ]
+      }
+    ]
+  };
+
+  const chart = echarts.init(el);
+  chart.setOption(option);
+
+  const resize = () => chart.resize();
+  window.addEventListener('resize', resize);
+
+  el.__echartsInstance = chart;
+  el.__echartsResizeHandler = resize;
+
+  return chart;
+}
+
+export default initResourcesByCountryTypology;

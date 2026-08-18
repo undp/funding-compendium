@@ -3,12 +3,24 @@ import { initResourcesByFundingType } from './resourcesByFundingType';
 import { initTrendsInResources } from './trendsInResources';
 import { initContributionByDonorCategory } from './contributionByDonorCategory';
 import { initContributionsByDonorResource } from './contributionsByDonorResource';
+import { initResourcesByFundingChannel } from './resourcesByFundingChannel';
+import { initRegularResourcesAllocation } from './regularResourcesAllocation';
+import { initResourcesByDevelopmentStatus } from './resourcesByDevelopmentStatus';
+import { initResourcesByCountryTypology } from './resourcesByCountryTypology';
+import { initResourcesByRegion } from './resourcesByRegion';
+import { initInstitutionalBudgetAllocation } from './institutionalBudgetAllocation';
 
 const registry = {
   'resources-by-funding-type': initResourcesByFundingType,
   'trends-in-resources': initTrendsInResources,
   'contribution-by-donor-category': initContributionByDonorCategory,
-  'contributions-by-donor-resource': initContributionsByDonorResource
+  'contributions-by-donor-resource': initContributionsByDonorResource,
+  'resources-by-funding-channel': initResourcesByFundingChannel,
+  'regular-resources-allocation': initRegularResourcesAllocation,
+  'resources-by-development-status': initResourcesByDevelopmentStatus,
+  'resources-by-country-typology': initResourcesByCountryTypology,
+  'resources-by-region': initResourcesByRegion,
+  'institutional-budget-allocation': initInstitutionalBudgetAllocation
 };
 
 function initChartEl(el) {

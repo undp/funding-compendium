@@ -1,0 +1,1091 @@
+// Initializes the "Resources by funding channel" stacked area chart.
+// el: DOM element
+// echarts: imported echarts namespace
+export function initResourcesByFundingChannel(el, echarts) {
+  const years = ['2022', '2023', '2024', '2025'];
+
+  // ======================================================
+  // DATA — USD MILLIONS
+  // ======================================================
+
+  const data = {
+    'Third party cost sharing': [
+      1918.060867,
+      1793.600347,
+      1812.300670,
+      1945.827036
+    ],
+
+    'Government financing': [
+      1124.037568,
+      1194.290257,
+      1167.303461,
+      1425.934731
+    ],
+
+    'Vertical funds': [
+      885.152917,
+      1032.913610,
+      926.758424,
+      829.421591
+    ],
+
+    'Regular resources': [
+      590.941542,
+      566.077213,
+      581.005615,
+      442.318070
+    ],
+
+    'United Nations pooled funds': [
+      220.622514,
+      210.416950,
+      241.957584,
+      226.084378
+    ],
+
+    'Reimbursable support services': [
+      76.322282,
+      64.375964,
+      62.326190,
+      55.483459
+    ],
+
+    'Thematic funds': [
+      118.617483,
+      126.267133,
+      133.075502,
+      115.049362
+    ]
+  };
+
+  const totals = [
+    4933.755173,
+    4987.941473,
+    4924.727445,
+    5040.118625
+  ];
+
+  const shares2025 = {
+    'Third party cost sharing': 39,
+    'Government financing': 28,
+    'Vertical funds': 16,
+    'Regular resources': 9,
+    'United Nations pooled funds': 4,
+    'Reimbursable support services': 1,
+    'Thematic funds': 2
+  };
+
+  // ======================================================
+  // COLORS
+  // ======================================================
+
+  const colors = {
+    'Third party cost sharing': '#F5A64A',
+    'Government financing': '#BC6872',
+    'Vertical funds': '#6391A8',
+    'Regular resources': '#88AA7F',
+    'United Nations pooled funds': '#9183A3',
+    'Reimbursable support services': '#D2B886',
+    'Thematic funds': '#AD7A45'
+  };
+
+  const seriesOrder = [
+    'Third party cost sharing',
+    'Government financing',
+    'Vertical funds',
+    'Regular resources',
+    'United Nations pooled funds',
+    'Reimbursable support services',
+    'Thematic funds'
+  ];
+
+  const legendOrder = [
+    'Thematic funds',
+    'Reimbursable support services',
+    'United Nations pooled funds',
+    'Regular resources',
+    'Vertical funds',
+    'Government financing',
+    'Third party cost sharing'
+  ];
+
+  // ======================================================
+  // FORMATTERS
+  // ======================================================
+
+  function formatValue(value) {
+    return '$' + Math.round(value).toLocaleString('en-US');
+  }
+
+  function formatM(value) {
+    return '$' + Math.round(value).toLocaleString('en-US') + 'M';
+  }
+
+  function formatShort(value) {
+    if (value >= 1000) {
+      return (
+        '$' +
+        (value / 1000)
+          .toFixed(2)
+          .replace(/0+$/, '')
+          .replace(/\.$/, '') +
+        'b'
+      );
+    }
+
+    return '$' + Math.round(value) + 'm';
+  }
+
+  function formatTotal(value) {
+    return (
+      '$' +
+      (value / 1000)
+        .toFixed(1)
+        .replace('.0', '') +
+      'b'
+    );
+  }
+
+  // ======================================================
+  // BUILD SERIES
+  // ======================================================
+
+  const series = [];
+
+  // Keep track of indexes
+  const areaSeriesIndex = {};
+  const hoverLabelSeriesIndex = {};
+
+  // ======================================================
+  // 1. MAIN STACKED AREA SERIES
+  // ======================================================
+
+  seriesOrder.forEach((name) => {
+
+    areaSeriesIndex[name] = series.length;
+
+    series.push({
+      name: name,
+
+      type: 'line',
+
+      stack: 'funding',
+
+      data: data[name],
+
+      symbol: 'none',
+
+      smooth: false,
+
+      lineStyle: {
+        width: 0.7,
+        color: 'rgba(255,255,255,0.72)'
+      },
+
+      areaStyle: {
+        opacity: 0.95,
+        color: colors[name]
+      },
+
+      itemStyle: {
+        color: colors[name]
+      },
+
+      emphasis: {
+        focus: 'series',
+
+        areaStyle: {
+          opacity: 1
+        }
+      },
+
+      blur: {
+        areaStyle: {
+          opacity: 0.35
+        }
+      },
+
+      z: 5
+    });
+
+  });
+
+  // ======================================================
+  // 2. CALCULATE MIDPOINT OF EACH BAND
+  // ======================================================
+
+  const cumulative = [0, 0, 0, 0];
+
+  const midpointData = {};
+
+  seriesOrder.forEach((name) => {
+
+    midpointData[name] =
+      data[name].map((value, index) => {
+
+        const midpoint =
+          cumulative[index] +
+          value / 2;
+
+        cumulative[index] += value;
+
+        return midpoint;
+
+      });
+
+  });
+
+  // ======================================================
+  // 3. PERMANENT VALUES
+  //
+  // These remain visible BEFORE hover.
+  // ======================================================
+
+  seriesOrder.forEach((name) => {
+
+    const points =
+      years.map((year, index) => ({
+
+        value: [
+          year,
+          midpointData[name][index]
+        ],
+
+        fundingValue:
+          data[name][index]
+
+      }));
+
+    series.push({
+
+      name: name + ' permanent values',
+
+      type: 'scatter',
+
+      data: points,
+
+      symbolSize: 1,
+
+      silent: true,
+
+      itemStyle: {
+        opacity: 0
+      },
+
+      label: {
+
+        show: true,
+
+        position: 'inside',
+
+        formatter: function (params) {
+
+          const value =
+            params.data.fundingValue;
+
+          if (value < 100) {
+
+            return (
+              '{small|' +
+              formatValue(value) +
+              '}'
+            );
+
+          }
+
+          if (value < 250) {
+
+            return (
+              '{medium|' +
+              formatValue(value) +
+              '}'
+            );
+
+          }
+
+          return (
+            '{large|' +
+            formatValue(value) +
+            '}'
+          );
+
+        },
+
+        rich: {
+
+          large: {
+
+            color: '#303030',
+
+            fontFamily:
+              'ProximaNova, Arial, sans-serif',
+
+            fontSize: 14,
+
+            fontWeight: 700,
+
+            textBorderColor:
+              'rgba(255,255,255,0.9)',
+
+            textBorderWidth: 3
+
+          },
+
+          medium: {
+
+            color: '#303030',
+
+            fontFamily:
+              'ProximaNova, Arial, sans-serif',
+
+            fontSize: 12,
+
+            fontWeight: 700,
+
+            textBorderColor:
+              'rgba(255,255,255,0.94)',
+
+            textBorderWidth: 3
+
+          },
+
+          small: {
+
+            color: '#303030',
+
+            fontFamily:
+              'ProximaNova, Arial, sans-serif',
+
+            fontSize: 10,
+
+            fontWeight: 700,
+
+            textBorderColor:
+              'rgba(255,255,255,0.96)',
+
+            textBorderWidth: 3
+
+          }
+
+        }
+
+      },
+
+      tooltip: {
+        show: false
+      },
+
+      z: 30
+
+    });
+
+  });
+
+  // ======================================================
+  // 4. HOVER LABEL SERIES
+  //
+  // Hidden normally.
+  //
+  // When a funding stream is hovered, this layer is
+  // highlighted and shows all FOUR values prominently.
+  // ======================================================
+
+  seriesOrder.forEach((name) => {
+
+    const points =
+      years.map((year, index) => ({
+
+        value: [
+          year,
+          midpointData[name][index]
+        ],
+
+        fundingValue:
+          data[name][index],
+
+        year: year
+
+      }));
+
+    hoverLabelSeriesIndex[name] =
+      series.length;
+
+    series.push({
+
+      name: name + ' hover values',
+
+      type: 'scatter',
+
+      data: points,
+
+      symbolSize: 1,
+
+      silent: true,
+
+      itemStyle: {
+        opacity: 0
+      },
+
+      label: {
+        show: false
+      },
+
+      emphasis: {
+
+        label: {
+
+          show: true,
+
+          position: 'inside',
+
+          formatter: function (params) {
+
+            return (
+              '{year|' +
+              params.data.year +
+              '}\n' +
+
+              '{value|' +
+              formatValue(
+                params.data.fundingValue
+              ) +
+              '}'
+            );
+
+          },
+
+          backgroundColor:
+            'rgba(255,255,255,0.94)',
+
+          borderColor:
+            'rgba(0,0,0,0.12)',
+
+          borderWidth: 1,
+
+          borderRadius: 3,
+
+          padding: [5, 8],
+
+          rich: {
+
+            year: {
+
+              color: '#777777',
+
+              fontFamily:
+                'ProximaNova, Arial, sans-serif',
+
+              fontSize: 10,
+
+              fontWeight: 500,
+
+              lineHeight: 14,
+
+              align: 'center'
+
+            },
+
+            value: {
+
+              color: '#222222',
+
+              fontFamily:
+                'ProximaNova, Arial, sans-serif',
+
+              fontSize: 14,
+
+              fontWeight: 700,
+
+              lineHeight: 18,
+
+              align: 'center'
+
+            }
+
+          }
+
+        }
+
+      },
+
+      tooltip: {
+        show: false
+      },
+
+      z: 100
+
+    });
+
+  });
+
+  // ======================================================
+  // 5. TOTAL LABELS ABOVE CHART
+  // ======================================================
+
+  series.push({
+
+    name: 'Total',
+
+    type: 'line',
+
+    data: totals,
+
+    symbol: 'none',
+
+    silent: true,
+
+    lineStyle: {
+      width: 0,
+      opacity: 0
+    },
+
+    itemStyle: {
+      opacity: 0
+    },
+
+    label: {
+
+      show: true,
+
+      position: 'top',
+
+      distance: 12,
+
+      formatter: function (params) {
+        return formatTotal(params.value);
+      },
+
+      color: '#8E632F',
+
+      fontFamily:
+        'ProximaNova, Arial, sans-serif',
+
+      fontSize: 17,
+
+      fontWeight: 700
+
+    },
+
+    tooltip: {
+      show: false
+    },
+
+    z: 60
+
+  });
+
+  // ======================================================
+  // OPTION
+  // ======================================================
+
+  const option = {
+
+    animation: false,
+    color:
+      seriesOrder.map(
+        name => colors[name]
+      ),
+
+    // ====================================================
+    // TOOLTIP
+    //
+    // YEAR tooltip still works when moving horizontally.
+    // ====================================================
+
+    tooltip: {
+
+      trigger: 'axis',
+
+      confine: true,
+
+      axisPointer: {
+
+        type: 'line',
+
+        snap: true,
+
+        lineStyle: {
+          color: '#555555',
+          width: 1.4,
+          type: 'dashed'
+        },
+
+        label: {
+
+          show: true,
+
+          backgroundColor: '#333333',
+
+          color: '#ffffff',
+
+          padding: [5, 9],
+
+          borderRadius: 2,
+
+          margin: 8,
+
+          fontFamily:
+            'ProximaNova, Arial, sans-serif',
+
+          fontSize: 13,
+
+          fontWeight: 700
+
+        }
+
+      },
+
+      backgroundColor: '#ffffff',
+
+      borderColor: '#cccccc',
+
+      borderWidth: 1,
+
+      padding: 14,
+
+      extraCssText:
+        'box-shadow:0 4px 14px rgba(0,0,0,0.14);' +
+        'border-radius:4px;',
+
+      textStyle: {
+
+        color: '#222222',
+
+        fontFamily:
+          'ProximaNova, Arial, sans-serif',
+
+        fontSize: 13
+
+      },
+
+      formatter: function (params) {
+
+        const validParams =
+          params.filter(item =>
+            seriesOrder.includes(
+              item.seriesName
+            )
+          );
+
+        if (!validParams.length) {
+          return '';
+        }
+
+        const year =
+          validParams[0].axisValue;
+
+        const yearIndex =
+          years.indexOf(year);
+
+        let html =
+
+          '<div style="' +
+          'font-size:16px;' +
+          'font-weight:700;' +
+          'padding-bottom:8px;' +
+          'margin-bottom:9px;' +
+          'border-bottom:1px solid #ddd;' +
+          '">' +
+
+          year +
+
+          '</div>';
+
+        validParams
+          .slice()
+          .reverse()
+          .forEach(item => {
+
+            html +=
+
+              '<div style="' +
+              'display:flex;' +
+              'align-items:center;' +
+              'justify-content:space-between;' +
+              'gap:30px;' +
+              'margin:7px 0;' +
+              '">' +
+
+              '<div style="' +
+              'display:flex;' +
+              'align-items:center;' +
+              'gap:7px;' +
+              '">' +
+
+              '<span style="' +
+              'width:9px;' +
+              'height:9px;' +
+              'display:inline-block;' +
+              'background:' +
+              colors[item.seriesName] +
+              ';' +
+              '"></span>' +
+
+              '<span>' +
+              item.seriesName +
+              '</span>' +
+
+              '</div>' +
+
+              '<strong>' +
+              formatM(item.value) +
+              '</strong>' +
+
+              '</div>';
+
+          });
+
+        html +=
+
+          '<div style="' +
+          'border-top:1px solid #ddd;' +
+          'margin-top:10px;' +
+          'padding-top:10px;' +
+          'display:flex;' +
+          'justify-content:space-between;' +
+          'gap:30px;' +
+          '">' +
+
+          '<strong>Total</strong>' +
+
+          '<strong>' +
+          formatM(totals[yearIndex]) +
+          '</strong>' +
+
+          '</div>';
+
+        return html;
+
+      }
+
+    },
+
+    // ====================================================
+    // LEGEND
+    // ====================================================
+
+    legend: {
+
+      orient: 'vertical',
+
+      right: 22,
+
+      top: '14%',
+
+      itemWidth: 9,
+
+      itemHeight: 9,
+
+      itemGap: 23,
+
+      icon: 'rect',
+
+      selectedMode: true,
+
+      data: legendOrder,
+
+      formatter: function (name) {
+        return name;
+      },
+
+      textStyle: {
+
+        rich: {
+
+          name: {
+
+            width: 220,
+
+            fontFamily:
+              'ProximaNova, Arial, sans-serif',
+
+            fontSize: 14,
+
+            fontWeight: 500,
+
+            color: '#222222',
+
+            lineHeight: 18
+
+          },
+
+          value: {
+
+            fontFamily:
+              'ProximaNova, Arial, sans-serif',
+
+            fontSize: 13,
+
+            fontWeight: 700,
+
+            color: '#333333',
+
+            lineHeight: 18
+
+          },
+
+          share: {
+
+            fontFamily:
+              'ProximaNova, Arial, sans-serif',
+
+            fontSize: 12,
+
+            fontWeight: 400,
+
+            color: '#777777',
+
+            lineHeight: 18
+
+          }
+
+        }
+
+      }
+
+    },
+
+    // ====================================================
+    // GRID
+    // ====================================================
+
+    grid: {
+
+      left: 80,
+
+      right: 355,
+
+      top: 80,
+
+      bottom: 70,
+
+      containLabel: false
+
+    },
+
+    // ====================================================
+    // X AXIS
+    // ====================================================
+
+    xAxis: {
+
+      type: 'category',
+
+      boundaryGap: false,
+
+      data: years,
+
+      axisLine: {
+
+        show: true,
+
+        lineStyle: {
+          color: '#999999',
+          width: 1
+        }
+
+      },
+
+      axisTick: {
+        show: false
+      },
+
+      axisLabel: {
+
+        margin: 13,
+
+        color: '#111111',
+
+        fontFamily:
+          'ProximaNova, Arial, sans-serif',
+
+        fontSize: 16
+
+      },
+
+      axisPointer: {
+
+        show: true,
+
+        type: 'line',
+
+        snap: true,
+
+        lineStyle: {
+          color: '#555555',
+          width: 1.4,
+          type: 'dashed'
+        },
+
+        label: {
+
+          show: true,
+
+          backgroundColor: '#333333',
+
+          color: '#ffffff',
+
+          padding: [5, 9],
+
+          borderRadius: 2,
+
+          fontFamily:
+            'ProximaNova, Arial, sans-serif',
+
+          fontSize: 13,
+
+          fontWeight: 700
+
+        }
+
+      }
+
+    },
+
+    // ====================================================
+    // Y AXIS
+    // ====================================================
+
+    yAxis: {
+
+      type: 'value',
+
+      min: 0,
+
+      max: 5500,
+
+      name: '$US in millions',
+
+      nameLocation: 'middle',
+
+      nameGap: 58,
+
+      nameRotate: 90,
+
+      nameTextStyle: {
+
+        color: '#111111',
+
+        fontFamily:
+          'ProximaNova, Arial, sans-serif',
+
+        fontSize: 15,
+
+        fontWeight: 500
+
+      },
+
+      axisLine: {
+        show: false
+      },
+
+      axisTick: {
+        show: false
+      },
+
+      axisLabel: {
+        show: false
+      },
+
+      splitLine: {
+        show: false
+      }
+
+    },
+
+    series: series
+
+  };
+
+  const myChart = echarts.init(el);
+  myChart.setOption(option);
+
+  // ======================================================
+  // INTERACTION
+  //
+  // Hovering ANY colored band highlights its four
+  // corresponding values across 2022–2025.
+  // ======================================================
+
+  myChart.off('mouseover');
+  myChart.off('mouseout');
+  myChart.off('globalout');
+
+  myChart.on('mouseover', function (params) {
+
+    if (
+      params.componentType !== 'series' ||
+      !seriesOrder.includes(params.seriesName)
+    ) {
+      return;
+    }
+
+    const name =
+      params.seriesName;
+
+    // Clear any previous hover labels
+    seriesOrder.forEach(category => {
+
+      myChart.dispatchAction({
+
+        type: 'downplay',
+
+        seriesIndex:
+          hoverLabelSeriesIndex[category]
+
+      });
+
+    });
+
+    // Highlight selected category's 4 labels
+    myChart.dispatchAction({
+
+      type: 'highlight',
+
+      seriesIndex:
+        hoverLabelSeriesIndex[name]
+
+    });
+
+  });
+
+  myChart.on('mouseout', function (params) {
+
+    if (
+      params.componentType !== 'series' ||
+      !seriesOrder.includes(params.seriesName)
+    ) {
+      return;
+    }
+
+    myChart.dispatchAction({
+
+      type: 'downplay',
+
+      seriesIndex:
+        hoverLabelSeriesIndex[
+          params.seriesName
+        ]
+
+    });
+
+  });
+
+  myChart.on('globalout', function () {
+
+    seriesOrder.forEach(category => {
+
+      myChart.dispatchAction({
+
+        type: 'downplay',
+
+        seriesIndex:
+          hoverLabelSeriesIndex[category]
+
+      });
+
+    });
+
+  });
+}
