@@ -19,28 +19,28 @@
 <main>
   <section class="fc-explore" aria-labelledby="explore-title">
     <div class="grid-container">
-      <h2 id="explore-title">Explore the report</h2>
-      <p class="fc-section-intro">This Compendium presents UNDP’s annual contributions from our partners and how we turn that trust into impact worldwide.</p>
+      <h2 id="explore-title">{{homepage.explore.heading}}</h2>
+      <p class="fc-section-intro">{{homepage.explore.intro}}</p>
       <div class="grid-x grid-margin-x small-up-1 medium-up-3 fc-report-grid">
         <div class="cell">
           <article class="fc-report-card">
-            <h3>Funding landscape</h3>
-            <p>Key messages, financial highlights and our commitment to transparency.</p>
-            <a href="{{@root.root}}landscape/index.html" class="fc-text-link">Learn more</a>
+            <h3>{{homepage.explore.cards.landscape.heading}}</h3>
+            <p>{{homepage.explore.cards.landscape.copy}}</p>
+            <a href="{{@root.root}}landscape/index.html" class="fc-text-link">{{homepage.explore.cards.landscape.link-label}}</a>
           </article>
         </div>
         <div class="cell">
           <article class="fc-report-card">
-            <h3>Regular resources</h3>
-            <p>The power of flexible, regular resources that enable UNDP to respond and deliver.</p>
-            <a href="{{@root.root}}regular-resources/index.html" class="fc-text-link">Learn more</a>
+            <h3>{{homepage.explore.cards.regular.heading}}</h3>
+            <p>{{homepage.explore.cards.regular.copy}}</p>
+            <a href="{{@root.root}}regular-resources/index.html" class="fc-text-link">{{homepage.explore.cards.regular.link-label}}</a>
           </article>
         </div>
         <div class="cell">
           <article class="fc-report-card">
-            <h3>Other resources<br>&amp; partnerships</h3>
-            <p>Earmarked funding windows and partnerships that support our work worldwide.</p>
-            <a href="{{@root.root}}other-resources-partnerships/index.html" class="fc-text-link">Learn more</a>
+            <h3>{{{homepage.explore.cards.other.heading}}}</h3>
+            <p>{{homepage.explore.cards.other.copy}}</p>
+            <a href="{{@root.root}}other-resources-partnerships/index.html" class="fc-text-link">{{homepage.explore.cards.other.link-label}}</a>
           </article>
         </div>
       </div>
@@ -49,24 +49,24 @@
 
   <section class="fc-highlights" aria-labelledby="highlights-title">
     <div class="grid-container">
-      <h2 id="highlights-title">2025 Financial Highlights</h2>
+      <h2 id="highlights-title">{{homepage.financial-highlights.heading}}</h2>
       <div class="grid-x grid-margin-x small-up-1 medium-up-3 fc-highlight-grid">
         <div class="cell">
           <article class="fc-highlight-card fc-highlight-orange">
-            <h3><span>24% decrease in</span> core funding</h3>
-            <p>(regular resources)<br>Core contributions received in 2025 decreased to $442 million, from $581 million in 2024.</p>
+            <h3><span>{{homepage.financial-highlights.cards.core.overline}}</span> {{homepage.financial-highlights.cards.core.heading}}</h3>
+            <p>{{{homepage.financial-highlights.cards.core.copy}}}</p>
           </article>
         </div>
         <div class="cell">
           <article class="fc-highlight-card fc-highlight-yellow">
-            <h3><span>14% decrease in</span> funding windows</h3>
-            <p>Contributions from thematic funding windows decreased to $115 million in 2025, down from $133 million in 2024.</p>
+            <h3><span>{{homepage.financial-highlights.cards.windows.overline}}</span> {{homepage.financial-highlights.cards.windows.heading}}</h3>
+            <p>{{homepage.financial-highlights.cards.windows.copy}}</p>
           </article>
         </div>
         <div class="cell">
           <article class="fc-highlight-card fc-highlight-blue">
-            <h3><span>17% increase in</span> government development financing</h3>
-            <p>Contributions from government financing increased to $1.4 billion in 2025, up from $1.2 billion in 2024 and representing 28% of total resources.</p>
+            <h3><span>{{homepage.financial-highlights.cards.government.overline}}</span> {{homepage.financial-highlights.cards.government.heading}}</h3>
+            <p>{{homepage.financial-highlights.cards.government.copy}}</p>
           </article>
         </div>
       </div>
@@ -74,30 +74,22 @@
       <div class="grid-x grid-margin-x fc-partner-grid">
         <div class="cell large-7">
           <article class="fc-partner-card fc-partner-dark">
-            <h3><span>10 partners* contributed to</span> regular resources with multi-year pledges</h3>
-            <p>*Australia had a multi-year agreement in 2025 but did not contribute to core.</p>
+            <h3><span>{{homepage.partner-highlights.multi-year.overline}}</span> {{homepage.partner-highlights.multi-year.heading}}</h3>
+            <p>{{homepage.partner-highlights.multi-year.note}}</p>
             <ul class="fc-partners" aria-label="Multi-year pledge partners">
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Belgium</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Canada</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Denmark</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Luxembourg</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Ireland</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Netherlands</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">New Zealand</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Qatar</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Sweden</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Türkiye</li>
+              {{#each homepage.partner-highlights.multi-year.partners}}
+              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">{{this}}</li>
+              {{/each}}
             </ul>
           </article>
         </div>
         <div class="cell large-5">
           <article class="fc-partner-card fc-partner-green">
-            <h3><span>4 partners increased their</span> contributions to regular resources</h3>
+            <h3><span>{{homepage.partner-highlights.increased.overline}}</span> {{homepage.partner-highlights.increased.heading}}</h3>
             <ul class="fc-partners fc-partners-four" aria-label="Partners that increased contributions">
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Spain</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Luxembourg</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Belgium</li>
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">Austria</li>
+              {{#each homepage.partner-highlights.increased.partners}}
+              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">{{this}}</li>
+              {{/each}}
             </ul>
           </article>
         </div>

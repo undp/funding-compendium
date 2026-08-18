@@ -22,7 +22,7 @@ export function initTopGlocContributors(el, echarts) {
     
     title: {
       text: 'Top 10 GLOC contributors',
-      subtext: '$ millions',
+      subtext: '$M',
       left: 0,
       top: 0,
       textStyle: {
@@ -93,7 +93,7 @@ export function initTopGlocContributors(el, echarts) {
       axisLabel: {
         color: '#6B7280',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#E5E7EB' } }
     },
@@ -146,7 +146,7 @@ export function initTopGlocContributors(el, echarts) {
           show: true,
           position: 'right',
           distance: 8,
-          formatter: (params) => `$${params.value.toFixed(2)}m`,
+          formatter: (params) => `$${params.value.toFixed(2)}M`,
           color: '#232E3D',
           fontSize: 12,
           fontWeight: 700

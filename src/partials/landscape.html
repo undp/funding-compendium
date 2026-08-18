@@ -1,81 +1,27 @@
-<!--************************* Cover Hero *************************  -->
-
-
-<div class="homepage-hero-full" data-undpds-component="expandToSize" data-selector=".homepage-hero-full">
-
+<!-- ************************* Page Hero ************************* -->
+<div class="pagehero-full funding-pagehero" data-undpds-component="expandToSize" data-selector=".pagehero-full">
   <div class="overlay-grey">
-    <!--- <img src="{{@root.root}}assets/img/cover.jpg" alt="abstract image" />-->
-
-    <video loop muted playsinline autoplay poster="{{@root.root}}assets/img/cover-landscape.png">
-      <source src="{{@root.root}}assets/img/cover-landscape.png" type="video/mp4">
-      Your browser does not support the HTML5 video element
-    </video>
+    <img class="mobile-position-center" src="{{@root.root}}assets/img/cover.jpg" alt="">
   </div>
-  <div class="grid-x homepage-hero-content">
-    <div class="cell large-7 medium-9 medium-offset-1">
 
-      <!--<
-    nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb white medium-offset-1 inviewport">
-      <ul>
-        <li><a href="#" aria-label="Home">Home</a></li>
-        <li aria-current="Page Title">Funding landscape</li>
-      </ul>
-    </nav>
-    -->
+  <nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb medium-offset-1">
+    <ul>
+      <li><a href="{{@root.root}}index.html" aria-label="{{breadcrumbs.home}}">{{breadcrumbs.home}}</a></li>
+      <li aria-current="page">{{landscape-page.hero.title}}</li>
+    </ul>
+  </nav>
 
-      <h4 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-        UNDP Funding Compendium 2025
+  <div class="pagehero-content medium-offset-1">
+    <div class="content-box color-black">
+      <h4 tabindex="0" data-viewport="true">
+        {{landscape-page.hero.overline}}
       </h4>
-      <h1 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-        Funding landscape
-      </h1>
-
-
-      <h4 class="color-white" tabindex="0" data-viewport="true"></h4>
-      <a class="button" role="" style="visibility: hidden;"></a>
-
+      <h2 tabindex="0" data-viewport="true">
+        {{landscape-page.hero.title}}
+      </h2>
     </div>
   </div>
 </div>
-
-<!---
-
-<div
-  class="pagehero-full"
-  data-undpds-component="expandToSize"
-  data-selector=".pagehero-full"
-  data-initialized="expandToSize"
->
-  <div class="overlay-grey">
-    <img
-      class="mobile-position-center"
-      alt="{{@root.root}}assets/img/cover.jpg"
-      src="{{@root.root}}assets/img/cover.jpg"
-    />
-  </div>
-  <nav
-    aria-label="breadcrumbs"
-    data-viewport="true"
-    class="breadcrumb white medium-offset-1 inviewport"
-  >
-    <ul>
-      <li><a href="#" aria-label="Home">Home</a></li>
-      <li><a href="#" aria-label="Second-level">Second-level</a></li>
-      <li><a href="#" aria-label="Third-level">Third-level</a></li>
-      <li aria-current="Page Title">Page Title</li>
-    </ul>
-  </nav>
-  <div class="pagehero-content medium-offset-1">
-    <div class="content-box color-white">
-      <h2 class="inviewport" tabindex="0" data-viewport="true">
-        The sdgs in action
-      </h2>
-      <p class="subtitle">
-        Subtitle or excerpt of the story goes below and it is two lines
-      </p>
-    </div>
-  </div>
-</div>-->
 
 <!--************************* Foreword  *************************  -->
 
@@ -108,10 +54,8 @@
       <div class="small-12 medium-8 large-4  medium-text-center">
 
 
-
         <br>
         <img alt="Achim Steiner" src="{{@root.root}}assets/img/photo-susan.png" style="margin-bottom: 7px; width: 70%;">
-        <small style="margin-top: 0;">{{{content.homepage.foreword.photo-credit}}}</small>
         <!--<br><br>
                         <img alt="Achim Steiner" src="{{@root.root}}assets/img/signature.png" style="margin-bottom: 7px; width: 60%;">-->
         <br>
@@ -121,8 +65,8 @@
           <small>{{{homepage.foreword.position-title}}}</small>
 
 
-        </span>
 
+        </span>
 
 
       </div>
@@ -190,7 +134,7 @@
 
                           <div class="cell shrink">
                             <div class="total-value">
-                              $5<span>billion</span>
+                              $5<span>B</span>
                             </div>
 
                             <div class="total-caption">
@@ -201,7 +145,7 @@
                           <div class="cell auto increase-wrap">
                             <div class="increase">
                               <strong>↑2%</strong>
-                              <span>up from $4.9 billion in 2024</span>
+                              <span>up from $4.9B in 2024</span>
                             </div>
                           </div>
                         </div>
@@ -230,7 +174,7 @@
                             </div>
 
                             <div class="breakdown-value">
-                              $1.8 billion
+                              $1.8B
                             </div>
 
                           </div>
@@ -249,7 +193,7 @@
                             </div>
 
                             <div class="breakdown-value">
-                              $1.6 billion
+                              $1.6B
                             </div>
 
                           </div>
@@ -268,7 +212,7 @@
                             </div>
 
                             <div class="breakdown-value">
-                              $1.6 billion
+                              $1.6B
                             </div>
 
                           </div>
@@ -304,7 +248,6 @@
             </div>
 
 
-
             <!-- =====================================================
      TAB 2: REGULAR RESOURCES
      ===================================================== -->
@@ -326,7 +269,7 @@
                           <div class="cell shrink">
 
                             <div class="total-value">
-                              $442<span>million</span>
+                              $442<span>M</span>
                             </div>
 
                             <div class="total-caption">
@@ -339,7 +282,7 @@
 
                             <div class="increase decrease">
                               <strong>↓24%</strong>
-                              <span>down from $581 million in 2024</span>
+                              <span>down from $581M in 2024</span>
                             </div>
 
                           </div>
@@ -409,7 +352,7 @@
                             </div>
 
                             <div class="breakdown-value">
-                              $165 million · down from 40%
+                              $165M · down from 40%
                             </div>
 
                           </div>
@@ -449,7 +392,7 @@
                           <div class="cell shrink">
 
                             <div class="total-value">
-                              $4.6<span>billion</span>
+                              $4.6<span>B</span>
                             </div>
 
                             <div class="total-caption">
@@ -464,7 +407,7 @@
 
                             <div class="increase">
                               <strong>↑6%</strong>
-                              <span>up from $4.3 billion in 2024</span>
+                              <span>up from $4.3B in 2024</span>
                             </div>
 
                           </div>
@@ -505,49 +448,22 @@
         <h2>{{homepage.transparency.headline}}</h2>
         <br>
 
-        <h5 style="color: #0468B1;">A long-standing commitment to transparency</h5>
-        <p>
-          As a member of the International Aid Transparency Initiative (IATI) since its creation in 2008,
-          UNDP has led outreach efforts with partner countries and UN agencies to champion the aid transparency
-          standard and make it relevant for national development planning, public financial management and mutual
-          accountability of aid, development and humanitarian funding. UNDP ranked <strong>sixth overall</strong> in the
-          <a href="https://www.publishwhatyoufund.org/the-index/2024/" target="_blank">2024 Aid Transparency Index</a>
-          and was the <strong>second most transparent UN agency</strong>.
-        </p>
-
-        <p>UNDP’s <a href="https://open.undp.org/" target="_blank">Transparency Portal</a> allows open, comprehensive
-          public access to data on over 4,000 UNDP
-          projects, with links to profile pages for every donor. The portal also shows UNDP’s contribution to
-          the SDGs and offers an online training platform on the IATI Standard.</p>
+        <h5 style="color: #0468B1;">{{landscape-page.transparency.longstanding.heading}}</h5>
+        {{{landscape-page.transparency.longstanding.copy}}}
 
         <br><br>
 
       </div>
 
 
-
       <div class="small-12 medium-6 large-5 ">
-        <h5 style="color: #0468B1;">Promoting transparency across the UN system</h5>
-        <p>
-          UNDP actively participated in defining and implementing a set of
-          <a href="https://unsdg.un.org/sites/default/files/2022-04/UN_DataStandards_Digital_March2022.pdf"
-            target="_blank">
-            UN data standards
-          </a>
-          for system-wide financial reporting.
-        </p>
+        <h5 style="color: #0468B1;">{{landscape-page.transparency.un-system.heading}}</h5>
+        <p>{{{landscape-page.transparency.un-system.copy}}}</p>
       </div>
 
       <div class="small-12 medium-6 large-6">
-        <h5 style="color: #0468B1;">Audit reports</h5>
-        <p>
-          UNDP has been
-          <a href="https://www.undp.org/content/undp/en/home/accountability/audit/disclosure-of-internal-audit-reports.html"
-            target="_blank">
-            publishing audit reports
-          </a> issued by the Office of Audit and Investigations since 2012,
-          and has obtained its 19th consecutive unqualified (clean) audit from the UN Board of Auditors.
-        </p>
+        <h5 style="color: #0468B1;">{{landscape-page.transparency.audit.heading}}</h5>
+        <p>{{{landscape-page.transparency.audit.copy}}}</p>
       </div>
 
     </div>
@@ -565,10 +481,9 @@
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
 
-        <h2>Resources by funding type</h2>
-        <h4>Regular and other resources, 2025</h4>
+        <h2>{{landscape-page.funding-type.heading}}</h2>
+        <h4>{{landscape-page.funding-type.subheading}}</h4>
       </div>
-
 
 
     </div>
@@ -578,19 +493,7 @@
       <div class="cell small-12 medium-12 large-4">
         <div>
           <br><br><br>
-          <p>
-            <strong>Annual contributions increased to $5 billion in 2025,</strong>
-            up by 2 percent from $4.9 billion in 2024.
-          </p>
-          <p>
-            <strong style="color: #C3D51F;">Annual contributions to regular resources decreased to $442
-              million,</strong>
-            down by 24 percent from $581 million in 2024.
-          </p>
-          <p>
-            <strong style="color: #0069B3;">Annual contributions to other resources increased to $4.6 billion, </strong>
-            up by 6 percent from $4.3 billion in 2024.
-          </p>
+          {{{landscape-page.funding-type.summary}}}
         </div>
       </div>
 
@@ -604,26 +507,12 @@
 
     <div class="cell small-12 medium-12 large-12">
       <br><br>
-      <p>Regular resources are critical to UNDP's ability to prioritize countries' needs, respond swiftly in crises
-        and maintain
-        high standards of accountability and transparency. They also allow UNDP to sustain country presence and
-        upstream policy
-        expertise that other types of funding cannot support. Regular resources also carry strong catalytic value,
-        mobilizing additional
-        resources for development. Insufficient regular resources would therefore severely compromise UNDP's unique
-        ability to respond rapidly
-        to emergencies and address critical needs that other funding sources do not cover. The continued decline in
-        regular resources also has
-        serious implications for UNDP's ability to deliver the intended results of the Strategic Plan, restore and
-        accelerate progress towards
-        the SDGs and maintain robust oversight and accountability systems.</p>
+      <p>{{landscape-page.funding-type.core-copy}}</p>
 
       <br>
 
-      <p><span class="text-extrabold">Trends in regular and other resources, 2022–2025</span><br>
-        UNDP maintained broadly stable annual contributions throughout the period covered by the 2022–2025 Strategic
-        Plan, averaging approximately $4.9 billion per year.
-        Annual contributions reached a peak of $5.0 billion in both 2023 and 2025.</p>
+      <p><span class="text-extrabold">{{landscape-page.funding-type.trends-heading}}</span><br>
+        {{landscape-page.funding-type.trends-copy}}</p>
 
 
       <div class="chart-wrapper">
@@ -639,7 +528,6 @@
 </section>
 
 
-
 <!--************************* Resources by funding partner  *************************  -->
 
 <section class="section">
@@ -648,22 +536,15 @@
 
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
-        <h2>Resources by funding partner</h2>
+        <h2>{{landscape-page.funding-partner.heading}}</h2>
       </div>
     </div>
 
     <div class="grid-x align-justify align-middle">
 
       <div class="cell small-12 medium-12 large-6">
-        <h4>Regular and other resources, 2025</h4>
-        <p>
-          UNDP values all types of funding received from its partners—including Member States,
-          multilateral organizations, non-governmental organizations, private and philanthropic
-          organizations and financing institutions—as these resources enable it to deliver on its
-          commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total,
-          36 percent was contributed by donor country governments, 32 percent by multilateral organizations
-          and 32 percent by programme country governments.
-        </p>
+        <h4>{{landscape-page.funding-partner.subheading}}</h4>
+        <p>{{landscape-page.funding-partner.copy}}</p>
       </div>
 
       <div class="cell small-12 medium-12 large-6">
@@ -680,18 +561,12 @@
 
     <div class="grid-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
-        <h4>Top 30 resource partners, 2025
-        </h4>
-        <p>
-          In 2025, UNDP’s top 30 resource partners contributed $4.1 billion, or 82 percent of total annual
-          contributions. These partners provided 89 percent of regular resources and 81 percent of other resource
-          contributions.
-        </p>
+        <h4>{{landscape-page.funding-partner.top-heading}}</h4>
+        <p>{{landscape-page.funding-partner.top-copy}}</p>
 
         <div class="echarts" data-chart-type="contributions-by-donor-resource" style="width:100%;height:1000px;"></div>
 
       </div>
-
 
 
     </div>
@@ -708,12 +583,8 @@
 
     <div class="grid-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
-        <h2>Resources by funding channel
-        </h2>
-        <p>
-          In 2025, UNDP benefited from increases in government development financing (17 percent) and third-party
-          cost-sharing (7 percent).
-        </p>
+        <h2>{{landscape-page.funding-channel.heading}}</h2>
+        <p>{{landscape-page.funding-channel.copy}}</p>
 
         <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;"></div>
 
@@ -723,7 +594,7 @@
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-12 large-12">
         <br><br>
-        <h3>The case for regular (“core”) resources in 2025</h3>
+        <h3>{{landscape-page.funding-channel.case-heading}}</h3>
       </div>
 
       <div class="grid-x grid-margin-x resource-grid">
@@ -742,11 +613,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>Regular (core) resources</h4>
-              <p>
-                Unearmarked funds that provide a flexible foundation for delivering
-                results across the Strategic Plan.
-              </p>
+              <h4>{{landscape-page.funding-channel.types.regular.heading}}</h4>
+              <p>{{landscape-page.funding-channel.types.regular.copy}}</p>
             </div>
           </div>
 
@@ -759,11 +627,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>Other resources</h4>
-              <p>
-                Earmarked funds that support specific themes, programmes or projects.<br>
-                These include:
-              </p>
+              <h4>{{landscape-page.funding-channel.types.other.heading}}</h4>
+              <p>{{{landscape-page.funding-channel.types.other.copy}}}</p>
             </div>
           </div>
 
@@ -784,12 +649,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>Government financing</h4>
-              <p>
-                Voluntary funding through which programme country governments entrust
-                domestic resources or loans from financial institutions to UNDP to
-                support development initiatives in their respective countries.
-              </p>
+              <h4>{{landscape-page.funding-channel.types.government.heading}}</h4>
+              <p>{{landscape-page.funding-channel.types.government.copy}}</p>
             </div>
           </div>
 
@@ -802,12 +663,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>Thematic funds</h4>
-              <p>
-                Softly earmarked pooled funds that support the achievement of outcomes
-                aligned with the Strategic Plan and address issues that cut across
-                thematic areas.
-              </p>
+              <h4>{{landscape-page.funding-channel.types.thematic.heading}}</h4>
+              <p>{{landscape-page.funding-channel.types.thematic.copy}}</p>
             </div>
           </div>
 
@@ -819,11 +676,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>Third-party cost-sharing</h4>
-              <p>
-                Earmarked contributions for a specific programme, project, region,
-                or country.
-              </p>
+              <h4>{{landscape-page.funding-channel.types.cost-sharing.heading}}</h4>
+              <p>{{landscape-page.funding-channel.types.cost-sharing.copy}}</p>
             </div>
           </div>
 
@@ -841,13 +695,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>UN pooled funds</h4>
-              <p>
-                UN inter-agency financing mechanisms that support clearly defined
-                programmatic scopes and results frameworks, enabling global and local
-                responses to humanitarian, development, environmental and peace-related
-                challenges.
-              </p>
+              <h4>{{landscape-page.funding-channel.types.pooled.heading}}</h4>
+              <p>{{landscape-page.funding-channel.types.pooled.copy}}</p>
             </div>
           </div>
 
@@ -860,11 +709,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>Vertical funds</h4>
-              <p>
-                Earmarked funds focused on a single area of development, such as
-                health or the environment.
-              </p>
+              <h4>{{landscape-page.funding-channel.types.vertical.heading}}</h4>
+              <p>{{landscape-page.funding-channel.types.vertical.copy}}</p>
             </div>
           </div>
 
@@ -877,12 +723,8 @@
             </div>
 
             <div class="resource-content">
-              <h4>Reimbursable support services</h4>
-              <p>
-                Funds received for management and support services, including services
-                provided by UN Volunteers and the Junior Professional Officer (JPO)
-                Programme.
-              </p>
+              <h4>{{landscape-page.funding-channel.types.reimbursable.heading}}</h4>
+              <p>{{landscape-page.funding-channel.types.reimbursable.copy}}</p>
             </div>
           </div>
 
@@ -893,15 +735,11 @@
     </div>
 
 
-
-
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-12 large-12">
         <br><br>
-        <h3>UNDP funding types and channels</h3><br><br>
+        <h3>{{landscape-page.funding-channel.types-heading}}</h3><br><br>
       </div>
-
-
 
 
     </div>

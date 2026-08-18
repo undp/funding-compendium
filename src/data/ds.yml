@@ -79,7 +79,7 @@
 #
 # Heros
 - components/homepage-hero.min.css
-- components/page.min.css
+- components/page-hero.min.css
 - components/country-card.min.css
 - components/pagehero-cards.min.css
 #

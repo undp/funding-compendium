@@ -52,7 +52,7 @@
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/footer.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/newsletter-signup.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/homepage-hero.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/page.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/page-hero.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/country-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/pagehero-cards.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
       
@@ -138,58 +138,38 @@
                         tabindex="0"
                       >Other resources &amp; Partnerships</a>
                     </li>
-                    <li>
-                      <a
-                        href="../index.html#looking-ahead"
-                        tabindex="0"
-                      ></a>
-                    </li>
                   </ul>
                 </nav>
               </div>
       
-              <!-- =================== RIGHT: Lang switcher + hamburger + download =================== -->
+              <!-- =================== RIGHT: Lang switcher + hamburger =================== -->
               <div class="cell small-3 large-auto top-right">
-               
+      
       
                 <!-- Language switcher w/ download handling -->
              <div
         class="dropdown-language"
         data-undpds-component="language-switcher"
       >
-        <!--<button
-          class="blue"
-          aria-label=""
-          aria-expanded="false"
-          style="padding-right: 20px;"
-        >
-            English
-            
-            
-            
-            
-            
-        </button>-->
-      
         <ul role="menu">
                
                
                 <li role="menuitem">
-                    <a
-                      href="../es"
-                      lang="es"
-                      hreflang="es"
-                      tabindex="-1"
-                    >Español</a>
+                  <a
+                    href="../es"
+                    lang="es"
+                    hreflang="es"
+                    tabindex="-1"
+                  >Español</a>
                 </li>
                
                 <li role="menuitem">
-                    <a
-                      href="../fr"
-                      lang="fr"
-                      hreflang="fr"
-                      tabindex="-1"
-                    >Français</a>
+                  <a
+                    href="../fr"
+                    lang="fr"
+                    hreflang="fr"
+                    tabindex="-1"
+                  >Français</a>
                 </li>
                           </ul>
       </div>
@@ -202,21 +182,6 @@
                   Menu
                 </button>
       
-                <!-- Desktop Download button -->
-                
-                    <a role="button" href="#" data-toggle="modal" data-target-modal="#downloadModal" class="button button-secondary"
-                      role="button">
-                      Download
-                      <svg style="padding-left: 5px" class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="white" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="white" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="white" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </a>
-                  
               </div>
       
               <!-- overflow container kept from skeleton -->
@@ -247,12 +212,6 @@
                           href="../other-resources-partnerships/index.html"
                         >Other resources &amp; Partnerships</a>
                       </li>
-                      <li data-menu-id="headerlink4">
-                        <a
-                          class="cta__link cta--space no-submenu"
-                          href="../index.html#looking-ahead"
-                        ></a>
-                      </li>
                     </ul>
       
                     <!-- Mobile language + (optional) globe -->
@@ -269,24 +228,9 @@
                           
                           
                       </a>
-                      
+      
                     </div>
       
-                    <!-- Mobile Download button -->
-                    <div class="mobile-nav-options">
-                        <a role="button" href="#" data-toggle="modal" data-target-modal="#downloadModal" class="button button-secondary"
-                      role="button">
-                      Download
-                      <svg style="padding-left: 5px" class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="white" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="white" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="white" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </a>
-                    </div>
                   </div>
       
                   <!-- ========== Mobile language list (sub view) ========== -->
@@ -298,23 +242,23 @@
       
         <ul class="sub-sub-lang">
           <li>
-            <span></span>
+            <span>Select Language</span>
             <ul role="menu">
                     <li role="menuitem">
-                        <a
-                          href="../es"
-                          lang="es"
-                          hreflang="es"
-                          tabindex="-1"
-                        >Español</a>
+                      <a
+                        href="../es"
+                        lang="es"
+                        hreflang="es"
+                        tabindex="-1"
+                      >Español</a>
                     </li>
                     <li role="menuitem">
-                        <a
-                          href="../fr"
-                          lang="fr"
-                          hreflang="fr"
-                          tabindex="-1"
-                        >Français</a>
+                      <a
+                        href="../fr"
+                        lang="fr"
+                        hreflang="fr"
+                        tabindex="-1"
+                      >Français</a>
                     </li>
             </ul>
           </li>
@@ -338,9 +282,6 @@
                       <div class="mobile-mega-content" data-mobile-id="headerlink3">
                         <h6 class="sub-heading">Other resources &amp; Partnerships</h6>
                       </div>
-                      <div class="mobile-mega-content" data-mobile-id="headerlink4">
-                        <h6 class="sub-heading"></h6>
-                      </div>
                     </div>
                   </div>
                   <!-- ========== /Mobile mega wrapper ========== -->
@@ -349,522 +290,30 @@
           </div>
         </section>
       </header>
-      
-      
-       <!-- ************************ Pop up for download ******************************************************************** -->
-      
-      
-      
-      <div class="modal modal-download" role="dialog" aria-label="modal" aria-modal="true" id="downloadModal"
-        data-undpds-component="modal" data-initialized="true">
-        <div class="modal-content" aria-describedby="content">
-          <button type="button" class="modal-close-button" data-dismiss="modal" aria-label="Close">
-            Close
-          </button>
-      
-      
-         <!--<h4 class="" tabindex="0" data-viewport="false">Download documents</h4>
-          <br><br>-->
-      
-          <h5 class="text-extrabold">Visual Summary</h5>
-          <div class="download-body">
-            <div class="download-content">
-              
-      
-          <a href="../assets/docs/UNDP-Strategic-Plan-English-Summary.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">English
-                        <span>PDF (15.3MB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-                <a href="../assets/docs/UNDP-Strategic-Plan-English-Summary.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">English
-                        <span>PDF (15.3MB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-      
-                 <a href="../assets/docs/UNDP-Strategic-Plan-Spanish-Summary.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">Español
-                        <span>PDF (1.8MB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-      
-                 <a href="../assets/docs/UNDP-Strategic-Plan-French-Summary.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">Français
-                        <span>PDF (1.8MB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-                <a href="../assets/docs/UNDP-Strategic-Plan-Russian-Summary.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">Русский
-                        <span>PDF (1.8MB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-      
-                 <a href="../assets/docs/UNDP-Strategic-Plan-Chinese-Summary.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">中文
-                        <span>PDF (1.9MB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-                 <a href="../assets/docs/UNDP-Strategic-Plan-Arabic-Summary.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">العربية
-                        <span>PDF (1.8MB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-                </div> </div>
-      
-      
-       
-           
-      
-          <br><br><br>
-      
-             <h5 class="text-extrabold">Strategic Plan | full document</h5>
-      
-          <div class="download-body">
-            <div class="download-content">
-             
-                
-                <a href="../assets/docs/UNDP-Strategic-Plan-English.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">English
-                        <span>PDF (524KB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-                <a href="../assets/docs/UNDP-Strategic-Plan-Spanish.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">Español
-                        <span>PDF (610KB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-      
-                <a href="../assets/docs/UNDP-Strategic-Plan-French.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">Français
-                        <span>PDF (668KB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-                <a href="../assets/docs/UNDP-Strategic-Plan-Russian.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">Русский
-                        <span>PDF (472KB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-      
-                <a href="../assets/docs/UNDP-Strategic-Plan-Chinese.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">中文
-                        <span>PDF (679KB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-      
-                <a href="../assets/docs/UNDP-Strategic-Plan-Arabic.pdf" target="_blank">
-                  <div class="download-row" data-value="pasto">
-                    <div class="download-row__main">
-                      <label for="list-0" class="download-row__data">العربية
-                        <span>PDF (578KB)</span></label>
-                      <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                        <g class="arrow">
-                          <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                          <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </a>
-      
-              </div>
-            </div>
-         
-      
-        </div>
-      </div>
-      
-      
-        <!--<div class="modal" role="dialog" aria-label="modal" aria-modal="true" id="download-modal" data-undpds-component="modal">
-          <div class="modal-content" aria-describedby="content" style="min-height: 50vh;">
-            <button type="button" class="modal-close-button" data-dismiss="modal" aria-label="Close">
-              Close
-            </button>
-            <div class="">
-              <div class="grid-x grid-padding-x" style="padding-top: 3rem;">
-                <div class=" small-12 medium-12 large-12">
-        
-                  <h4 class="" tabindex="0" data-viewport="false">Download documents</h4><br>
-        
-                 
-                  <h5 class="text-extrabold">Visual Summary</h5>
-        
-                  <div class="select-box" data-select="" data-undpds-component="custom-select">
-                    <div class="select-box" data-select data-undpds-component="custom-select">
-                      <button type="button" aria-haspopup="listbox" aria-label="Select" data-select-open>
-                        Language
-                      </button>
-        
-                      <ul role="listbox" data-select-options>
-                        <li role="option" tabindex="0" data-value="en"  aria-selected="true" >
-                          <a href="../assets/docs/UNDP-Strategic-Plan-English-Summary.pdf" target="_blank">
-                            <span>
-                              English
-                              &nbsp;
-                              <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                                <g class="arrow">
-                                  <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                                  <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                                    stroke-width="2" />
-                                </g>
-                              </svg>
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-        
-                  <br><br>
-        
-                  
-                  <h5 class="text-extrabold">Strategic Plan | full document</h5>
-        
-                  <div class="select-box" data-select="" data-undpds-component="custom-select">
-                    <div class="select-box" data-select data-undpds-component="custom-select">
-                      <button type="button" aria-haspopup="listbox" aria-label="Select" data-select-open>
-                        Language
-                      </button>
-        
-                      <ul role="listbox" data-select-options>
-                        <li role="option" tabindex="0" data-value="en"  aria-selected="true" >
-                          <a href="../assets/docs/UNDP-Strategic-Plan-English.pdf" target="_blank">
-                            <span>
-                              English
-                              &nbsp;
-                              <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                                <g class="arrow">
-                                  <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                                  <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                                    stroke-width="2" />
-                                </g>
-                              </svg>
-                            </span>
-                          </a>
-                        </li>
-                        <li role="option" tabindex="0" data-value="es" >
-                          <a href="../assets/docs/UNDP-Strategic-Plan-Spanish.pdf" target="_blank">
-                            <span>
-                              Español
-                              &nbsp;
-                              <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                                <g class="arrow">
-                                  <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                                  <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                                    stroke-width="2" />
-                                </g>
-                              </svg>
-                            </span>
-                          </a>
-                        </li>
-                        <li role="option" tabindex="0" data-value="fr" >
-                          <a href="../assets/docs/UNDP-Strategic-Plan-French.pdf" target="_blank">
-                            <span>
-                              Français
-                              &nbsp;
-                              <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                                <g class="arrow">
-                                  <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                                  <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                                    stroke-width="2" />
-                                </g>
-                              </svg>
-                            </span>
-                          </a>
-                        </li>
-                        <li role="option" tabindex="0" data-value="ru" >
-                          <a href="../assets/docs/UNDP-Strategic-Plan-Russian.pdf" target="_blank">
-                            <span>
-                              Русский
-                              &nbsp;
-                              <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                                <g class="arrow">
-                                  <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                                  <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                                    stroke-width="2" />
-                                </g>
-                              </svg>
-                            </span>
-                          </a>
-                        </li>
-                        <li role="option" tabindex="0" data-value="zh" >
-                          <a href="../assets/docs/UNDP-Strategic-Plan-Chinese.pdf" target="_blank">
-                            <span>
-                              中文
-                              &nbsp;
-                              <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                                <g class="arrow">
-                                  <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                                  <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                                    stroke-width="2" />
-                                </g>
-                              </svg>
-                            </span>
-                          </a>
-                        </li>
-                        <li role="option" tabindex="0" data-value="ar" >
-                          <a href="../assets/docs/UNDP-Strategic-Plan-Arabic.pdf" target="_blank">
-                            <span>
-                              العربية
-                              &nbsp;
-                              <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                                <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                                <g class="arrow">
-                                  <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                                  <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                                    stroke-width="2" />
-                                </g>
-                              </svg>
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-        
-                  </div>
-        
-                </div>
-              </div>
-        
-        
-            </div>
-          </div>
-        </div>-->
-      <!--************************* Cover Hero *************************  -->
-      
-      
-      <div class="homepage-hero-full" data-undpds-component="expandToSize" data-selector=".homepage-hero-full">
-      
+      <!-- ************************* Page Hero ************************* -->
+      <div class="pagehero-full funding-pagehero" data-undpds-component="expandToSize" data-selector=".pagehero-full">
         <div class="overlay-grey">
-          <!--- <img src="../assets/img/cover.jpg" alt="abstract image" />-->
-      
-          <video loop muted playsinline autoplay poster="../assets/img/cover-landscape.png">
-            <source src="../assets/img/cover-landscape.png" type="video/mp4">
-            Your browser does not support the HTML5 video element
-          </video>
+          <img class="mobile-position-center" src="../assets/img/cover.jpg" alt="">
         </div>
-        <div class="grid-x homepage-hero-content">
-          <div class="cell large-7 medium-9 medium-offset-1">
       
-            <!--<
-          nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb white medium-offset-1 inviewport">
-            <ul>
-              <li><a href="#" aria-label="Home">Home</a></li>
-              <li aria-current="Page Title">Funding landscape</li>
-            </ul>
-          </nav>
-          -->
-      
-            <h4 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-              UNDP Funding Compendium 2025
-            </h4>
-            <h1 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-              Funding landscape
-            </h1>
-      
-      
-            <h4 class="color-white" tabindex="0" data-viewport="true"></h4>
-            <a class="button" role="" style="visibility: hidden;"></a>
-      
-          </div>
-        </div>
-      </div>
-      
-      <!---
-      
-      <div
-        class="pagehero-full"
-        data-undpds-component="expandToSize"
-        data-selector=".pagehero-full"
-        data-initialized="expandToSize"
-      >
-        <div class="overlay-grey">
-          <img
-            class="mobile-position-center"
-            alt="../assets/img/cover.jpg"
-            src="../assets/img/cover.jpg"
-          />
-        </div>
-        <nav
-          aria-label="breadcrumbs"
-          data-viewport="true"
-          class="breadcrumb white medium-offset-1 inviewport"
-        >
+        <nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb medium-offset-1">
           <ul>
-            <li><a href="#" aria-label="Home">Home</a></li>
-            <li><a href="#" aria-label="Second-level">Second-level</a></li>
-            <li><a href="#" aria-label="Third-level">Third-level</a></li>
-            <li aria-current="Page Title">Page Title</li>
+            <li><a href="../index.html" aria-label="Home">Home</a></li>
+            <li aria-current="page">Funding landscape</li>
           </ul>
         </nav>
+      
         <div class="pagehero-content medium-offset-1">
-          <div class="content-box color-white">
-            <h2 class="inviewport" tabindex="0" data-viewport="true">
-              The sdgs in action
+          <div class="content-box color-black">
+            <h4 tabindex="0" data-viewport="true">
+              UNDP Funding Compendium 2025
+            </h4>
+            <h2 tabindex="0" data-viewport="true">
+              Funding landscape
             </h2>
-            <p class="subtitle">
-              Subtitle or excerpt of the story goes below and it is two lines
-            </p>
           </div>
         </div>
-      </div>-->
+      </div>
       
       <!--************************* Foreword  *************************  -->
       
@@ -905,10 +354,8 @@
             <div class="small-12 medium-8 large-4  medium-text-center">
       
       
-      
               <br>
               <img alt="Achim Steiner" src="../assets/img/photo-susan.png" style="margin-bottom: 7px; width: 70%;">
-              <small style="margin-top: 0;"></small>
               <!--<br><br>
                               <img alt="Achim Steiner" src="../assets/img/signature.png" style="margin-bottom: 7px; width: 60%;">-->
               <br>
@@ -919,8 +366,8 @@
       </small>
       
       
-              </span>
       
+              </span>
       
       
             </div>
@@ -989,7 +436,7 @@
       
                                 <div class="cell shrink">
                                   <div class="total-value">
-                                    $5<span>billion</span>
+                                    $5<span>B</span>
                                   </div>
       
                                   <div class="total-caption">
@@ -1000,7 +447,7 @@
                                 <div class="cell auto increase-wrap">
                                   <div class="increase">
                                     <strong>↑2%</strong>
-                                    <span>up from $4.9 billion in 2024</span>
+                                    <span>up from $4.9B in 2024</span>
                                   </div>
                                 </div>
                               </div>
@@ -1029,7 +476,7 @@
                                   </div>
       
                                   <div class="breakdown-value">
-                                    $1.8 billion
+                                    $1.8B
                                   </div>
       
                                 </div>
@@ -1048,7 +495,7 @@
                                   </div>
       
                                   <div class="breakdown-value">
-                                    $1.6 billion
+                                    $1.6B
                                   </div>
       
                                 </div>
@@ -1067,7 +514,7 @@
                                   </div>
       
                                   <div class="breakdown-value">
-                                    $1.6 billion
+                                    $1.6B
                                   </div>
       
                                 </div>
@@ -1103,7 +550,6 @@
                   </div>
       
       
-      
                   <!-- =====================================================
            TAB 2: REGULAR RESOURCES
            ===================================================== -->
@@ -1125,7 +571,7 @@
                                 <div class="cell shrink">
       
                                   <div class="total-value">
-                                    $442<span>million</span>
+                                    $442<span>M</span>
                                   </div>
       
                                   <div class="total-caption">
@@ -1138,7 +584,7 @@
       
                                   <div class="increase decrease">
                                     <strong>↓24%</strong>
-                                    <span>down from $581 million in 2024</span>
+                                    <span>down from $581M in 2024</span>
                                   </div>
       
                                 </div>
@@ -1208,7 +654,7 @@
                                   </div>
       
                                   <div class="breakdown-value">
-                                    $165 million · down from 40%
+                                    $165M · down from 40%
                                   </div>
       
                                 </div>
@@ -1248,7 +694,7 @@
                                 <div class="cell shrink">
       
                                   <div class="total-value">
-                                    $4.6<span>billion</span>
+                                    $4.6<span>B</span>
                                   </div>
       
                                   <div class="total-caption">
@@ -1263,7 +709,7 @@
       
                                   <div class="increase">
                                     <strong>↑6%</strong>
-                                    <span>up from $4.3 billion in 2024</span>
+                                    <span>up from $4.3B in 2024</span>
                                   </div>
       
                                 </div>
@@ -1305,48 +751,22 @@
               <br>
       
               <h5 style="color: #0468B1;">A long-standing commitment to transparency</h5>
-              <p>
-                As a member of the International Aid Transparency Initiative (IATI) since its creation in 2008,
-                UNDP has led outreach efforts with partner countries and UN agencies to champion the aid transparency
-                standard and make it relevant for national development planning, public financial management and mutual
-                accountability of aid, development and humanitarian funding. UNDP ranked <strong>sixth overall</strong> in the
-                <a href="https://www.publishwhatyoufund.org/the-index/2024/" target="_blank">2024 Aid Transparency Index</a>
-                and was the <strong>second most transparent UN agency</strong>.
-              </p>
-      
-              <p>UNDP’s <a href="https://open.undp.org/" target="_blank">Transparency Portal</a> allows open, comprehensive
-                public access to data on over 4,000 UNDP
-                projects, with links to profile pages for every donor. The portal also shows UNDP’s contribution to
-                the SDGs and offers an online training platform on the IATI Standard.</p>
+              <p>As a member of the International Aid Transparency Initiative (IATI) since its creation in 2008, UNDP has led outreach efforts with partner countries and UN agencies to champion the aid transparency standard and make it relevant for national development planning, public financial management and mutual accountability of aid, development and humanitarian funding. UNDP ranked <strong>sixth overall</strong> in the <a href="https://www.publishwhatyoufund.org/the-index/2024/" target="_blank">2024 Aid Transparency Index</a> and was the <strong>second most transparent UN agency</strong>.</p>
+      <p>UNDP’s <a href="https://open.undp.org/" target="_blank">Transparency Portal</a> allows open, comprehensive public access to data on over 4,000 UNDP projects, with links to profile pages for every donor. The portal also shows UNDP’s contribution to the SDGs and offers an online training platform on the IATI Standard.</p>
       
               <br><br>
       
             </div>
       
       
-      
             <div class="small-12 medium-6 large-5 ">
               <h5 style="color: #0468B1;">Promoting transparency across the UN system</h5>
-              <p>
-                UNDP actively participated in defining and implementing a set of
-                <a href="https://unsdg.un.org/sites/default/files/2022-04/UN_DataStandards_Digital_March2022.pdf"
-                  target="_blank">
-                  UN data standards
-                </a>
-                for system-wide financial reporting.
-              </p>
+              <p>UNDP actively participated in defining and implementing a set of <a href="https://unsdg.un.org/sites/default/files/2022-04/UN_DataStandards_Digital_March2022.pdf" target="_blank">UN data standards</a> for system-wide financial reporting.</p>
             </div>
       
             <div class="small-12 medium-6 large-6">
               <h5 style="color: #0468B1;">Audit reports</h5>
-              <p>
-                UNDP has been
-                <a href="https://www.undp.org/content/undp/en/home/accountability/audit/disclosure-of-internal-audit-reports.html"
-                  target="_blank">
-                  publishing audit reports
-                </a> issued by the Office of Audit and Investigations since 2012,
-                and has obtained its 19th consecutive unqualified (clean) audit from the UN Board of Auditors.
-              </p>
+              <p>UNDP has been <a href="https://www.undp.org/content/undp/en/home/accountability/audit/disclosure-of-internal-audit-reports.html" target="_blank">publishing audit reports</a> issued by the Office of Audit and Investigations since 2012, and has obtained its 19th consecutive unqualified (clean) audit from the UN Board of Auditors.</p>
             </div>
       
           </div>
@@ -1369,7 +789,6 @@
             </div>
       
       
-      
           </div>
       
           <div class="grid-x grid-padding-x align-justify align-center align-self-middle">
@@ -1377,19 +796,9 @@
             <div class="cell small-12 medium-12 large-4">
               <div>
                 <br><br><br>
-                <p>
-                  <strong>Annual contributions increased to $5 billion in 2025,</strong>
-                  up by 2 percent from $4.9 billion in 2024.
-                </p>
-                <p>
-                  <strong style="color: #C3D51F;">Annual contributions to regular resources decreased to $442
-                    million,</strong>
-                  down by 24 percent from $581 million in 2024.
-                </p>
-                <p>
-                  <strong style="color: #0069B3;">Annual contributions to other resources increased to $4.6 billion, </strong>
-                  up by 6 percent from $4.3 billion in 2024.
-                </p>
+                <p><strong>Annual contributions increased to $5 billion in 2025,</strong> up by 2 percent from $4.9 billion in 2024.</p>
+      <p><strong style="color: #C3D51F;">Annual contributions to regular resources decreased to $442 million,</strong> down by 24 percent from $581 million in 2024.</p>
+      <p><strong style="color: #0069B3;">Annual contributions to other resources increased to $4.6 billion,</strong> up by 6 percent from $4.3 billion in 2024.</p>
               </div>
             </div>
       
@@ -1403,26 +812,12 @@
       
           <div class="cell small-12 medium-12 large-12">
             <br><br>
-            <p>Regular resources are critical to UNDP's ability to prioritize countries' needs, respond swiftly in crises
-              and maintain
-              high standards of accountability and transparency. They also allow UNDP to sustain country presence and
-              upstream policy
-              expertise that other types of funding cannot support. Regular resources also carry strong catalytic value,
-              mobilizing additional
-              resources for development. Insufficient regular resources would therefore severely compromise UNDP's unique
-              ability to respond rapidly
-              to emergencies and address critical needs that other funding sources do not cover. The continued decline in
-              regular resources also has
-              serious implications for UNDP's ability to deliver the intended results of the Strategic Plan, restore and
-              accelerate progress towards
-              the SDGs and maintain robust oversight and accountability systems.</p>
+            <p>Regular resources are critical to UNDP&#x27;s ability to prioritize countries&#x27; needs, respond swiftly in crises and maintain high standards of accountability and transparency. They also allow UNDP to sustain country presence and upstream policy expertise that other types of funding cannot support. Regular resources also carry strong catalytic value, mobilizing additional resources for development. Insufficient regular resources would therefore severely compromise UNDP&#x27;s unique ability to respond rapidly to emergencies and address critical needs that other funding sources do not cover. The continued decline in regular resources also has serious implications for UNDP&#x27;s ability to deliver the intended results of the Strategic Plan, restore and accelerate progress towards the SDGs and maintain robust oversight and accountability systems.</p>
       
             <br>
       
             <p><span class="text-extrabold">Trends in regular and other resources, 2022–2025</span><br>
-              UNDP maintained broadly stable annual contributions throughout the period covered by the 2022–2025 Strategic
-              Plan, averaging approximately $4.9 billion per year.
-              Annual contributions reached a peak of $5.0 billion in both 2023 and 2025.</p>
+              UNDP maintained broadly stable annual contributions throughout the period covered by the 2022–2025 Strategic Plan, averaging approximately $4.9 billion per year. Annual contributions reached a peak of $5.0 billion in both 2023 and 2025.</p>
       
       
             <div class="chart-wrapper">
@@ -1436,7 +831,6 @@
         </div>
       
       </section>
-      
       
       
       <!--************************* Resources by funding partner  *************************  -->
@@ -1455,14 +849,7 @@
       
             <div class="cell small-12 medium-12 large-6">
               <h4>Regular and other resources, 2025</h4>
-              <p>
-                UNDP values all types of funding received from its partners—including Member States,
-                multilateral organizations, non-governmental organizations, private and philanthropic
-                organizations and financing institutions—as these resources enable it to deliver on its
-                commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total,
-                36 percent was contributed by donor country governments, 32 percent by multilateral organizations
-                and 32 percent by programme country governments.
-              </p>
+              <p>UNDP values all types of funding received from its partners—including Member States, multilateral organizations, non-governmental organizations, private and philanthropic organizations and financing institutions—as these resources enable it to deliver on its commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total, 36 percent was contributed by donor country governments, 32 percent by multilateral organizations and 32 percent by programme country governments.</p>
             </div>
       
             <div class="cell small-12 medium-12 large-6">
@@ -1479,18 +866,12 @@
       
           <div class="grid-x align-justify align-self-middle">
             <div class="cell small-12 medium-12 large-12">
-              <h4>Top 30 resource partners, 2025
-              </h4>
-              <p>
-                In 2025, UNDP’s top 30 resource partners contributed $4.1 billion, or 82 percent of total annual
-                contributions. These partners provided 89 percent of regular resources and 81 percent of other resource
-                contributions.
-              </p>
+              <h4>Top 30 resource partners, 2025</h4>
+              <p>In 2025, UNDP’s top 30 resource partners contributed $4.1 billion, or 82 percent of total annual contributions. These partners provided 89 percent of regular resources and 81 percent of other resource contributions.</p>
       
               <div class="echarts" data-chart-type="contributions-by-donor-resource" style="width:100%;height:1000px;"></div>
       
             </div>
-      
       
       
           </div>
@@ -1507,12 +888,8 @@
       
           <div class="grid-x align-justify align-self-middle">
             <div class="cell small-12 medium-12 large-12">
-              <h2>Resources by funding channel
-              </h2>
-              <p>
-                In 2025, UNDP benefited from increases in government development financing (17 percent) and third-party
-                cost-sharing (7 percent).
-              </p>
+              <h2>Resources by funding channel</h2>
+              <p>In 2025, UNDP benefited from increases in government development financing (17 percent) and third-party cost-sharing (7 percent).</p>
       
               <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;"></div>
       
@@ -1542,10 +919,7 @@
       
                   <div class="resource-content">
                     <h4>Regular (core) resources</h4>
-                    <p>
-                      Unearmarked funds that provide a flexible foundation for delivering
-                      results across the Strategic Plan.
-                    </p>
+                    <p>Unearmarked funds that provide a flexible foundation for delivering results across the Strategic Plan.</p>
                   </div>
                 </div>
       
@@ -1559,10 +933,7 @@
       
                   <div class="resource-content">
                     <h4>Other resources</h4>
-                    <p>
-                      Earmarked funds that support specific themes, programmes or projects.<br>
-                      These include:
-                    </p>
+                    <p>Earmarked funds that support specific themes, programmes or projects.<br>These include:</p>
                   </div>
                 </div>
       
@@ -1584,11 +955,7 @@
       
                   <div class="resource-content">
                     <h4>Government financing</h4>
-                    <p>
-                      Voluntary funding through which programme country governments entrust
-                      domestic resources or loans from financial institutions to UNDP to
-                      support development initiatives in their respective countries.
-                    </p>
+                    <p>Voluntary funding through which programme country governments entrust domestic resources or loans from financial institutions to UNDP to support development initiatives in their respective countries.</p>
                   </div>
                 </div>
       
@@ -1602,11 +969,7 @@
       
                   <div class="resource-content">
                     <h4>Thematic funds</h4>
-                    <p>
-                      Softly earmarked pooled funds that support the achievement of outcomes
-                      aligned with the Strategic Plan and address issues that cut across
-                      thematic areas.
-                    </p>
+                    <p>Softly earmarked pooled funds that support the achievement of outcomes aligned with the Strategic Plan and address issues that cut across thematic areas.</p>
                   </div>
                 </div>
       
@@ -1619,10 +982,7 @@
       
                   <div class="resource-content">
                     <h4>Third-party cost-sharing</h4>
-                    <p>
-                      Earmarked contributions for a specific programme, project, region,
-                      or country.
-                    </p>
+                    <p>Earmarked contributions for a specific programme, project, region, or country.</p>
                   </div>
                 </div>
       
@@ -1641,12 +1001,7 @@
       
                   <div class="resource-content">
                     <h4>UN pooled funds</h4>
-                    <p>
-                      UN inter-agency financing mechanisms that support clearly defined
-                      programmatic scopes and results frameworks, enabling global and local
-                      responses to humanitarian, development, environmental and peace-related
-                      challenges.
-                    </p>
+                    <p>UN inter-agency financing mechanisms that support clearly defined programmatic scopes and results frameworks, enabling global and local responses to humanitarian, development, environmental and peace-related challenges.</p>
                   </div>
                 </div>
       
@@ -1660,10 +1015,7 @@
       
                   <div class="resource-content">
                     <h4>Vertical funds</h4>
-                    <p>
-                      Earmarked funds focused on a single area of development, such as
-                      health or the environment.
-                    </p>
+                    <p>Earmarked funds focused on a single area of development, such as health or the environment.</p>
                   </div>
                 </div>
       
@@ -1677,11 +1029,7 @@
       
                   <div class="resource-content">
                     <h4>Reimbursable support services</h4>
-                    <p>
-                      Funds received for management and support services, including services
-                      provided by UN Volunteers and the Junior Professional Officer (JPO)
-                      Programme.
-                    </p>
+                    <p>Funds received for management and support services, including services provided by UN Volunteers and the Junior Professional Officer (JPO) Programme.</p>
                   </div>
                 </div>
       
@@ -1692,15 +1040,11 @@
           </div>
       
       
-      
-      
           <div class="grid-x grid-margin-x">
             <div class="cell small-12 medium-12 large-12">
               <br><br>
               <h3>UNDP funding types and channels</h3><br><br>
             </div>
-      
-      
       
       
           </div>

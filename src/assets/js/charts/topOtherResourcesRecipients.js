@@ -26,7 +26,7 @@ export function initTopOtherResourcesRecipients(el, echarts) {
       fontFamily: 'Proxima Nova, Arial, sans-serif'
     },
     title: {
-      subtext: '$ millions',
+      subtext: '$M',
       left: 0,
       top: 0,
       textStyle: {
@@ -56,7 +56,7 @@ export function initTopOtherResourcesRecipients(el, echarts) {
       formatter: function (params) {
         const item = params[0];
         return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${item.name}</div>
-          <div style="font-family:'Proxima Nova',Arial,sans-serif">Other resources: <strong>$${item.value}m</strong></div>`;
+          <div style="font-family:'Proxima Nova',Arial,sans-serif">Other resources: <strong>$${item.value}M</strong></div>`;
       }
     },
     grid: {
@@ -75,7 +75,7 @@ export function initTopOtherResourcesRecipients(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: {
         lineStyle: { color: '#E8EAED' }
@@ -106,7 +106,7 @@ export function initTopOtherResourcesRecipients(el, echarts) {
         show: true,
         position: 'right',
         distance: 8,
-        formatter: (params) => `$${params.value}m`,
+        formatter: (params) => `$${params.value}M`,
         color: '#46515D',
         fontSize: 11,
         fontWeight: 600

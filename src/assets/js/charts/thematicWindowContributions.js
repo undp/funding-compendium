@@ -11,7 +11,7 @@ export function initThematicWindowContributions(el, echarts) {
     },
     title: {
       text: '',
-      subtext: '$ millions',
+      subtext: '$M',
       left: 0,
       top: 0,
       textStyle: {
@@ -39,7 +39,7 @@ export function initThematicWindowContributions(el, echarts) {
       },
       formatter: function (params) {
         const item = params[0];
-        return `<strong>${item.axisValue}</strong><br>$${item.value}m`;
+        return `<strong>${item.axisValue}</strong><br>$${item.value}M`;
       }
     },
     grid: {
@@ -70,7 +70,7 @@ export function initThematicWindowContributions(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#E8EAED' } }
     },
@@ -93,7 +93,7 @@ export function initThematicWindowContributions(el, echarts) {
         show: true,
         position: 'top',
         distance: 10,
-        formatter: '${c}m',
+        formatter: '${c}M',
         color: '#36434D',
         fontSize: 12,
         fontWeight: 700

@@ -1,84 +1,27 @@
-<!--************************* Cover Hero *************************  -->
-
-
-<div class="homepage-hero-full" data-undpds-component="expandToSize" data-selector=".homepage-hero-full">
-
+<!-- ************************* Page Hero ************************* -->
+<div class="pagehero-full funding-pagehero" data-undpds-component="expandToSize" data-selector=".pagehero-full">
   <div class="overlay-grey">
-    <!--- <img src="{{@root.root}}assets/img/cover.jpg" alt="abstract image" />-->
-
-    <video loop muted playsinline autoplay poster="{{@root.root}}assets/img/cover-regular.png">
-      <source src="{{@root.root}}assets/img/cover-landscape.png" type="video/mp4">
-      Your browser does not support the HTML5 video element
-    </video>
+    <img class="mobile-position-center" src="{{@root.root}}assets/img/cover.jpg" alt="">
   </div>
-  <div class="grid-x homepage-hero-content">
-    <div class="cell large-7 medium-9 medium-offset-1">
 
-      <!--<
-    nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb white medium-offset-1 inviewport">
-      <ul>
-        <li><a href="#" aria-label="Home">Home</a></li>
-        <li aria-current="Page Title">Funding landscape</li>
-      </ul>
-    </nav>
-    -->
+  <nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb medium-offset-1">
+    <ul>
+      <li><a href="{{@root.root}}index.html" aria-label="{{breadcrumbs.home}}">{{breadcrumbs.home}}</a></li>
+      <li aria-current="page">{{other-resources-page.hero.title}}</li>
+    </ul>
+  </nav>
 
-      <h4 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-        UNDP Funding Compendium 2025
+  <div class="pagehero-content medium-offset-1">
+    <div class="content-box color-black">
+      <h4 tabindex="0" data-viewport="true">
+        {{other-resources-page.hero.overline}}
       </h4>
-      <h1 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-        Other resources and partnerships
-      </h1>
-
-
-      <h4 class="color-white" tabindex="0" data-viewport="true"></h4>
-      <a class="button" role="" style="visibility: hidden;"></a>
-
+      <h2 tabindex="0" data-viewport="true">
+        {{other-resources-page.hero.title}}
+      </h2>
     </div>
   </div>
 </div>
-
-<!---
-
-<div
-  class="pagehero-full"
-  data-undpds-component="expandToSize"
-  data-selector=".pagehero-full"
-  data-initialized="expandToSize"
->
-  <div class="overlay-grey">
-    <img
-      class="mobile-position-center"
-      alt="{{@root.root}}assets/img/cover.jpg"
-      src="{{@root.root}}assets/img/cover.jpg"
-    />
-  </div>
-  <nav
-    aria-label="breadcrumbs"
-    data-viewport="true"
-    class="breadcrumb white medium-offset-1 inviewport"
-  >
-    <ul>
-      <li><a href="#" aria-label="Home">Home</a></li>
-      <li><a href="#" aria-label="Second-level">Second-level</a></li>
-      <li><a href="#" aria-label="Third-level">Third-level</a></li>
-      <li aria-current="Page Title">Page Title</li>
-    </ul>
-  </nav>
-  <div class="pagehero-content medium-offset-1">
-    <div class="content-box color-white">
-      <h2 class="inviewport" tabindex="0" data-viewport="true">
-        The sdgs in action
-      </h2>
-      <p class="subtitle">
-        Subtitle or excerpt of the story goes below and it is two lines
-      </p>
-    </div>
-  </div>
-</div>-->
-
-
-
 
 
 <!--************************* Other resources overview *************************  -->
@@ -86,26 +29,26 @@
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12">
-       
-        <p>Other resources are earmarked contributions that supplement regular, or core, resources. They range from softly earmarked thematic funds to tightly earmarked funds for specific programmes or projects. Other resources are channelled to UNDP through government financing, thematic funding windows, UN pooled funds, vertical funds or third-party cost-sharing.</p>
-        <p>In 2025, annual contributions to other resources increased to $4.6 billion, up by 6 percent from $4.3 billion in 2024.</p>
+
+        <p>{{other-resources-page.overview.copy1}}</p>
+        <p>{{other-resources-page.overview.copy2}}</p>
         <br><br>
       </div>
     </div>
     <div class="grid-x grid-margin-x grid-margin-y">
       <div class="cell small-12 large-12">
-        <h5>Top 20 other resources contributors, 2025</h5>
+        <h5>{{other-resources-page.overview.contributors-chart}}</h5>
         <div class="echarts" data-chart-type="top-other-resources-contributors" style="width:100%;height:700px;"></div>
       </div>
-      
+
     </div>
 
      <div class="grid-x grid-margin-x grid-margin-y">
       <div class="cell small-12 large-12">
-        <h5>Top 15 recipient countries of other resources, 2025</h5>
+        <h5>{{other-resources-page.overview.recipients-chart}}</h5>
         <div class="echarts" data-chart-type="top-other-resources-recipients" style="width:100%;height:700px;"></div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -115,19 +58,17 @@
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12">
-        <h2>Thematic funds</h2>
-        <p>The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $133 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.</p>
+        <h2>{{other-resources-page.thematic.heading}}</h2>
+        <p>{{other-resources-page.thematic.copy}}</p>
       </div>
       <div class="cell small-12">
-        <h5>Funding window contributions, 2022–2025</h5>
+        <h5>{{other-resources-page.thematic.chart}}</h5>
         <div class="echarts" data-chart-type="thematic-window-contributions" style="width:100%;height:420px;"></div>
 
                 <div class="echarts padded" data-chart-type="funding-window-contributor-flow" style="width:100%;height:620px;"></div>
       </div>
     </div>
 
-
-   
 
   </div>
 </section>
@@ -137,22 +78,22 @@
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12">
-        <h2>UN pooled funds</h2>
-        <p>A UN inter-agency pooled fund is a financing mechanism that supports a clearly defined programmatic purpose and results framework through contributions from more than one contributor. These funds enable global, regional and country-level responses to humanitarian, development, peace and transition and climate and environment-related challenges.</p>
-        <p>In 2025, UNDP remained the largest participating organization in inter-agency pooled funds, receiving $234 million, down by 7 percent from $251 million in 2024.</p>
+        <h2>{{other-resources-page.pooled.heading}}</h2>
+        <p>{{other-resources-page.pooled.copy1}}</p>
+        <p>{{other-resources-page.pooled.copy2}}</p>
         <br><br>
-          <h5>Top 15 UN pooled funds received by UNDP as a participating UN organization, 2025</h5>        
+          <h5>{{other-resources-page.pooled.top-funds-chart}}</h5>
         <div class="echarts" data-chart-type="top-un-pooled-funds" style="width:100%;height:620px;"></div>
 
       </div>
     </div>
     <div class="grid-x grid-margin-x grid-margin-y padded">
       <div class="cell small-12 large-6">
-        <h5 class="text-center">Top 15 Member State contributions</h5>
+        <h5 class="text-center">{{other-resources-page.pooled.member-states-chart}}</h5>
         <div class="echarts" data-chart-type="top-pooled-fund-member-states" style="width:100%;height:520px;"></div>
       </div>
       <div class="cell small-12 large-6">
-        <h5 class="text-center">UN pooled funding to UNDP, 2022–2025</h5>
+        <h5 class="text-center">{{other-resources-page.pooled.trend-chart}}</h5>
         <div class="echarts" data-chart-type="pooled-fund-contributions" style="width:100%;height:520px;"></div>
       </div>
     </div>
@@ -164,37 +105,37 @@
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x grid-margin-y">
       <div class="cell small-12">
-        <h2>Government development financing</h2>
-        <p>Government development financing is a voluntary funding mechanism through which programme country governments entrust their domestic resources, or loans extended by international financial institutions (IFIs), to UNDP to assist in implementing development initiatives in their respective countries.</p>
+        <h2>{{other-resources-page.government.heading}}</h2>
+        <p>{{other-resources-page.government.intro}}</p>
       </div>
     </div>
 
     <div class="grid-x grid-margin-x grid-margin-y">
       <div class="cell small-12 large-6">
-        <h3>$1.4 billion</h3>
-        <p>Total government financing in 2025, representing 28 percent of total resources and a 17 percent increase from 2024.</p>
+        <h3>{{other-resources-page.government.total}}</h3>
+        <p>{{other-resources-page.government.total-copy}}</p>
       </div>
       <div class="cell small-12 large-6">
-        <h3>$113 million</h3>
-        <p>Financed through loans from international financial institutions.</p>
+        <h3>{{other-resources-page.government.loans}}</h3>
+        <p>{{other-resources-page.government.loans-copy}}</p>
       </div>
     </div>
 
     <br><br>
     <div class="grid-x grid-margin-x grid-margin-y">
       <div class="cell small-12">
-        <h5 class="text-center">Government financing by country, 2024</h5>
+        <h5 class="text-center">{{other-resources-page.government.country-chart}}</h5>
         <div class="echarts" data-chart-type="government-financing-by-country" style="width:100%;height:850px;"></div>
       </div>
     </div>
 
     <div class="grid-x grid-margin-x grid-margin-y align-middle padded">
       <div class="cell small-12 large-5">
-        <h3>Government financing by region</h3>
-        <p>In 2025, programme countries in Latin America and the Caribbean contributed 62 percent of total government financing, followed by Africa (17 percent), Europe and the Commonwealth of Independent States (9 percent), the Arab States (8 percent), and Asia and the Pacific (4 percent).</p>
+        <h3>{{other-resources-page.government.region-heading}}</h3>
+        <p>{{other-resources-page.government.region-copy}}</p>
       </div>
       <div class="cell small-12 large-7 align-self-center">
-        <h5 style="text-align: center;">Contributions to government financing, 2022–2025</h5>
+        <h5 style="text-align: center;">{{other-resources-page.government.region-chart}}</h5>
         <div class="echarts" data-chart-type="government-financing-by-region" style="width:100%;height:500px;"></div>
       </div>
     </div>
@@ -206,12 +147,12 @@
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 large-5">
-        <h2>Vertical funds</h2>
-        <p>Vertical funds are earmarked for a single area of development such as nature, climate, energy or health. These funds are governed by steering committees and are not directly administered by UNDP.</p>
-        <p>In 2025, UNDP received $825 million from vertical funds, an 11 percent decrease from the $920 million received in 2024. The largest contributions came from the Global Environment Facility ($372 million), the Global Fund ($311 million) and the Green Climate Fund ($84 million).</p>
+        <h2>{{other-resources-page.vertical.heading}}</h2>
+        <p>{{other-resources-page.vertical.copy1}}</p>
+        <p>{{other-resources-page.vertical.copy2}}</p>
       </div>
       <div class="cell small-12 large-7">
-        <h5>Vertical fund contributions, 2024–2025</h5>
+        <h5>{{other-resources-page.vertical.chart}}</h5>
         <div class="echarts" data-chart-type="vertical-fund-contributions" style="width:100%;height:460px;"></div>
       </div>
     </div>
@@ -223,22 +164,22 @@
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12">
-        <h2>Third-party cost-sharing</h2>
-        <p>Earmarked contributions for a specific programme or project continue to make up the largest share of UNDP resources. In 2025, these contributions amounted to $1.95 billion (39 percent of total resources).</p>
+        <h2>{{other-resources-page.cost-sharing.heading}}</h2>
+        <p>{{other-resources-page.cost-sharing.intro}}</p>
       <br><br>
       </div>
 
        <div class="cell small-12 large-5">
-        <h3>Partnering with the European Union</h3>
-        <p>As UNDP’s third-largest donor in 2025, the European Union remains a strong partner. It contributed $313 million for UNDP programmes in Türkiye, Lebanon, Nigeria, Cyprus, Bosnia and Herzegovina, the Philippines and other countries, a 3 percent increase from the $305 million received in 2024.</p>
+        <h3>{{other-resources-page.cost-sharing.eu-heading}}</h3>
+        <p>{{other-resources-page.cost-sharing.eu-copy}}</p>
       </div>
 
       <div class="cell small-12 large-7">
-        <h5>Contributions from the European Union, 2022–2025</h5>
+        <h5>{{other-resources-page.cost-sharing.eu-chart}}</h5>
         <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:500px;"></div>
       </div>
 
-     
+
     </div>
   </div>
 </section>
@@ -247,30 +188,28 @@
 <section class="section section-bg-gold">
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x">
-      
+
 
       <div class="cell small-12 large-5">
-        <h3>Partnering with financing institutions</h3>
-        <p>UNDP’s financial and non-financial partnerships with IFIs are central to promoting $1 trillion in public expenditure and private capital investments aligned with the SDGs.</p>
-        <p>In 2025, UNDP received $316 million from IFIs, an 8 percent decrease from $344 million in 2024. Top IFI contributors were Kreditanstalt für Wiederaufbau (KfW), at $105 million, and the World Bank, at $88 million. This funding comprised $203 million in direct grants and $113 million in indirect government contributions.</p>
+        <h3>{{other-resources-page.institutions.heading}}</h3>
+        <p>{{other-resources-page.institutions.copy1}}</p>
+        <p>{{other-resources-page.institutions.copy2}}</p>
       </div>
 
       <div class="cell small-12 large-7">
-        <h5>Total contributions by IFI, 2025</h5>
+        <h5>{{other-resources-page.institutions.total-chart}}</h5>
         <div class="echarts" data-chart-type="ifi-contributions-donut" style="width:100%;height:520px;"></div>
       </div>
 
 
-
-    
     </div>
     <div class="grid-x grid-margin-x grid-margin-y padded">
       <div class="cell small-12 large-6">
-        <h5>IFI contributions by type, 2022–2025</h5>
+        <h5>{{other-resources-page.institutions.type-chart}}</h5>
         <div class="echarts" data-chart-type="ifi-contributions-by-type" style="width:100%;height:420px;"></div>
       </div>
       <div class="cell small-12 large-6">
-        <h5>Top 10 recipients of IFI funding, 2025</h5>
+        <h5>{{other-resources-page.institutions.recipients-chart}}</h5>
         <div class="echarts" data-chart-type="top-ifi-recipient-countries" style="width:100%;height:420px;"></div>
       </div>
     </div>
@@ -282,25 +221,23 @@
   <div class="grid-container section padded">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12">
-        <h3>Partnering with private companies, foundations, NGOs and academic institutions</h3>
-        <p>Contributions from the private sector, foundations, non-governmental organizations and academic, training and research institutions decreased to $89 million in 2025, down by 5 percent from $94 million in 2024.</p>
-        <p>Partnerships with the private sector accelerate progress towards the SDGs by mobilizing capital, innovation and technology. Through its Finance Moonshot, UNDP leveraged $920 billion in public and private finance for the SDGs, helping countries mobilize investment for development priorities. Through the timbuktoo initiative, a flagship partnership to mobilize capital for innovation across Africa, UNDP is working to raise $1 billion over the next decade to support 10,000 start-ups and scale 1,000 ventures to generate $10 billion and positively impact 100 million lives.</p>
+        <h3>{{other-resources-page.private-sector.heading}}</h3>
+        <p>{{other-resources-page.private-sector.copy1}}</p>
+        <p>{{other-resources-page.private-sector.copy2}}</p>
       </div>
     </div>
     <div class="grid-x grid-margin-x grid-margin-y padded">
       <div class="cell small-12 large-6">
-        <h5>Top 10 contributors, 2025</h5>
+        <h5>{{other-resources-page.private-sector.contributors-chart}}</h5>
         <div class="echarts" data-chart-type="top-private-sector-contributors" style="width:100%;height:420px;"></div>
       </div>
       <div class="cell small-12 large-6">
-        <h5>Annual contributions, 2022–2025</h5>
+        <h5>{{other-resources-page.private-sector.trend-chart}}</h5>
         <div class="echarts" data-chart-type="private-sector-contributions-by-type" style="width:100%;height:420px;"></div>
       </div>
     </div>
   </div>
 </section>
-
-
 
 
 <!--************************* UNDS *************************  -->
@@ -309,8 +246,8 @@
   <div class="grid-container" style="padding-top: 5rem;">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-12 large-12">
-        <h3 style="color: #0468B1;">{{{partnerships-page.unds.heading}}}</h3>
-        <p>{{{partnerships-page.unds.copy.para1}}}</p>
+        <h3 style="color: #0468B1;">{{{un-system-support.unds.heading}}}</h3>
+        <p>{{{un-system-support.unds.copy.para1}}}</p>
       </div>
     </div>
   </div>
@@ -326,15 +263,15 @@
         <div class="grid-x grid-margin-x align-middle">
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
-            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{partnerships-page.unds.unv.logo}}}"
+            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.unv.logo}}}"
               alt="UN Volunteers logo">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
             <span class="highlight-title" style="color:#009EDB; text-transform: uppercase;">
-              {{{partnerships-page.unds.unv.title}}}
+              {{{un-system-support.unds.unv.title}}}
             </span>
-            <p>{{{partnerships-page.unds.unv.copy}}}</p>
+            <p>{{{un-system-support.unds.unv.copy}}}</p>
           </div>
         </div>
       </div>
@@ -344,15 +281,15 @@
         <div class="grid-x grid-margin-x align-middle">
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
-            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{partnerships-page.unds.uncdf.logo}}}"
+            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.uncdf.logo}}}"
               alt="UNCDF logo">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
             <span class="highlight-title" style="color:#2D3D89; text-transform: uppercase;">
-              {{{partnerships-page.unds.uncdf.title}}}
+              {{{un-system-support.unds.uncdf.title}}}
             </span>
-            <p>{{{partnerships-page.unds.uncdf.copy}}}</p>
+            <p>{{{un-system-support.unds.uncdf.copy}}}</p>
           </div>
         </div>
       </div>
@@ -362,15 +299,15 @@
         <div class="grid-x grid-margin-x align-middle">
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
-            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{partnerships-page.unds.unossc.logo}}}"
+            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.unossc.logo}}}"
               alt="UNOSSC logo">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
             <span class="highlight-title" style="color:#2E87C8; text-transform: uppercase;">
-              {{{partnerships-page.unds.unossc.title}}}
+              {{{un-system-support.unds.unossc.title}}}
             </span>
-            <p>{{{partnerships-page.unds.unossc.copy}}}</p>
+            <p>{{{un-system-support.unds.unossc.copy}}}</p>
           </div>
         </div>
       </div>
@@ -380,15 +317,15 @@
         <div class="grid-x grid-margin-x align-middle">
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
-            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{partnerships-page.unds.mptf.logo}}}"
+            <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.mptf.logo}}}"
               alt="MPTF logo">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
             <span class="highlight-title" style="color:#009EDB; text-transform: uppercase;">
-              {{{partnerships-page.unds.mptf.title}}}
+              {{{un-system-support.unds.mptf.title}}}
             </span>
-            <p>{{{partnerships-page.unds.mptf.copy}}}</p>
+            <p>{{{un-system-support.unds.mptf.copy}}}</p>
           </div>
         </div>
       </div>
@@ -401,7 +338,7 @@
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
             <br>
-            <p>{{{partnerships-page.unds.copy.para2}}}</p>
+            <p>{{{un-system-support.unds.copy.para2}}}</p>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       
-      subtext: '$ millions · Last updated 26 June 2026',
+      subtext: '$M · Last updated 26 June 2026',
       left: 0,
       top: 0,
       textStyle: {
@@ -73,7 +73,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       axisLabel: {
         color: '#877F79',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#EEE9E5' } }
     },
@@ -111,8 +111,8 @@ export function initGovernmentFinancingByCountry(el, echarts) {
         distance: 7,
         formatter: function (params) {
           return params.value >= 100
-            ? `$${params.value.toFixed(0)}m`
-            : `$${params.value.toFixed(1)}m`;
+            ? `$${params.value.toFixed(0)}M`
+            : `$${params.value.toFixed(1)}M`;
         },
         color: '#514944',
         fontSize: 10,

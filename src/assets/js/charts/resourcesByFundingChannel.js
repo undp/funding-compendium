@@ -134,7 +134,7 @@ export function initResourcesByFundingChannel(el, echarts) {
       );
     }
 
-    return '$' + Math.round(value) + 'm';
+    return '$' + Math.round(value) + 'M';
   }
 
   function formatTotal(value) {
@@ -956,7 +956,7 @@ export function initResourcesByFundingChannel(el, echarts) {
 
       max: 5500,
 
-      name: '$US in millions',
+      name: 'USD M',
 
       nameLocation: 'middle',
 

@@ -13,7 +13,7 @@ export function initPooledFundContributions(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       
-      subtext: '2022–2025 · $ millions',
+      subtext: '2022–2025 · $M',
       left: 0,
       top: 0,
       textStyle: {
@@ -43,15 +43,15 @@ export function initPooledFundContributions(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         const humanitarianRow = humanitarian[index] > 0
-          ? `<div style="margin-bottom:5px">Humanitarian: <strong>$${humanitarian[index].toFixed(1)}m</strong></div>`
+          ? `<div style="margin-bottom:5px">Humanitarian: <strong>$${humanitarian[index].toFixed(1)}M</strong></div>`
           : '';
 
         return `<div style="font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="margin-bottom:5px">Climate and environment: <strong>$${climate[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:5px">Development: <strong>$${development[index].toFixed(1)}m</strong></div>
+          <div style="margin-bottom:5px">Climate and environment: <strong>$${climate[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:5px">Development: <strong>$${development[index].toFixed(1)}M</strong></div>
           ${humanitarianRow}
-          <div style="margin-bottom:5px">Peace and transition: <strong>$${peace[index].toFixed(1)}m</strong></div>
-          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">UNDP Total: <strong>$${undpTotal[index]}m</strong></div>`;
+          <div style="margin-bottom:5px">Peace and transition: <strong>$${peace[index].toFixed(1)}M</strong></div>
+          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">UNDP Total: <strong>$${undpTotal[index]}M</strong></div>`;
       }
     },
     legend: {
@@ -89,7 +89,7 @@ export function initPooledFundContributions(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#E8EAED' } }
     },
@@ -151,7 +151,7 @@ export function initPooledFundContributions(el, echarts) {
           show: true,
           position: 'right',
           distance: 9,
-          formatter: (params) => `$${params.value}m`,
+          formatter: (params) => `$${params.value}M`,
           color: '#232E3D',
           fontSize: 12,
           fontWeight: 700

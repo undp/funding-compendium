@@ -42,11 +42,11 @@ export function initPrivateSectorContributionsByType(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="margin-bottom:4px">Private companies: <strong>$${privateCompanies[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">Foundations: <strong>$${foundations[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">NGOs: <strong>$${ngos[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">Academic, training &amp; research: <strong>$${academic[index].toFixed(1)}m</strong></div>
-          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}m</strong></div>`;
+          <div style="margin-bottom:4px">Private companies: <strong>$${privateCompanies[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Foundations: <strong>$${foundations[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">NGOs: <strong>$${ngos[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Academic, training &amp; research: <strong>$${academic[index].toFixed(1)}M</strong></div>
+          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}M</strong></div>`;
       }
     },
     legend: {
@@ -168,7 +168,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
           show: true,
           position: 'top',
           distance: 8,
-          formatter: (params) => `$${Math.round(params.value)}m`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#253746',
           fontSize: 11,
           fontWeight: 700

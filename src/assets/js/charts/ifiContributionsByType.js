@@ -29,9 +29,9 @@ export function initIfiContributionsByType(el, echarts) {
         const directShare = direct[index] / total[index] * 100;
 
         return `<div style="font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="display:flex;justify-content:space-between;gap:28px;margin-bottom:6px"><span>Indirect government financing</span><strong>$${indirect[index].toFixed(1)}m · ${indirectShare.toFixed(0)}%</strong></div>
-          <div style="display:flex;justify-content:space-between;gap:28px;margin-bottom:6px"><span>Direct contribution</span><strong>$${direct[index].toFixed(1)}m · ${directShare.toFixed(0)}%</strong></div>
-          <div style="margin-top:9px;padding-top:9px;border-top:1px solid #E5E7EB;display:flex;justify-content:space-between;gap:28px"><span>Total</span><strong>$${total[index].toFixed(1)}m</strong></div>`;
+          <div style="display:flex;justify-content:space-between;gap:28px;margin-bottom:6px"><span>Indirect government financing</span><strong>$${indirect[index].toFixed(1)}M · ${indirectShare.toFixed(0)}%</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:28px;margin-bottom:6px"><span>Direct contribution</span><strong>$${direct[index].toFixed(1)}M · ${directShare.toFixed(0)}%</strong></div>
+          <div style="margin-top:9px;padding-top:9px;border-top:1px solid #E5E7EB;display:flex;justify-content:space-between;gap:28px"><span>Total</span><strong>$${total[index].toFixed(1)}M</strong></div>`;
       }
     },
     legend: {
@@ -98,7 +98,7 @@ export function initIfiContributionsByType(el, echarts) {
         label: {
           show: true,
           position: 'inside',
-          formatter: (params) => `$${Math.round(params.value)}m`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#17372A',
           fontSize: 11,
           fontWeight: 700
@@ -114,7 +114,7 @@ export function initIfiContributionsByType(el, echarts) {
         label: {
           show: true,
           position: 'inside',
-          formatter: (params) => `$${Math.round(params.value)}m`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#ffffff',
           fontSize: 11,
           fontWeight: 700
@@ -140,7 +140,7 @@ export function initIfiContributionsByType(el, echarts) {
           show: true,
           position: 'top',
           distance: 10,
-          formatter: (params) => `$${Math.round(params.value)}m`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#253746',
           fontSize: 12,
           fontWeight: 700

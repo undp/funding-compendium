@@ -61,7 +61,7 @@ export function initTopPrivateSectorContributors(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 10,
-        formatter: (value) => `$${value}m`
+        formatter: (value) => `$${value}M`
       },
       splitLine: { lineStyle: { color: '#ECEEF1' } }
     },
@@ -92,7 +92,7 @@ export function initTopPrivateSectorContributors(el, echarts) {
         show: true,
         position: 'right',
         distance: 8,
-        formatter: (params) => `$${params.value.toFixed(1)}m`,
+        formatter: (params) => `$${params.value.toFixed(1)}M`,
         color: '#303944',
         fontSize: 11,
         fontWeight: 700

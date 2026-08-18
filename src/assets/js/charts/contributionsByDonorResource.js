@@ -242,7 +242,7 @@ export function initContributionsByDonorResource(el, echarts) {
       max: 400000000,
       interval: 50000000,
 
-      name: 'USD Million',
+      name: 'USD M',
       nameLocation: 'middle',
       nameGap: 48,
 

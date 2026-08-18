@@ -11,7 +11,7 @@ export function initMultiYearPledges(el, echarts) {
 
     title: {
       text: 'Regular resources income from multi-year pledges',
-      subtext: '$ millions',
+      subtext: '$M',
       left: 0,
       top: 0,
       textStyle: {
@@ -40,9 +40,9 @@ export function initMultiYearPledges(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         return `<div style="font-weight:700;margin-bottom:8px">${years[index]}</div>
-          <div style="margin-bottom:5px">Multi-year pledges: <strong>$${multiYear[index]}m</strong> <span style="color:#6B7280">(${multiYearPercent[index]}%)</span></div>
-          <div style="margin-bottom:5px">Non-multi-year pledges: <strong>$${nonMultiYear[index]}m</strong> <span style="color:#6B7280">(${nonMultiYearPercent[index]}%)</span></div>
-          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total core contributions: <strong>$${total[index]}m</strong></div>`;
+          <div style="margin-bottom:5px">Multi-year pledges: <strong>$${multiYear[index]}M</strong> <span style="color:#6B7280">(${multiYearPercent[index]}%)</span></div>
+          <div style="margin-bottom:5px">Non-multi-year pledges: <strong>$${nonMultiYear[index]}M</strong> <span style="color:#6B7280">(${nonMultiYearPercent[index]}%)</span></div>
+          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total core contributions: <strong>$${total[index]}M</strong></div>`;
       }
     },
     legend: {
@@ -98,7 +98,7 @@ export function initMultiYearPledges(el, echarts) {
         axisLabel: {
           color: '#6B7280',
           fontSize: 11,
-          formatter: '${value}m'
+          formatter: '${value}M'
         },
         splitLine: { lineStyle: { color: '#E5E7EB' } }
       },
@@ -128,7 +128,7 @@ export function initMultiYearPledges(el, echarts) {
         label: {
           show: true,
           position: 'inside',
-          formatter: (params) => `$${params.value}m`,
+          formatter: (params) => `$${params.value}M`,
           color: '#ffffff',
           fontSize: 11,
           fontWeight: 600
@@ -145,7 +145,7 @@ export function initMultiYearPledges(el, echarts) {
         label: {
           show: true,
           position: 'inside',
-          formatter: (params) => `$${params.value}m`,
+          formatter: (params) => `$${params.value}M`,
           color: '#ffffff',
           fontSize: 11,
           fontWeight: 600
@@ -164,7 +164,7 @@ export function initMultiYearPledges(el, echarts) {
           show: true,
           position: 'top',
           distance: 8,
-          formatter: (params) => `$${params.value}m`,
+          formatter: (params) => `$${params.value}M`,
           color: '#232E3D',
           fontSize: 12,
           fontWeight: 700

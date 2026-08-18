@@ -49,7 +49,7 @@ export function initIfiContributionsDonut(el, echarts) {
       formatter: function (params) {
         const item = data[params.dataIndex];
         return `<div style="font-weight:700;margin-bottom:7px">${item.name}</div>
-          <div style="margin-bottom:4px">Contribution: <strong>$${(item.value / 1000000).toFixed(1)}m</strong></div>
+          <div style="margin-bottom:4px">Contribution: <strong>$${(item.value / 1000000).toFixed(1)}M</strong></div>
           <div>Share: <strong>${item.percent}%</strong></div>`;
       }
     },

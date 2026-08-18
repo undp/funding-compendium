@@ -43,11 +43,11 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         return `<div style="font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="margin-bottom:5px">Latin America and the Caribbean: <strong>$${latinAmerica[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:5px">Africa: <strong>$${africa[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:5px">Europe and the CIS: <strong>$${europeCIS[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:5px">Arab States: <strong>$${arabStates[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:5px">Asia and the Pacific: <strong>$${asiaPacific[index].toFixed(1)}m</strong></div>
+          <div style="margin-bottom:5px">Latin America and the Caribbean: <strong>$${latinAmerica[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:5px">Africa: <strong>$${africa[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:5px">Europe and the CIS: <strong>$${europeCIS[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:5px">Arab States: <strong>$${arabStates[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:5px">Asia and the Pacific: <strong>$${asiaPacific[index].toFixed(1)}M</strong></div>
           <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${(totals[index] / 1000).toFixed(2)}B</strong></div>`;
       }
     },
@@ -99,7 +99,7 @@ export function initGovernmentFinancingByRegion(el, echarts) {
         color: '#7A838F',
         fontSize: 11,
         formatter: function (value) {
-          return value >= 1000 ? `$${(value / 1000).toFixed(1)}B` : `$${value}m`;
+          return value >= 1000 ? `$${(value / 1000).toFixed(1)}B` : `$${value}M`;
         }
       },
       splitLine: { lineStyle: { color: '#E8EAED' } }

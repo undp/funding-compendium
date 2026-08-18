@@ -1,328 +1,307 @@
-<!--************************* Cover Hero *************************  -->
-
-
-<div class="homepage-hero-full" data-undpds-component="expandToSize" data-selector=".homepage-hero-full">
-
+<!-- ************************* Page Hero ************************* -->
+<div class="pagehero-full funding-pagehero" data-undpds-component="expandToSize" data-selector=".pagehero-full">
   <div class="overlay-grey">
-    <!--- <img src="{{@root.root}}assets/img/cover.jpg" alt="abstract image" />-->
-
-    <video loop muted playsinline autoplay poster="{{@root.root}}assets/img/cover-regular.png">
-      <source src="{{@root.root}}assets/img/cover-landscape.png" type="video/mp4">
-      Your browser does not support the HTML5 video element
-    </video>
+    <img class="mobile-position-center" src="{{@root.root}}assets/img/cover.jpg" alt="">
   </div>
-  <div class="grid-x homepage-hero-content">
-    <div class="cell large-7 medium-9 medium-offset-1">
 
-      <!--<
-    nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb white medium-offset-1 inviewport">
-      <ul>
-        <li><a href="#" aria-label="Home">Home</a></li>
-        <li aria-current="Page Title">Funding landscape</li>
-      </ul>
-    </nav>
-    -->
+  <nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb medium-offset-1">
+    <ul>
+      <li><a href="{{@root.root}}index.html" aria-label="{{breadcrumbs.home}}">{{breadcrumbs.home}}</a></li>
+      <li aria-current="page">{{regular-resources-page.hero.title}}</li>
+    </ul>
+  </nav>
 
-      <h4 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-        UNDP Funding Compendium 2025
+  <div class="pagehero-content medium-offset-1">
+    <div class="content-box color-black">
+      <h4 tabindex="0" data-viewport="true">
+        {{regular-resources-page.hero.overline}}
       </h4>
-      <h1 class="color-white" tabindex="0" data-viewport="true" style="color: black;">
-        Regular Resources
-      </h1>
 
-
-      <h4 class="color-white" tabindex="0" data-viewport="true"></h4>
-      <a class="button" role="" style="visibility: hidden;"></a>
-
+      <h2 tabindex="0" data-viewport="true">
+        {{regular-resources-page.hero.title}}
+      </h2>
     </div>
   </div>
 </div>
 
-<!---
 
-<div
-  class="pagehero-full"
-  data-undpds-component="expandToSize"
-  data-selector=".pagehero-full"
-  data-initialized="expandToSize"
->
-  <div class="overlay-grey">
-    <img
-      class="mobile-position-center"
-      alt="{{@root.root}}assets/img/cover.jpg"
-      src="{{@root.root}}assets/img/cover.jpg"
-    />
-  </div>
-  <nav
-    aria-label="breadcrumbs"
-    data-viewport="true"
-    class="breadcrumb white medium-offset-1 inviewport"
-  >
-    <ul>
-      <li><a href="#" aria-label="Home">Home</a></li>
-      <li><a href="#" aria-label="Second-level">Second-level</a></li>
-      <li><a href="#" aria-label="Third-level">Third-level</a></li>
-      <li aria-current="Page Title">Page Title</li>
-    </ul>
-  </nav>
-  <div class="pagehero-content medium-offset-1">
-    <div class="content-box color-white">
-      <h2 class="inviewport" tabindex="0" data-viewport="true">
-        The sdgs in action
-      </h2>
-      <p class="subtitle">
-        Subtitle or excerpt of the story goes below and it is two lines
-      </p>
-    </div>
-  </div>
-</div>-->
-
-
-<!--************************* Lion’s share goes to programmes  *************************  -->
+<!-- ************************* Lion’s share goes to programmes ************************* -->
 
 <section class="section section-bg-regular">
-
-  <div class="grid-container section padded" id="" data-magellan-target="">
+  <div class="grid-container section padded">
     <div class="grid-x align-justify align-middle">
 
       <div class="cell small-12 medium-12 large-4">
-        <h4>Lion’s share goes to programmes</h4>
+        <h4>{{regular-resources-page.allocation.heading}}</h4>
         <br>
-        <p>The lion’s share of the core programme budget for 2022–2025 is channelled through country programmes.</p>
+        <p>{{regular-resources-page.allocation.copy}}</p>
       </div>
 
       <div class="cell small-12 medium-12 large-8">
         <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="regular-resources-allocation" style="width:100%;height:700px;"></div>
+          <div
+            class="echarts"
+            data-chart-type="regular-resources-allocation"
+            style="width: 100%; height: 700px;"
+          ></div>
         </div>
-        <p class="chart-source">Source: [Add source]</p>
 
+        <p class="chart-source">
+          {{regular-resources-page.allocation.source}}
+        </p>
       </div>
+
     </div>
   </div>
-
 </section>
 
-<!--************************* Strong support for least developed and low-income countries  *************************  -->
+
+<!-- ************************* Strong support for least developed and low-income countries ************************* -->
 
 <section class="section">
-
-  <div class="grid-container section padded" id="" data-magellan-target="">
+  <div class="grid-container section padded">
     <div class="grid-x align-justify align-middle">
 
       <div class="cell small-12 medium-12 large-12">
-        <h4>Strong support for least developed and low-income countries</h4>
-       
-        <p>Over 80 percent of core resources are allocated to least developed countries where development needs are greatest, and over 70 percent to low-income countries.</p>
+        <h4>{{regular-resources-page.country-focus.heading}}</h4>
+
+        <p>{{regular-resources-page.country-focus.copy}}</p>
         <br><br>
       </div>
 
       <div class="cell small-12 medium-12 large-5">
-        <p style="text-align: center;">2022–2025 distribution of regular (core) resources <strong>by development status</strong>, Core: TRAC-1, TRAC-2 and TRAC-3</p>
-        <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="resources-by-development-status" style="width:100%;height:450px;"></div>
-        </div>
-        <p class="chart-source">Source: DP/2025/23 Annex 1</p>
+        <p style="text-align: center;">
+          {{{regular-resources-page.country-focus.development-chart}}}
+        </p>
 
+        <div class="chart-wrapper">
+          <div
+            class="echarts"
+            data-chart-type="resources-by-development-status"
+            style="width: 100%; height: 450px;"
+          ></div>
+        </div>
+
+        <p class="chart-source">
+          {{regular-resources-page.country-focus.source}}
+        </p>
       </div>
 
       <div class="cell small-12 medium-12 large-5">
-         <p style="text-align: center;">2022–2025 distribution of regular (core) resources <strong>by country typology</strong>, Core: TRAC-1, TRAC-2 and TRAC-3</p>
-        <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="resources-by-country-typology" style="width:100%;height:450px;"></div>
-        </div>
-        <p class="chart-source">Source: DP/2025/23 Annex 1</p>
+        <p style="text-align: center;">
+          {{{regular-resources-page.country-focus.typology-chart}}}
+        </p>
 
+        <div class="chart-wrapper">
+          <div
+            class="echarts"
+            data-chart-type="resources-by-country-typology"
+            style="width: 100%; height: 450px;"
+          ></div>
+        </div>
+
+        <p class="chart-source">
+          {{regular-resources-page.country-focus.source}}
+        </p>
       </div>
 
     </div>
   </div>
-
 </section>
 
 
-<!--************************* Africa share  *************************  -->
+<!-- ************************* Africa share ************************* -->
 
 <section class="section section-bg-teal" padded>
-
-  <div class="grid-container section padded" id="" data-magellan-target="">
+  <div class="grid-container section padded">
     <div class="grid-x align-center align-middle">
 
-    
+      <div
+        class="padded cell small-12 medium-12 large-10"
+        style="text-align: center;"
+      >
+        <h4>{{regular-resources-page.regions.heading}}</h4>
+        <p>{{regular-resources-page.regions.copy}}</p>
 
-       <div class="padded cell small-12 medium-12 large-10" style="text-align: center;" >
+        <br>
 
-                <h4>Africa receives the largest share</h4>
-        <p>In line with development needs, the largest share of core resources is allocated to Africa, followed by Asia and the Arab States.</p>
+        <p>{{{regular-resources-page.regions.chart}}}</p>
 
-       <br>
-       
-         <p >2022–2025 distribution of regular (core) resources <strong>by region</strong>
-          <br>Core: TRAC-1, TRAC-2 and TRAC-3</p>
         <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="resources-by-region" style="width:100%;height:200px;"></div>
+          <div
+            class="echarts"
+            data-chart-type="resources-by-region"
+            style="width: 100%; height: 200px;"
+          ></div>
         </div>
-        <p class="chart-source">Source: DP/2025/23 Annex 1</p>
-        
 
+        <p class="chart-source">
+          {{regular-resources-page.regions.source}}
+        </p>
       </div>
+
     </div>
   </div>
-
 </section>
 
 
-<!--************************* Institutional budget  *************************  -->
+<!-- ************************* Institutional budget ************************* -->
 
 <section class="section section-bg-gold" padded>
-
-  <div class="grid-container section padded" id="" data-magellan-target="">
+  <div class="grid-container section padded">
     <div class="grid-x align-center align-middle">
 
-    
+      <div
+        class="padded cell small-12 medium-12 large-12"
+        style="text-align: center;"
+      >
+        <h4>{{regular-resources-page.institutional-budget.heading}}</h4>
+        <p>{{regular-resources-page.institutional-budget.copy}}</p>
 
-       <div class="padded cell small-12 medium-12 large-12" style="text-align: center;" >
+        <br>
 
-        <h4>The institutional budget enables programmatic impact</h4>
-        <p>UNDP’s institutional budget supports investments in institutional capacity, development effectiveness, the maintenance of the highest levels of independent oversight, transparency and accountability, and special-purpose initiatives (UNV and UNCDF).</p>
-<br>
-      
         <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="institutional-budget-allocation" style="width:100%;height:600px;"></div>
+          <div
+            class="echarts"
+            data-chart-type="institutional-budget-allocation"
+            style="width: 100%; height: 600px;"
+          ></div>
         </div>
-        <p class="chart-source">Source: DP/2025/23 Table 1</p>
-        
 
+        <p class="chart-source">
+          {{regular-resources-page.institutional-budget.source}}
+        </p>
       </div>
+
     </div>
   </div>
-
 </section>
 
 
-<!--************************* Top core contributors  *************************  -->
+<!-- ************************* Top core contributors ************************* -->
 
 <section class="section" padded>
-
-  <div class="grid-container section padded" id="" data-magellan-target="">
+  <div class="grid-container section padded">
     <div class="grid-x align-center align-middle">
 
-    
+      <div class="padded cell small-12 medium-12 large-12">
+        <h4>{{regular-resources-page.contributors.heading}}</h4>
+        <p>{{regular-resources-page.contributors.copy}}</p>
 
-       <div class="padded cell small-12 medium-12 large-12">
+        <br>
 
-        <h4>Top core contributors</h4>
-        <p>In 2025, UNDP received $442 million in core contributions, of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.</p>
-<br>
-      
         <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="top-core-contributors" style="width:100%;height:700px;"></div>
+          <div
+            class="echarts"
+            data-chart-type="top-core-contributors"
+            style="width: 100%; height: 700px;"
+          ></div>
         </div>
-        <p class="chart-source">*Includes core contributions for 2024 received in 2025<br>
-**Includes core contributions for 2026 received in 2025
-</p>
-        
 
+        <p class="chart-source">
+          {{{regular-resources-page.contributors.footnote}}}
+        </p>
       </div>
+
     </div>
   </div>
-
 </section>
 
 
-<!--************************* 12 partners with multi-year pledges to regular resources *************************  -->
+<!-- ************************* 12 partners with multi-year pledges to regular resources ************************* -->
 
 <section class="section section-bg-purple" padded>
-
-  <div class="grid-container section padded" id="" data-magellan-target="">
+  <div class="grid-container section padded">
     <div class="grid-x align-center align-middle">
 
-    
+      <div class="padded cell small-12 medium-12 large-12">
+        <h4>{{regular-resources-page.pledges.heading}}</h4>
+        <p>{{regular-resources-page.pledges.copy}}</p>
 
-       <div class="padded cell small-12 medium-12 large-12">
+        <br>
 
-    
-        <h4>12 partners with multi-year pledges to regular resources</h4>
-        <p>In 2025, UNDP received $442 million in core contributions, of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.</p>
-<br>
-      
-      <img src="{{@root.root}}assets/img/pledges.svg"
-  alt="12 partners with multi-year pledges to regular resources"
-  style="display:block;width:100%;height:auto;">
-        
+        <img
+          src="{{@root.root}}assets/img/pledges.svg"
+          alt="{{regular-resources-page.pledges.image-alt}}"
+          style="display: block; width: 100%; height: auto;"
+        >
 
-    <div class="chart-wrapper padded">
-          <div class="echarts" data-chart-type="multi-year-pledges" style="width:100%;height:900px;"></div>
+        <div class="chart-wrapper padded">
+          <div
+            class="echarts"
+            data-chart-type="multi-year-pledges"
+            style="width: 100%; height: 900px;"
+          ></div>
         </div>
-
       </div>
+
     </div>
   </div>
-
 </section>
 
 
-
-
-<!--************************* Map *************************  -->
+<!-- ************************* Map ************************* -->
 
 <section class="section" padded>
-
-  <div class="grid-container section-" id="" data-magellan-target="">
+  <div class="grid-container section-">
     <div class="grid-x align-center align-middle">
 
-    
+      <div
+        class="padded cell small-12 medium-12 large-12"
+        style="text-align: center;"
+      >
+        <h4>{{regular-resources-page.map.heading}}</h4>
 
-       <div class="padded cell small-12 medium-12 large-12" style="text-align: center;" >
-
-        <h4>Contributors to regular resources, 2025</h4>      
         <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="regular-resources-contributions-map" style="width:100%;height:900px;"></div>
+          <div
+            class="echarts"
+            data-chart-type="regular-resources-contributions-map"
+            style="width: 100%; height: 900px;"
+          ></div>
         </div>
-        <p class="chart-source">Source: DP/2025/23 Table 1</p>
-        
 
+        <p class="chart-source">
+          {{regular-resources-page.map.source}}
+        </p>
       </div>
+
     </div>
   </div>
-
 </section>
 
-<!--************************* 12 partners with multi-year pledges to regular resources *************************  -->
+
+<!-- ************************* GLOC contributors ************************* -->
 
 <section class="section section-bg-orange" padded>
-
-  <div class="grid-container section padded" id="" data-magellan-target="">
+  <div class="grid-container section padded">
     <div class="grid-x align-center align-middle">
 
-    
+      <div class="padded cell small-12 medium-12 large-12">
+        <h4>{{regular-resources-page.gloc.heading}}</h4>
+        <p>{{regular-resources-page.gloc.copy}}</p>
 
-       <div class="padded cell small-12 medium-12 large-12">
+        <br>
 
-    
-
-        <h4>Government contributions to local office costs</h4>
-        <p>Annual government contributions to local office costs (GLOC) are an important source of revenue and take the form of cash or in-kind contributions from host governments. In low- and middle-income countries, $39 million was received in 2025 ($29 million in 2024), consisting of $31 million in cash contributions and $8 million of in-kind contributions for premises and utilities.</p>
-<br>
-      
-    <div class="chart-wrapper">
-          <div class="echarts" data-chart-type="top-gloc-contributors" style="width:100%;height:900px;"></div>
+        <div class="chart-wrapper">
+          <div
+            class="echarts"
+            data-chart-type="top-gloc-contributors"
+            style="width: 100%; height: 900px;"
+          ></div>
         </div>
-
       </div>
+
     </div>
   </div>
-
 </section>
 
 
-<!-- ********************************************************************************************************************************************************************************  -->
-
+<!-- ************************* Scripts ************************* -->
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const statsSwiper = new Swiper('.stats-slider', {
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       centeredSlides: false,
       spaceBetween: 0,
       scrollbar: {
@@ -332,22 +311,23 @@
     });
   });
 
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const readMoreLink = document.getElementById("readMore_foreword");
-    const additionalText = document.getElementById("additionalText_foreword");
+  document.addEventListener('DOMContentLoaded', function () {
+    const readMoreLink = document.getElementById('readMore_foreword');
+    const additionalText = document.getElementById('additionalText_foreword');
 
     if (readMoreLink && additionalText) {
-      readMoreLink.addEventListener("click", function (event) {
+      readMoreLink.addEventListener('click', function (event) {
         event.preventDefault();
 
-        // Toggle the display of the additional text
-        if (additionalText.style.display === "none" || additionalText.style.display === "") {
-          additionalText.style.display = "block";
-          readMoreLink.textContent = "{{buttons.read-less}}"; // Change button text
+        if (
+          additionalText.style.display === 'none' ||
+          additionalText.style.display === ''
+        ) {
+          additionalText.style.display = 'block';
+          readMoreLink.textContent = '{{buttons.read-less}}';
         } else {
-          additionalText.style.display = "none";
-          readMoreLink.textContent = "{{buttons.read-more}}"; // Change button text back
+          additionalText.style.display = 'none';
+          readMoreLink.textContent = '{{buttons.read-more}}';
         }
       });
     }

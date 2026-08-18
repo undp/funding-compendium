@@ -53,13 +53,13 @@ export function initTopIfiRecipientCountries(el, echarts) {
         let html = `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-size:14px;font-weight:700;margin-bottom:9px">${recipients[index]}</div>`;
 
         if (direct[index] > 0) {
-          html += `<div style="margin-bottom:5px">Direct: <strong>$${direct[index].toFixed(1)}m · ${directShare.toFixed(0)}%</strong></div>`;
+          html += `<div style="margin-bottom:5px">Direct: <strong>$${direct[index].toFixed(1)}M · ${directShare.toFixed(0)}%</strong></div>`;
         }
         if (indirect[index] > 0) {
-          html += `<div style="margin-bottom:5px">Indirect: <strong>$${indirect[index].toFixed(1)}m · ${indirectShare.toFixed(0)}%</strong></div>`;
+          html += `<div style="margin-bottom:5px">Indirect: <strong>$${indirect[index].toFixed(1)}M · ${indirectShare.toFixed(0)}%</strong></div>`;
         }
 
-        return `${html}<div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}m</strong></div>`;
+        return `${html}<div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}M</strong></div>`;
       }
     },
     legend: {
@@ -91,7 +91,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 10,
-        formatter: (value) => `$${value}m`
+        formatter: (value) => `$${value}M`
       },
       splitLine: { lineStyle: { color: '#EDF0F2' } }
     },
@@ -141,7 +141,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
           show: true,
           position: 'right',
           distance: 8,
-          formatter: (params) => `$${params.value.toFixed(1)}m`,
+          formatter: (params) => `$${params.value.toFixed(1)}M`,
           color: '#303944',
           fontSize: 11,
           fontWeight: 700

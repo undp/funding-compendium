@@ -57,66 +57,30 @@
                   tabindex="0"
                 >{{menu.investing}}</a>
               </li>
-              <li>
-                <a
-                  href="{{@root.root}}{{#ifequal lang "en"}}index.html{{else}}{{lang}}/index.html{{/ifequal}}#looking-ahead"
-                  tabindex="0"
-                >{{menu.looking-ahead}}</a>
-              </li>
             </ul>
           </nav>
         </div>
 
-        <!-- =================== RIGHT: Lang switcher + hamburger + download =================== -->
+        <!-- =================== RIGHT: Lang switcher + hamburger =================== -->
         <div class="cell small-3 large-auto top-right">
-         
+
 
           <!-- Language switcher w/ download handling -->
        <div
   class="dropdown-language"
   data-undpds-component="language-switcher"
 >
-  <!--<button
-    class="blue"
-    aria-label="{{content.header.language_button_label}}"
-    aria-expanded="false"
-    style="padding-right: 20px;"
-  >
-    {{#each langVersions}}
-      {{#ifequal this.lang ../lang}}{{this.name}}{{/ifequal}}
-    {{/each}}
-  </button>-->
-
   <ul role="menu">
     {{#each langVersions}}
       {{#if this.web}}   {{!-- only render if web: true --}}
         {{#unless currentLang}}
           <li role="menuitem">
-            {{#ifequal download true}}
-              <a
-                href="{{@root.root}}assets/docs/{{this.asset}}"
-                lang="{{this.lang}}"
-                hreflang="{{this.lang}}"
-                tabindex="-1"
-                target="_blank"
-              >
-                <span class="label">{{this.name}}</span>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </a>
-            {{else}}
-              <a
-                href="{{@root.root}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}{{/ifequal}}"
-                lang="{{this.lang}}"
-                hreflang="{{this.lang}}"
-                tabindex="-1"
-              >{{this.name}}</a>
-            {{/ifequal}}
+            <a
+              href="{{@root.root}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}{{/ifequal}}"
+              lang="{{this.lang}}"
+              hreflang="{{this.lang}}"
+              tabindex="-1"
+            >{{this.name}}</a>
           </li>
         {{/unless}}
       {{/if}}
@@ -132,21 +96,6 @@
             {{header.nav_toggle}}
           </button>
 
-          <!-- Desktop Download button -->
-          
-              <a role="button" href="#" data-toggle="modal" data-target-modal="#downloadModal" class="button button-secondary"
-                role="button">
-                {{header.download_button}}
-                <svg style="padding-left: 5px" class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="white" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="white" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="white" stroke-width="2" />
-                  </g>
-                </svg>
-              </a>
-            
         </div>
 
         <!-- overflow container kept from skeleton -->
@@ -177,12 +126,6 @@
                     href="{{@root.root}}other-resources-partnerships/index.html"
                   >{{menu.investing}}</a>
                 </li>
-                <li data-menu-id="headerlink4">
-                  <a
-                    class="cta__link cta--space no-submenu"
-                    href="{{@root.root}}{{#ifequal lang "en"}}index.html{{else}}{{lang}}/index.html{{/ifequal}}#looking-ahead"
-                  >{{menu.looking-ahead}}</a>
-                </li>
               </ul>
 
               <!-- Mobile language + (optional) globe -->
@@ -196,24 +139,9 @@
                     {{#ifequal currentLang true}}{{this.name}}{{/ifequal}}
                   {{/each}}
                 </a>
-                
+
               </div>
 
-              <!-- Mobile Download button -->
-              <div class="mobile-nav-options">
-                  <a role="button" href="#" data-toggle="modal" data-target-modal="#downloadModal" class="button button-secondary"
-                role="button">
-                {{header.download_button}}
-                <svg style="padding-left: 5px" class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="white" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="white" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="white" stroke-width="2" />
-                  </g>
-                </svg>
-              </a>
-              </div>
             </div>
 
             <!-- ========== Mobile language list (sub view) ========== -->
@@ -225,37 +153,18 @@
 
   <ul class="sub-sub-lang">
     <li>
-      <span>{{content.header.language_button_label}}</span>
+      <span>{{header.language_button_label}}</span>
       <ul role="menu">
         {{#each langVersions}}
-          {{#ifequal this.web true}}          
-            {{#unless this.currentLang}}      
+          {{#ifequal this.web true}}
+            {{#unless this.currentLang}}
               <li role="menuitem">
-                {{#ifequal this.download true}}
-                  <a
-                    href="{{@root.root}}assets/docs/{{this.asset}}"
-                    lang="{{this.lang}}"
-                    hreflang="{{this.lang}}"
-                    target="_blank"
-                    tabindex="-1"
-                  >
-                    {{this.name}}
-                    <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                      <g class="arrow">
-                        <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                        <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                      </g>
-                    </svg>
-                  </a>
-                {{else}}
-                  <a
-                    href="{{@root.root}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}{{/ifequal}}"
-                    lang="{{this.lang}}"
-                    hreflang="{{this.lang}}"
-                    tabindex="-1"
-                  >{{this.name}}</a>
-                {{/ifequal}}
+                <a
+                  href="{{@root.root}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}{{/ifequal}}"
+                  lang="{{this.lang}}"
+                  hreflang="{{this.lang}}"
+                  tabindex="-1"
+                >{{this.name}}</a>
               </li>
             {{/unless}}
           {{/ifequal}}
@@ -282,9 +191,6 @@
                 <div class="mobile-mega-content" data-mobile-id="headerlink3">
                   <h6 class="sub-heading">{{menu.investing}}</h6>
                 </div>
-                <div class="mobile-mega-content" data-mobile-id="headerlink4">
-                  <h6 class="sub-heading">{{menu.looking-ahead}}</h6>
-                </div>
               </div>
             </div>
             <!-- ========== /Mobile mega wrapper ========== -->
@@ -293,362 +199,3 @@
     </div>
   </section>
 </header>
-
-
- <!-- ************************ Pop up for download ******************************************************************** -->
-
-
-
-<div class="modal modal-download" role="dialog" aria-label="modal" aria-modal="true" id="downloadModal"
-  data-undpds-component="modal" data-initialized="true">
-  <div class="modal-content" aria-describedby="content">
-    <button type="button" class="modal-close-button" data-dismiss="modal" aria-label="Close">
-      Close
-    </button>
-
-
-   <!--<h4 class="" tabindex="0" data-viewport="false">{{header.popup.title}}</h4>
-    <br><br>-->
-
-    <h5 class="text-extrabold">{{header.popup.visual}}</h5>
-    <div class="download-body">
-      <div class="download-content">
-        
-
-    <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-English-Summary.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">English
-                  <span>PDF (15.3MB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-English-Summary.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">English
-                  <span>PDF (15.3MB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-
-           <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Spanish-Summary.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">Español
-                  <span>PDF (1.8MB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-
-           <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-French-Summary.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">Français
-                  <span>PDF (1.8MB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Russian-Summary.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">Русский
-                  <span>PDF (1.8MB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-
-           <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Chinese-Summary.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">中文
-                  <span>PDF (1.9MB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-           <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Arabic-Summary.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">العربية
-                  <span>PDF (1.8MB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-          </div> </div>
-
-
- 
-     
-
-    <br><br><br>
-
-       <h5 class="text-extrabold">{{header.popup.bw}}</h5>
-
-    <div class="download-body">
-      <div class="download-content">
-       
-          
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-English.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">English
-                  <span>PDF (524KB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Spanish.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">Español
-                  <span>PDF (610KB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-French.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">Français
-                  <span>PDF (668KB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Russian.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">Русский
-                  <span>PDF (472KB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Chinese.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">中文
-                  <span>PDF (679KB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="{{@root.root}}assets/docs/UNDP-Strategic-Plan-Arabic.pdf" target="_blank">
-            <div class="download-row" data-value="pasto">
-              <div class="download-row__main">
-                <label for="list-0" class="download-row__data">العربية
-                  <span>PDF (578KB)</span></label>
-                <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                  <g class="arrow">
-                    <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                    <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800" stroke-width="2" />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-   
-
-  </div>
-</div>
-
-
-  <!--<div class="modal" role="dialog" aria-label="modal" aria-modal="true" id="download-modal" data-undpds-component="modal">
-    <div class="modal-content" aria-describedby="content" style="min-height: 50vh;">
-      <button type="button" class="modal-close-button" data-dismiss="modal" aria-label="Close">
-        Close
-      </button>
-      <div class="">
-        <div class="grid-x grid-padding-x" style="padding-top: 3rem;">
-          <div class=" small-12 medium-12 large-12">
-  
-            <h4 class="" tabindex="0" data-viewport="false">{{header.popup.title}}</h4><br>
-  
-           
-            <h5 class="text-extrabold">{{header.popup.visual}}</h5>
-  
-            <div class="select-box" data-select="" data-undpds-component="custom-select">
-              <div class="select-box" data-select data-undpds-component="custom-select">
-                <button type="button" aria-haspopup="listbox" aria-label="Select" data-select-open>
-                  {{header.popup.lang}}
-                </button>
-  
-                <ul role="listbox" data-select-options>
-                  {{#each langVersions}}
-                  {{#if (lookup this "visual-pdf")}}
-                  <li role="option" tabindex="0" data-value="{{lang}}" {{#if currentLang}} aria-selected="true" {{/if}}>
-                    <a href="{{@root.root}}assets/docs/{{lookup this "visual-pdf"}}" target="_blank">
-                      <span>
-                        {{name}}
-                        &nbsp;
-                        <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                          xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                          <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                          <g class="arrow">
-                            <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                            <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                              stroke-width="2" />
-                          </g>
-                        </svg>
-                      </span>
-                    </a>
-                  </li>
-                  {{/if}}
-                  {{/each}}
-                </ul>
-              </div>
-            </div>
-  
-            <br><br>
-  
-            
-            <h5 class="text-extrabold">{{header.popup.bw}}</h5>
-  
-            <div class="select-box" data-select="" data-undpds-component="custom-select">
-              <div class="select-box" data-select data-undpds-component="custom-select">
-                <button type="button" aria-haspopup="listbox" aria-label="Select" data-select-open>
-                  {{header.popup.lang}}
-                </button>
-  
-                <ul role="listbox" data-select-options>
-                  {{#each langVersions}}
-                  <li role="option" tabindex="0" data-value="{{lang}}" {{#if currentLang}} aria-selected="true" {{/if}}>
-                    <a href="{{@root.root}}assets/docs/{{asset}}" target="_blank">
-                      <span>
-                        {{name}}
-                        &nbsp;
-                        <svg class="downloadIcon" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                          xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                          <path d="M1.07605 10.5664V16.9592H19.9261V10.5664" stroke="#D12800" stroke-width="2" />
-                          <g class="arrow">
-                            <path d="M10.5001 -0.000518799V11.6484" stroke="#D12800" stroke-width="2" />
-                            <path d="M5.39096 7.13647L10.5397 12.4862L15.6897 7.13647" stroke="#D12800"
-                              stroke-width="2" />
-                          </g>
-                        </svg>
-                      </span>
-                    </a>
-                  </li>
-                  {{/each}}
-                </ul>
-              </div>
-  
-            </div>
-  
-          </div>
-        </div>
-  
-  
-      </div>
-    </div>
-  </div>-->

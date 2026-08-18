@@ -26,6 +26,16 @@
   clip-path: inset(0);
 }
 
+@media screen and (min-width: 48em) {
+  .funding-pagehero .pagehero-content {
+    width: 91.6667%;
+  }
+
+  .funding-pagehero .pagehero-content h4 {
+    white-space: nowrap;
+  }
+}
+
 .sp-swiper {
 
   .swiper-slide {

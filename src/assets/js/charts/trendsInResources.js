@@ -143,7 +143,7 @@ export function initTrendsInResources(el, echarts) {
       min: 0,
       max: 6000,
       interval: 1000,
-      name: 'USD Million',
+      name: 'USD M',
       nameLocation: 'middle',
       nameGap: 56,
       nameRotate: 90,
@@ -257,7 +257,7 @@ export function initTrendsInResources(el, echarts) {
           position: 'top',
           distance: 12,
           formatter: function (params) {
-            return `{total|USD ${(params.value / 1000).toFixed(1)} Billion}`;
+            return `{total|USD ${(params.value / 1000).toFixed(1)}B}`;
           },
           rich: {
             total: {

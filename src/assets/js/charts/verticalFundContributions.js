@@ -47,8 +47,8 @@ export function initVerticalFundContributions(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         return `<div style="font-weight:700;margin-bottom:8px">${funds[index]}</div>
-          <div style="margin-bottom:4px">2024: <strong>$${values2024[index].toFixed(1)}m</strong></div>
-          <div>2025: <strong>$${values2025[index].toFixed(1)}m</strong></div>`;
+          <div style="margin-bottom:4px">2024: <strong>$${values2024[index].toFixed(1)}M</strong></div>
+          <div>2025: <strong>$${values2025[index].toFixed(1)}M</strong></div>`;
       }
     },
     legend: {
@@ -80,7 +80,7 @@ export function initVerticalFundContributions(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: { show: false }
     },

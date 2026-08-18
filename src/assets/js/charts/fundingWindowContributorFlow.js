@@ -66,7 +66,7 @@ export function initFundingWindowContributorFlow(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       text: 'Contributions by Funding Window and contributor',
-      subtext: '2025 · $115 million total contributions',
+      subtext: '2025 · $115M total contributions',
       left: 0,
       top: 0,
       textStyle: {
@@ -96,7 +96,7 @@ export function initFundingWindowContributorFlow(el, echarts) {
         if (params.dataType === 'edge') {
           return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:7px">${params.data.source.replace(/\n/g, ' ')}</div>
             <div style="font-family:'Proxima Nova',Arial,sans-serif;color:#6B7280;margin-bottom:5px">${params.data.target.replace(/\n/g, ' ')}</div>
-            <div style="font-family:'Proxima Nova',Arial,sans-serif;font-size:15px;font-weight:700">$${params.data.value.toFixed(2)}m</div>`;
+            <div style="font-family:'Proxima Nova',Arial,sans-serif;font-size:15px;font-weight:700">$${params.data.value.toFixed(2)}M</div>`;
         }
         return params.name.replace(/\n/g, ' ');
       }

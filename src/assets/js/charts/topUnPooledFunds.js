@@ -40,7 +40,7 @@ export function initTopUnPooledFunds(el, echarts) {
   chart.setOption({
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
-      subtext: 'Net funded amount · $ millions',
+      subtext: 'Net funded amount · $M',
       left: 0,
       top: 0,
       textStyle: {
@@ -90,7 +90,7 @@ export function initTopUnPooledFunds(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#E8EAED' } }
     },
@@ -121,7 +121,7 @@ export function initTopUnPooledFunds(el, echarts) {
         show: true,
         position: 'right',
         distance: 7,
-        formatter: (params) => `$${params.value.toFixed(1)}m`,
+        formatter: (params) => `$${params.value.toFixed(1)}M`,
         color: '#3B4650',
         fontSize: 11,
         fontWeight: 600

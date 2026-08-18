@@ -105,7 +105,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: {
         lineStyle: { color: '#E8EAED' }
@@ -135,7 +135,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
         show: true,
         position: 'right',
         distance: 8,
-        formatter: (params) => `$${params.value.toFixed(1)}m`,
+        formatter: (params) => `$${params.value.toFixed(1)}M`,
         color: '#46515D',
         fontSize: 11,
         fontWeight: 600

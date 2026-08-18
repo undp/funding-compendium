@@ -45,13 +45,13 @@ export function initEuContributionsByRegion(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         return `<div style="font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="margin-bottom:4px">Europe and the CIS: <strong>$${europeCIS[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">Asia and the Pacific: <strong>$${asiaPacific[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">Arab States: <strong>$${arabStates[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">Africa: <strong>$${africa[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">Latin America and the Caribbean: <strong>$${latinAmerica[index].toFixed(1)}m</strong></div>
-          <div style="margin-bottom:4px">Global: <strong>$${global[index].toFixed(1)}m</strong></div>
-          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}m</strong></div>`;
+          <div style="margin-bottom:4px">Europe and the CIS: <strong>$${europeCIS[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Asia and the Pacific: <strong>$${asiaPacific[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Arab States: <strong>$${arabStates[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Africa: <strong>$${africa[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Latin America and the Caribbean: <strong>$${latinAmerica[index].toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Global: <strong>$${global[index].toFixed(1)}M</strong></div>
+          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}M</strong></div>`;
       }
     },
     legend: {
@@ -103,7 +103,7 @@ export function initEuContributionsByRegion(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}m'
+        formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#E8EAED' } }
     },
@@ -130,7 +130,7 @@ export function initEuContributionsByRegion(el, echarts) {
           show: true,
           position: 'top',
           distance: 10,
-          formatter: (params) => `$${Math.round(params.value)}m`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#232E3D',
           fontSize: 12,
           fontWeight: 700
