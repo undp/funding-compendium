@@ -41,7 +41,7 @@ export function initRegularResourcesAllocation(el, echarts) {
     '$' + value.toLocaleString('en-US') + 'M';
 
   const valueStyle = (color) => ({
-    fontFamily: 'ProximaNova, Arial, sans-serif',
+    fontFamily: 'Proxima Nova, Arial, sans-serif',
     fontSize: 19,
     fontWeight: 700,
     color,
@@ -49,6 +49,7 @@ export function initRegularResourcesAllocation(el, echarts) {
   });
 
   const option = {
+    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     tooltip: {
       trigger: 'item',
       backgroundColor: '#FFFFFF',
@@ -57,7 +58,7 @@ export function initRegularResourcesAllocation(el, echarts) {
       padding: [10, 12],
 
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222'
       },
 
@@ -66,7 +67,7 @@ export function initRegularResourcesAllocation(el, echarts) {
 
         return `
           <div style="
-            font-family: ProximaNova, Arial, sans-serif;
+            font-family: 'Proxima Nova', Arial, sans-serif;
             min-width: 90px;
           ">
             <div style="
@@ -127,7 +128,7 @@ export function initRegularResourcesAllocation(el, echarts) {
 
           rich: {
             name: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 13,
               fontWeight: 500,
               color: '#4F4F4F',

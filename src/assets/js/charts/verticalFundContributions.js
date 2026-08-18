@@ -1,0 +1,148 @@
+const funds = [
+  'Global Fund',
+  'Global Environment Facility',
+  'Green Climate Fund',
+  'Montreal Protocol',
+  'GAVI',
+  'Adaptation Fund'
+];
+
+const values2024 = [581.827016, 149.924217, 128.108911, 35.560208, 18.581428, 6.111816];
+const values2025 = [310.762558, 371.578945, 84.422285, 16.269482, 35.340745, 6.888984];
+
+export function initVerticalFundContributions(el, echarts) {
+  const chart = echarts.init(el);
+
+  chart.setOption({
+    
+    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    title: {
+
+      left: 0,
+      top: 0,
+      textStyle: {
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontSize: 20,
+        fontWeight: 700,
+        color: '#232E3D'
+      },
+      subtextStyle: {
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontSize: 12,
+        color: '#7A838F'
+      }
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: { type: 'shadow' },
+      backgroundColor: '#ffffff',
+      borderColor: '#D8DDE3',
+      borderWidth: 1,
+      padding: 12,
+      textStyle: {
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        color: '#232E3D',
+        fontSize: 12
+      },
+      formatter: function (params) {
+        const index = params[0].dataIndex;
+        return `<div style="font-weight:700;margin-bottom:8px">${funds[index]}</div>
+          <div style="margin-bottom:4px">2024: <strong>$${values2024[index].toFixed(1)}m</strong></div>
+          <div>2025: <strong>$${values2025[index].toFixed(1)}m</strong></div>`;
+      }
+    },
+    legend: {
+      bottom: 0,
+      left: 'center',
+      itemWidth: 12,
+      itemHeight: 12,
+      itemGap: 18,
+      textStyle: {
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontSize: 11,
+        color: '#4B5563'
+      },
+      data: ['2024', '2025']
+    },
+    grid: {
+      left: 190,
+      right: 85,
+      top: 90,
+      bottom: 60
+    },
+    xAxis: {
+      type: 'value',
+      min: 0,
+      max: 650,
+      interval: 100,
+      axisLine: { show: false },
+      axisTick: { show: false },
+      axisLabel: {
+        color: '#7A838F',
+        fontSize: 11,
+        formatter: '${value}m'
+      },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'category',
+      inverse: true,
+      data: funds,
+      axisLine: {
+        show: true,
+        lineStyle: { color: '#D7DBDF' }
+      },
+      axisTick: { show: false },
+      axisLabel: {
+        color: '#303944',
+        fontSize: 11,
+        margin: 14
+      }
+    },
+    series: [
+      {
+        name: '2024',
+        type: 'bar',
+        data: values2024,
+        barWidth: 20,
+        barGap: '15%',
+        barCategoryGap: '38%',
+        itemStyle: { color: '#F3B27F' },
+        label: {
+          show: true,
+          position: 'right',
+          distance: 7,
+          formatter: (params) => `$${Math.round(params.value)}`,
+          color: '#303944',
+          fontSize: 10,
+          fontWeight: 600
+        }
+      },
+      {
+        name: '2025',
+        type: 'bar',
+        data: values2025,
+        barWidth: 20,
+        itemStyle: { color: '#666666' },
+        label: {
+          show: true,
+          position: 'right',
+          distance: 7,
+          formatter: (params) => `$${Math.round(params.value)}`,
+          color: '#303944',
+          fontSize: 10,
+          fontWeight: 600
+        }
+      }
+    ]
+  });
+
+  const resize = () => chart.resize();
+  window.addEventListener('resize', resize);
+  el.__echartsInstance = chart;
+  el.__echartsResizeHandler = resize;
+
+  return chart;
+}
+
+export default initVerticalFundContributions;

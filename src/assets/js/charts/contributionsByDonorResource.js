@@ -120,7 +120,7 @@ export function initContributionsByDonorResource(el, echarts) {
     animationDuration: 700,
 
     textStyle: {
-      fontFamily: 'ProximaNova, Arial, sans-serif',
+      fontFamily: 'Proxima Nova, Arial, sans-serif',
       color: '#222222'
     },
 
@@ -129,7 +129,7 @@ export function initContributionsByDonorResource(el, echarts) {
       left: 0,
       top: 0,
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#333333',
         fontSize: 26,
         fontWeight: 700
@@ -155,7 +155,7 @@ export function initContributionsByDonorResource(el, echarts) {
         'Other resources'
       ],
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#555555',
         fontSize: 13
       }
@@ -171,7 +171,7 @@ export function initContributionsByDonorResource(el, echarts) {
       borderWidth: 1,
       padding: [14, 16],
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222222',
         fontSize: 13,
         lineHeight: 21
@@ -184,7 +184,7 @@ export function initContributionsByDonorResource(el, echarts) {
         let html = `
           <div style="
             min-width: 240px;
-            font-family: 'ProximaNova', Arial, sans-serif;
+            font-family: 'Proxima Nova', Arial, sans-serif;
           ">
             <div style="
               font-size: 15px;
@@ -247,7 +247,7 @@ export function initContributionsByDonorResource(el, echarts) {
       nameGap: 48,
 
       nameTextStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#666666',
         fontSize: 13,
         fontWeight: 600
@@ -319,7 +319,7 @@ export function initContributionsByDonorResource(el, echarts) {
           name: {
             width: 275,
             color: '#333333',
-            fontFamily: 'ProximaNova, Arial, sans-serif',
+            fontFamily: 'Proxima Nova, Arial, sans-serif',
             fontSize: 13,
             lineHeight: 20,
             align: 'right',
@@ -392,7 +392,7 @@ export function initContributionsByDonorResource(el, echarts) {
           color: '#222222',
           fontSize: 13,
           fontWeight: 700,
-          fontFamily: 'ProximaNova, Arial, sans-serif'
+          fontFamily: 'Proxima Nova, Arial, sans-serif'
         },
 
         tooltip: {

@@ -26,7 +26,7 @@ export function initTrendsInResources(el, echarts) {
     animationDuration: 700,
 
     textStyle: {
-      fontFamily: 'ProximaNova, Arial, sans-serif',
+      fontFamily: 'Proxima Nova, Arial, sans-serif',
       color: '#222222'
     },
 

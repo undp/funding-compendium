@@ -36,6 +36,7 @@ export function initResourcesByRegion(el, echarts) {
   ];
 
   const option = {
+    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     grid: {
       left: 215,
       right: 140,
@@ -80,7 +81,7 @@ export function initResourcesByRegion(el, echarts) {
       },
 
       axisLabel: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         fontSize: 14,
         fontWeight: 600,
         color: '#333',
@@ -124,14 +125,14 @@ export function initResourcesByRegion(el, echarts) {
 
           rich: {
             pct: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 15,
               fontWeight: 700,
               color: '#333'
             },
 
             value: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 14,
               color: '#666'
             }

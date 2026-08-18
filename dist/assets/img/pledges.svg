@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1048.1 520.3">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #006eb5;
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #999;
+        stroke-linecap: round;
+      }
+
+      .st2 {
+        stroke: #006eb5;
+        stroke-width: 2px;
+      }
+
+      .st3 {
+        fill: #111;
+        font-family: ProximaNova-Semibold, 'Proxima Nova';
+        font-size: 14px;
+        font-weight: 600;
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M136.1,62.5h857"/>
+  <text class="st3" transform="translate(120.5 43)"><tspan x="0" y="0">2025</tspan></text>
+  <text class="st3" transform="translate(334.8 43)"><tspan x="0" y="0">2026</tspan></text>
+  <text class="st3" transform="translate(549 43)"><tspan x="0" y="0">2027</tspan></text>
+  <text class="st3" transform="translate(763.3 43)"><tspan x="0" y="0">2028</tspan></text>
+  <text class="st3" transform="translate(977.5 43)"><tspan x="0" y="0">2029</tspan></text>
+  <text class="st3" transform="translate(54.3 97.4)"><tspan x="0" y="0">Australia *</tspan></text>
+  <g>
+    <path class="st2" d="M136.1,93.4h214.2"/>
+    <circle class="st0" cx="136.1" cy="93.4" r="4.5"/>
+    <circle class="st0" cx="350.4" cy="93.4" r="4.5"/>
+  </g>
+  <text class="st3" transform="translate(67.5 133.3)"><tspan x="0" y="0">Belgium</tspan></text>
+  <g>
+    <path class="st2" d="M136.1,130.3h642.8"/>
+    <circle class="st0" cx="136.1" cy="129.4" r="4.5"/>
+    <circle class="st0" cx="778.9" cy="129.4" r="4.5"/>
+  </g>
+  <text class="st3" transform="translate(69.1 169.3)"><tspan x="0" y="0">Canada</tspan></text>
+  <circle class="st0" cx="136.1" cy="165.3" r="4.5"/>
+  <text class="st3" transform="translate(61.3 205.2)"><tspan x="0" y="0">Denmark</tspan></text>
+  <circle class="st0" cx="136.1" cy="200.2" r="4.5"/>
+  <text class="st3" transform="translate(75.3 241.1)"><tspan x="0" y="0">Ireland</tspan></text>
+  <circle class="st0" cx="136.1" cy="236.2" r="4.5"/>
+  <text class="st3" transform="translate(40.3 277)"><tspan x="0" y="0">Luxembourg</tspan></text>
+  <g>
+    <path class="st2" d="M136.1,272h857"/>
+    <circle class="st0" cx="136.1" cy="272.1" r="4.5"/>
+    <circle class="st0" cx="993.1" cy="272.1" r="4.5"/>
+  </g>
+  <text class="st3" transform="translate(14.6 313)"><tspan x="0" y="0">The Netherlands</tspan></text>
+  <circle class="st0" cx="136.1" cy="307.9" r="4.5"/>
+  <text class="st3" transform="translate(35.6 348.9)"><tspan x="0" y="0">New Zealand</tspan></text>
+  <path class="st2" d="M136.1,343.9h428.5"/>
+  <circle class="st0" cx="136.1" cy="343.9" r="4.5"/>
+  <circle class="st0" cx="564.6" cy="343.9" r="4.5"/>
+  <text class="st3" transform="translate(83.1 384.8)"><tspan x="0" y="0">Qatar</tspan></text>
+  <path class="st2" d="M136.1,379.8h214.2"/>
+  <circle class="st0" cx="136.1" cy="379.8" r="4.5"/>
+  <circle class="st0" cx="350.4" cy="379.8" r="4.5"/>
+  <text class="st3" transform="translate(67.5 420.7)"><tspan x="0" y="0">Sweden</tspan></text>
+  <path class="st2" d="M136.1,415.7h642.8"/>
+  <circle class="st0" cx="136.1" cy="415.7" r="4.5"/>
+  <circle class="st0" cx="778.9" cy="415.7" r="4.5"/>
+  <text class="st3" transform="translate(45.7 456.7)"><tspan x="0" y="0">Switzerland</tspan></text>
+  <path class="st2" d="M350.3,451.7h428.5"/>
+  <circle class="st0" cx="350.4" cy="451.7" r="4.5"/>
+  <circle class="st0" cx="778.9" cy="451.7" r="4.5"/>
+  <text class="st3" transform="translate(72.2 492.6)"><tspan x="0" y="0">Türkiye</tspan></text>
+  <path class="st2" d="M136.1,487.6h428.5"/>
+  <circle class="st0" cx="136.1" cy="487.6" r="4.5"/>
+  <circle class="st0" cx="564.6" cy="487.6" r="4.5"/>
+</svg>

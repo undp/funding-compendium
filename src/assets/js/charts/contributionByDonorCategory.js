@@ -99,7 +99,7 @@ export function initContributionByDonorCategory(el, echarts) {
     animationDuration: 600,
 
     textStyle: {
-      fontFamily: 'ProximaNova, Arial, sans-serif',
+      fontFamily: 'Proxima Nova, Arial, sans-serif',
       color: '#222222'
     },
 
@@ -109,7 +109,7 @@ export function initContributionByDonorCategory(el, echarts) {
       top: -5,
 
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         fontSize: 20,
         fontWeight: 700,
         color: '#444'
@@ -126,7 +126,7 @@ export function initContributionByDonorCategory(el, echarts) {
       padding: [12, 14],
 
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222',
         fontSize: 13,
         lineHeight: 21
@@ -151,7 +151,7 @@ export function initContributionByDonorCategory(el, echarts) {
           <div
             style="
               min-width: 210px;
-              font-family: 'ProximaNova', Arial, sans-serif;
+              font-family: 'Proxima Nova', Arial, sans-serif;
             "
           >
             <div
@@ -251,7 +251,7 @@ export function initContributionByDonorCategory(el, echarts) {
           rich: {
             name: {
               fontFamily:
-                'ProximaNova, Arial, sans-serif',
+                'Proxima Nova, Arial, sans-serif',
 
               color: '#fff',
 
@@ -267,7 +267,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             percent: {
               fontFamily:
-                'ProximaNova, Arial, sans-serif',
+                'Proxima Nova, Arial, sans-serif',
 
               color: '#fff',
 
@@ -416,7 +416,7 @@ export function initContributionByDonorCategory(el, echarts) {
           rich: {
             name: {
               fontFamily:
-                'ProximaNova, Arial, sans-serif',
+                'Proxima Nova, Arial, sans-serif',
 
               color:
                 '#222',
@@ -433,7 +433,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             percent: {
               fontFamily:
-                'ProximaNova, Arial, sans-serif',
+                'Proxima Nova, Arial, sans-serif',
 
               color:
                 '#555',

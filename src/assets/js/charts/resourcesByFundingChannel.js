@@ -319,7 +319,7 @@ export function initResourcesByFundingChannel(el, echarts) {
             color: '#303030',
 
             fontFamily:
-              'ProximaNova, Arial, sans-serif',
+              'Proxima Nova, Arial, sans-serif',
 
             fontSize: 14,
 
@@ -337,7 +337,7 @@ export function initResourcesByFundingChannel(el, echarts) {
             color: '#303030',
 
             fontFamily:
-              'ProximaNova, Arial, sans-serif',
+              'Proxima Nova, Arial, sans-serif',
 
             fontSize: 12,
 
@@ -355,7 +355,7 @@ export function initResourcesByFundingChannel(el, echarts) {
             color: '#303030',
 
             fontFamily:
-              'ProximaNova, Arial, sans-serif',
+              'Proxima Nova, Arial, sans-serif',
 
             fontSize: 10,
 
@@ -474,7 +474,7 @@ export function initResourcesByFundingChannel(el, echarts) {
               color: '#777777',
 
               fontFamily:
-                'ProximaNova, Arial, sans-serif',
+                'Proxima Nova, Arial, sans-serif',
 
               fontSize: 10,
 
@@ -491,7 +491,7 @@ export function initResourcesByFundingChannel(el, echarts) {
               color: '#222222',
 
               fontFamily:
-                'ProximaNova, Arial, sans-serif',
+                'Proxima Nova, Arial, sans-serif',
 
               fontSize: 14,
 
@@ -559,7 +559,7 @@ export function initResourcesByFundingChannel(el, echarts) {
       color: '#8E632F',
 
       fontFamily:
-        'ProximaNova, Arial, sans-serif',
+        'Proxima Nova, Arial, sans-serif',
 
       fontSize: 17,
 
@@ -580,6 +580,7 @@ export function initResourcesByFundingChannel(el, echarts) {
   // ======================================================
 
   const option = {
+    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
 
     animation: false,
     color:
@@ -626,7 +627,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           margin: 8,
 
           fontFamily:
-            'ProximaNova, Arial, sans-serif',
+            'Proxima Nova, Arial, sans-serif',
 
           fontSize: 13,
 
@@ -653,7 +654,7 @@ export function initResourcesByFundingChannel(el, echarts) {
         color: '#222222',
 
         fontFamily:
-          'ProximaNova, Arial, sans-serif',
+          'Proxima Nova, Arial, sans-serif',
 
         fontSize: 13
 
@@ -798,7 +799,7 @@ export function initResourcesByFundingChannel(el, echarts) {
             width: 220,
 
             fontFamily:
-              'ProximaNova, Arial, sans-serif',
+              'Proxima Nova, Arial, sans-serif',
 
             fontSize: 14,
 
@@ -813,7 +814,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           value: {
 
             fontFamily:
-              'ProximaNova, Arial, sans-serif',
+              'Proxima Nova, Arial, sans-serif',
 
             fontSize: 13,
 
@@ -828,7 +829,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           share: {
 
             fontFamily:
-              'ProximaNova, Arial, sans-serif',
+              'Proxima Nova, Arial, sans-serif',
 
             fontSize: 12,
 
@@ -898,7 +899,7 @@ export function initResourcesByFundingChannel(el, echarts) {
         color: '#111111',
 
         fontFamily:
-          'ProximaNova, Arial, sans-serif',
+          'Proxima Nova, Arial, sans-serif',
 
         fontSize: 16
 
@@ -931,7 +932,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           borderRadius: 2,
 
           fontFamily:
-            'ProximaNova, Arial, sans-serif',
+            'Proxima Nova, Arial, sans-serif',
 
           fontSize: 13,
 
@@ -968,7 +969,7 @@ export function initResourcesByFundingChannel(el, echarts) {
         color: '#111111',
 
         fontFamily:
-          'ProximaNova, Arial, sans-serif',
+          'Proxima Nova, Arial, sans-serif',
 
         fontSize: 15,
 

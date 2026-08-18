@@ -31,6 +31,7 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
   };
 
   const option = {
+    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     tooltip: {
       trigger: 'item',
       formatter: function (params) {
@@ -72,19 +73,19 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
           },
           rich: {
             name: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 15,
               fontWeight: 700,
               color: '#333',
               lineHeight: 20
             },
             value: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 14,
               color: '#555'
             },
             pct: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 14,
               fontWeight: 700,
               color: '#333'
@@ -115,7 +116,7 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
           formatter: '{total|$1.275B}\n{caption|Total}',
           rich: {
             total: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 26,
               fontWeight: 700,
               color: '#333',
@@ -123,7 +124,7 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
               align: 'center'
             },
             caption: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 14,
               fontWeight: 400,
               color: '#777',

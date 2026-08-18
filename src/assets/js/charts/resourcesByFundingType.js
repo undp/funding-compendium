@@ -39,7 +39,7 @@ export function initResourcesByFundingType(el, echarts) {
 
   const option = {
     textStyle: {
-      fontFamily: 'ProximaNova, Arial, sans-serif',
+      fontFamily: 'Proxima Nova, Arial, sans-serif',
       color: '#222222'
     },
 
@@ -56,7 +56,7 @@ export function initResourcesByFundingType(el, echarts) {
         type: 'shadow'
       },
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222222',
         fontSize: 12,
         lineHeight: 20
@@ -83,7 +83,7 @@ export function initResourcesByFundingType(el, echarts) {
       top: 0,
       icon: 'rect',
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222222',
         fontSize: 11
       },
@@ -99,7 +99,7 @@ export function initResourcesByFundingType(el, echarts) {
       nameLocation: 'middle',
       nameGap: 30,
       axisLabel: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         formatter: '{value}%'
       },
       splitLine: {
@@ -147,7 +147,7 @@ export function initResourcesByFundingType(el, echarts) {
 
           rich: {
             percent: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               color: '#ffffff',
               fontSize: 10,
               fontWeight: 'bold',
@@ -155,7 +155,7 @@ export function initResourcesByFundingType(el, echarts) {
               align: 'center'
             },
             amount: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               color: '#ffffff',
               fontSize: 11,
               lineHeight: 15,
@@ -196,7 +196,7 @@ export function initResourcesByFundingType(el, echarts) {
 
           rich: {
             percent: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               color: '#ffffff',
               fontSize: 16,
               fontWeight: 'bold',
@@ -204,7 +204,7 @@ export function initResourcesByFundingType(el, echarts) {
               align: 'center'
             },
             amount: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               color: '#ffffff',
               fontSize: 13,
               lineHeight: 17,

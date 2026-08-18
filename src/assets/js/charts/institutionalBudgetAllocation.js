@@ -30,6 +30,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
   ];
 
   const option = {
+    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     tooltip: {
       trigger: 'item',
       formatter: function (params) {
@@ -50,7 +51,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
       itemHeight: 14,
       itemGap: 20,
       textStyle: {
-        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
         fontSize: 13,
         color: '#333',
         lineHeight: 18
@@ -79,14 +80,14 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
           },
           rich: {
             pct: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 15,
               fontWeight: 700,
               color: '#333',
               lineHeight: 20
             },
             value: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 13,
               color: '#666'
             }
@@ -122,7 +123,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
           formatter: '{total|$1.080B}\n{caption|Total}',
           rich: {
             total: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 24,
               fontWeight: 700,
               color: '#333',
@@ -130,7 +131,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
               align: 'center'
             },
             caption: {
-              fontFamily: 'ProximaNova, Arial, sans-serif',
+              fontFamily: 'Proxima Nova, Arial, sans-serif',
               fontSize: 13,
               color: '#777',
               lineHeight: 20,
