@@ -61,10 +61,16 @@ $(document).ready(function() {
 });
 
 import chartManager from './charts/chartManager';
+import { initRegularResourcesExperience } from './regularResourcesExperience';
+import { initFundingLandscapeExperience } from './fundingLandscapeExperience';
+import { initOtherResourcesExperience } from './otherResourcesExperience';
 
 // Initialize any charts declared via data-chart-type attributes
 document.addEventListener('DOMContentLoaded', function () {
   chartManager.initCharts(document);
+  initRegularResourcesExperience();
+  initFundingLandscapeExperience();
+  initOtherResourcesExperience();
 });
 
 expandToSize('.pagehero-full');

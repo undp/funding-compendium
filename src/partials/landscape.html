@@ -23,17 +23,30 @@
   </div>
 </div>
 
+<nav class="fl-chapter-nav" aria-label="Funding landscape chapters">
+  <div class="grid-container fl-chapter-nav__inner">
+    <a href="#fl-foreword">Foreword</a>
+    <a href="#fl-overview">Executive Summary</a>
+    <a href="#fl-transparency">Transparency</a>
+    <a href="#fl-funding-types">Funding types</a>
+    <a href="#fl-partners">Funding partners</a>
+    <a href="#fl-channels">Funding channels</a>
+  </div>
+</nav>
+
+<main class="fl-modern">
+
 <!--************************* Foreword  *************************  -->
 
-<section class="section foreword">
+<section class="section foreword fl-section" id="fl-foreword">
 
-  <div class="grid-container section padded" id="toc1" data-magellan-target="toc1">
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc1" data-fl-reveal>
 
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-7 ">
         <h6>{{homepage.foreword.overline}}</h6>
 
-        <h2>{{homepage.foreword.headline}}</h2>
+        <h2 class="fl-section-title">{{homepage.foreword.headline}}</h2>
 
         <h3>{{homepage.foreword.subhead}}</h3><br>
 
@@ -77,14 +90,14 @@
 
 <!--************************* Executive summary  *************************  -->
 
-<section class="section">
+<section class="section fl-section" id="fl-overview">
 
-  <div class="grid-container section padded" data-magellan-target="toc2">
+  <div class="grid-container section padded" data-magellan-target="toc2" data-fl-reveal>
 
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12 ">
 
-        <h2>{{homepage.exec-summary.headline}}</h2>
+        <h2 class="fl-section-title">{{homepage.exec-summary.headline}}</h2>
 
         <div>
           {{{homepage.exec-summary.copy}}}<br>
@@ -438,34 +451,64 @@
 
 <!--************************* Commitment to transparency and accountability  *************************  -->
 
-<section class="section">
+<section class="section fl-section" id="fl-transparency">
 
-  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
-
-    <div class="grid-x grid-padding-x align-justify align-self-middle">
-      <div class="cell small-12 medium-12 large-12">
-
-        <h2>{{homepage.transparency.headline}}</h2>
-        <br>
-
-        <h5 style="color: #0468B1;">{{landscape-page.transparency.longstanding.heading}}</h5>
-        {{{landscape-page.transparency.longstanding.copy}}}
-
-        <br><br>
-
+  <div class="grid-container section padded fl-trust" id="toc1" data-magellan-target="toc2" data-fl-reveal>
+    <div class="grid-x grid-padding-x align-justify fl-trust-desktop">
+      <div class="cell large-4">
+        <h2 class="fl-section-title">{{homepage.transparency.headline}}</h2>
       </div>
 
+      <div class="cell large-8 fl-trust-commitments">
+        <article class="fl-trust-row">
+          <span class="fl-trust-index" aria-hidden="true">01</span>
+          <div>
+            <h3>{{landscape-page.transparency.longstanding.heading}}</h3>
+            {{{landscape-page.transparency.longstanding.copy}}}
+          </div>
+        </article>
 
-      <div class="small-12 medium-6 large-5 ">
-        <h5 style="color: #0468B1;">{{landscape-page.transparency.un-system.heading}}</h5>
-        <p>{{{landscape-page.transparency.un-system.copy}}}</p>
+        <article class="fl-trust-row">
+          <span class="fl-trust-index" aria-hidden="true">02</span>
+          <div>
+            <h3>{{landscape-page.transparency.un-system.heading}}</h3>
+            <p>{{{landscape-page.transparency.un-system.copy}}}</p>
+          </div>
+        </article>
+
+        <article class="fl-trust-row">
+          <span class="fl-trust-index" aria-hidden="true">03</span>
+          <div>
+            <h3>{{landscape-page.transparency.audit.heading}}</h3>
+            <p>{{{landscape-page.transparency.audit.copy}}}</p>
+          </div>
+        </article>
       </div>
+    </div>
 
-      <div class="small-12 medium-6 large-6">
-        <h5 style="color: #0468B1;">{{landscape-page.transparency.audit.heading}}</h5>
-        <p>{{{landscape-page.transparency.audit.copy}}}</p>
-      </div>
+    <div class="fl-trust-mobile">
+      <h2 class="fl-section-title">{{homepage.transparency.headline}}</h2>
 
+      <ul class="accordion fl-trust-accordion" aria-label="Transparency commitments" data-undpds-component="accordion">
+        <li>
+          <button type="button" aria-expanded="false">01 — {{landscape-page.transparency.longstanding.heading}}</button>
+          <div class="accordion__panel" aria-hidden="true" role="region">
+            {{{landscape-page.transparency.longstanding.copy}}}
+          </div>
+        </li>
+        <li>
+          <button type="button" aria-expanded="false">02 — {{landscape-page.transparency.un-system.heading}}</button>
+          <div class="accordion__panel" aria-hidden="true" role="region">
+            <p>{{{landscape-page.transparency.un-system.copy}}}</p>
+          </div>
+        </li>
+        <li>
+          <button type="button" aria-expanded="false">03 — {{landscape-page.transparency.audit.heading}}</button>
+          <div class="accordion__panel" aria-hidden="true" role="region">
+            <p>{{{landscape-page.transparency.audit.copy}}}</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -474,14 +517,14 @@
 
 <!--************************* Resources by funding type  *************************  -->
 
-<section class="section section-bg-orange">
+<section class="section section-bg-orange fl-section" id="fl-funding-types">
 
-  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2" data-fl-reveal>
 
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
 
-        <h2>{{landscape-page.funding-type.heading}}</h2>
+        <h2 class="fl-section-title">{{landscape-page.funding-type.heading}}</h2>
         <h4>{{landscape-page.funding-type.subheading}}</h4>
       </div>
 
@@ -530,13 +573,13 @@
 
 <!--************************* Resources by funding partner  *************************  -->
 
-<section class="section">
+<section class="section fl-section" id="fl-partners">
 
-  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2">
+  <div class="grid-container section padded" id="toc1" data-magellan-target="toc2" data-fl-reveal>
 
     <div class="grid-x grid-padding-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
-        <h2>{{landscape-page.funding-partner.heading}}</h2>
+        <h2 class="fl-section-title">{{landscape-page.funding-partner.heading}}</h2>
       </div>
     </div>
 
@@ -578,12 +621,12 @@
 
 <!--************************* Resources by funding channel *************************  -->
 
-<section class="section padded section-bg-purple">
-  <div class="grid-container">
+<section class="section padded section-bg-purple fl-section" id="fl-channels">
+  <div class="grid-container" data-fl-reveal>
 
     <div class="grid-x align-justify align-self-middle">
       <div class="cell small-12 medium-12 large-12">
-        <h2>{{landscape-page.funding-channel.heading}}</h2>
+        <h2 class="fl-section-title">{{landscape-page.funding-channel.heading}}</h2>
         <p>{{landscape-page.funding-channel.copy}}</p>
 
         <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;"></div>
@@ -889,6 +932,8 @@
   </div>
 
 </section>
+
+</main>
 
 
 <!-- ********************************************************************************************************************************************************************************  -->
