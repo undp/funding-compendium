@@ -47,6 +47,7 @@
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/cta-link.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/bio-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/download-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/featured-content-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/publication-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/stats-cards.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/footer.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -310,40 +311,63 @@
         </div>
       </div>
       
-      <main>
+      <main class="fc-home-content">
         <section class="fc-explore" aria-labelledby="explore-title">
           <div class="grid-container">
             <h2 id="explore-title">Explore the report</h2>
             <p class="fc-section-intro">This Compendium presents UNDP’s annual contributions from our partners and how we turn that trust into impact worldwide.</p>
             <div class="grid-x grid-margin-x small-up-1 medium-up-3 fc-report-grid">
               <div class="cell">
-                <article class="fc-report-card">
-                  <h3>Funding landscape</h3>
-                  <p>Key messages, financial highlights and our commitment to transparency.</p>
-                  <a href="landscape/index.html" class="cta__link cta--arrow">Learn more <i></i></a>
-                </article>
+                <div class="feature__card without-image fc-featured-report">
+                  <a href="landscape/index.html">
+                    <div class="feature__card-slide"></div>
+                    <article class="feature__card-content">
+                      <div class="feature__card-description">
+                        <div class="feature__card-title">Funding landscape</div>
+                        <p>Key messages, financial highlights and our commitment to transparency.</p>
+                      </div>
+                      <span class="cta__link cta--arrow">Learn more <i></i></span>
+                    </article>
+                  </a>
+                </div>
               </div>
               <div class="cell">
-                <article class="fc-report-card">
-                  <h3>Regular resources</h3>
-                  <p>The power of flexible, regular resources that enable UNDP to respond and deliver.</p>
-                  <a href="regular-resources/index.html" class="cta__link cta--arrow">Learn more <i></i></a>
-                </article>
+                <div class="feature__card without-image fc-featured-report">
+                  <a href="regular-resources/index.html">
+                    <div class="feature__card-slide"></div>
+                    <article class="feature__card-content">
+                      <div class="feature__card-description">
+                        <div class="feature__card-title">Regular resources</div>
+                        <p>The power of flexible, regular resources that enable UNDP to respond and deliver.</p>
+                      </div>
+                      <span class="cta__link cta--arrow">Learn more <i></i></span>
+                    </article>
+                  </a>
+                </div>
               </div>
               <div class="cell">
-                <article class="fc-report-card">
-                  <h3>Other resources<br>&amp; partnerships</h3>
-                  <p>Earmarked funding windows and partnerships that support our work worldwide.</p>
-                  <a href="other-resources-partnerships/index.html" class="cta__link cta--arrow">Learn more <i></i></a>
-                </article>
+                <div class="feature__card without-image fc-featured-report">
+                  <a href="other-resources-partnerships/index.html">
+                    <div class="feature__card-slide"></div>
+                    <article class="feature__card-content">
+                      <div class="feature__card-description">
+                        <div class="feature__card-title">Other resources<br>&amp; partnerships</div>
+                        <p>Earmarked funding windows and partnerships that support our work worldwide.</p>
+                      </div>
+                      <span class="cta__link cta--arrow">Learn more <i></i></span>
+                    </article>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
       
+        <br><br><br>
+      
         <section class="fc-highlights" aria-labelledby="highlights-title">
           <div class="grid-container">
-            <h2 id="highlights-title">2025 Financial Highlights</h2>
+            <h3 id="highlights-title">2025 Financial Highlights</h3>
             <div class="grid-x grid-margin-x small-up-1 medium-up-3 fc-highlight-grid">
               <div class="cell">
                 <article class="fc-highlight-card fc-highlight-orange">

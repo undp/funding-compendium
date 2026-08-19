@@ -56,7 +56,7 @@
 - components/bio-card.min.css
 #- components/content-card.min.css
 - components/download-card.min.css
-#- components/featured-content-card.min.css
+- components/featured-content-card.min.css
 #- components/image-revel-cta-card.min.css
 #- components/parallax-card.min.css
 #- components/parallax-cards.min.css

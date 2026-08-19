@@ -47,6 +47,7 @@
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/cta-link.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/bio-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/download-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/featured-content-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/publication-card.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/stats-cards.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/css/components/footer.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -315,29 +316,45 @@
         </div>
       </div>
       
+      <nav class="or-chapter-nav" aria-label="Other resources and partnerships chapters">
+        <div class="grid-container or-chapter-nav__inner">
+          <a href="#or-overview">Overview</a>
+          <a href="#or-thematic">Thematic funds</a>
+          <a href="#or-pooled">UN pooled funds</a>
+          <a href="#or-government">Government financing</a>
+          <a href="#or-vertical">Vertical funds</a>
+          <a href="#or-cost-sharing">Third-party cost-sharing</a>
+          <a href="#or-institutions">Financing institutions</a>
+          <a href="#or-private-sector">Private sector</a>
+          <a href="#or-un-system">UN system support</a>
+          <a href="#or-annual-contributions">Annual tables</a>
+        </div>
+      </nav>
+      
+      <main class="or-modern">
+      
       
       <!--************************* Other resources overview *************************  -->
-      <section class="section section-bg-other">
-        <div class="grid-container section padded">
+      <section class="section section-bg-other or-section" id="or-overview">
+        <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
+            <div class="cell small-12 or-section-intro">
       
               <p>Other resources are earmarked contributions that supplement regular, or core, resources. They range from softly earmarked thematic funds to tightly earmarked funds for specific programmes or projects. Other resources are channelled to UNDP through government financing, thematic funding windows, UN pooled funds, vertical funds or third-party cost-sharing.</p>
               <p>In 2025, annual contributions to other resources increased to $4.6 billion, up by 6 percent from $4.3 billion in 2024.</p>
-              <br><br>
             </div>
           </div>
           <div class="grid-x grid-margin-x grid-margin-y">
-            <div class="cell small-12 large-12">
-              <h5>Top 20 other resources contributors, 2025</h5>
+            <div class="cell small-12 large-12 or-chart-block">
+              <h5 class="or-chart-title">Top 20 other resources contributors, 2025</h5>
               <div class="echarts" data-chart-type="top-other-resources-contributors" style="width:100%;height:700px;"></div>
             </div>
       
           </div>
       
            <div class="grid-x grid-margin-x grid-margin-y">
-            <div class="cell small-12 large-12">
-              <h5>Top 15 recipient countries of other resources, 2025</h5>
+            <div class="cell small-12 large-12 or-chart-block">
+              <h5 class="or-chart-title">Top 15 recipient countries of other resources, 2025</h5>
               <div class="echarts" data-chart-type="top-other-resources-recipients" style="width:100%;height:700px;"></div>
             </div>
       
@@ -346,18 +363,20 @@
       </section>
       
       <!--************************* Thematic funds *************************  -->
-      <section class="section">
-        <div class="grid-container section padded">
+      <section class="section or-section" id="or-thematic">
+        <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-              <h2>Thematic funds</h2>
+            <div class="cell small-12 or-section-intro">
+              <h2 class="or-section-title">Thematic funds</h2>
               <p>The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $133 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.</p>
             </div>
-            <div class="cell small-12">
-              <h5>Funding window contributions, 2022–2025</h5>
+            <div class="cell small-12 or-chart-block">
+              <h5 class="or-chart-title">Funding window contributions, 2022–2025</h5>
               <div class="echarts" data-chart-type="thematic-window-contributions" style="width:100%;height:420px;"></div>
       
-                      <div class="echarts padded" data-chart-type="funding-window-contributor-flow" style="width:100%;height:620px;"></div>
+              <div class="or-chart-block">
+                <div class="echarts padded" data-chart-type="funding-window-contributor-flow" style="width:100%;height:620px;"></div>
+              </div>
             </div>
           </div>
       
@@ -366,26 +385,26 @@
       </section>
       
       <!--************************* UN pooled funds *************************  -->
-      <section class="section section-bg-purple">
-        <div class="grid-container section padded">
+      <section class="section section-bg-purple or-section" id="or-pooled">
+        <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-              <h2>UN pooled funds</h2>
+            <div class="cell small-12 or-section-intro">
+              <h2 class="or-section-title">UN pooled funds</h2>
               <p>A UN inter-agency pooled fund is a financing mechanism that supports a clearly defined programmatic purpose and results framework through contributions from more than one contributor. These funds enable global, regional and country-level responses to humanitarian, development, peace and transition and climate and environment-related challenges.</p>
               <p>In 2025, UNDP remained the largest participating organization in inter-agency pooled funds, receiving $234 million, down by 7 percent from $251 million in 2024.</p>
-              <br><br>
-                <h5>Top 15 UN pooled funds received by UNDP as a participating UN organization, 2025</h5>
+            </div>
+            <div class="cell small-12 or-chart-block">
+              <h5 class="or-chart-title">Top 15 UN pooled funds received by UNDP as a participating UN organization, 2025</h5>
               <div class="echarts" data-chart-type="top-un-pooled-funds" style="width:100%;height:620px;"></div>
-      
             </div>
           </div>
-          <div class="grid-x grid-margin-x grid-margin-y padded">
-            <div class="cell small-12 large-6">
-              <h5 class="text-center">Top 15 Member State contributions</h5>
+          <div class="grid-x grid-margin-x grid-margin-y or-chart-pair">
+            <div class="cell small-12 large-6 or-chart-block">
+              <h5 class="text-center or-chart-title">Top 15 Member State contributions</h5>
               <div class="echarts" data-chart-type="top-pooled-fund-member-states" style="width:100%;height:520px;"></div>
             </div>
-            <div class="cell small-12 large-6">
-              <h5 class="text-center">UN pooled funding to UNDP, 2022–2025</h5>
+            <div class="cell small-12 large-6 or-chart-block">
+              <h5 class="text-center or-chart-title">UN pooled funding to UNDP, 2022–2025</h5>
               <div class="echarts" data-chart-type="pooled-fund-contributions" style="width:100%;height:520px;"></div>
             </div>
           </div>
@@ -393,41 +412,40 @@
       </section>
       
       <!--************************* Government development financing *************************  -->
-      <section class="section">
-        <div class="grid-container section padded">
+      <section class="section or-section" id="or-government">
+        <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x grid-margin-y">
-            <div class="cell small-12">
-              <h2>Government development financing</h2>
+            <div class="cell small-12 or-section-intro">
+              <h2 class="or-section-title">Government development financing</h2>
               <p>Government development financing is a voluntary funding mechanism through which programme country governments entrust their domestic resources, or loans extended by international financial institutions (IFIs), to UNDP to assist in implementing development initiatives in their respective countries.</p>
             </div>
           </div>
       
-          <div class="grid-x grid-margin-x grid-margin-y">
-            <div class="cell small-12 large-6">
-              <h3>$1.4B</h3>
+          <div class="or-metric-grid">
+            <div class="or-metric-card or-metric-card--blue">
+              <h2>$1.4B</h2>
               <p>Total government financing in 2025, representing 28 percent of total resources and a 17 percent increase from 2024.</p>
             </div>
-            <div class="cell small-12 large-6">
-              <h3>$113M</h3>
+            <div class="or-metric-card or-metric-card--teal">
+              <h2>$113M</h2>
               <p>Financed through loans from international financial institutions.</p>
             </div>
           </div>
       
-          <br><br>
           <div class="grid-x grid-margin-x grid-margin-y">
-            <div class="cell small-12">
-              <h5 class="text-center">Government financing by country, 2024</h5>
+            <div class="cell small-12 or-chart-block">
+              <h5 class="text-center or-chart-title">Government financing by country, 2024</h5>
               <div class="echarts" data-chart-type="government-financing-by-country" style="width:100%;height:850px;"></div>
             </div>
           </div>
       
-          <div class="grid-x grid-margin-x grid-margin-y align-middle padded">
+          <div class="grid-x grid-margin-x grid-margin-y align-middle or-split-feature">
             <div class="cell small-12 large-5">
               <h3>Government financing by region</h3>
               <p>In 2025, programme countries in Latin America and the Caribbean contributed 62 percent of total government financing, followed by Africa (17 percent), Europe and the Commonwealth of Independent States (9 percent), the Arab States (8 percent), and Asia and the Pacific (4 percent).</p>
             </div>
             <div class="cell small-12 large-7 align-self-center">
-              <h5 style="text-align: center;">Contributions to government financing, 2022–2025</h5>
+              <h5 class="text-center or-chart-title">Contributions to government financing, 2022–2025</h5>
               <div class="echarts" data-chart-type="government-financing-by-region" style="width:100%;height:500px;"></div>
             </div>
           </div>
@@ -435,16 +453,16 @@
       </section>
       
       <!--************************* Vertical funds *************************  -->
-      <section class="section section-bg-orange">
-        <div class="grid-container section padded">
-          <div class="grid-x grid-margin-x">
+      <section class="section section-bg-orange or-section" id="or-vertical">
+        <div class="grid-container section padded" data-or-reveal>
+          <div class="grid-x grid-margin-x grid-margin-y align-middle or-split-feature">
             <div class="cell small-12 large-5">
-              <h2>Vertical funds</h2>
+              <h2 class="or-section-title">Vertical funds</h2>
               <p>Vertical funds are earmarked for a single area of development such as nature, climate, energy or health. These funds are governed by steering committees and are not directly administered by UNDP.</p>
               <p>In 2025, UNDP received $825 million from vertical funds, an 11 percent decrease from the $920 million received in 2024. The largest contributions came from the Global Environment Facility ($372 million), the Global Fund ($311 million) and the Green Climate Fund ($84 million).</p>
             </div>
             <div class="cell small-12 large-7">
-              <h5>Vertical fund contributions, 2024–2025</h5>
+              <h5 class="or-chart-title">Vertical fund contributions, 2024–2025</h5>
               <div class="echarts" data-chart-type="vertical-fund-contributions" style="width:100%;height:460px;"></div>
             </div>
           </div>
@@ -452,13 +470,12 @@
       </section>
       
       <!--************************* Third-party cost-sharing *************************  -->
-      <section class="section">
-        <div class="grid-container section padded">
+      <section class="section or-section" id="or-cost-sharing">
+        <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-              <h2>Third-party cost-sharing</h2>
+            <div class="cell small-12 or-section-intro">
+              <h2 class="or-section-title">Third-party cost-sharing</h2>
               <p>Earmarked contributions for a specific programme or project continue to make up the largest share of UNDP resources. In 2025, these contributions amounted to $1.95 billion (39 percent of total resources).</p>
-            <br><br>
             </div>
       
              <div class="cell small-12 large-5">
@@ -467,7 +484,7 @@
             </div>
       
             <div class="cell small-12 large-7">
-              <h5>Contributions from the European Union, 2022–2025</h5>
+              <h5 class="or-chart-title">Contributions from the European Union, 2022–2025</h5>
               <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:500px;"></div>
             </div>
       
@@ -477,31 +494,31 @@
       </section>
       
       <!--************************* Financing institutions *************************  -->
-      <section class="section section-bg-gold">
-        <div class="grid-container section padded">
-          <div class="grid-x grid-margin-x">
+      <section class="section section-bg-gold or-section" id="or-institutions">
+        <div class="grid-container section padded" data-or-reveal>
+          <div class="grid-x grid-margin-x grid-margin-y align-middle or-split-feature">
       
       
             <div class="cell small-12 large-5">
-              <h3>Partnering with financing institutions</h3>
+              <h2 class="or-section-title">Partnering with financing institutions</h2>
               <p>UNDP’s financial and non-financial partnerships with IFIs are central to promoting $1 trillion in public expenditure and private capital investments aligned with the SDGs.</p>
               <p>In 2025, UNDP received $316 million from IFIs, an 8 percent decrease from $344 million in 2024. Top IFI contributors were Kreditanstalt für Wiederaufbau (KfW), at $105 million, and the World Bank, at $88 million. This funding comprised $203 million in direct grants and $113 million in indirect government contributions.</p>
             </div>
       
             <div class="cell small-12 large-7">
-              <h5>Total contributions by IFI, 2025</h5>
+              <h5 class="or-chart-title">Total contributions by IFI, 2025</h5>
               <div class="echarts" data-chart-type="ifi-contributions-donut" style="width:100%;height:520px;"></div>
             </div>
       
       
           </div>
-          <div class="grid-x grid-margin-x grid-margin-y padded">
-            <div class="cell small-12 large-6">
-              <h5>IFI contributions by type, 2022–2025</h5>
+          <div class="grid-x grid-margin-x grid-margin-y or-chart-pair">
+            <div class="cell small-12 large-6 or-chart-block">
+              <h5 class="or-chart-title">IFI contributions by type, 2022–2025</h5>
               <div class="echarts" data-chart-type="ifi-contributions-by-type" style="width:100%;height:420px;"></div>
             </div>
-            <div class="cell small-12 large-6">
-              <h5>Top 10 recipients of IFI funding, 2025</h5>
+            <div class="cell small-12 large-6 or-chart-block">
+              <h5 class="or-chart-title">Top 10 recipients of IFI funding, 2025</h5>
               <div class="echarts" data-chart-type="top-ifi-recipient-countries" style="width:100%;height:420px;"></div>
             </div>
           </div>
@@ -509,22 +526,22 @@
       </section>
       
       <!--************************* Private-sector partnerships *************************  -->
-      <section class="section">
-        <div class="grid-container section padded">
+      <section class="section or-section" id="or-private-sector">
+        <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
-            <div class="cell small-12">
-              <h3>Partnering with private companies, foundations, NGOs and academic institutions</h3>
+            <div class="cell small-12 or-section-intro">
+              <h2 class="or-section-title">Partnering with private companies, foundations, NGOs and academic institutions</h2>
               <p>Contributions from the private sector, foundations, non-governmental organizations and academic, training and research institutions decreased to $89 million in 2025, down by 5 percent from $94 million in 2024.</p>
               <p>Partnerships with the private sector accelerate progress towards the SDGs by mobilizing capital, innovation and technology. Through its Finance Moonshot, UNDP leveraged $920 billion in public and private finance for the SDGs, helping countries mobilize investment for development priorities. Through the timbuktoo initiative, a flagship partnership to mobilize capital for innovation across Africa, UNDP is working to raise $1 billion over the next decade to support 10,000 start-ups and scale 1,000 ventures to generate $10 billion and positively impact 100 million lives.</p>
             </div>
           </div>
-          <div class="grid-x grid-margin-x grid-margin-y padded">
-            <div class="cell small-12 large-6">
-              <h5>Top 10 contributors, 2025</h5>
+          <div class="grid-x grid-margin-x grid-margin-y or-chart-pair">
+            <div class="cell small-12 large-6 or-chart-block">
+              <h5 class="or-chart-title">Top 10 contributors, 2025</h5>
               <div class="echarts" data-chart-type="top-private-sector-contributors" style="width:100%;height:420px;"></div>
             </div>
-            <div class="cell small-12 large-6">
-              <h5>Annual contributions, 2022–2025</h5>
+            <div class="cell small-12 large-6 or-chart-block">
+              <h5 class="or-chart-title">Annual contributions, 2022–2025</h5>
               <div class="echarts" data-chart-type="private-sector-contributions-by-type" style="width:100%;height:420px;"></div>
             </div>
           </div>
@@ -533,12 +550,12 @@
       
       
       <!--************************* UNDS *************************  -->
-      <section class="section section-bg-teal">
+      <section class="section section-bg-teal or-section" id="or-un-system">
       
-        <div class="grid-container" style="padding-top: 5rem;">
+        <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
             <div class="cell small-12 medium-12 large-12">
-              <h3 style="color: #0468B1;">Support to United Nations system programmes, offices and initiatives</h3>
+              <h2 class="or-section-title">Support to United Nations system programmes, offices and initiatives</h2>
               <p>In 2025, UNDP continued to serve as the institutional platform for four UN entities, delivering critical services across the UN system.
       </p>
             </div>
@@ -547,12 +564,12 @@
       
       </section>
       
-      <section class="section unds-highlights center-text-mobile section-bg-other">
-        <div class="grid-container">
-          <div class="grid-x grid-margin-x grid-margin-y" style="padding: 3rem 0;">
+      <section class="section unds-highlights center-text-mobile section-bg-teal or-section or-un-system-highlights">
+        <div class="grid-container" data-or-reveal>
+          <div class="or-organization-list">
       
             <!-- Row: UNV -->
-            <div class="cell small-12 large-11 large-offset-1">
+            <article class="or-organization-card">
               <div class="grid-x grid-margin-x align-middle">
                 <!-- Logo -->
                 <div class="cell small-12 medium-shrink small-text-center medium-text-left">
@@ -561,16 +578,13 @@
                 </div>
                 <!-- Text -->
                 <div class="cell small-12 medium-auto small-text-center medium-text-left">
-                  <span class="highlight-title" style="color:#009EDB; text-transform: uppercase;">
-                    United Nations Volunteers
-                  </span>
-                  <p>The UN Volunteers programme promotes volunteerism to support peace and development worldwide. During 2025, 17,169 UN Volunteers from 182 countries supported 59 partner UN entities in their peace and development activities in 172 countries.</p>
+                  <p>The <strong>UN Volunteers programme</strong> promotes volunteerism to support peace and development worldwide. During 2025, 17,169 UN Volunteers from 182 countries supported 59 partner UN entities in their peace and development activities in 172 countries.</p>
                 </div>
               </div>
-            </div>
+            </article>
       
             <!-- Row: UNCDF -->
-            <div class="cell small-12 large-11 large-offset-1">
+            <article class="or-organization-card">
               <div class="grid-x grid-margin-x align-middle">
                 <!-- Logo -->
                 <div class="cell small-12 medium-shrink small-text-center medium-text-left">
@@ -579,16 +593,13 @@
                 </div>
                 <!-- Text -->
                 <div class="cell small-12 medium-auto small-text-center medium-text-left">
-                  <span class="highlight-title" style="color:#2D3D89; text-transform: uppercase;">
-                    UN Capital Development Fund
-                  </span>
-                  <p>In 2025, the UN Capital Development Fund provided $6 million in loans and $3.1 million in guarantees, leveraging and catalysing a total of $50 million in financing to support development solutions in 19 countries. Through UNCDF-enabled solutions, 3.3 million people were reached, of whom two-thirds were women.</p>
+                  <p>In 2025, the <strong>UN Capital Development Fund</strong> provided $6 million in loans and $3.1 million in guarantees, leveraging and catalysing a total of $50 million in financing to support development solutions in 19 countries. Through UNCDF-enabled solutions, 3.3 million people were reached, of whom two-thirds were women.</p>
                 </div>
               </div>
-            </div>
+            </article>
       
             <!-- Row: UNOSSC -->
-            <div class="cell small-12 large-11 large-offset-1">
+            <article class="or-organization-card">
               <div class="grid-x grid-margin-x align-middle">
                 <!-- Logo -->
                 <div class="cell small-12 medium-shrink small-text-center medium-text-left">
@@ -597,16 +608,13 @@
                 </div>
                 <!-- Text -->
                 <div class="cell small-12 medium-auto small-text-center medium-text-left">
-                  <span class="highlight-title" style="color:#2E87C8; text-transform: uppercase;">
-                    UN Office for South–South Cooperation 
-                  </span>
-                  <p>In 2025, the UN Office for South–South Cooperation supported 41 UN resolutions and decisions that incorporated South–South and triangular cooperation modalities. It also facilitated the implementation of South–South and triangular cooperation trust fund projects across 50 developing countries.</p>
+                  <p>In 2025, the <strong>UN Office for South–South Cooperation</strong> supported 41 UN resolutions and decisions that incorporated South–South and triangular cooperation modalities. It also facilitated the implementation of South–South and triangular cooperation trust fund projects across 50 developing countries.</p>
                 </div>
               </div>
-            </div>
+            </article>
       
             <!-- Row: MPTF -->
-            <div class="cell small-12 large-11 large-offset-1">
+            <article class="or-organization-card">
               <div class="grid-x grid-margin-x align-middle">
                 <!-- Logo -->
                 <div class="cell small-12 medium-shrink small-text-center medium-text-left">
@@ -615,22 +623,18 @@
                 </div>
                 <!-- Text -->
                 <div class="cell small-12 medium-auto small-text-center medium-text-left">
-                  <span class="highlight-title" style="color:#009EDB; text-transform: uppercase;">
-                    Multi-Partner Trust Fund Office 
-                  </span>
-                  <p>The Multi-Partner Trust Fund Office transferred $1.06 billion to participating UN and non-UN entities in 2025, supporting development, climate and environment, and peace and transition outcomes for sustainable development progress. As a system-wide UN asset, the MPTF disbursed over $860 million to 41 UN entities and 111 countries in 2025.</p>
+                  <p>The <strong>Multi-Partner Trust Fund Office</strong> transferred $1.06 billion to participating UN and non-UN entities in 2025, supporting development, climate and environment, and peace and transition outcomes for sustainable development progress. As a system-wide UN asset, the MPTF disbursed over $860 million to 41 UN entities and 111 countries in 2025.</p>
                 </div>
               </div>
-            </div>
+            </article>
       
       
             <!-- Row: Extra copy -->
-            <div class="cell small-12 large-11 large-offset-1">
+            <div class="cell small-12 or-organization-footer">
               <div class="grid-x grid-margin-x align-middle">
       
                 <!-- Text -->
                 <div class="cell small-12 medium-auto small-text-center medium-text-left">
-                  <br>
                   <p><strong>Support to United Nations organizations: </strong> UNDP continued to be the operational backbone of the UN system in 2025. It disbursed $2.3 billion in 109 currencies through its payroll system, 54 percent of which was on behalf of partner UN organizations. UNDP supported $3.2 billion in financial transactions for 70 UN entities and other agencies in 170 countries. In addition, UNDP provided common premises for other agencies in 130 countries, enabling them to access common services, including travel management. 
       </p>
                 </div>
@@ -641,6 +645,71 @@
           </div>
         </div>
       </section>
+      
+      <!--************************* Annual contribution tables *************************  -->
+      <section class="section or-section or-reference-section" id="or-annual-contributions">
+        <div class="grid-container section padded" data-or-reveal>
+          <header class="or-reference-header">
+            <h2 class="or-section-title">Annual contributions to UNDP from Member States</h2>
+            <h3>Annual contributions to UNDP from Member States, 2025 ($)</h3>
+          </header>
+      
+          <aside class="or-notes-panel" aria-labelledby="or-member-state-notes">
+            <h4 id="or-member-state-notes">Notes</h4>
+            <ul>
+              <li>*All references to Kosovo in this table should be understood in the context of United Nations Security Council resolution 1244 (1999).</li>
+              <li><span class="or-note-marker">a/</span> For Fund 00001 only. Excludes amounts totalling $991,411 for which the donor is not identified.</li>
+              <li><span class="or-note-marker">b/</span> Includes South–South contributions from China ($18,635,831), Colombia ($100,000) and Saudi Arabia ($900,000).</li>
+              <li><span class="or-note-marker">c/</span> Amounts exclude accounting linkages.</li>
+              <li><span class="or-note-marker">d/</span> Montserrat is a programme country managed by the Barbados office.</li>
+              <li><span class="or-note-marker">e/</span> Includes JPOs, management service agreements (MSAs) and development service agreements.</li>
+            </ul>
+            <p class="or-reference-source"><strong>Source:</strong> Appendix VII to Annex I to DP/2023/26 Table 4.</p>
+          </aside>
+      
+          <div class="or-table-block">
+            <h3>Contributions to UNDP from non-government partner groups, 2025 ($)</h3>
+            <div class="or-table-scroll" tabindex="0" role="region" aria-label="Contributions from non-government partner groups table">
+              <table class="or-contributions-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Non-government partner group</th>
+                    <th scope="col">Regular</th>
+                    <th scope="col">Other</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">European Union</th><td></td><td>304,944,809</td><td></td></tr>
+                  <tr><th scope="row">Financial institutions <span class="or-note-marker">/a</span></th><td></td><td>98,363,895</td><td></td></tr>
+                  <tr><th scope="row">Other multilaterals</th><td></td><td>11,019,073</td><td></td></tr>
+                  <tr><th scope="row">Private companies</th><td></td><td>39,816,444</td><td></td></tr>
+                  <tr><th scope="row">Foundations</th><td></td><td>28,967,314</td><td></td></tr>
+                  <tr><th scope="row">NGOs</th><td></td><td>19,918,648</td><td></td></tr>
+                  <tr><th scope="row">Academic, training and research institutions</th><td></td><td>728,344</td><td></td></tr>
+                  <tr><th scope="row">UN agencies</th><td></td><td>69,396,342</td><td></td></tr>
+                  <tr><th scope="row">UN pooled funds</th><td></td><td>233,741,124</td><td></td></tr>
+                  <tr><th scope="row">Vertical funds</th><td></td><td>825,262,999</td><td></td></tr>
+                  <tr class="or-table-subtotal"><th scope="row">Total non-government partner groups</th><td></td><td>1,632,158,992</td><td></td></tr>
+                  <tr class="or-table-total">
+                    <th scope="row">2025 contributions total <span class="or-note-marker">/b</span></th>
+                    <td>442 million</td>
+                    <td>4,344 million</td>
+                    <td>4,925 million</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      
+            <div class="or-table-notes">
+              <p><span class="or-note-marker">a/</span> Reflects direct grants received by UNDP; excludes loans extended to programme country governments and received by UNDP as government financing, and grants received from the German Development Bank (KfW), which are reported under Germany.</p>
+              <p><span class="or-note-marker">b/</span> Amounts are rounded to the nearest million. Includes core contributions for 2024 received in 2025 and core contributions for 2026 received in 2025.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      </main>
       
       <!-- ********************************************************************************************************************************************************************************  -->
       <!-- ********************************************************************************************************************************************************************************  -->

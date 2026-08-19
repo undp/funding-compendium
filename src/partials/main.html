@@ -16,40 +16,63 @@
   </div>
 </div>
 
-<main>
+<main class="fc-home-content">
   <section class="fc-explore" aria-labelledby="explore-title">
     <div class="grid-container">
       <h2 id="explore-title">{{homepage.explore.heading}}</h2>
       <p class="fc-section-intro">{{homepage.explore.intro}}</p>
       <div class="grid-x grid-margin-x small-up-1 medium-up-3 fc-report-grid">
         <div class="cell">
-          <article class="fc-report-card">
-            <h3>{{homepage.explore.cards.landscape.heading}}</h3>
-            <p>{{homepage.explore.cards.landscape.copy}}</p>
-            <a href="{{@root.root}}landscape/index.html" class="cta__link cta--arrow">{{homepage.explore.cards.landscape.link-label}} <i></i></a>
-          </article>
+          <div class="feature__card without-image fc-featured-report">
+            <a href="{{@root.root}}landscape/index.html">
+              <div class="feature__card-slide"></div>
+              <article class="feature__card-content">
+                <div class="feature__card-description">
+                  <div class="feature__card-title">{{homepage.explore.cards.landscape.heading}}</div>
+                  <p>{{homepage.explore.cards.landscape.copy}}</p>
+                </div>
+                <span class="cta__link cta--arrow">{{homepage.explore.cards.landscape.link-label}} <i></i></span>
+              </article>
+            </a>
+          </div>
         </div>
         <div class="cell">
-          <article class="fc-report-card">
-            <h3>{{homepage.explore.cards.regular.heading}}</h3>
-            <p>{{homepage.explore.cards.regular.copy}}</p>
-            <a href="{{@root.root}}regular-resources/index.html" class="cta__link cta--arrow">{{homepage.explore.cards.regular.link-label}} <i></i></a>
-          </article>
+          <div class="feature__card without-image fc-featured-report">
+            <a href="{{@root.root}}regular-resources/index.html">
+              <div class="feature__card-slide"></div>
+              <article class="feature__card-content">
+                <div class="feature__card-description">
+                  <div class="feature__card-title">{{homepage.explore.cards.regular.heading}}</div>
+                  <p>{{homepage.explore.cards.regular.copy}}</p>
+                </div>
+                <span class="cta__link cta--arrow">{{homepage.explore.cards.regular.link-label}} <i></i></span>
+              </article>
+            </a>
+          </div>
         </div>
         <div class="cell">
-          <article class="fc-report-card">
-            <h3>{{{homepage.explore.cards.other.heading}}}</h3>
-            <p>{{homepage.explore.cards.other.copy}}</p>
-            <a href="{{@root.root}}other-resources-partnerships/index.html" class="cta__link cta--arrow">{{homepage.explore.cards.other.link-label}} <i></i></a>
-          </article>
+          <div class="feature__card without-image fc-featured-report">
+            <a href="{{@root.root}}other-resources-partnerships/index.html">
+              <div class="feature__card-slide"></div>
+              <article class="feature__card-content">
+                <div class="feature__card-description">
+                  <div class="feature__card-title">{{{homepage.explore.cards.other.heading}}}</div>
+                  <p>{{homepage.explore.cards.other.copy}}</p>
+                </div>
+                <span class="cta__link cta--arrow">{{homepage.explore.cards.other.link-label}} <i></i></span>
+              </article>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <br><br><br>
+
   <section class="fc-highlights" aria-labelledby="highlights-title">
     <div class="grid-container">
-      <h2 id="highlights-title">{{homepage.financial-highlights.heading}}</h2>
+      <h3 id="highlights-title">{{homepage.financial-highlights.heading}}</h3>
       <div class="grid-x grid-margin-x small-up-1 medium-up-3 fc-highlight-grid">
         <div class="cell">
           <article class="fc-highlight-card fc-highlight-orange">
