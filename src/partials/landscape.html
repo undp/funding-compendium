@@ -4,7 +4,7 @@
     <img class="mobile-position-center" src="{{@root.root}}assets/img/cover.jpg" alt="">
   </div>
 
-  <nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb medium-offset-1">
+  <nav aria-label="{{breadcrumbs.aria-label}}" data-viewport="true" class="breadcrumb medium-offset-1">
     <ul>
       <li><a href="{{@root.root}}index.html" aria-label="{{breadcrumbs.home}}">{{breadcrumbs.home}}</a></li>
       <li aria-current="page">{{landscape-page.hero.title}}</li>
@@ -23,14 +23,14 @@
   </div>
 </div>
 
-<nav class="fl-chapter-nav" aria-label="Funding landscape chapters">
+<nav class="fl-chapter-nav" aria-label="{{landscape-page.chapter-nav.aria-label}}">
   <div class="grid-container fl-chapter-nav__inner">
-    <a href="#fl-foreword">Foreword</a>
-    <a href="#fl-overview">Executive Summary</a>
-    <a href="#fl-transparency">Transparency</a>
-    <a href="#fl-funding-types">Funding types</a>
-    <a href="#fl-partners">Funding partners</a>
-    <a href="#fl-channels">Funding channels</a>
+    <a href="#fl-foreword">{{landscape-page.chapter-nav.foreword}}</a>
+    <a href="#fl-overview">{{landscape-page.chapter-nav.summary}}</a>
+    <a href="#fl-transparency">{{landscape-page.chapter-nav.transparency}}</a>
+    <a href="#fl-funding-types">{{landscape-page.chapter-nav.funding-types}}</a>
+    <a href="#fl-partners">{{landscape-page.chapter-nav.partners}}</a>
+    <a href="#fl-channels">{{landscape-page.chapter-nav.channels}}</a>
   </div>
 </nav>
 
@@ -68,7 +68,7 @@
 
 
         <br>
-        <img alt="Achim Steiner" src="{{@root.root}}assets/img/photo-susan.png" style="margin-bottom: 7px; width: 70%;">
+        <img alt="{{homepage.foreword.photo-alt}}" src="{{@root.root}}assets/img/photo-susan.png" style="margin-bottom: 7px; width: 70%;">
         <!--<br><br>
                         <img alt="Achim Steiner" src="{{@root.root}}assets/img/signature.png" style="margin-bottom: 7px; width: 60%;">-->
         <br>
@@ -109,17 +109,17 @@
 
             <li class="tabs-title is-active" role="tab" aria-selected="true" aria-controls="tab-1" id="tablist_1-tab-1"
               tabindex="-1">
-              <a href="#tab-1">total annual contributions<sup>1</sup> to UNDP</a>
+              <a href="#tab-1">{{{landscape-page.summary-tabs.total.label}}}</a>
             </li>
 
             <li class="tabs-title" role="tab" aria-selected="false" aria-controls="tab-2" id="tablist_1-tab-2"
               tabindex="0">
-              <a href="#tab-2">regular resources</a>
+              <a href="#tab-2">{{landscape-page.summary-tabs.regular.label}}</a>
             </li>
 
             <li class="tabs-title" role="tab" aria-selected="false" aria-controls="tab-3" id="tablist_1-tab-3"
               tabindex="1">
-              <a href="#tab-3">other resources</a>
+              <a href="#tab-3">{{landscape-page.summary-tabs.other.label}}</a>
             </li>
 
           </ul>
@@ -147,18 +147,18 @@
 
                           <div class="cell shrink">
                             <div class="total-value">
-                              $5<span>B</span>
+                              {{landscape-page.summary-tabs.total.amount}}<span> {{landscape-page.summary-tabs.total.unit}}</span>
                             </div>
 
                             <div class="total-caption">
-                              in annual contributions in 2025
+                              {{landscape-page.summary-tabs.total.caption}}
                             </div>
                           </div>
 
                           <div class="cell auto increase-wrap">
                             <div class="increase">
-                              <strong>↑2%</strong>
-                              <span>up from $4.9B in 2024</span>
+                              <strong>{{landscape-page.summary-tabs.total.change}}</strong>
+                              <span>{{landscape-page.summary-tabs.total.comparison}}</span>
                             </div>
                           </div>
                         </div>
@@ -169,66 +169,24 @@
                       <div class="cell small-12 large-6 contributions-breakdown">
 
                         <div class="breakdown-label">
-                          OF THIS TOTAL
+                          {{landscape-page.summary-tabs.total.breakdown-label}}
                         </div>
 
                         <div class="grid-x breakdown-grid">
 
-                          <!-- Donor country governments -->
+                          {{#each landscape-page.summary-tabs.total.breakdown}}
                           <div class="cell small-12 medium-4 breakdown-item">
-
                             <div class="breakdown-percent">
-                              36%
+                              {{this.percent}}
                             </div>
-
                             <div class="breakdown-title">
-                              Donor country<br>
-                              governments
+                              {{{this.title}}}
                             </div>
-
                             <div class="breakdown-value">
-                              $1.8B
+                              {{this.value}}
                             </div>
-
                           </div>
-
-
-                          <!-- Multilateral partners -->
-                          <div class="cell small-12 medium-4 breakdown-item">
-
-                            <div class="breakdown-percent">
-                              32%
-                            </div>
-
-                            <div class="breakdown-title">
-                              Multilateral<br>
-                              partners
-                            </div>
-
-                            <div class="breakdown-value">
-                              $1.6B
-                            </div>
-
-                          </div>
-
-
-                          <!-- Programme country governments -->
-                          <div class="cell small-12 medium-4 breakdown-item">
-
-                            <div class="breakdown-percent">
-                              32%
-                            </div>
-
-                            <div class="breakdown-title">
-                              Programme country<br>
-                              governments
-                            </div>
-
-                            <div class="breakdown-value">
-                              $1.6B
-                            </div>
-
-                          </div>
+                          {{/each}}
 
                         </div>
 
@@ -241,18 +199,8 @@
 
                   <!-- Footnote -->
                   <small class="tab-footnote">
-                    <sup>1</sup>
-                    In 2019, UNDP refined its accounting policy on IPSAS 23
-                    (non-exchange) revenues. Under this policy, UNDP records the full
-                    value of funding agreements when they are signed, even when cash
-                    has not been received for the majority of contribution agreements.
-                    Any uncollected cash associated with funding agreements is held as
-                    a receivable. Under UNDP financial regulations and rules, UNDP is
-                    permitted to spend only up to the amount of cash received. In this
-                    document, where applicable, “annual contributions” are therefore
-                    aligned with past revenue recognition policies for contributions
-                    (i.e., cash received in a reporting year, plus receivables due in a
-                    reporting year).
+                    <sup>{{landscape-page.summary-tabs.total.marker}}</sup>
+                    {{landscape-page.summary-tabs.total.footnote}}
                   </small>
 
                 </div>
@@ -282,11 +230,11 @@
                           <div class="cell shrink">
 
                             <div class="total-value">
-                              $442<span>M</span>
+                              {{landscape-page.summary-tabs.regular.amount}}<span> {{landscape-page.summary-tabs.regular.unit}}</span>
                             </div>
 
                             <div class="total-caption">
-                              in regular resources in 2025
+                              {{landscape-page.summary-tabs.regular.caption}}
                             </div>
 
                           </div>
@@ -294,8 +242,8 @@
                           <div class="cell auto increase-wrap">
 
                             <div class="increase decrease">
-                              <strong>↓24%</strong>
-                              <span>down from $581M in 2024</span>
+                              <strong>{{landscape-page.summary-tabs.regular.change}}</strong>
+                              <span>{{landscape-page.summary-tabs.regular.comparison}}</span>
                             </div>
 
                           </div>
@@ -309,66 +257,24 @@
                       <div class="cell small-12 large-6 contributions-breakdown">
 
                         <div class="breakdown-label">
-                          REGULAR RESOURCES
+                          {{landscape-page.summary-tabs.regular.breakdown-label}}
                         </div>
 
                         <div class="grid-x breakdown-grid">
 
-                          <!-- Share of total -->
+                          {{#each landscape-page.summary-tabs.regular.breakdown}}
                           <div class="cell small-12 medium-4 breakdown-item">
-
                             <div class="breakdown-percent">
-                              9%
+                              {{this.percent}}
                             </div>
-
                             <div class="breakdown-title">
-                              share of total<br>
-                              annual contributions
+                              {{{this.title}}}
                             </div>
-
                             <div class="breakdown-value">
-                              down from 12% in 2024
+                              {{this.value}}
                             </div>
-
                           </div>
-
-
-                          <!-- Funding Compact target -->
-                          <div class="cell small-12 medium-4 breakdown-item">
-
-                            <div class="breakdown-percent">
-                              30%
-                            </div>
-
-                            <div class="breakdown-title">
-                              Funding Compact<br>
-                              target
-                            </div>
-
-                            <div class="breakdown-value">
-                              current share remains below target
-                            </div>
-
-                          </div>
-
-
-                          <!-- Multi-year commitments -->
-                          <div class="cell small-12 medium-4 breakdown-item">
-
-                            <div class="breakdown-percent">
-                              37%
-                            </div>
-
-                            <div class="breakdown-title">
-                              of regular resources were<br>
-                              multi-year commitments
-                            </div>
-
-                            <div class="breakdown-value">
-                              $165M · down from 40%
-                            </div>
-
-                          </div>
+                          {{/each}}
 
                         </div>
 
@@ -405,11 +311,11 @@
                           <div class="cell shrink">
 
                             <div class="total-value">
-                              $4.6<span>B</span>
+                              {{landscape-page.summary-tabs.other.amount}}<span> {{landscape-page.summary-tabs.other.unit}}</span>
                             </div>
 
                             <div class="total-caption">
-                              in other resources in 2025
+                              {{landscape-page.summary-tabs.other.caption}}
                             </div>
 
                           </div>
@@ -419,8 +325,8 @@
                           <div class="cell auto increase-wrap">
 
                             <div class="increase">
-                              <strong>↑6%</strong>
-                              <span>up from $4.3B in 2024</span>
+                              <strong>{{landscape-page.summary-tabs.other.change}}</strong>
+                              <span>{{landscape-page.summary-tabs.other.comparison}}</span>
                             </div>
 
                           </div>
@@ -461,7 +367,6 @@
 
       <div class="cell large-8 fl-trust-commitments">
         <article class="fl-trust-row">
-          <span class="fl-trust-index" aria-hidden="true">01</span>
           <div>
             <h3>{{landscape-page.transparency.longstanding.heading}}</h3>
             {{{landscape-page.transparency.longstanding.copy}}}
@@ -469,7 +374,6 @@
         </article>
 
         <article class="fl-trust-row">
-          <span class="fl-trust-index" aria-hidden="true">02</span>
           <div>
             <h3>{{landscape-page.transparency.un-system.heading}}</h3>
             <p>{{{landscape-page.transparency.un-system.copy}}}</p>
@@ -477,7 +381,6 @@
         </article>
 
         <article class="fl-trust-row">
-          <span class="fl-trust-index" aria-hidden="true">03</span>
           <div>
             <h3>{{landscape-page.transparency.audit.heading}}</h3>
             <p>{{{landscape-page.transparency.audit.copy}}}</p>
@@ -489,21 +392,21 @@
     <div class="fl-trust-mobile">
       <h2 class="fl-section-title">{{homepage.transparency.headline}}</h2>
 
-      <ul class="accordion fl-trust-accordion" aria-label="Transparency commitments" data-undpds-component="accordion">
+      <ul class="accordion fl-trust-accordion" aria-label="{{landscape-page.transparency.aria-label}}" data-undpds-component="accordion">
         <li>
-          <button type="button" aria-expanded="false">01 — {{landscape-page.transparency.longstanding.heading}}</button>
+          <button type="button" aria-expanded="false">{{landscape-page.transparency.longstanding.heading}}</button>
           <div class="accordion__panel" aria-hidden="true" role="region">
             {{{landscape-page.transparency.longstanding.copy}}}
           </div>
         </li>
         <li>
-          <button type="button" aria-expanded="false">02 — {{landscape-page.transparency.un-system.heading}}</button>
+          <button type="button" aria-expanded="false">{{landscape-page.transparency.un-system.heading}}</button>
           <div class="accordion__panel" aria-hidden="true" role="region">
             <p>{{{landscape-page.transparency.un-system.copy}}}</p>
           </div>
         </li>
         <li>
-          <button type="button" aria-expanded="false">03 — {{landscape-page.transparency.audit.heading}}</button>
+          <button type="button" aria-expanded="false">{{landscape-page.transparency.audit.heading}}</button>
           <div class="accordion__panel" aria-hidden="true" role="region">
             <p>{{{landscape-page.transparency.audit.copy}}}</p>
           </div>

@@ -1,11 +1,11 @@
 const countries = [
-  'South Sudan, Republic of',
+  'South Sudan',
   'Iraq',
   'Angola',
   'South Africa',
   'Nigeria',
   'Indonesia',
-  'Côte d’Ivoire',
+  "Côte D'Ivoire",
   'Lebanon',
   'Pakistan',
   'Ecuador'

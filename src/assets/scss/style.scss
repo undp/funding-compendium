@@ -1418,22 +1418,12 @@ html {
 }
 
 .fl-trust-row {
-  display: grid;
-  grid-template-columns: 4rem minmax(0, 1fr);
-  gap: 1.25rem;
   padding-block: 2.25rem;
   border-top: 1px solid rgba(0, 105, 179, 0.22);
 }
 
 .fl-trust-row:last-child {
   border-bottom: 1px solid rgba(0, 105, 179, 0.22);
-}
-
-.fl-trust-index {
-  color: #0069b3;
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
 }
 
 .fl-trust-row h3 {
@@ -2243,17 +2233,18 @@ html {
 .fc-highlight-card h3 span::before {
   display: inline-block;
   margin-right: 0.45rem;
+  font-family: inherit;
   font-size: 1.2em;
   line-height: 0;
 }
 
 .fc-highlight-orange h3 span::before,
 .fc-highlight-yellow h3 span::before {
-  content: "↘";
+  content: "↘\FE0E";
 }
 
 .fc-highlight-blue h3 span::before {
-  content: "↗";
+  content: "↗\FE0E";
 }
 
 .fc-highlight-card p,
@@ -2345,11 +2336,10 @@ html {
   text-align: center;
 }
 
-.fc-partners li img {
+.fc-partners li .fi {
   display: block;
   height: 3.25rem;
   margin-bottom: 0.65rem;
-  object-fit: cover;
   width: 100%;
 }
 

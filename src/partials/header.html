@@ -128,52 +128,7 @@
                 </li>
               </ul>
 
-              <!-- Mobile language + (optional) globe -->
-              <div class="mobile-nav-options">
-                <a href="#" class="mob-lang-switcher">
-                  <img
-                    src="https://cdn.jsdelivr.net/npm/@undp/design-system/docs/images/language.svg"
-                    alt="icon-language"
-                  />
-                  {{#each langVersions}}
-                    {{#ifequal currentLang true}}{{this.name}}{{/ifequal}}
-                  {{/each}}
-                </a>
-
-              </div>
-
             </div>
-
-            <!-- ========== Mobile language list (sub view) ========== -->
-            <div class="cell mob-sub-lang">
-  <button class="back-nav">
-    <img src="https://cdn.jsdelivr.net/npm/@undp/design-system/docs/images/back.svg" alt="back button" />
-    {{buttons.back}}
-  </button>
-
-  <ul class="sub-sub-lang">
-    <li>
-      <span>{{header.language_button_label}}</span>
-      <ul role="menu">
-        {{#each langVersions}}
-          {{#ifequal this.web true}}
-            {{#unless this.currentLang}}
-              <li role="menuitem">
-                <a
-                  href="{{@root.root}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}{{/ifequal}}"
-                  lang="{{this.lang}}"
-                  hreflang="{{this.lang}}"
-                  tabindex="-1"
-                >{{this.name}}</a>
-              </li>
-            {{/unless}}
-          {{/ifequal}}
-        {{/each}}
-      </ul>
-    </li>
-  </ul>
-</div>
-
 
             <!-- ========== (Optional) Mobile mega wrapper; kept for DS JS ========== -->
             <div class="cell mobile-sub-menu">

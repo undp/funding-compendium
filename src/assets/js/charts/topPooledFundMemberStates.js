@@ -1,7 +1,7 @@
 const countries = [
   'Norway',
   'Germany',
-  'Netherlands',
+  'The Netherlands',
   'Australia',
   'United Kingdom',
   'Canada',

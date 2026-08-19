@@ -4,7 +4,7 @@
     <img class="mobile-position-center" src="{{@root.root}}assets/img/cover.jpg" alt="">
   </div>
 
-  <nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb medium-offset-1">
+  <nav aria-label="{{breadcrumbs.aria-label}}" data-viewport="true" class="breadcrumb medium-offset-1">
     <ul>
       <li><a href="{{@root.root}}index.html" aria-label="{{breadcrumbs.home}}">{{breadcrumbs.home}}</a></li>
       <li aria-current="page">{{regular-resources-page.hero.title}}</li>
@@ -24,44 +24,32 @@
   </div>
 </div>
 
-<nav class="rr-chapter-nav" aria-label="Regular resources chapters">
+<nav class="rr-chapter-nav" aria-label="{{regular-resources-page.chapter-nav.aria-label}}">
   <div class="grid-container rr-chapter-nav__inner">
-    <a href="#rr-allocation">Programme allocation</a>
-    <a href="#rr-country-focus">Country priorities</a>
-    <a href="#rr-regions">Regional share</a>
-    <a href="#rr-budget">Institutional budget</a>
-    <a href="#rr-contributors">Core contributors</a>
-    <a href="#rr-pledges">Multi-year pledges</a>
-    <a href="#rr-map">Contributor map</a>
-    <a href="#rr-gloc">GLOC contributors</a>
+    <a href="#rr-allocation">{{regular-resources-page.chapter-nav.allocation}}</a>
+    <a href="#rr-country-focus">{{regular-resources-page.chapter-nav.country-focus}}</a>
+    <a href="#rr-regions">{{regular-resources-page.chapter-nav.regions}}</a>
+    <a href="#rr-budget">{{regular-resources-page.chapter-nav.budget}}</a>
+    <a href="#rr-contributors">{{regular-resources-page.chapter-nav.contributors}}</a>
+    <a href="#rr-pledges">{{regular-resources-page.chapter-nav.pledges}}</a>
+    <a href="#rr-map">{{regular-resources-page.chapter-nav.map}}</a>
+    <a href="#rr-gloc">{{regular-resources-page.chapter-nav.gloc}}</a>
   </div>
 </nav>
 
 <main class="rr-modern">
-  <aside class="rr-signal-strip" aria-label="Regular resources highlights" data-rr-reveal>
+  <aside class="rr-signal-strip" aria-label="{{regular-resources-page.highlights.aria-label}}" data-rr-reveal>
     <div class="grid-container">
       <div class="rr-signal-grid">
-        <div class="stats-card medium full-width accent-blue rr-stat-card">
-          <div><div><h2>83%</h2></div></div>
+        {{#each regular-resources-page.highlights.items}}
+        <div class="stats-card medium full-width {{this.accent}} rr-stat-card">
+          <div><div><h2>{{this.value}}</h2></div></div>
           <div>
-            <h4>Least developed countries</h4>
-            <p>Share of core resources allocated where development needs are greatest.</p>
+            <h4>{{this.title}}</h4>
+            <p>{{this.copy}}</p>
           </div>
         </div>
-        <div class="stats-card medium full-width accent-green rr-stat-card">
-          <div><div><h2>77%</h2></div></div>
-          <div>
-            <h4>Low-income countries</h4>
-            <p>Share of core resources allocated to low-income countries.</p>
-          </div>
-        </div>
-        <div class="stats-card medium full-width accent-red rr-stat-card">
-          <div><div><h2>68%</h2></div></div>
-          <div>
-            <h4>Africa</h4>
-            <p>Share of programmatic resources allocated across the region.</p>
-          </div>
-        </div>
+        {{/each}}
       </div>
     </div>
   </aside>

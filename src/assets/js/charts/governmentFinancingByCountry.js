@@ -3,8 +3,8 @@ const countries = [
   'Honduras', 'Dominica', 'Haiti', 'Saudi Arabia', 'Cuba', 'Uruguay',
   'Angola', 'Egypt', 'Turkmenistan', 'Morocco', 'Serbia', 'Montenegro',
   'Indonesia', 'India', 'Dominican Republic', 'Paraguay', 'Türkiye',
-  'Bolivia, Plurinational State of', 'Ethiopia', 'Zambia',
-  'Republic of Cameroon', 'Kazakhstan', 'Peru', 'Chile'
+  'Bolivia', 'Ethiopia', 'Zambia',
+  'Cameroon', 'Kazakhstan', 'Peru', 'Chile'
 ];
 
 const values = [

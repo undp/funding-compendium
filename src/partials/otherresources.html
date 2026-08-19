@@ -4,7 +4,7 @@
     <img class="mobile-position-center" src="{{@root.root}}assets/img/cover.jpg" alt="">
   </div>
 
-  <nav aria-label="breadcrumbs" data-viewport="true" class="breadcrumb medium-offset-1">
+  <nav aria-label="{{breadcrumbs.aria-label}}" data-viewport="true" class="breadcrumb medium-offset-1">
     <ul>
       <li><a href="{{@root.root}}index.html" aria-label="{{breadcrumbs.home}}">{{breadcrumbs.home}}</a></li>
       <li aria-current="page">{{other-resources-page.hero.title}}</li>
@@ -23,18 +23,18 @@
   </div>
 </div>
 
-<nav class="or-chapter-nav" aria-label="Other resources and partnerships chapters">
+<nav class="or-chapter-nav" aria-label="{{other-resources-page.chapter-nav.aria-label}}">
   <div class="grid-container or-chapter-nav__inner">
-    <a href="#or-overview">Overview</a>
-    <a href="#or-thematic">Thematic funds</a>
-    <a href="#or-pooled">UN pooled funds</a>
-    <a href="#or-government">Government financing</a>
-    <a href="#or-vertical">Vertical funds</a>
-    <a href="#or-cost-sharing">Third-party cost-sharing</a>
-    <a href="#or-institutions">Financing institutions</a>
-    <a href="#or-private-sector">Private sector</a>
-    <a href="#or-un-system">UN system support</a>
-    <a href="#or-annual-contributions">Annual tables</a>
+    <a href="#or-overview">{{other-resources-page.chapter-nav.overview}}</a>
+    <a href="#or-thematic">{{other-resources-page.chapter-nav.thematic}}</a>
+    <a href="#or-pooled">{{other-resources-page.chapter-nav.pooled}}</a>
+    <a href="#or-government">{{other-resources-page.chapter-nav.government}}</a>
+    <a href="#or-vertical">{{other-resources-page.chapter-nav.vertical}}</a>
+    <a href="#or-cost-sharing">{{other-resources-page.chapter-nav.cost-sharing}}</a>
+    <a href="#or-institutions">{{other-resources-page.chapter-nav.institutions}}</a>
+    <a href="#or-private-sector">{{other-resources-page.chapter-nav.private-sector}}</a>
+    <a href="#or-un-system">{{other-resources-page.chapter-nav.un-system}}</a>
+    <a href="#or-annual-contributions">{{other-resources-page.chapter-nav.annual-contributions}}</a>
   </div>
 </nav>
 
@@ -280,7 +280,7 @@
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
             <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.unv.logo}}}"
-              alt="UN Volunteers logo">
+              alt="{{un-system-support.unds.unv.alt}}">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
@@ -295,7 +295,7 @@
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
             <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.uncdf.logo}}}"
-              alt="UNCDF logo">
+              alt="{{un-system-support.unds.uncdf.alt}}">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
@@ -310,7 +310,7 @@
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
             <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.unossc.logo}}}"
-              alt="UNOSSC logo">
+              alt="{{un-system-support.unds.unossc.alt}}">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
@@ -325,7 +325,7 @@
           <!-- Logo -->
           <div class="cell small-12 medium-shrink small-text-center medium-text-left">
             <img class="highlight-logo" src="{{@root.root}}assets/img/logos/{{{un-system-support.unds.mptf.logo}}}"
-              alt="MPTF logo">
+              alt="{{un-system-support.unds.mptf.alt}}">
           </div>
           <!-- Text -->
           <div class="cell small-12 medium-auto small-text-center medium-text-left">
@@ -355,60 +355,50 @@
 <section class="section or-section or-reference-section" id="or-annual-contributions">
   <div class="grid-container section padded" data-or-reveal>
     <header class="or-reference-header">
-      <h2 class="or-section-title">Annual contributions to UNDP from Member States</h2>
-      <h3>Annual contributions to UNDP from Member States, 2025 ($)</h3>
+      <h2 class="or-section-title">{{other-resources-page.annual-contributions.heading}}</h2>
     </header>
 
     <aside class="or-notes-panel" aria-labelledby="or-member-state-notes">
-      <h4 id="or-member-state-notes">Notes</h4>
+      <h4 id="or-member-state-notes">{{other-resources-page.annual-contributions.notes-heading}}</h4>
       <ul>
-        <li>*All references to Kosovo in this table should be understood in the context of United Nations Security Council resolution 1244 (1999).</li>
-        <li><span class="or-note-marker">a/</span> For Fund 00001 only. Excludes amounts totalling $991,411 for which the donor is not identified.</li>
-        <li><span class="or-note-marker">b/</span> Includes South–South contributions from China ($18,635,831), Colombia ($100,000) and Saudi Arabia ($900,000).</li>
-        <li><span class="or-note-marker">c/</span> Amounts exclude accounting linkages.</li>
-        <li><span class="or-note-marker">d/</span> Montserrat is a programme country managed by the Barbados office.</li>
-        <li><span class="or-note-marker">e/</span> Includes JPOs, management service agreements (MSAs) and development service agreements.</li>
+        {{#each other-resources-page.annual-contributions.member-state-notes}}
+        <li><sup class="or-note-marker">{{this.marker}}</sup> {{this.copy}}</li>
+        {{/each}}
       </ul>
-      <p class="or-reference-source"><strong>Source:</strong> Appendix VII to Annex I to DP/2023/26 Table 4.</p>
+      <p class="or-reference-source"><strong>{{other-resources-page.annual-contributions.source-label}}</strong> {{other-resources-page.annual-contributions.source}}</p>
     </aside>
 
     <div class="or-table-block">
-      <h3>Contributions to UNDP from non-government partner groups, 2025 ($)</h3>
-      <div class="or-table-scroll" tabindex="0" role="region" aria-label="Contributions from non-government partner groups table">
+      <h3>{{other-resources-page.annual-contributions.table-heading}}</h3>
+      <div class="or-table-scroll" tabindex="0" role="region" aria-label="{{other-resources-page.annual-contributions.table-aria-label}}">
         <table class="or-contributions-table">
           <thead>
             <tr>
-              <th scope="col">Non-government partner group</th>
-              <th scope="col">Regular</th>
-              <th scope="col">Other</th>
-              <th scope="col">Total</th>
+              <th scope="col">{{other-resources-page.annual-contributions.columns.partner}}</th>
+              <th scope="col">{{other-resources-page.annual-contributions.columns.regular}}</th>
+              <th scope="col">{{other-resources-page.annual-contributions.columns.other}}</th>
+              <th scope="col">{{other-resources-page.annual-contributions.columns.total}}</th>
             </tr>
           </thead>
           <tbody>
-            <tr><th scope="row">European Union</th><td></td><td>304,944,809</td><td></td></tr>
-            <tr><th scope="row">Financial institutions <span class="or-note-marker">/a</span></th><td></td><td>98,363,895</td><td></td></tr>
-            <tr><th scope="row">Other multilaterals</th><td></td><td>11,019,073</td><td></td></tr>
-            <tr><th scope="row">Private companies</th><td></td><td>39,816,444</td><td></td></tr>
-            <tr><th scope="row">Foundations</th><td></td><td>28,967,314</td><td></td></tr>
-            <tr><th scope="row">NGOs</th><td></td><td>19,918,648</td><td></td></tr>
-            <tr><th scope="row">Academic, training and research institutions</th><td></td><td>728,344</td><td></td></tr>
-            <tr><th scope="row">UN agencies</th><td></td><td>69,396,342</td><td></td></tr>
-            <tr><th scope="row">UN pooled funds</th><td></td><td>233,741,124</td><td></td></tr>
-            <tr><th scope="row">Vertical funds</th><td></td><td>825,262,999</td><td></td></tr>
-            <tr class="or-table-subtotal"><th scope="row">Total non-government partner groups</th><td></td><td>1,632,158,992</td><td></td></tr>
+            {{#each other-resources-page.annual-contributions.rows}}
+            <tr><th scope="row">{{this.partner}}{{#if this.marker}} <sup class="or-note-marker">{{this.marker}}</sup>{{/if}}</th><td>{{this.regular}}</td><td>{{this.other}}</td><td>{{this.total}}</td></tr>
+            {{/each}}
+            <tr class="or-table-subtotal"><th scope="row">{{other-resources-page.annual-contributions.subtotal.partner}}</th><td>{{other-resources-page.annual-contributions.subtotal.regular}}</td><td>{{other-resources-page.annual-contributions.subtotal.other}}</td><td>{{other-resources-page.annual-contributions.subtotal.total}}</td></tr>
             <tr class="or-table-total">
-              <th scope="row">2025 contributions total <span class="or-note-marker">/b</span></th>
-              <td>442 million</td>
-              <td>4,344 million</td>
-              <td>4,925 million</td>
+              <th scope="row">{{other-resources-page.annual-contributions.total-row.partner}} <sup class="or-note-marker">{{other-resources-page.annual-contributions.total-row.marker}}</sup></th>
+              <td>{{other-resources-page.annual-contributions.total-row.regular}}</td>
+              <td>{{other-resources-page.annual-contributions.total-row.other}}</td>
+              <td>{{other-resources-page.annual-contributions.total-row.total}}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="or-table-notes">
-        <p><span class="or-note-marker">a/</span> Reflects direct grants received by UNDP; excludes loans extended to programme country governments and received by UNDP as government financing, and grants received from the German Development Bank (KfW), which are reported under Germany.</p>
-        <p><span class="or-note-marker">b/</span> Amounts are rounded to the nearest million. Includes core contributions for 2024 received in 2025 and core contributions for 2026 received in 2025.</p>
+        {{#each other-resources-page.annual-contributions.table-notes}}
+        <p><sup class="or-note-marker">{{this.marker}}</sup> {{this.copy}}</p>
+        {{/each}}
       </div>
     </div>
   </div>

@@ -1,8 +1,14 @@
 ---
+# =============================================================================
+# GLOBAL SETTINGS AND SHARED INTERFACE COPY
+# =============================================================================
+
 lang: en
 language: English
 cdn: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.4.5/
 gtm: GTM-NDW6MV6
+
+# Metadata and primary navigation
 meta:
   title: Funding Compendium 2025 | UNDP
   image: social-thumbnail.jpg
@@ -10,26 +16,6 @@ menu:
   what-do: Funding landscape
   how-work: Regular resources
   investing: Other resources & Partnerships
-langVersions:
-- name: English
-  lang: en
-  currentLang: true
-  web: true
-- name: Español
-  lang: es
-  web: true
-- name: Français
-  lang: fr
-  web: true
-- name: Русский
-  lang: ru
-  web: false
-- name: 中文
-  lang: zh
-  web: false
-- name: العربية
-  lang: ar
-  web: false
 buttons:
   read-more: Read more
   read-less: Show less
@@ -37,11 +23,12 @@ buttons:
   learn: Learn more
   close: Close
 breadcrumbs:
+  aria-label: Breadcrumbs
   home: Home
-footer:
-  name: 'United Nations <br> Development Programme
 
-'
+# Shared footer and header
+footer:
+  name: United Nations <br> Development Programme
   copyright: "© 2025 United Nations Development Programme"
   terms: Terms of Use
   terms-link: https://www.undp.org/copyright-terms-use
@@ -51,23 +38,23 @@ footer:
   twitter-x: https://x.com/UNDP
   youtube: https://www.youtube.com/user/UNDP
 header:
-  title: 'Funding  <br> Compendium  <br> 2025
-
-'
+  title: Funding <br> Compendium <br> 2025
   language_button_label: Select Language
   menu_icon_label: Toggle Navigation Menu
   nav_toggle: Menu
+# =============================================================================
+# HOMEPAGE
+# =============================================================================
+
 homepage:
+  # Hero
   hero:
-    title: 'Funding  Compendium  2025
-
-'
-    subtitle: 'Investing in a stable and sustainable future
-
-'
+    title: Funding Compendium 2025
+    subtitle: Investing in a stable and sustainable future
+  # Report navigation cards
   explore:
     heading: Explore the report
-    intro: This Compendium presents UNDP’s annual contributions from our partners and how we turn that trust into impact worldwide.
+    intro: The Funding Compendium presents UNDP’s annual contributions from our partners and how we turn that trust into impact worldwide.
     cards:
       landscape:
         heading: Funding landscape
@@ -81,6 +68,7 @@ homepage:
         heading: Other resources<br>&amp; partnerships
         copy: Earmarked funding windows and partnerships that support our work worldwide.
         link-label: Learn more
+  # Financial highlights
   financial-highlights:
     heading: 2025 Financial Highlights
     cards:
@@ -95,56 +83,75 @@ homepage:
       government:
         overline: 17% increase in
         heading: government development financing
-        copy: Contributions from government financing increased to $1.4 billion in 2025, up from $1.2 billion in 2024 and representing 28% of total resources.
+        copy: Contributions from government financing increased to $1.4 billion in 2025, down from $1.2 billion in 2024 and representing 28% of total resources.
+  # Partner highlights and flags
   partner-highlights:
     multi-year:
-      overline: 10 partners* contributed to
-      heading: regular resources with multi-year pledges
-      note: '*Australia had a multi-year agreement in 2025 but did not contribute to core.'
+      overline: 10 partners* had
+      heading: >
+        multi-year pledges to contribute <br> to regular resources
       partners:
-        - Belgium
-        - Canada
-        - Denmark
-        - Luxembourg
-        - Ireland
-        - Netherlands
-        - New Zealand
-        - Qatar
-        - Sweden
-        - Türkiye
+        - name: Belgium
+          code: be
+        - name: Canada
+          code: ca
+        - name: Denmark
+          code: dk
+        - name: Luxembourg
+          code: lu
+        - name: Ireland
+          code: ie
+        - name: The Netherlands
+          code: nl
+        - name: New Zealand
+          code: nz
+        - name: Qatar
+          code: qa
+        - name: Sweden
+          code: se
+        - name: Türkiye
+          code: tr
     increased:
       overline: 4 partners increased their
       heading: contributions to regular resources
       partners:
-        - Spain
-        - Luxembourg
-        - Belgium
-        - Austria
+        - name: Spain
+          code: es
+        - name: Luxembourg
+          code: lu
+        - name: Belgium
+          code: be
+        - name: Austria
+          code: at
+  # Foreword: copy-part2 is the collapsible content
   foreword:
     overline: Foreword
-    headline: Investing in a stable and sustainable future
+    headline: Sustaining Trust in an Era of Uncertainty
     subhead:
-    copy-part1: "<p>For 60 years, countries and communities have actively sought out the United Nations Development Programme’s (UNDP) support to turn ambition into reality, risk into resilience, build prosperity, protect the planet, and prevent crises.</p> <p>This Funding Compendium provides an overview of the financing UNDP uses to do that work. It also demonstrates the remarkable returns donors achieve on their investments and highlights where additional support can multiply that impact.</p> <p>When we strengthen democratic institutions, we reduce the likelihood of political upheaval. When we support economic opportunities in fragile communities, we reduce the lure of extremism. Our climate disaster preparedness prevents humanitarian catastrophes that could potentially displace millions of people. Restoring basic services after conflict creates conditions for lasting peace rather than renewed violence. In essence, UNDP helps to ‘de-risk’ the world’s political, social, and financial operating environment.</p>\n"
+    copy-part1: |
+      <p>Stability is the result of continuous work: institutions that hold together instead of collapsing under pressure, economies that keep functioning through crisis instead of stalling, essential services that keep reaching people even as conflict disrupts everything around them. In 2025, that was UNDP’s work across 170 countries and territories, and it is the strongest case for backing UNDP.</p>
+      <p>Trust is what makes that work possible, and governments and communities have placed it in UNDP for more than six decades. Flexible, predictable and long-term financing allows that work to continue, giving countries the tools to address interconnected challenges while building resilience for tomorrow.</p>
+      <p>That trust is being tested in a harder environment. Official development assistance fell by 23.1 per cent in 2025, and contributions to the United Nations development system dropped sharply, including a 27 per cent cut to system-wide regular resources, the largest annual decline on record. Conflicts are proliferating faster than diplomacy can resolve them, climate shocks are arriving more often and costing more, and hard-won development gains are eroding. Expectations of UNDP have never been greater. The resources to meet them have rarely been tighter.</p>
     copy-part2: |
-      <p>As part of the United Nations family and with our partners, UNDP continues to deliver measurable results where they matter most. We have enabled over 800 million registered voters to participate in 57 elections across 43 countries since 2022, protecting democracy at a time when it is under siege globally. In the same period, we have supported governments to reach more than 100 million people with essential services like electricity and water, and helped over 19 million displaced people regain livelihoods and access justice. More than half of the UNDP’s total annual budget is allocated to fragile and crisis settings as we stay and deliver in some of the world’s most challenging contexts: Afghanistan, Gaza, Haiti, Myanmar, Sudan, Ukraine, when others cannot.</p>
-      <p>It proves how development cooperation works, delivering extraordinary results over the past six decades. Extreme poverty rates are at historic lows, life expectancy is at record highs, and nearly 70 percent of people are now connected online. These achievements represent not just major leaps forward in human development, but the kind of structural stability that prevents local problems from escalating into global crises.</p>
-      <p>Drawing on six decades of experience, UNDP’s next Strategic Plan 2026-29 focuses on four objectives: prosperity for all, effective governance, crisis resilience, and planetary health. The objectives will be accelerated by digital and AI transformation, gender equality, and sustainable finance.</p>
-      <p>At a time when cuts in Official Development Assistance (ODA) are undermining our collective ability to respond, UNDP is delivering exceptional value. We transformed $581 million in core funding and fuelled $4.8 billion in life-changing development outcomes in 2024.</p>
-      <p>For every $1 of core funding, UNDP has unlocked $7 in additional resources for countries and catalysed nearly $60 in public and private investments in the Sustainable Development Goals (SDGs), including key areas like tackling poverty, enhancing climate action, and advancing gender equality. But we face unprecedented challenges: rising inequality, record levels of conflict, accelerating climate impacts, and mounting economic pressures. These interconnected crises will cost far more to fix later than to prevent now.</p>
-      <p>We are grateful to our partners who sustained their investment in UNDP throughout 2024, particularly the 10 core contributors who increased their support during this challenging period and those who make multi-year commitments, which give us the certainty for planning.</p>
-      <p>Additional investment will give much more in terms of the outcomes needed. We ask our partners to continue - and increase - their investment in UNDP. Without UNDP’s continued presence and resources, the stability we have helped build over six decades will be at serious risk. The world’s most vulnerable people and places depend on our collective resolve.</p>
-    photo-credit: 'Photo: Fouad Juez
-
-'
+      <p>UNDP has not been immune to the downturn. In 2025, our core (regular) resources fell by 24 per cent to $442 million, just 9 per cent of total contributions and the lowest share in more than fifteen years. Funding has also fragmented, shortened and narrowed, precisely when countries need integrated, long-term solutions. Flexible resources remain essential, allowing UNDP to act early, operate in the most difficult environments, and combine expertise across sectors in ways that narrowly earmarked funding cannot.</p>
+      <p>Our new Strategic Plan 2026–2029 responds to this changing world. It places prevention and resilience at the centre of development, accelerated by digital and AI transformation, gender equality and sustainable finance. At the same time, UNDP is strengthening its own efficiency, optimizing its operating model and protecting the institutional capabilities that countries rely on.</p>
+      <p>UNDP delivered results at scale in 2025, reaching 1.1 billion people across 170 countries and territories. More than half of our expenditure, $2.67 billion, were directed to crisis and fragile settings, including Afghanistan, Gaza, Haiti, Myanmar, Sudan, and Ukraine. We earned our twentieth consecutive clean audit opinion and directed 91 cents of every programmatic dollar to development activities.</p>
+      <p>Every $1 of core funding unlocked $10 in additional resources, and UNDP has helped countries align and leverage $920 billion in public and private finance for the Sustainable Development Goals since 2022. Investing in UNDP means strengthening national institutions and multiplying resources for sustainable development.</p>
+      <p>We are grateful to the partners who maintained or increased their core contributions during a period of significant fiscal constraint, particularly the Governments of Austria, Belgium, Luxembourg and Spain. We are grateful in equal measure to the ten partners whose multi-year commitments give UNDP greater predictability: Belgium, Canada, Denmark, Ireland, Luxembourg, the Kingdom of the Netherlands, New Zealand, Qatar, Sweden and Türkiye. The continued growth of Government Development Finance, through which programme countries invest their own resources in partnership with UNDP, is one of the strongest expressions of confidence in our work.</p>
+      <p>The challenges before us cannot be addressed by any institution acting alone. Reversing current funding trends will require renewed commitment to predictable, flexible, multi-year financing; broader engagement from traditional and emerging partners; and sustained investment by programme countries themselves. Without it, six decades of development progress begins to reverse, and the countries least able to absorb further shocks will feel it first. That investment strengthens the capacity of UNDP and the wider multilateral system to support countries in navigating an increasingly uncertain world.</p>
+      <p>As you explore this year’s Funding Compendium, I hope it leaves you in no doubt that every contribution entrusted to UNDP delivers measurable results, creates value far beyond its initial investment, and helps build a more resilient, prosperous and sustainable future for all.</p>
+    photo-credit: 'Photo: Fouad Juez'
+    photo-alt: Susan Brown
     name: Susan Brown
-    position-title: 'Assistant Secretary-General and Assistant Administrator <br> Bureau of External Relations and Advocacy <br> United Nations Development Programme
-
-'
+    position-title: Assistant Secretary-General and Assistant Administrator <br> Bureau of External Relations and Advocacy <br> United Nations Development Programme
+  # Executive summary
   exec-summary:
     headline: Executive Summary
     copy: "<p>The Funding Compendium presents the annual contributions received by UNDP from its funding partners through various channels. These include regular (core) resources and other resources and range from softly earmarked thematic funds to tightly earmarked funds for specific programmes or projects.</p> <p>The year 2025 tested UNDP’s agility, resilience and ability to respond to complexity. During the global decline in official development assistance (ODA) in 2025, UNDP’s annual contributions from its partners remained broadly stable at $5 billion, a 2 percent increase compared to 2024. However, despite this overall stability, the quality of funding continued to deteriorate. In 2025, regular resources declined to $442 million, down by 24 percent from $581 million in 2024.</p> <p>Despite the record-low level of regular resources received in 2025, UNDP delivered $4.9 billion in programme expenditure, allocated 91 cents of every programmatic dollar to development activities and continued to demonstrate the catalytic value of regular resources by mobilizing approximately $10 in other resources for every $1 of core funding.</p> <p>The declining trend in regular resources increasingly constrains UNDP’s ability to adequately support country programming, respond to crises, invest in innovation and maintain the institutional capabilities that underpin integrated development solutions.</p>\n"
+  # Transparency heading
   transparency:
     headline: Commitment to transparency and accountability
+  # Case for regular resources cards
   action:
     swiper:
       flexible-foundation:
@@ -152,9 +159,7 @@ homepage:
         body: Core funding provides UNDP with flexible, predictable resources that enable it to respond rapidly to emerging challenges while maintaining a focus on long-term development goals in 170 countries and territories.
       reaching-most-in-need:
         title: Reaching those most in need
-        body: '"The lion''s share of the core programme budget is channelled through country programmes. In 2022–2025, over 80 percent of these resources (TRAC-1, TRAC-2 and TRAC-3) were allocated to least developed countries, and over 70 percent to low-income countries, prioritizing the "last mile"—the poorest and most excluded populations."
-
-'
+        body: '"The lion''s share of the core programme budget is channelled through country programmes. In 2022–2025, over 80 percent of these resources (TRAC-1, TRAC-2 and TRAC-3) were allocated to least developed countries, and over 70 percent to low-income countries, prioritizing the "last mile"—the poorest and most excluded populations."'
       multiplier-effect:
         title: Multiplier effect
         body: Core funding acts as a catalyst for additional investment. A programme established with core resources as seed funding can subsequently scale up by mobilizing other resources. In 2025, $1 of regular resources mobilized an additional $10 in other resources. In Gaza, core funding enabled UNDP to remove 225,000 tonnes of debris for 1.3 million people.
@@ -175,20 +180,22 @@ homepage:
         body: As the largest UN provider of climate assistance, UNDP helps nations strengthen their environmental commitments, secure vital financing and implement equitable energy transitions. Initially launched with core resources, UNDP's Climate Promise has grown to support 90 percent of developing countries in designing and implementing ambitious Nationally Determined Contributions.
       operational-excellence:
         title: Operational excellence
-        body: Core funding maintains UNDP's global infrastructure and quality standards, supporting independent oversight functions, including evaluation, ethics and development effectiveness. In 2024, UNDP received its 19th consecutive clean audit from the UN Board of Auditors, having stewarded over $100 billion in total revenue over 20 years while maintaining the highest standards of accountability and transparency.
+        body: Core funding maintains UNDP's global infrastructure and quality standards, supporting independent oversight functions, including evaluation, ethics and development effectiveness. In 2024, UNDP received its 20th consecutive clean audit from the UN Board of Auditors, having stewarded over $100 billion in total revenue over 20 years while maintaining the highest standards of accountability and transparency.
       efficiency-un-system:
         title: Efficiency across the UN system
         body: Core resources also drive greater efficiency and improve coordination across the entire UN system. UNDP is the single largest contributor to the UN Resident Coordinator System. It delivers dependable services to over 70 UN entities and manages 136 UN common premises globally, providing common services at the country level.
       trust-transformation:
         title: Trust and transformation
         body: By investing in core funding, partners support a model that promotes national agency, reduces dependency and creates lasting, transformative change.
+# =============================================================================
+# UNITED NATIONS SYSTEM SUPPORT
+# =============================================================================
+
 un-system-support:
   unds:
     heading: Support to United Nations system programmes, offices and initiatives
     copy:
-      para1: 'In 2025, UNDP continued to serve as the institutional platform for four UN entities, delivering critical services across the UN system.
-
-'
+      para1: In 2025, UNDP continued to serve as the institutional platform for four UN entities, delivering critical services across the UN system.
       para2: "<strong>Support to United Nations organizations: </strong> UNDP continued to be the operational backbone of the UN system in 2025. It disbursed $2.3 billion in 109 currencies through its payroll system, 54 percent of which was on behalf of partner UN organizations. UNDP supported $3.2 billion in financial transactions for 70 UN entities and other agencies in 170 countries. In addition, UNDP provided common premises for other agencies in 130 countries, enabling them to access common services, including travel management. \n"
     unv:
       logo: unv.png
@@ -211,22 +218,85 @@ un-system-support:
       title: 'UN Office for South–South Cooperation '
       copy: In 2025, the <strong>UN Office for South–South Cooperation</strong> supported 41 UN resolutions and decisions that incorporated South–South and triangular cooperation modalities. It also facilitated the implementation of South–South and triangular cooperation trust fund projects across 50 developing countries.
 
+# =============================================================================
+# FUNDING LANDSCAPE PAGE
+# =============================================================================
+
 landscape-page:
+  # Page hero
   hero:
     overline: UNDP Funding Compendium 2025
     title: Funding landscape
+  chapter-nav:
+    aria-label: Funding landscape chapters
+    foreword: Foreword
+    summary: Executive Summary
+    transparency: Transparency
+    funding-types: Funding types
+    partners: Funding partners
+    channels: Funding channels
+  summary-tabs:
+    total:
+      label: total annual contributions<sup>1</sup> to UNDP
+      marker: 1
+      amount: $5
+      unit: billion
+      caption: in annual contributions in 2025
+      change: ↑2%
+      comparison: up from $4.9 billion in 2024
+      breakdown-label: Of this total
+      breakdown:
+        - percent: 36%
+          title: Donor country<br>governments
+          value: $1.8 billion
+        - percent: 32%
+          title: Multilateral<br>partners
+          value: $1.6 billion
+        - percent: 32%
+          title: Programme country<br>governments
+          value: $1.6 billion
+      footnote: In 2019, UNDP refined its accounting policy on IPSAS 23 (non-exchange) revenues. Under this policy, UNDP records the full value of funding agreements when they are signed, even when cash has not been received for the majority of contribution agreements. Any uncollected cash associated with funding agreements is held as a receivable. Under UNDP financial regulations and rules, UNDP is permitted to spend only up to the amount of cash received. In this document, where applicable, “annual contributions” are therefore aligned with past revenue recognition policies for contributions (i.e., cash received in a reporting year, plus receivables due in a reporting year).
+    regular:
+      label: regular resources
+      amount: $442
+      unit: million
+      caption: in regular resources in 2025
+      change: ↓24%
+      comparison: down from $581 million in 2024
+      breakdown-label: Regular resources
+      breakdown:
+        - percent: 9%
+          title: share of total<br>annual contributions
+          value: down from 12% in 2024
+        - percent: 30%
+          title: Funding Compact<br>target
+          value: current share remains below target
+        - percent: 37%
+          title: of regular resources were<br>multi-year commitments
+          value: $165 million · down from 40%
+    other:
+      label: other resources
+      amount: $4.6
+      unit: billion
+      caption: in other resources in 2025
+      change: ↑6%
+      comparison: up from $4.3 billion in 2024
+  # Transparency and accountability
   transparency:
+    aria-label: Transparency commitments
     longstanding:
       heading: A long-standing commitment to transparency
       copy: |-
         <p>As a member of the International Aid Transparency Initiative (IATI) since its creation in 2008, UNDP has led outreach efforts with partner countries and UN agencies to champion the aid transparency standard and make it relevant for national development planning, public financial management and mutual accountability of aid, development and humanitarian funding. UNDP ranked <strong>sixth overall</strong> in the <a href="https://www.publishwhatyoufund.org/the-index/2024/" target="_blank">2024 Aid Transparency Index</a> and was the <strong>second most transparent UN agency</strong>.</p>
+        <br>
         <p>UNDP’s <a href="https://open.undp.org/" target="_blank">Transparency Portal</a> allows open, comprehensive public access to data on over 4,000 UNDP projects, with links to profile pages for every donor. The portal also shows UNDP’s contribution to the SDGs and offers an online training platform on the IATI Standard.</p>
     un-system:
       heading: Promoting transparency across the UN system
       copy: 'UNDP actively participated in defining and implementing a set of <a href="https://unsdg.un.org/sites/default/files/2022-04/UN_DataStandards_Digital_March2022.pdf" target="_blank">UN data standards</a> for system-wide financial reporting.'
     audit:
       heading: Audit reports
-      copy: 'UNDP has been <a href="https://www.undp.org/content/undp/en/home/accountability/audit/disclosure-of-internal-audit-reports.html" target="_blank">publishing audit reports</a> issued by the Office of Audit and Investigations since 2012, and has obtained its 19th consecutive unqualified (clean) audit from the UN Board of Auditors.'
+      copy: 'UNDP has been <a href="https://www.undp.org/content/undp/en/home/accountability/audit/disclosure-of-internal-audit-reports.html" target="_blank">publishing audit reports</a> issued by the Office of Audit and Investigations since 2012, and has obtained its 20th consecutive unqualified (clean) audit from the UN Board of Auditors.'
+  # Resources by funding type
   funding-type:
     heading: Resources by funding type
     subheading: Regular and other resources, 2025
@@ -237,12 +307,14 @@ landscape-page:
     core-copy: Regular resources are critical to UNDP's ability to prioritize countries' needs, respond swiftly in crises and maintain high standards of accountability and transparency. They also allow UNDP to sustain country presence and upstream policy expertise that other types of funding cannot support. Regular resources also carry strong catalytic value, mobilizing additional resources for development. Insufficient regular resources would therefore severely compromise UNDP's unique ability to respond rapidly to emergencies and address critical needs that other funding sources do not cover. The continued decline in regular resources also has serious implications for UNDP's ability to deliver the intended results of the Strategic Plan, restore and accelerate progress towards the SDGs and maintain robust oversight and accountability systems.
     trends-heading: Trends in regular and other resources, 2022–2025
     trends-copy: UNDP maintained broadly stable annual contributions throughout the period covered by the 2022–2025 Strategic Plan, averaging approximately $4.9 billion per year. Annual contributions reached a peak of $5.0 billion in both 2023 and 2025.
+  # Resources by funding partner
   funding-partner:
     heading: Resources by funding partner
     subheading: Regular and other resources, 2025
     copy: UNDP values all types of funding received from its partners—including Member States, multilateral organizations, non-governmental organizations, private and philanthropic organizations and financing institutions—as these resources enable it to deliver on its commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total, 36 percent was contributed by donor country governments, 32 percent by multilateral organizations and 32 percent by programme country governments.
     top-heading: Top 30 resource partners, 2025
     top-copy: In 2025, UNDP’s top 30 resource partners contributed $4.1 billion, or 82 percent of total annual contributions. These partners provided 89 percent of regular resources and 81 percent of other resource contributions.
+  # Resources by funding channel
   funding-channel:
     heading: Resources by funding channel
     copy: In 2025, UNDP benefited from increases in government development financing (17 percent) and third-party cost-sharing (7 percent).
@@ -274,57 +346,115 @@ landscape-page:
         heading: Reimbursable support services
         copy: Funds received for management and support services, including services provided by UN Volunteers and the Junior Professional Officer (JPO) Programme.
 
+# =============================================================================
+# REGULAR RESOURCES PAGE
+# =============================================================================
+
 regular-resources-page:
+  # Page hero
   hero:
     overline: UNDP Funding Compendium 2025
     title: Regular resources
+  chapter-nav:
+    aria-label: Regular resources chapters
+    allocation: Programme allocation
+    country-focus: Country priorities
+    regions: Regional share
+    budget: Institutional budget
+    contributors: Core contributors
+    pledges: Multi-year pledges
+    map: Contributor map
+    gloc: GLOC contributors
+  highlights:
+    aria-label: Regular resources highlights
+    items:
+      - value: 83%
+        accent: accent-blue
+        title: Least developed countries
+        copy: Share of core resources allocated where development needs are greatest.
+      - value: 77%
+        accent: accent-green
+        title: Low-income countries
+        copy: Share of core resources allocated to low-income countries.
+      - value: 68%
+        accent: accent-red
+        title: Africa
+        copy: Share of programmatic resources allocated across the region.
+  # Core-resource allocation
   allocation:
     heading: Lion’s share goes to programmes
     copy: The lion’s share of the core programme budget for 2022–2025 is channelled through country programmes.
     source: 'Source: [Add source]'
+  # Country development focus
   country-focus:
     heading: Strong support for least developed and low-income countries
-    copy: Over 80 percent of core resources are allocated to least developed countries where development needs are greatest, and over 70 percent to low-income countries.
+    copy: Over 80 percent of core resources are allocated to least developed countries where development needs are greatest, and 78 percent to low-income countries.
     development-chart: '2022–2025 distribution of regular (core) resources <strong>by development status</strong>, Core: TRAC-1, TRAC-2 and TRAC-3'
     typology-chart: '2022–2025 distribution of regular (core) resources <strong>by country typology</strong>, Core: TRAC-1, TRAC-2 and TRAC-3'
     source: 'Source: DP/2025/23 Annex 1'
+  # Regional distribution
   regions:
     heading: Africa receives the largest share
     copy: In line with development needs, the largest share of core resources is allocated to Africa, followed by Asia and the Arab States.
     chart: '2022–2025 distribution of regular (core) resources <strong>by region</strong><br>Core: TRAC-1, TRAC-2 and TRAC-3'
     source: 'Source: DP/2025/23 Annex 1'
+  # Institutional budget
   institutional-budget:
     heading: The institutional budget enables programmatic impact
     copy: UNDP’s institutional budget supports investments in institutional capacity, development effectiveness, the maintenance of the highest levels of independent oversight, transparency and accountability, and special-purpose initiatives (UNV and UNCDF).
-    source: 'Source: DP/2025/23 Table 1'
+    source: 'Source: DP/2025/23 Annex 1'
+  # Core contributors
   contributors:
     heading: Top core contributors
     copy: In 2025, UNDP received $442 million in core contributions, of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.
     footnote: '*Includes core contributions for 2024 received in 2025<br>**Includes core contributions for 2026 received in 2025'
+  # Multi-year pledges
   pledges:
     heading: 12 partners with multi-year pledges to regular resources
     copy: In 2025, UNDP received $442 million in core contributions, of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.
     image-alt: 12 partners with multi-year pledges to regular resources
+  # Contributor map
   map:
     heading: Contributors to regular resources, 2025
     source: 'Source: DP/2025/23 Table 1'
+  # Government contributions to local office costs
   gloc:
     heading: Government contributions to local office costs
     copy: Annual government contributions to local office costs (GLOC) are an important source of revenue and take the form of cash or in-kind contributions from host governments. In low- and middle-income countries, $39 million was received in 2025 ($29 million in 2024), consisting of $31 million in cash contributions and $8 million of in-kind contributions for premises and utilities.
 
+# =============================================================================
+# OTHER RESOURCES AND PARTNERSHIPS PAGE
+# =============================================================================
+
 other-resources-page:
+  # Page hero
   hero:
     overline: UNDP Funding Compendium 2025
     title: Other resources and partnerships
+  chapter-nav:
+    aria-label: Other resources and partnerships chapters
+    overview: Overview
+    thematic: Thematic funds
+    pooled: UN pooled funds
+    government: Government financing
+    vertical: Vertical funds
+    cost-sharing: Third-party cost-sharing
+    institutions: Financing institutions
+    private-sector: Private sector
+    un-system: UN system support
+    annual-contributions: Annual tables
+  # Overview
   overview:
     copy1: Other resources are earmarked contributions that supplement regular, or core, resources. They range from softly earmarked thematic funds to tightly earmarked funds for specific programmes or projects. Other resources are channelled to UNDP through government financing, thematic funding windows, UN pooled funds, vertical funds or third-party cost-sharing.
     copy2: In 2025, annual contributions to other resources increased to $4.6 billion, up by 6 percent from $4.3 billion in 2024.
     contributors-chart: Top 20 other resources contributors, 2025
     recipients-chart: Top 15 recipient countries of other resources, 2025
+  # Thematic funding windows
   thematic:
     heading: Thematic funds
     copy: The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $133 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.
     chart: Funding window contributions, 2022–2025
+  # UN pooled funds
   pooled:
     heading: UN pooled funds
     copy1: A UN inter-agency pooled fund is a financing mechanism that supports a clearly defined programmatic purpose and results framework through contributions from more than one contributor. These funds enable global, regional and country-level responses to humanitarian, development, peace and transition and climate and environment-related challenges.
@@ -332,6 +462,7 @@ other-resources-page:
     top-funds-chart: Top 15 UN pooled funds received by UNDP as a participating UN organization, 2025
     member-states-chart: Top 15 Member State contributions
     trend-chart: UN pooled funding to UNDP, 2022–2025
+  # Government development financing
   government:
     heading: Government development financing
     intro: Government development financing is a voluntary funding mechanism through which programme country governments entrust their domestic resources, or loans extended by international financial institutions (IFIs), to UNDP to assist in implementing development initiatives in their respective countries.
@@ -339,21 +470,24 @@ other-resources-page:
     total-copy: Total government financing in 2025, representing 28 percent of total resources and a 17 percent increase from 2024.
     loans: $113M
     loans-copy: Financed through loans from international financial institutions.
-    country-chart: Government financing by country, 2024
+    country-chart: Government financing by country, 2025
     region-heading: Government financing by region
     region-copy: In 2025, programme countries in Latin America and the Caribbean contributed 62 percent of total government financing, followed by Africa (17 percent), Europe and the Commonwealth of Independent States (9 percent), the Arab States (8 percent), and Asia and the Pacific (4 percent).
     region-chart: Contributions to government financing, 2022–2025
+  # Vertical funds
   vertical:
     heading: Vertical funds
     copy1: Vertical funds are earmarked for a single area of development such as nature, climate, energy or health. These funds are governed by steering committees and are not directly administered by UNDP.
     copy2: In 2025, UNDP received $825 million from vertical funds, an 11 percent decrease from the $920 million received in 2024. The largest contributions came from the Global Environment Facility ($372 million), the Global Fund ($311 million) and the Green Climate Fund ($84 million).
     chart: Vertical fund contributions, 2024–2025
+  # Third-party cost-sharing and European Union
   cost-sharing:
     heading: Third-party cost-sharing
     intro: Earmarked contributions for a specific programme or project continue to make up the largest share of UNDP resources. In 2025, these contributions amounted to $1.95 billion (39 percent of total resources).
     eu-heading: Partnering with the European Union
     eu-copy: As UNDP’s third-largest donor in 2025, the European Union remains a strong partner. It contributed $313 million for UNDP programmes in Türkiye, Lebanon, Nigeria, Cyprus, Bosnia and Herzegovina, the Philippines and other countries, a 3 percent increase from the $305 million received in 2024.
     eu-chart: Contributions from the European Union, 2022–2025
+  # Financing institutions
   institutions:
     heading: Partnering with financing institutions
     copy1: UNDP’s financial and non-financial partnerships with IFIs are central to promoting $1 trillion in public expenditure and private capital investments aligned with the SDGs.
@@ -361,9 +495,71 @@ other-resources-page:
     total-chart: Total contributions by IFI, 2025
     type-chart: IFI contributions by type, 2022–2025
     recipients-chart: Top 10 recipients of IFI funding, 2025
+  # Private sector, foundations, NGOs and academia
   private-sector:
     heading: Partnering with private companies, foundations, NGOs and academic institutions
     copy1: Contributions from the private sector, foundations, non-governmental organizations and academic, training and research institutions decreased to $89 million in 2025, down by 5 percent from $94 million in 2024.
     copy2: Partnerships with the private sector accelerate progress towards the SDGs by mobilizing capital, innovation and technology. Through its Finance Moonshot, UNDP leveraged $920 billion in public and private finance for the SDGs, helping countries mobilize investment for development priorities. Through the timbuktoo initiative, a flagship partnership to mobilize capital for innovation across Africa, UNDP is working to raise $1 billion over the next decade to support 10,000 start-ups and scale 1,000 ventures to generate $10 billion and positively impact 100 million lives.
     contributors-chart: Top 10 contributors, 2025
     trend-chart: Annual contributions, 2022–2025
+  annual-contributions:
+    heading: Annual contributions to UNDP from Member States 2025
+    notes-heading: Notes
+    member-state-notes:
+      - marker: '*'
+        copy: All references to Kosovo in this table should be understood in the context of United Nations Security Council resolution 1244 (1999).
+      - marker: a
+        copy: For Fund 00001 only. Excludes amounts totalling $991,411 for which the donor is not identified.
+      - marker: b
+        copy: Includes South–South contributions from China ($18,635,831), Colombia ($100,000) and Saudi Arabia ($900,000).
+      - marker: c
+        copy: Amounts exclude accounting linkages.
+      - marker: d
+        copy: Montserrat is a programme country managed by the Barbados office.
+      - marker: e
+        copy: Includes JPOs, management service agreements (MSAs) and development service agreements.
+    source-label: 'Source:'
+    source: Appendix VII to Annex I to DP/2023/26 Table 4.
+    table-heading: Contributions to UNDP from non-government partner groups, 2025 ($)
+    table-aria-label: Contributions from non-government partner groups table
+    columns:
+      partner: Non-government partner group
+      regular: Regular
+      other: Other
+      total: Total
+    rows:
+      - partner: European Union
+        other: 304,944,809
+      - partner: Financial institutions
+        marker: a
+        other: 98,363,895
+      - partner: Other multilaterals
+        other: 11,019,073
+      - partner: Private companies
+        other: 39,816,444
+      - partner: Foundations
+        other: 28,967,314
+      - partner: NGOs
+        other: 19,918,648
+      - partner: Academic, training and research institutions
+        other: 728,344
+      - partner: UN agencies
+        other: 69,396,342
+      - partner: UN pooled funds
+        other: 233,741,124
+      - partner: Vertical funds
+        other: 825,262,999
+    subtotal:
+      partner: Total non-government partner groups
+      other: 1,632,158,992
+    total-row:
+      partner: 2025 contributions total
+      marker: b
+      regular: 442 million
+      other: 4,344 million
+      total: 4,925 million
+    table-notes:
+      - marker: a
+        copy: Reflects direct grants received by UNDP; excludes loans extended to programme country governments and received by UNDP as government financing, and grants received from the German Development Bank (KfW), which are reported under Germany.
+      - marker: b
+        copy: Amounts are rounded to the nearest million. Includes core contributions for 2024 received in 2025 and core contributions for 2026 received in 2025.

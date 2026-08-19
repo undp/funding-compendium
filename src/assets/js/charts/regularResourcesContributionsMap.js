@@ -6,10 +6,10 @@ const contributors = [
   { name: 'Sweden', value: 40911333, rank: 3 },
   { name: 'Switzerland', value: 38608749, rank: 4 },
   { name: 'Norway', value: 37343097, rank: 5 },
-  { name: 'Netherlands', value: 37037037, rank: 6 },
+  { name: 'The Netherlands', mapName: 'Netherlands', value: 37037037, rank: 6 },
   { name: 'Canada', value: 29325513, rank: 7 },
   { name: 'Denmark', value: 19104386, rank: 8 },
-  { name: 'South Korea', mapName: 'Korea', value: 15370924, rank: 9 },
+  { name: 'Republic of Korea', mapName: 'Korea', value: 15370924, rank: 9 },
   { name: 'United Kingdom', value: 14666667, rank: 10 },
   { name: 'Belgium', value: 11560694, rank: 11 },
   { name: 'Ireland', value: 8959538, rank: 12 },
@@ -21,13 +21,13 @@ const contributors = [
   { name: 'China', value: 3450000, rank: 18 },
   { name: 'Saudi Arabia', value: 2000000, rank: 19 },
   { name: 'Austria', value: 1409249, rank: 20 },
-  { name: 'Turkey', value: 1200000, rank: 21 },
+  { name: 'Türkiye', mapName: 'Turkey', value: 1200000, rank: 21 },
   { name: 'Finland', value: 1169591, rank: 22 },
   { name: 'Thailand', value: 865112, rank: 23 },
   { name: 'Kuwait', value: 570000, rank: 24 },
   { name: 'Singapore', value: 300000, rank: 25 },
   { name: 'Iceland', value: 238186, rank: 26 },
-  { name: 'Vietnam', value: 70000, rank: 27 },
+  { name: 'Viet Nam', mapName: 'Vietnam', value: 70000, rank: 27 },
   { name: 'Liechtenstein', value: 60729, rank: 28 },
   { name: 'Portugal', value: 50000, rank: 29 },
   { name: 'Cambodia', value: 10000, rank: 30 },
@@ -143,7 +143,11 @@ export function initRegularResourcesContributionsMap(el, echarts) {
             fontFamily: 'Proxima Nova, Arial, sans-serif',
             fontSize: 11,
             fontWeight: 700,
-            color: '#111'
+            color: '#111',
+            formatter: function (params) {
+              const item = contributors.find((country) => (country.mapName || country.name) === params.name);
+              return item ? item.name : params.name;
+            }
           },
           itemStyle: {
             areaColor: '#A8B819',

@@ -19,7 +19,7 @@ export function initContributionsByDonorResource(el, echarts) {
     { donor: 'Guatemala', other: 98091888, regular: 0 },
     { donor: 'Saudi Arabia', other: 92705485, regular: 2000000 },
     { donor: 'Canada', other: 58632333, regular: 29325513 },
-    { donor: 'Netherlands', other: 49744666, regular: 37037037 },
+    { donor: 'The Netherlands', other: 49744666, regular: 37037037 },
     {
       donor: 'Vertical fund – Green Climate Fund',
       other: 84422285,
@@ -75,7 +75,7 @@ export function initContributionsByDonorResource(el, echarts) {
     Guatemala: 'https://flagcdn.com/gt.svg',
     'Saudi Arabia': 'https://flagcdn.com/sa.svg',
     Canada: 'https://flagcdn.com/ca.svg',
-    Netherlands: 'https://flagcdn.com/nl.svg',
+    'The Netherlands': 'https://flagcdn.com/nl.svg',
     'United Kingdom': 'https://flagcdn.com/gb.svg',
     Brazil: 'https://flagcdn.com/br.svg',
     Colombia: 'https://flagcdn.com/co.svg',

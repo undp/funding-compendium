@@ -43,10 +43,13 @@ gulp.task('default',
   gulp.series('build', server, watch)
 );
 
-// Delete the "docs" folder
-// This happens every time a build starts
+// Clear generated output before every build. Production builds also clear the
+// published site so removed pages cannot linger in docs.
 function clean(done) {
   rimraf.sync(PATH_DIST);
+  if (PRODUCTION) {
+    rimraf.sync(PATH_PUBLISH);
+  }
   done()
 }
 

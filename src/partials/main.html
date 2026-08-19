@@ -97,11 +97,11 @@
       <div class="grid-x grid-margin-x fc-partner-grid">
         <div class="cell large-7">
           <article class="fc-partner-card fc-partner-dark">
-            <h3><span>{{homepage.partner-highlights.multi-year.overline}}</span> {{homepage.partner-highlights.multi-year.heading}}</h3>
+            <h3><span>{{homepage.partner-highlights.multi-year.overline}}</span> {{{homepage.partner-highlights.multi-year.heading}}}</h3>
             <p>{{homepage.partner-highlights.multi-year.note}}</p>
             <ul class="fc-partners" aria-label="Multi-year pledge partners">
               {{#each homepage.partner-highlights.multi-year.partners}}
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">{{this}}</li>
+              <li><span class="fi fi-{{this.code}}" aria-hidden="true"></span>{{this.name}}</li>
               {{/each}}
             </ul>
           </article>
@@ -111,7 +111,7 @@
             <h3><span>{{homepage.partner-highlights.increased.overline}}</span> {{homepage.partner-highlights.increased.heading}}</h3>
             <ul class="fc-partners fc-partners-four" aria-label="Partners that increased contributions">
               {{#each homepage.partner-highlights.increased.partners}}
-              <li><img src="{{@root.root}}assets/img/placeholder.png" alt="">{{this}}</li>
+              <li><span class="fi fi-{{this.code}}" aria-hidden="true"></span>{{this.name}}</li>
               {{/each}}
             </ul>
           </article>

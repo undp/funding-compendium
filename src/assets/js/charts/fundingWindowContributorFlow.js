@@ -143,7 +143,8 @@ export function initFundingWindowContributorFlow(el, echarts) {
         fontSize: 11,
         lineHeight: 15,
         formatter: function (params) {
-          return [GOV, NATURE, GENDER, POVERTY].includes(params.name) ? '' : params.name;
+          if ([GOV, NATURE, GENDER, POVERTY].includes(params.name)) return '';
+          return params.name;
         }
       }
     }]

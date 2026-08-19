@@ -10,7 +10,7 @@ const countries = [
   'Lebanon',
   'Democratic Republic of the Congo',
   'Yemen',
-  'Moldova, Republic of',
+  'Republic of Moldova',
   'Haiti',
   'Türkiye',
   'Zimbabwe'
