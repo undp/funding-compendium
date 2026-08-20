@@ -380,7 +380,7 @@ regular-resources-page:
         copy: Share of core resources allocated to low-income countries.
       - value: 68%
         accent: accent-red
-        title: Africa
+        title: Largest share to Africa
         copy: Share of programmatic resources allocated across the region.
   # Core-resource allocation
   allocation:

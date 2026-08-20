@@ -21,8 +21,6 @@ export function initTopGlocContributors(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     
     title: {
-      text: 'Top 10 GLOC contributors',
-      subtext: '$M',
       left: 0,
       top: 0,
       textStyle: {

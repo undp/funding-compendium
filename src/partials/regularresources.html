@@ -247,13 +247,65 @@
         <h4>{{regular-resources-page.pledges.heading}}</h4>
         <p>{{regular-resources-page.pledges.copy}}</p>
 
-        <br>
+        <div class="pledges-timeline" role="img" aria-label="{{regular-resources-page.pledges.image-alt}}">
+          <div class="pledges-timeline__years" aria-hidden="true">
+            <span></span>
+            <span>2025</span>
+            <span>2026</span>
+            <span>2027</span>
+            <span>2028</span>
+            <span>2029</span>
+          </div>
 
-        <img
-          src="{{@root.root}}assets/img/pledges.svg"
-          alt="{{regular-resources-page.pledges.image-alt}}"
-          style="display: block; width: 100%; height: auto;"
-        >
+          <div class="pledges-timeline__row" aria-label="Australia: 2025 to 2026">
+            <span class="pledges-timeline__partner">Australia <sup>*</sup></span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 2;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Belgium: 2025 to 2028">
+            <span class="pledges-timeline__partner">Belgium</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 4;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Canada: 2025">
+            <span class="pledges-timeline__partner">Canada</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 1;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Denmark: 2025">
+            <span class="pledges-timeline__partner">Denmark</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 1;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Ireland: 2025">
+            <span class="pledges-timeline__partner">Ireland</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 1;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Luxembourg: 2025 to 2029">
+            <span class="pledges-timeline__partner">Luxembourg</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 5;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="The Netherlands: 2025">
+            <span class="pledges-timeline__partner">The Netherlands</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 1;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="New Zealand: 2025 to 2027">
+            <span class="pledges-timeline__partner">New Zealand</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 3;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Qatar: 2025 to 2026">
+            <span class="pledges-timeline__partner">Qatar</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 2;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Sweden: 2025 to 2028">
+            <span class="pledges-timeline__partner">Sweden</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 4;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Switzerland: 2026 to 2028">
+            <span class="pledges-timeline__partner">Switzerland</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 2; --span: 3;"></span></span>
+          </div>
+          <div class="pledges-timeline__row" aria-label="Türkiye: 2025 to 2027">
+            <span class="pledges-timeline__partner">Türkiye</span>
+            <span class="pledges-timeline__track"><span class="pledges-timeline__period" style="--start: 1; --span: 3;"></span></span>
+          </div>
+        </div>
         <p class="chart-source">{{regular-resources-page.pledges.footnote}}</p>
 
         <div class="chart-wrapper padded">
