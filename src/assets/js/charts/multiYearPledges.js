@@ -4,6 +4,7 @@ const nonMultiYear = [395, 390, 350, 277];
 const total = [591, 566, 581, 442];
 const multiYearPercent = [33, 31, 40, 37];
 const nonMultiYearPercent = [67, 69, 60, 63];
+const multiYearLineColor = '#005F61';
 
 export function initMultiYearPledges(el, echarts) {
   const option = {
@@ -58,8 +59,8 @@ export function initMultiYearPledges(el, echarts) {
       },
       data: [
         'Multi-year pledges',
-        'Non-multi-year pledges',
-        '% from multi-year commitments'
+        '% from multi-year commitments',
+        'Non-multi-year pledges'
       ]
     },
     grid: {
@@ -81,42 +82,26 @@ export function initMultiYearPledges(el, echarts) {
         margin: 12
       }
     },
-    yAxis: [
-      {
-        type: 'value',
-        min: 0,
-        max: 800,
-        interval: 200,
-        nameLocation: 'end',
-        nameGap: 15,
-        nameTextStyle: {
-          color: '#6B7280',
-          fontSize: 11
-        },
-        axisLine: { show: false },
-        axisTick: { show: false },
-        axisLabel: {
-          color: '#6B7280',
-          fontSize: 11,
-          formatter: '${value}M'
-        },
-        splitLine: { lineStyle: { color: '#E5E7EB' } }
+    yAxis: {
+      type: 'value',
+      min: 0,
+      max: 800,
+      interval: 200,
+      nameLocation: 'end',
+      nameGap: 15,
+      nameTextStyle: {
+        color: '#6B7280',
+        fontSize: 11
       },
-      {
-        type: 'value',
-        min: 0,
-        max: 80,
-        interval: 20,
-        axisLine: { show: false },
-        axisTick: { show: false },
-        axisLabel: {
-          color: '#6B7280',
-          fontSize: 11,
-          formatter: '{value}%'
-        },
-        splitLine: { show: false }
-      }
-    ],
+      axisLine: { show: false },
+      axisTick: { show: false },
+      axisLabel: {
+        color: '#6B7280',
+        fontSize: 11,
+        formatter: '${value}M'
+      },
+      splitLine: { lineStyle: { color: '#E5E7EB' } }
+    },
     series: [
       {
         name: 'Multi-year pledges',
@@ -174,27 +159,29 @@ export function initMultiYearPledges(el, echarts) {
       {
         name: '% from multi-year commitments',
         type: 'line',
-        yAxisIndex: 1,
-        data: multiYearPercent,
+        data: multiYear,
         symbol: 'circle',
-        symbolSize: 9,
+        symbolSize: 10,
         lineStyle: {
           width: 3,
-          color: SECONDARY_COLORS[2]
+          color: multiYearLineColor
         },
         itemStyle: {
-          color: SECONDARY_COLORS[2],
-          borderColor: '#ffffff',
-          borderWidth: 2
+          color: '#ffffff',
+          borderColor: multiYearLineColor,
+          borderWidth: 3
         },
         label: {
           show: true,
           position: 'top',
           distance: 8,
-          formatter: '{c}%',
-          color: SECONDARY_COLORS[2],
+          formatter: (params) => `${multiYearPercent[params.dataIndex]}%`,
+          color: multiYearLineColor,
+          backgroundColor: 'rgba(255, 255, 255, 0.92)',
+          borderRadius: 3,
+          padding: [3, 5],
           fontSize: 12,
-          fontWeight: 700
+          fontWeight: 800
         },
         z: 20
       }

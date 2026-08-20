@@ -15,7 +15,7 @@ export function initEuContributionsByRegion(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       
-      subtext: 'Last updated 26 June 2026',
+      subtext: '',
       left: 0,
       top: 0,
       textStyle: {

@@ -3,7 +3,7 @@ const data = [
   { name: 'World Bank Group', value: 88113014, percent: 28 },
   { name: 'Inter-American Development Bank', value: 29975774, percent: 9 },
   { name: 'Islamic Development Bank', value: 19732831, percent: 6 },
-  { name: 'Corporación Andina de Fomento (CAF)', value: 18601822, percent: 6 },
+  { name: 'Development Bank of Latin America and the Caribbean (CAF)', value: 18601822, percent: 6 },
   { name: 'European Investment Bank', value: 17768782, percent: 6 },
   { name: 'IFAD', value: 17076747, percent: 5 },
   { name: 'African Development Bank', value: 10687027.90, percent: 3 },
@@ -20,7 +20,7 @@ export function initIfiContributionsDonut(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       
-      subtext: 'Last updated 26 June 2026',
+      subtext: '',
       left: 0,
       top: 0,
       textStyle: {
@@ -108,6 +108,37 @@ export function initIfiContributionsDonut(el, echarts) {
         name: item.name,
         value: item.value
       }))
+    }, {
+      type: 'pie',
+      radius: [0, '1%'],
+      center: ['50%', '56%'],
+      silent: true,
+      tooltip: { show: false },
+      labelLine: { show: false },
+      label: {
+        show: true,
+        position: 'center',
+        formatter: '{total|$316}\n{caption|million}',
+        rich: {
+          total: {
+            fontFamily: 'Proxima Nova, Arial, sans-serif',
+            fontSize: 28,
+            fontWeight: 700,
+            color: '#232E3D',
+            lineHeight: 34,
+            align: 'center'
+          },
+          caption: {
+            fontFamily: 'Proxima Nova, Arial, sans-serif',
+            fontSize: 14,
+            fontWeight: 600,
+            color: '#4B5563',
+            lineHeight: 20,
+            align: 'center'
+          }
+        }
+      },
+      data: [{ value: 1, itemStyle: { color: 'transparent' } }]
     }]
   });
 

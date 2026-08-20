@@ -9,13 +9,11 @@ import { initResourcesByDevelopmentStatus } from './resourcesByDevelopmentStatus
 import { initResourcesByCountryTypology } from './resourcesByCountryTypology';
 import { initResourcesByRegion } from './resourcesByRegion';
 import { initInstitutionalBudgetAllocation } from './institutionalBudgetAllocation';
-import { initRegularResourcesContributionsMap } from './regularResourcesContributionsMap';
 import { initTopCoreContributors } from './topCoreContributors';
 import { initMultiYearPledges } from './multiYearPledges';
 import { initTopGlocContributors } from './topGlocContributors';
 import { initOtherResourcesPlaceholder } from './otherResourcesPlaceholder';
 import { initTopOtherResourcesContributors } from './topOtherResourcesContributors';
-import { initTopOtherResourcesRecipients } from './topOtherResourcesRecipients';
 import { initThematicWindowContributions } from './thematicWindowContributions';
 import { initFundingWindowContributorFlow } from './fundingWindowContributorFlow';
 import { initTopPooledFundMemberStates } from './topPooledFundMemberStates';
@@ -42,14 +40,12 @@ const registry = {
   'resources-by-country-typology': initResourcesByCountryTypology,
   'resources-by-region': initResourcesByRegion,
   'institutional-budget-allocation': initInstitutionalBudgetAllocation,
-  'regular-resources-contributions-map': initRegularResourcesContributionsMap,
   'top-core-contributors': initTopCoreContributors,
   'multi-year-pledges': initMultiYearPledges,
   'top-gloc-contributors': initTopGlocContributors,
   topGlocContributors: initTopGlocContributors,
   'other-resources-placeholder': initOtherResourcesPlaceholder,
   'top-other-resources-contributors': initTopOtherResourcesContributors,
-  'top-other-resources-recipients': initTopOtherResourcesRecipients,
   'thematic-window-contributions': initThematicWindowContributions,
   'funding-window-contributor-flow': initFundingWindowContributorFlow,
   'top-pooled-fund-member-states': initTopPooledFundMemberStates,

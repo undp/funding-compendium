@@ -2,7 +2,7 @@ const donors = [
   'Bill & Melinda Gates Foundation',
   'The Coca-Cola Foundation',
   'Open Society Foundation',
-  'WWF – World Wide Fund for Nature',
+  'World Wide Fund for Nature (WWF)',
   'Palestinian American Medical Association',
   'Bloomberg Family Foundation',
   'Samsung Electronics Co., Ltd.',
@@ -92,7 +92,7 @@ export function initTopPrivateSectorContributors(el, echarts) {
         show: true,
         position: 'right',
         distance: 8,
-        formatter: (params) => `$${params.value.toFixed(1)}M`,
+        formatter: (params) => `$${Math.floor(params.value)}M`,
         color: '#303944',
         fontSize: 11,
         fontWeight: 700

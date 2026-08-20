@@ -163,7 +163,7 @@ export function initTrendsInResources(el, echarts) {
         fontSize: 11,
         margin: 12,
         formatter: function (value) {
-          return value.toLocaleString('de-DE');
+          return value.toLocaleString('en-US');
         }
       },
       splitLine: {

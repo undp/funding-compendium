@@ -5,31 +5,31 @@ export function initRegularResourcesAllocation(el, echarts) {
   const data = [
     {
       name: 'Country activities',
-      value: 1393,
+      value: 1384.4,
       styleKey: 'country',
       itemStyle: { color: RESOURCE_COLORS.regular }
     },
     {
       name: 'Regional activities',
-      value: 83,
+      value: 83.4,
       styleKey: 'regional',
       itemStyle: { color: SECONDARY_COLORS[0] }
     },
     {
       name: 'Global activities',
-      value: 19,
+      value: 18.7,
       styleKey: 'global',
       itemStyle: { color: SECONDARY_COLORS[1] }
     },
     {
-      name: 'Consolidated Development Effectiveness',
-      value: 83,
+      name: 'Consolidated development effectiveness',
+      value: 82,
       styleKey: 'effectiveness',
       itemStyle: { color: SECONDARY_COLORS[2] }
     },
     {
-      name: 'UN Development Coordination - SRC',
-      value: 40,
+      name: 'UN development coordination—SRC',
+      value: 39.7,
       styleKey: 'coordination',
       itemStyle: { color: SECONDARY_COLORS[3] }
     }
@@ -180,8 +180,8 @@ export function initRegularResourcesAllocation(el, echarts) {
             'Country activities': 8,
             'Regional activities': 14,
             'Global activities': 2,
-            'Consolidated Development Effectiveness': -12,
-            'UN Development Coordination - SRC': -26
+            'Consolidated development effectiveness': -12,
+            'UN development coordination—SRC': -26
           };
 
           const dy = verticalOffsets[name] || 0;

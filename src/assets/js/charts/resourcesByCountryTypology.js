@@ -5,24 +5,24 @@ export function initResourcesByCountryTypology(el, echarts) {
   const data = [
     {
       name: 'Low-income countries (LICs)',
-      value: 987,
+      value: 993.2,
       itemStyle: { color: RESOURCE_COLORS.regular }
     },
     {
       name: 'Middle-income countries (MICs)',
-      value: 288,
+      value: 281.3,
       itemStyle: { color: SECONDARY_COLORS[0] }
     }
   ];
 
   const percentages = {
-    'Low-income countries (LICs)': 77,
-    'Middle-income countries (MICs)': 23
+    'Low-income countries (LICs)': 77.9,
+    'Middle-income countries (MICs)': 22.1
   };
 
   const displayValues = {
-    'Low-income countries (LICs)': '$987M',
-    'Middle-income countries (MICs)': '$288M'
+    'Low-income countries (LICs)': '$993.2M',
+    'Middle-income countries (MICs)': '$281.3M'
   };
 
   const shortLabels = {

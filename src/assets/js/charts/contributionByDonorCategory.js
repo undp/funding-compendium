@@ -17,9 +17,9 @@ export function initContributionByDonorCategory(el, echarts) {
   let verticalFunds = 825;
   let pooledFunds = 234;
   let europeanUnion = 313;
-  let otherMultilaterals = 266;
-
-  let title = 'Contribution by donor category in 2025';
+  let financialInstitutions = 98;
+  let unAgencies = 69;
+  let privateSectorAndOthers = 99;
 
   if (el.dataset.donorGovernments) {
     donorGovernments = parseNumber(
@@ -56,16 +56,31 @@ export function initContributionByDonorCategory(el, echarts) {
     );
   }
 
-  if (el.dataset.otherMultilaterals) {
-    otherMultilaterals = parseNumber(
-      el.dataset.otherMultilaterals,
-      otherMultilaterals
+  if (el.dataset.financialInstitutions) {
+    financialInstitutions = parseNumber(
+      el.dataset.financialInstitutions,
+      financialInstitutions
     );
   }
 
-  if (el.dataset.title) {
-    title = el.dataset.title;
+  if (el.dataset.unAgencies) {
+    unAgencies = parseNumber(
+      el.dataset.unAgencies,
+      unAgencies
+    );
   }
+
+  if (el.dataset.privateSectorAndOthers) {
+    privateSectorAndOthers = parseNumber(
+      el.dataset.privateSectorAndOthers,
+      privateSectorAndOthers
+    );
+  }
+
+  const otherMultilaterals =
+    financialInstitutions +
+    unAgencies +
+    privateSectorAndOthers;
 
   const multilateral =
     verticalFunds +
@@ -103,16 +118,37 @@ export function initContributionByDonorCategory(el, echarts) {
       color: '#222222'
     },
 
-    title: {
-      text: title,
-      left: 'center',
-      top: -5,
+    legend: {
+      show: true,
+      orient: 'vertical',
+      left: '13%',
+      bottom: 32,
+      itemWidth: 14,
+      itemHeight: 14,
+      itemGap: 7,
+      selectedMode: false,
+      data: [
+        'Financial Institutions',
+        'UN agencies',
+        'Private sector, foundations, NGOs, Academic Institutions and others'
+      ],
+      formatter: function (name) {
+        const labels = {
+          'Financial Institutions':
+            'Financial Institutions — 2%',
+          'UN agencies':
+            'UN agencies — 1%',
+          'Private sector, foundations, NGOs, Academic Institutions and others':
+            'Private sector, foundations, NGOs, Academic Institutions and others — 2%'
+        };
 
+        return labels[name] || name;
+      },
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#444'
+        color: '#333333',
+        fontSize: 13,
+        lineHeight: 17
       }
     },
 
@@ -141,11 +177,27 @@ export function initContributionByDonorCategory(el, echarts) {
         }
 
         const percentOfTotal =
+          params.data.displayPercent ??
           (params.value / total) * 100;
+
+        const isOtherBreakdown =
+          params.seriesName ===
+          'Other multilaterals breakdown';
 
         const isBreakdown =
           params.seriesName ===
-          'Multilateral breakdown';
+            'Multilateral breakdown' ||
+          isOtherBreakdown;
+
+        const breakdownTotal =
+          isOtherBreakdown
+            ? otherMultilaterals
+            : multilateral;
+
+        const breakdownLabel =
+          isOtherBreakdown
+            ? 'other multilaterals'
+            : 'multilateral funding';
 
         return `
           <div
@@ -185,9 +237,9 @@ export function initContributionByDonorCategory(el, echarts) {
                     "
                   >
                     ${formatPercent(
-                      (params.value / multilateral) * 100
+                      (params.value / breakdownTotal) * 100
                     )}
-                    of multilateral funding
+                    of ${breakdownLabel}
                   </div>
                 `
                 : ''
@@ -209,12 +261,12 @@ export function initContributionByDonorCategory(el, echarts) {
 
         radius: [
           0,
-          '45%'
+          '54%'
         ],
 
         center: [
-          '49%',
-          '54%'
+          '56%',
+          '45%'
         ],
 
         startAngle: 90,
@@ -315,7 +367,7 @@ export function initContributionByDonorCategory(el, echarts) {
               multilateral,
 
             itemStyle: {
-              color: CATEGORY_COLORS[2]
+              color: '#E86B2E'
             }
           }
         ]
@@ -333,13 +385,13 @@ export function initContributionByDonorCategory(el, echarts) {
           'pie',
 
         radius: [
-          '52%',
-          '78%'
+          '61%',
+          '80%'
         ],
 
         center: [
-          '49%',
-          '54%'
+          '56%',
+          '45%'
         ],
 
         startAngle:
@@ -372,10 +424,10 @@ export function initContributionByDonorCategory(el, echarts) {
             true,
 
           length:
-            14,
+            26,
 
           length2:
-            10,
+            30,
 
           lineStyle: {
             color:
@@ -394,7 +446,7 @@ export function initContributionByDonorCategory(el, echarts) {
             'outside',
 
           distanceToLabelLine:
-            4,
+            6,
 
           formatter: function (params) {
             if (
@@ -405,11 +457,17 @@ export function initContributionByDonorCategory(el, echarts) {
             }
 
             const percentOfTotal =
+              params.data.displayPercent ??
               (params.value / total) * 100;
+
+            const breakdownValue =
+              params.data.showValue
+                ? `$${formatM(params.value)}M `
+                : '';
 
             return (
               `{name|${params.name}}\n` +
-              `{percent|${formatPercent(percentOfTotal)}}`
+              `{percent|${breakdownValue}${formatPercent(percentOfTotal)}}`
             );
           },
 
@@ -455,6 +513,9 @@ export function initContributionByDonorCategory(el, echarts) {
             'shiftY',
 
           hideOverlap:
+            false,
+
+          draggable:
             false
         },
 
@@ -550,6 +611,19 @@ export function initContributionByDonorCategory(el, echarts) {
           // -----------------------------------------
           {
             name:
+              'Other\nmultilaterals',
+
+            value:
+              otherMultilaterals,
+
+            itemStyle: {
+              color:
+                '#F08A54'
+            }
+          },
+
+          {
+            name:
               'Vertical funds',
 
             value:
@@ -557,7 +631,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             itemStyle: {
               color:
-                CATEGORY_COLORS[3]
+                '#7F2704'
             }
           },
 
@@ -570,7 +644,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             itemStyle: {
               color:
-                CATEGORY_COLORS[4]
+                '#A63A0B'
             }
           },
 
@@ -583,20 +657,172 @@ export function initContributionByDonorCategory(el, echarts) {
 
             itemStyle: {
               color:
-                CATEGORY_COLORS[5]
+                '#C85118'
+            }
+          }
+        ]
+      },
+
+      // =====================================================
+      // THIRD RING:
+      // Details within the original "Other multilaterals" slice
+      // =====================================================
+      {
+        name:
+          'Other multilaterals breakdown',
+
+        type:
+          'pie',
+
+        radius: [
+          '82%',
+          '90%'
+        ],
+
+        center: [
+          '56%',
+          '45%'
+        ],
+
+        startAngle:
+          90,
+
+        clockwise:
+          true,
+
+        itemStyle: {
+          borderColor:
+            '#ffffff',
+
+          borderWidth:
+            1
+        },
+
+        emphasis: {
+          scale:
+            false,
+
+          focus:
+            'self'
+        },
+
+        label: {
+          show:
+            false
+        },
+
+        labelLine: {
+          show:
+            false
+        },
+
+        data: [
+          {
+            value:
+              donorGovernments +
+              programmeGovernments,
+
+            name:
+              '',
+
+            placeholder:
+              true,
+
+            tooltip: {
+              show:
+                false
+            },
+
+            itemStyle: {
+              color:
+                'rgba(0,0,0,0)',
+
+              borderColor:
+                'rgba(0,0,0,0)'
+            },
+
+            emphasis: {
+              disabled:
+                true
             }
           },
 
           {
             name:
-              'Other multilaterals',
+              'Financial Institutions',
 
             value:
-              otherMultilaterals,
+              financialInstitutions,
+
+            displayPercent:
+              2,
 
             itemStyle: {
               color:
-                CATEGORY_COLORS[6]
+                '#D9672C'
+            }
+          },
+
+          {
+            name:
+              'UN agencies',
+
+            value:
+              unAgencies,
+
+            displayPercent:
+              1,
+
+            itemStyle: {
+              color:
+                '#F3A06F'
+            }
+          },
+
+          {
+            name:
+              'Private sector, foundations, NGOs, Academic Institutions and others',
+
+            value:
+              privateSectorAndOthers,
+
+            displayPercent:
+              2,
+
+            itemStyle: {
+              color:
+                '#F8C3A2'
+            }
+          },
+
+          {
+            value:
+              verticalFunds +
+              pooledFunds +
+              europeanUnion,
+
+            name:
+              '',
+
+            placeholder:
+              true,
+
+            tooltip: {
+              show:
+                false
+            },
+
+            itemStyle: {
+              color:
+                'rgba(0,0,0,0)',
+
+              borderColor:
+                'rgba(0,0,0,0)'
+            },
+
+            emphasis: {
+              disabled:
+                true
             }
           }
         ]

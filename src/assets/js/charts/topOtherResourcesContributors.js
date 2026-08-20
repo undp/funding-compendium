@@ -1,9 +1,9 @@
 const contributors = [
-  'Vertical fund - GEF',
+  'Vertical fund—GEF',
   'European Union',
-  'Vertical Fund - GFATM',
+  'Vertical Fund—GFATM',
   'Argentina',
-  'Multi Partner Trust Funds',
+  'Multi-Partner Trust Funds',
   'Norway',
   'Germany',
   'Japan',
@@ -52,24 +52,6 @@ export function initTopOtherResourcesContributors(el, echarts) {
     textStyle: {
       fontFamily: 'Proxima Nova, Arial, sans-serif'
     },
-    title: {
-      /*text: 'Top 20 non-core contributors, 2025',*/
-      subtext: 'Other resources · Last updated 26 June 2026',
-      left: 0,
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#232E3D'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
-        color: '#7A838F',
-        lineHeight: 18
-      }
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
@@ -93,7 +75,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
     grid: {
       left: 230,
       right: 100,
-      top: 90,
+      top: 0,
       bottom: 45
     },
     xAxis: {
@@ -135,7 +117,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
         show: true,
         position: 'right',
         distance: 8,
-        formatter: (params) => `$${params.value.toFixed(1)}M`,
+        formatter: (params) => `$${Math.round(params.value)}M`,
         color: '#46515D',
         fontSize: 11,
         fontWeight: 600

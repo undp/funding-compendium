@@ -121,7 +121,7 @@ export function initTopUnPooledFunds(el, echarts) {
         show: true,
         position: 'right',
         distance: 7,
-        formatter: (params) => `$${params.value.toFixed(1)}M`,
+        formatter: (params) => `$${Math.round(params.value)}M`,
         color: '#3B4650',
         fontSize: 11,
         fontWeight: 600

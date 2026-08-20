@@ -111,9 +111,9 @@
           ></div>
         </div>
 
-        <p class="chart-source">
-          {{regular-resources-page.country-focus.source}}
-        </p>
+        {{#if regular-resources-page.country-focus.source}}
+        <p class="chart-source">{{regular-resources-page.country-focus.source}}</p>
+        {{/if}}
       </div>
 
       <div class="cell small-12 medium-12 large-5">
@@ -129,9 +129,9 @@
           ></div>
         </div>
 
-        <p class="chart-source">
-          {{regular-resources-page.country-focus.source}}
-        </p>
+        {{#if regular-resources-page.country-focus.source}}
+        <p class="chart-source">{{regular-resources-page.country-focus.source}}</p>
+        {{/if}}
       </div>
 
     </div>
@@ -164,9 +164,9 @@
           ></div>
         </div>
 
-        <p class="chart-source">
-          {{regular-resources-page.regions.source}}
-        </p>
+        {{#if regular-resources-page.regions.source}}
+        <p class="chart-source">{{regular-resources-page.regions.source}}</p>
+        {{/if}}
       </div>
 
     </div>
@@ -197,9 +197,9 @@
           ></div>
         </div>
 
-        <p class="chart-source">
-          {{regular-resources-page.institutional-budget.source}}
-        </p>
+        {{#if regular-resources-page.institutional-budget.source}}
+        <p class="chart-source">{{regular-resources-page.institutional-budget.source}}</p>
+        {{/if}}
       </div>
 
     </div>
@@ -254,6 +254,7 @@
           alt="{{regular-resources-page.pledges.image-alt}}"
           style="display: block; width: 100%; height: auto;"
         >
+        <p class="chart-source">{{regular-resources-page.pledges.footnote}}</p>
 
         <div class="chart-wrapper padded">
           <div
@@ -269,7 +270,7 @@
 </section>
 
 
-<!-- ************************* Map ************************* -->
+<!-- ************************* Regular resource contributors ************************* -->
 
 <section class="section rr-section" id="rr-map" padded>
   <div class="grid-container section-" data-rr-reveal>
@@ -281,17 +282,33 @@
       >
         <h4>{{regular-resources-page.map.heading}}</h4>
 
-        <div class="chart-wrapper">
-          <div
-            class="echarts"
-            data-chart-type="regular-resources-contributions-map"
-            style="width: 100%; height: 900px;"
-          ></div>
+        <div class="rr-contributor-table-block">
+          <h5>{{regular-resources-page.map.table-heading}}</h5>
+          <div class="rr-contributor-table-grid" role="group" aria-label="{{regular-resources-page.map.table-aria-label}}">
+            {{#each regular-resources-page.map.table-groups}}
+            <div class="rr-contributor-table-scroll" tabindex="0">
+              <table class="rr-contributor-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Ranking</th>
+                    <th scope="col">Contributor</th>
+                    <th scope="col">USD</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each this.rows}}
+                  <tr>
+                    <td class="rr-contributor-rank">{{this.rank}}</td>
+                    <th scope="row"><span class="fi fi-{{this.flag}}" aria-hidden="true"></span><span>{{this.contributor}}</span></th>
+                    <td class="rr-contributor-usd">{{this.usd}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+            {{/each}}
+          </div>
         </div>
-
-        <p class="chart-source">
-          {{regular-resources-page.map.source}}
-        </p>
       </div>
 
     </div>

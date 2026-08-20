@@ -1,5 +1,5 @@
 const years = ['2022', '2023', '2024', '2025'];
-const values = [119, 126, 115, 115];
+const values = [119, 126, 126, 115];
 
 export function initThematicWindowContributions(el, echarts) {
   const chart = echarts.init(el);

@@ -9,7 +9,7 @@ export function initResourcesByFundingChannel(el, echarts) {
   // ======================================================
 
   const data = {
-    'Third party cost sharing': [
+    'Third-party cost-sharing': [
       1918.060867,
       1793.600347,
       1812.300670,
@@ -67,7 +67,7 @@ export function initResourcesByFundingChannel(el, echarts) {
   ];
 
   const shares2025 = {
-    'Third party cost sharing': 39,
+    'Third-party cost-sharing': 39,
     'Government financing': 28,
     'Vertical funds': 16,
     'Regular resources': 9,
@@ -81,7 +81,7 @@ export function initResourcesByFundingChannel(el, echarts) {
   // ======================================================
 
   const colors = {
-    'Third party cost sharing': CATEGORY_COLORS[0],
+    'Third-party cost-sharing': CATEGORY_COLORS[0],
     'Government financing': CATEGORY_COLORS[1],
     'Vertical funds': CATEGORY_COLORS[2],
     'Regular resources': RESOURCE_COLORS.regular,
@@ -91,7 +91,7 @@ export function initResourcesByFundingChannel(el, echarts) {
   };
 
   const seriesOrder = [
-    'Third party cost sharing',
+    'Third-party cost-sharing',
     'Government financing',
     'Vertical funds',
     'Regular resources',
@@ -107,7 +107,7 @@ export function initResourcesByFundingChannel(el, echarts) {
     'Regular resources',
     'Vertical funds',
     'Government financing',
-    'Third party cost sharing'
+    'Third-party cost-sharing'
   ];
 
   // ======================================================

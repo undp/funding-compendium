@@ -141,7 +141,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
           show: true,
           position: 'right',
           distance: 8,
-          formatter: (params) => `$${params.value.toFixed(1)}M`,
+          formatter: (params) => `$${Math.floor(params.value)}M`,
           color: '#303944',
           fontSize: 11,
           fontWeight: 700

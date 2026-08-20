@@ -1,0 +1,185 @@
+<header class="annual-table-heading ">
+  <div class="grid-container fluid padded">
+    <nav aria-label="{{breadcrumbs.aria-label}}" data-viewport="true" class="breadcrumb">
+    <ul>
+      <li><a href="{{@root.root}}index.html" aria-label="{{breadcrumbs.home}}">{{breadcrumbs.home}}</a></li>
+      <li><a href="{{@root.root}}other-resources-partnerships/index.html">Other resources &amp; partnerships</a></li>
+      <li aria-current="page">Annual contributions from member states</li>
+    </ul>
+    </nav>
+    <h1>Annual contributions to UNDP<br>from Member States, 2025</h1>
+  </div>
+</header>
+
+<main class="annual-table-page">
+  <section class="grid-container fluid annual-table-content">
+    <div class="annual-sort-controls" aria-label="Sort contributions table">
+      <label for="annual-sort-category">Sort by contribution amount</label>
+      <select id="annual-sort-category">
+        <option value="0">Member State order</option>
+        <option value="1">Regular resources</option>
+        <option value="2">Donor cost-sharing</option>
+        <option value="3">Government development financing</option>
+        <option value="4">Trust funds</option>
+        <option value="5">Reimbursable support services and miscellaneous activities</option>
+        <option value="6">Subtotal</option>
+        <option value="7">Government contributions to local office costs</option>
+        <option value="8">NCC contributions</option>
+        <option value="9">Upper MIC contributions</option>
+        <option value="10">In-kind contributions</option>
+        <option value="11">Total</option>
+      </select>
+
+      <label for="annual-sort-direction">Order</label>
+      <select id="annual-sort-direction" disabled>
+        <option value="desc">Highest to lowest</option>
+        <option value="asc">Lowest to highest</option>
+      </select>
+    </div>
+
+    <div class="annual-table-shell" tabindex="0" role="region" aria-label="Annual contributions to UNDP from Member States in 2025">
+      <table class="annual-member-table" id="annual-member-table">
+        <colgroup>
+          <col class="annual-col-member">
+          <col class="annual-col-regular">
+          <col class="annual-col-donor">
+          <col class="annual-col-development">
+          <col class="annual-col-trust">
+          <col class="annual-col-reimbursable">
+          <col class="annual-col-subtotal">
+          <col class="annual-col-local">
+          <col class="annual-col-ncc">
+          <col class="annual-col-mic">
+          <col class="annual-col-in-kind">
+          <col class="annual-col-total">
+        </colgroup>
+        <thead></thead>
+        <tbody>
+          <tr><td class="annual-table-loading">Loading contribution data&hellip;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside class="or-notes-panel annual-member-notes" aria-labelledby="annual-member-notes-heading">
+      <h4 id="annual-member-notes-heading">{{other-resources-page.annual-contributions.notes-heading}}</h4>
+      <div class="or-notes-content">
+        <div class="or-notes-group">
+          <ul>
+            {{#each other-resources-page.annual-contributions.member-state-notes}}
+            <li><sup class="or-note-marker">{{this.marker}}</sup> {{this.copy}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<script>
+  (() => {
+    const table = document.getElementById('annual-member-table');
+    if (!table) return;
+
+    const formatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+    const headerLayout = [
+      ['Member State'],
+      ['Regular resources', 'a'],
+      ['Donor cost-sharing'],
+      ['Government development', 'financing', 'b'],
+      ['Trust funds'],
+      ['Reimbursable support services', 'and miscellaneous activities'],
+      ['Subtotal'],
+      ['Government contributions', 'to local office costs', 'c'],
+      ['NCC contributions'],
+      ['Upper MIC', 'contributions'],
+      ['In-kind contributions'],
+      ['Total']
+    ];
+
+    fetch('{{@root.root}}assets/data/annual-contributions-2025.json')
+      .then((response) => {
+        if (!response.ok) throw new Error('Unable to load contribution data.');
+        return response.json();
+      })
+      .then(({ headers, rows }) => {
+        const headerRow = document.createElement('tr');
+        headers.forEach((label, index) => {
+          const th = document.createElement('th');
+          th.scope = 'col';
+          const parts = headerLayout[index] || [String(label || '').trim()];
+          parts.forEach((part, partIndex) => {
+            if (part.length === 1 && ['a', 'b', 'c'].includes(part)) {
+              th.appendChild(document.createTextNode('\u00a0'));
+              const sup = document.createElement('sup');
+              sup.textContent = part;
+              th.appendChild(sup);
+            } else {
+              if (partIndex) th.appendChild(document.createElement('br'));
+              th.appendChild(document.createTextNode(part));
+            }
+          });
+          headerRow.appendChild(th);
+        });
+        table.tHead.replaceChildren(headerRow);
+
+        const totalRow = rows.find((row) => String(row[0]).startsWith('TOTAL'));
+        const memberRows = rows.filter((row) => !String(row[0]).startsWith('TOTAL'));
+        const categorySelect = document.getElementById('annual-sort-category');
+        const directionSelect = document.getElementById('annual-sort-direction');
+
+        const renderRows = (sortedRows) => {
+          const fragment = document.createDocumentFragment();
+          [...sortedRows, totalRow].filter(Boolean).forEach((row) => {
+            const tr = document.createElement('tr');
+            if (String(row[0]).startsWith('TOTAL')) tr.className = 'annual-table-total';
+
+            row.forEach((value, index) => {
+              const cell = document.createElement(index === 0 ? 'th' : 'td');
+              if (index === 0) cell.scope = 'row';
+              if (index > 0) {
+                cell.dataset.label = (headerLayout[index] || [headers[index]])
+                  .join(' ')
+                  .replace(/\s+[abc]$/, '');
+              }
+              if (index === 0) {
+                cell.textContent = String(value || '').replace(/^TOTAL\s+e\/$/, 'TOTAL');
+              } else if (value === null || value === '' || value === 0) {
+                cell.textContent = '\u2014';
+                cell.className = value === 0 ? 'is-zero' : 'is-empty';
+              } else {
+                cell.textContent = formatter.format(value);
+                if (value < 0) cell.className = 'is-negative';
+              }
+              tr.appendChild(cell);
+            });
+            fragment.appendChild(tr);
+          });
+          table.tBodies[0].replaceChildren(fragment);
+        };
+
+        const sortRows = () => {
+          const columnIndex = Number(categorySelect.value);
+          directionSelect.disabled = columnIndex === 0;
+          if (columnIndex === 0) {
+            renderRows(memberRows);
+            return;
+          }
+
+          const direction = directionSelect.value === 'asc' ? 1 : -1;
+          const sortedRows = [...memberRows].sort((rowA, rowB) => {
+            const valueA = Number(rowA[columnIndex]) || 0;
+            const valueB = Number(rowB[columnIndex]) || 0;
+            return ((valueA - valueB) * direction) || String(rowA[0]).localeCompare(String(rowB[0]));
+          });
+          renderRows(sortedRows);
+        };
+
+        categorySelect.addEventListener('change', sortRows);
+        directionSelect.addEventListener('change', sortRows);
+        renderRows(memberRows);
+      })
+      .catch(() => {
+        table.tBodies[0].innerHTML = '<tr><td class="annual-table-loading">The contribution table could not be loaded.</td></tr>';
+      });
+  })();
+</script>

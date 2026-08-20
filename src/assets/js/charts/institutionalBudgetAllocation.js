@@ -5,27 +5,33 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
   const data = [
     {
       name: 'Management',
-      value: 654.2,
-      percent: 60.58,
+      value: 507.6,
+      percent: 53.4,
       color: SECONDARY_COLORS[0]
     },
     {
       name: 'Development/humanitarian activities',
-      value: 301.4,
-      percent: 28,
+      value: 328.2,
+      percent: 34.5,
       color: SECONDARY_COLORS[1]
     },
     {
       name: 'Independent oversight and assurance activities',
-      value: 80.2,
-      percent: 7.43,
+      value: 77.7,
+      percent: 8.2,
       color: SECONDARY_COLORS[2]
     },
     {
       name: 'Special purpose',
-      value: 44.1,
-      percent: 4,
+      value: 33.7,
+      percent: 3.5,
       color: SECONDARY_COLORS[3]
+    },
+    {
+      name: 'UN development coordination activities',
+      value: 2.8,
+      percent: 0.3,
+      color: '#6B7280'
     }
   ];
 
@@ -120,7 +126,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
         label: {
           show: true,
           position: 'center',
-          formatter: '{total|$1.080B}\n{caption|Total}',
+          formatter: '{total|$950.0M}\n{caption|Total}',
           rich: {
             total: {
               fontFamily: 'Proxima Nova, Arial, sans-serif',

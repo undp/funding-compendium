@@ -5,24 +5,24 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
   const data = [
     {
       name: 'Least developed countries (LDCs)',
-      value: 1061,
+      value: 1062,
       itemStyle: { color: RESOURCE_COLORS.regular }
     },
     {
       name: 'Non-least developed countries',
-      value: 214,
+      value: 213,
       itemStyle: { color: SECONDARY_COLORS[0] }
     }
   ];
 
   const percentages = {
-    'Least developed countries (LDCs)': 83,
-    'Non-least developed countries': 17
+    'Least developed countries (LDCs)': 83.3,
+    'Non-least developed countries': 16.7
   };
 
   const displayValues = {
-    'Least developed countries (LDCs)': '$1.061B',
-    'Non-least developed countries': '$214M'
+    'Least developed countries (LDCs)': '$1.062B',
+    'Non-least developed countries': '$213M'
   };
 
   const shortLabels = {

@@ -37,6 +37,11 @@ const links = [
   { source: 'United Kingdom', target: NATURE, value: 1.658941, lineStyle: { color: SECONDARY_COLORS[1] } }
 ];
 
+const contributorTotals = links.reduce((totals, link) => {
+  totals[link.source] = (totals[link.source] || 0) + link.value;
+  return totals;
+}, {});
+
 const graphicText = (left, top, text, font, fill = '#303944') => ({
   type: 'text',
   left,
@@ -65,8 +70,8 @@ export function initFundingWindowContributorFlow(el, echarts) {
     backgroundColor: '#ffffff',
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
-      text: 'Contributions by Funding Window and contributor',
-      subtext: '2025 · $115M total contributions',
+      text: 'Contributions by funding window and contributor',
+      subtext: '',
       left: 0,
       top: 0,
       textStyle: {
@@ -98,7 +103,8 @@ export function initFundingWindowContributorFlow(el, echarts) {
             <div style="font-family:'Proxima Nova',Arial,sans-serif;color:#6B7280;margin-bottom:5px">${params.data.target.replace(/\n/g, ' ')}</div>
             <div style="font-family:'Proxima Nova',Arial,sans-serif;font-size:15px;font-weight:700">$${params.data.value.toFixed(2)}M</div>`;
         }
-        return params.name.replace(/\n/g, ' ');
+
+        return null;
       }
     },
     graphic: [
@@ -138,13 +144,30 @@ export function initFundingWindowContributorFlow(el, echarts) {
         show: true,
         position: 'left',
         distance: 10,
-        color: '#303944',
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         fontSize: 11,
         lineHeight: 15,
         formatter: function (params) {
           if ([GOV, NATURE, GENDER, POVERTY].includes(params.name)) return '';
-          return params.name;
+          return `{name|${params.name}}\n{value|$${contributorTotals[params.name].toFixed(2)}M}`;
+        },
+        rich: {
+          name: {
+            fontFamily: 'Proxima Nova, Arial, sans-serif',
+            fontSize: 11,
+            fontWeight: 600,
+            lineHeight: 15,
+            color: '#303944',
+            align: 'right'
+          },
+          value: {
+            fontFamily: 'Proxima Nova, Arial, sans-serif',
+            fontSize: 11,
+            fontWeight: 700,
+            lineHeight: 16,
+            color: '#52636F',
+            align: 'right'
+          }
         }
       }
     }]

@@ -5,32 +5,32 @@ export function initResourcesByRegion(el, echarts) {
   const data = [
     {
       name: 'Africa',
-      value: 870,
-      percent: 68,
+      value: 871.1,
+      percent: 68.3,
       color: RESOURCE_COLORS.regular
     },
     {
       name: 'Asia and the Pacific',
-      value: 182,
-      percent: 14,
+      value: 183.8,
+      percent: 14.4,
       color: SECONDARY_COLORS[0]
     },
     {
       name: 'Arab States',
-      value: 128,
-      percent: 10,
+      value: 125.4,
+      percent: 9.8,
       color: SECONDARY_COLORS[1]
     },
     {
       name: 'Latin America and the Caribbean',
-      value: 52,
-      percent: 4,
+      value: 52.6,
+      percent: 4.1,
       color: SECONDARY_COLORS[2]
     },
     {
       name: 'Europe and the CIS',
-      value: 43,
-      percent: 3,
+      value: 42.1,
+      percent: 3.3,
       color: SECONDARY_COLORS[3]
     }
   ];
