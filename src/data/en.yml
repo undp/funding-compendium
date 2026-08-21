@@ -304,7 +304,7 @@ landscape-page:
     subheading: Regular and other resources, 2025
     summary: |-
       <p><strong>Annual contributions increased to $5 billion in 2025,</strong> up by 2 percent from $4.9 billion in 2024.</p>
-      <p><strong style="color: #C3D51F;">Annual contributions to regular resources decreased to $442 million,</strong> down by 24 percent from $581 million in 2024.</p>
+      <p><strong style="color: #637300;">Annual contributions to regular resources decreased to $442 million,</strong> down by 24 percent from $581 million in 2024.</p>
       <p><strong style="color: #0069B3;">Annual contributions to other resources increased to $4.6 billion,</strong> up by 6 percent from $4.3 billion in 2024.</p>
     core-copy: Regular resources are critical to UNDP’s ability to prioritize countries’ needs, respond swiftly in crises and maintain high standards of accountability and transparency. They also allow UNDP to sustain country presence and upstream policy expertise that other types of funding cannot support. Regular resources also carry strong catalytic value, mobilizing additional other resources (non-core). Insufficient regular resources would therefore severely compromise UNDP’s unique ability to respond rapidly to emergencies and address critical needs that other funding sources do not cover. The decline in regular resources also has serious implications for UNDP’s ability to deliver the intended results of the Strategic Plan, restore and accelerate progress towards the Sustainable Development Goals (SDGs) and maintain robust oversight and accountability systems.
     trends-heading: Trends in regular and other resources, 2022–2025
@@ -407,7 +407,7 @@ regular-resources-page:
   # Core contributors
   contributors:
     heading: Top core contributors
-    copy: In 2025, UNDP received $442 million in core contributions, of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.
+    copy: In 2025, UNDP received $442 million in core contributions,<br>of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.
     footnote: '*Includes core contributions for 2024 received in 2025<br>**Includes core contributions for 2026 received in 2025'
   # Multi-year pledges
   pledges:
@@ -415,6 +415,7 @@ regular-resources-page:
     copy: In 2025, UNDP received $442 million in core contributions, of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.
     image-alt: Partners with multi-year pledges to regular resources
     footnote: Australia had a multi-year core agreement in 2025 but did not contribute to core funding.
+    income-heading: Regular resources income from multi-year pledges
   # Contributor map
   map:
     heading: Contributors to regular resources, 2025
@@ -489,7 +490,7 @@ other-resources-page:
   # Overview
   overview:
     copy1: Other resources are earmarked contributions that supplement regular or core resources.
-    copy2: In 2025, annual contributions to other resources increased to $4.6 billion, up by 6 percent from $4.3 billion in 2024.
+    copy2: In 2025, annual contributions to<br><strong>other resources increased to $4.6 billion,</strong><br>up by 6 percent from $4.3 billion in 2024.
     contributors-chart: Top 20 other resources contributors, 2025
     recipients-chart: Top 15 recipient countries of other resources, 2025
   # Thematic funding windows
@@ -548,12 +549,10 @@ other-resources-page:
     trend-footnote: '*Corporate foundations are included under private companies.'
   annual-contributions:
     heading: Annual contributions to UNDP, 2025
-    member-state-table-heading: Annual contributions to UNDP from Member States, 2025
+    member-state-table-heading: Contributions to UNDP from Member States
     member-state-table-copy: View the complete Member State contributions table on a dedicated page designed for easier reading.
     member-state-table-link: View full Member State table
     notes-heading: Notes
-    table-notes-heading: Non-government partner group table
-    member-state-notes-heading: Member State contributions table
     member-state-notes:
       - marker: 
         copy: >
@@ -570,7 +569,7 @@ other-resources-page:
         copy: Includes JPOs, management service agreements (MSAs) and development service agreements.
     source-label: 'Source:'
     source: '<a href="https://www.undp.org/sites/g/files/zskgke326/files/2026-07/annex-i-appendix-6.pdf" target="_blank" rel="noopener noreferrer">Appendix VI of Annex 1 to DP/2026/26</a>.'
-    table-heading: Contributions to UNDP from non-government partner groups, 2025 ($)
+    table-heading: Contributions to UNDP from non-government partner groups
     table-aria-label: Contributions from non-government partner groups table
     columns:
       partner: Non-government partner group

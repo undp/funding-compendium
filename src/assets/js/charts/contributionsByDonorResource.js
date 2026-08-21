@@ -92,10 +92,25 @@ export function initContributionsByDonorResource(el, echarts) {
       'https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_the_United_Nations.svg'
   };
 
+  const logoUrls = {
+    'Vertical fund – GEF': '../assets/img/logos/gef.png',
+    MPTF: '../assets/img/logos/mptf.png',
+    'Vertical fund – Green Climate Fund': '../assets/img/logos/green-climate-fund.jpeg',
+    'World Bank Group': '../assets/img/logos/wbg.jpg'
+  };
+
+  const logoSizes = {
+    'Vertical fund – GEF': [24, 32],
+    MPTF: [60, 23],
+    'Vertical fund – Green Climate Fund': [56, 30],
+    'World Bank Group': [54, 28]
+  };
+
   const getFlagKey = (donor) =>
     `flag_${donor.replace(/[^a-zA-Z0-9]/g, '_')}`;
 
   const richFlagStyles = {};
+  const richLogoStyles = {};
 
   Object.entries(flagUrls).forEach(([donor, url]) => {
     richFlagStyles[getFlagKey(donor)] = {
@@ -105,8 +120,24 @@ export function initContributionsByDonorResource(el, echarts) {
         image: url
       },
       borderColor: '#cccccc',
-      borderWidth: 1,
-      align: 'right'
+      borderWidth: 0,
+      align: 'center',
+      verticalAlign: 'middle'
+    };
+  });
+
+  Object.entries(logoUrls).forEach(([donor, url]) => {
+    const [width, height] = logoSizes[donor];
+    const resolvedUrl = new URL(url, window.location.href).href;
+
+    richLogoStyles[getFlagKey(donor)] = {
+      width,
+      height,
+      backgroundColor: {
+        image: resolvedUrl
+      },
+      align: 'center',
+      verticalAlign: 'middle'
     };
   });
 
@@ -114,7 +145,7 @@ export function initContributionsByDonorResource(el, echarts) {
     Number(value).toLocaleString('en-US');
 
   const formatMillions = (value) =>
-    `${Math.round(value / 1000000)}M`;
+    `$${Math.round(value / 1000000)}M`;
 
   const option = {
     animationDuration: 700,
@@ -137,18 +168,18 @@ export function initContributionsByDonorResource(el, echarts) {
     },
 
     grid: {
-      left: 365,
-      right: 95,
-      top: 78,
+      left: 330,
+      right: 60,
+      top: 72,
       bottom: 68
     },
 
     legend: {
-      top: 38,
-      left: 0,
+      top: 24,
+      left: 'center',
       icon: 'rect',
-      itemWidth: 22,
-      itemHeight: 10,
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 24,
       data: [
         'Regular resources',
@@ -164,12 +195,13 @@ export function initContributionsByDonorResource(el, echarts) {
     tooltip: {
       trigger: 'axis',
       axisPointer: {
-        type: 'shadow'
+        type: 'shadow',
+        shadowStyle: { color: 'rgba(35, 46, 61, 0.035)' }
       },
       backgroundColor: '#ffffff',
       borderColor: '#d8d8d8',
-      borderWidth: 1,
-      padding: [14, 16],
+      borderWidth: 0,
+      padding: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222222',
@@ -180,59 +212,12 @@ export function initContributionsByDonorResource(el, echarts) {
         const index = params[0].dataIndex;
         const item = chartData[index];
         const total = item.other + item.regular;
+        const share = (value) => formatTooltipPercent(value, total);
 
-        let html = `
-          <div style="
-            min-width: 240px;
-            font-family: 'Proxima Nova', Arial, sans-serif;
-          ">
-            <div style="
-              font-size: 15px;
-              font-weight: 700;
-              margin-bottom: 9px;
-            ">
-              ${item.donor}
-            </div>
-        `;
-
-        if (item.regular > 0) {
-          html += `
-            <div style="margin-bottom: 6px;">
-              <span style="font-weight: 600;">
-                Regular resources
-              </span><br>
-              <span style="color: #666;">
-                USD ${formatExact(item.regular)}
-              </span>
-            </div>
-          `;
-        }
-
-        if (item.other > 0) {
-          html += `
-            <div style="margin-bottom: 9px;">
-              <span style="font-weight: 600;">
-                Other resources
-              </span><br>
-              <span style="color: #666;">
-                USD ${formatExact(item.other)}
-              </span>
-            </div>
-          `;
-        }
-
-        html += `
-            <div style="
-              border-top: 1px solid #e5e5e5;
-              padding-top: 8px;
-              font-weight: 700;
-            ">
-              Total: USD ${formatExact(total)}
-            </div>
-          </div>
-        `;
-
-        return html;
+        return detailedTooltip(item.donor, `$${formatExact(total)}`, [
+          { label: 'Regular resources', color: RESOURCE_COLORS.regular, value: item.regular > 0 ? `$${formatExact(item.regular)}` : '—', detail: item.regular > 0 ? share(item.regular) : null },
+          { label: 'Other resources', color: RESOURCE_COLORS.other, value: item.other > 0 ? `$${formatExact(item.other)}` : '—', detail: item.other > 0 ? share(item.other) : null }
+        ]);
       }
     },
 
@@ -242,7 +227,6 @@ export function initContributionsByDonorResource(el, echarts) {
       max: 400000000,
       interval: 50000000,
 
-      name: 'USD M',
       nameLocation: 'middle',
       nameGap: 48,
 
@@ -275,66 +259,63 @@ export function initContributionsByDonorResource(el, echarts) {
       splitLine: {
         show: true,
         lineStyle: {
-          color: '#e2e2e2',
+          color: '#C5CBD1',
           width: 1
         }
       }
     },
 
-    yAxis: {
-      type: 'category',
-      data: donors,
-
-      axisLine: {
-        show: false
+    yAxis: [
+      {
+        type: 'category',
+        data: donors,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          interval: 0,
+          width: 245,
+          margin: 84,
+          align: 'right',
+          overflow: 'truncate',
+          color: '#333333',
+          fontFamily: 'Proxima Nova, Arial, sans-serif',
+          fontSize: 13,
+          lineHeight: 20
+        }
       },
+      {
+        type: 'category',
+        data: donors,
+        position: 'left',
+        offset: 32,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          interval: 0,
+          width: 64,
+          margin: 10,
+          align: 'center',
+          formatter: function (donor) {
+            if (logoUrls[donor] || flagUrls[donor]) {
+              return `{${getFlagKey(donor)}|}`;
+            }
 
-      axisTick: {
-        show: false
-      },
-
-      axisLabel: {
-        interval: 0,
-        margin: 10,
-        align: 'right',
-
-        formatter: function (donor) {
-          const flagUrl = flagUrls[donor];
-
-          if (!flagUrl) {
-            return `{name|${donor}}  {spacer|}`;
-          }
-
-          return `{name|${donor}}  {${getFlagKey(donor)}|}`;
-        },
-
-        rich: {
-          ...richFlagStyles,
-
-          spacer: {
-            width: 30,
-            height: 20
+            return '';
           },
-
-          name: {
-            width: 275,
-            color: '#333333',
-            fontFamily: 'Proxima Nova, Arial, sans-serif',
-            fontSize: 13,
-            lineHeight: 20,
-            align: 'right',
-            overflow: 'truncate'
+          rich: {
+            ...richFlagStyles,
+            ...richLogoStyles
           }
         }
       }
-    },
+    ],
 
     series: [
       {
         name: 'Regular resources',
         type: 'bar',
         stack: 'resources',
-        barWidth: 21,
+        barWidth: 18,
         barCategoryGap: '30%',
         data: regularResources,
 
@@ -352,7 +333,7 @@ export function initContributionsByDonorResource(el, echarts) {
         name: 'Other resources',
         type: 'bar',
         stack: 'resources',
-        barWidth: 21,
+        barWidth: 18,
         barCategoryGap: '30%',
         data: otherResources,
 
@@ -405,6 +386,12 @@ export function initContributionsByDonorResource(el, echarts) {
   const chart = echarts.init(el);
   chart.setOption(option);
 
+  Object.values(logoUrls).forEach((url) => {
+    const image = new Image();
+    image.addEventListener('load', () => chart.resize());
+    image.src = new URL(url, window.location.href).href;
+  });
+
   const resize = () => chart.resize();
 
   window.addEventListener('resize', resize);
@@ -413,3 +400,4 @@ export function initContributionsByDonorResource(el, echarts) {
 
 export default initContributionsByDonorResource;
 import { RESOURCE_COLORS } from './chartColors';
+import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

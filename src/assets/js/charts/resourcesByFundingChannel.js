@@ -130,7 +130,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           .toFixed(2)
           .replace(/0+$/, '')
           .replace(/\.$/, '') +
-        'b'
+        'B'
       );
     }
 
@@ -141,9 +141,9 @@ export function initResourcesByFundingChannel(el, echarts) {
     return (
       '$' +
       (value / 1000)
-        .toFixed(1)
+        .toFixed(1).replace(/\.0$/, '')
         .replace('.0', '') +
-      'b'
+      'B'
     );
   }
 
@@ -265,17 +265,17 @@ export function initResourcesByFundingChannel(el, echarts) {
 
       data: points,
 
-      symbolSize: 1,
+      symbolSize: 0,
 
       silent: true,
 
       itemStyle: {
-        opacity: 0
+        color: 'transparent'
       },
 
       label: {
 
-        show: true,
+        show: false,
 
         position: 'inside',
 
@@ -419,12 +419,12 @@ export function initResourcesByFundingChannel(el, echarts) {
 
       data: points,
 
-      symbolSize: 1,
+      symbolSize: 0,
 
       silent: true,
 
       itemStyle: {
-        opacity: 0
+        color: 'transparent'
       },
 
       label: {
@@ -441,17 +441,7 @@ export function initResourcesByFundingChannel(el, echarts) {
 
           formatter: function (params) {
 
-            return (
-              '{year|' +
-              params.data.year +
-              '}\n' +
-
-              '{value|' +
-              formatValue(
-                params.data.fundingValue
-              ) +
-              '}'
-            );
+            return '{value|' + formatShort(params.data.fundingValue) + '}';
 
           },
 
@@ -463,7 +453,7 @@ export function initResourcesByFundingChannel(el, echarts) {
 
           borderWidth: 1,
 
-          borderRadius: 3,
+          borderRadius: 0,
 
           padding: [5, 8],
 
@@ -527,21 +517,20 @@ export function initResourcesByFundingChannel(el, echarts) {
 
     name: 'Total',
 
-    type: 'line',
+    type: 'scatter',
 
-    data: totals,
+    data: years.map((year, index) => [year, totals[index]]),
 
-    symbol: 'none',
+    symbol: 'circle',
+
+    symbolSize: 0,
+
+    clip: false,
 
     silent: true,
 
-    lineStyle: {
-      width: 0,
-      opacity: 0
-    },
-
     itemStyle: {
-      opacity: 0
+      color: 'transparent'
     },
 
     label: {
@@ -550,18 +539,18 @@ export function initResourcesByFundingChannel(el, echarts) {
 
       position: 'top',
 
-      distance: 12,
+      distance: 8,
 
       formatter: function (params) {
-        return formatTotal(params.value);
+        return formatTotal(params.value[1]);
       },
 
-      color: '#8E632F',
+      color: '#263746',
 
       fontFamily:
         'Proxima Nova, Arial, sans-serif',
 
-      fontSize: 17,
+      fontSize: 14,
 
       fontWeight: 700
 
@@ -607,8 +596,8 @@ export function initResourcesByFundingChannel(el, echarts) {
         snap: true,
 
         lineStyle: {
-          color: '#555555',
-          width: 1.4,
+          color: 'rgba(35, 46, 61, 0.28)',
+          width: 1,
           type: 'dashed'
         },
 
@@ -622,7 +611,7 @@ export function initResourcesByFundingChannel(el, echarts) {
 
           padding: [5, 9],
 
-          borderRadius: 2,
+          borderRadius: 0,
 
           margin: 8,
 
@@ -641,13 +630,13 @@ export function initResourcesByFundingChannel(el, echarts) {
 
       borderColor: '#cccccc',
 
-      borderWidth: 1,
+      borderWidth: 0,
 
-      padding: 14,
+      padding: 0,
 
       extraCssText:
         'box-shadow:0 4px 14px rgba(0,0,0,0.14);' +
-        'border-radius:4px;',
+        'border-radius:0;',
 
       textStyle: {
 
@@ -676,87 +665,21 @@ export function initResourcesByFundingChannel(el, echarts) {
         const year =
           validParams[0].axisValue;
 
-        const yearIndex =
-          years.indexOf(year);
+        const yearIndex = years.indexOf(year);
+        const total = totals[yearIndex];
 
-        let html =
-
-          '<div style="' +
-          'font-size:16px;' +
-          'font-weight:700;' +
-          'padding-bottom:8px;' +
-          'margin-bottom:9px;' +
-          'border-bottom:1px solid #ddd;' +
-          '">' +
-
-          year +
-
-          '</div>';
-
-        validParams
+        return detailedTooltip(year, formatM(total), seriesOrder
           .slice()
           .reverse()
-          .forEach(item => {
-
-            html +=
-
-              '<div style="' +
-              'display:flex;' +
-              'align-items:center;' +
-              'justify-content:space-between;' +
-              'gap:30px;' +
-              'margin:7px 0;' +
-              '">' +
-
-              '<div style="' +
-              'display:flex;' +
-              'align-items:center;' +
-              'gap:7px;' +
-              '">' +
-
-              '<span style="' +
-              'width:9px;' +
-              'height:9px;' +
-              'display:inline-block;' +
-              'background:' +
-              colors[item.seriesName] +
-              ';' +
-              '"></span>' +
-
-              '<span>' +
-              item.seriesName +
-              '</span>' +
-
-              '</div>' +
-
-              '<strong>' +
-              formatM(item.value) +
-              '</strong>' +
-
-              '</div>';
-
-          });
-
-        html +=
-
-          '<div style="' +
-          'border-top:1px solid #ddd;' +
-          'margin-top:10px;' +
-          'padding-top:10px;' +
-          'display:flex;' +
-          'justify-content:space-between;' +
-          'gap:30px;' +
-          '">' +
-
-          '<strong>Total</strong>' +
-
-          '<strong>' +
-          formatM(totals[yearIndex]) +
-          '</strong>' +
-
-          '</div>';
-
-        return html;
+          .map((category) => {
+            const value = data[category][yearIndex];
+            return {
+              label: category,
+              color: colors[category],
+              value: value > 0 ? formatM(value) : '—',
+              detail: value > 0 ? formatTooltipPercent(value, total) : null
+            };
+          }));
 
       }
 
@@ -772,13 +695,13 @@ export function initResourcesByFundingChannel(el, echarts) {
 
       right: 22,
 
-      top: '14%',
+      top: 'middle',
 
-      itemWidth: 9,
+      itemWidth: 30,
 
-      itemHeight: 9,
+      itemHeight: 10,
 
-      itemGap: 23,
+      itemGap: 25,
 
       icon: 'rect',
 
@@ -791,6 +714,17 @@ export function initResourcesByFundingChannel(el, echarts) {
       },
 
       textStyle: {
+
+        fontFamily:
+          'Proxima Nova, Arial, sans-serif',
+
+        fontSize: 15,
+
+        fontWeight: 500,
+
+        color: '#222222',
+
+        lineHeight: 22,
 
         rich: {
 
@@ -857,7 +791,7 @@ export function initResourcesByFundingChannel(el, echarts) {
 
       right: 355,
 
-      top: 80,
+      top: 40,
 
       bottom: 70,
 
@@ -929,7 +863,7 @@ export function initResourcesByFundingChannel(el, echarts) {
 
           padding: [5, 9],
 
-          borderRadius: 2,
+          borderRadius: 0,
 
           fontFamily:
             'Proxima Nova, Arial, sans-serif',
@@ -955,27 +889,6 @@ export function initResourcesByFundingChannel(el, echarts) {
       min: 0,
 
       max: 5500,
-
-      name: 'USD M',
-
-      nameLocation: 'middle',
-
-      nameGap: 58,
-
-      nameRotate: 90,
-
-      nameTextStyle: {
-
-        color: '#111111',
-
-        fontFamily:
-          'Proxima Nova, Arial, sans-serif',
-
-        fontSize: 15,
-
-        fontWeight: 500
-
-      },
 
       axisLine: {
         show: false
@@ -1091,3 +1004,4 @@ export function initResourcesByFundingChannel(el, echarts) {
   });
 }
 import { RESOURCE_COLORS, CATEGORY_COLORS } from './chartColors';
+import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

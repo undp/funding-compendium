@@ -3,6 +3,10 @@
   padding-top: 4rem;
 }
 
+main p {
+  text-wrap: pretty;
+}
+
 .padding-bottom {
   padding-bottom: 4rem;
 }
@@ -24,6 +28,10 @@
 .homepage-hero-full>img,
 .homepage-hero-full>video {
   clip-path: inset(0);
+}
+
+.funding-pagehero .overlay-grey::before {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (min-width: 48em) {
@@ -553,6 +561,52 @@ html {
   padding: 0;
 }
 
+/* Funding landscape summary tabs: keep the active rule aligned to the label. */
+#fl-overview .tabs > ul {
+  column-gap: 3rem;
+}
+
+#fl-overview .tabs-title {
+  padding-right: 0;
+  border-bottom: 0 !important;
+}
+
+#fl-overview .tabs-title > a {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#fl-overview .tabs-title.is-active > a::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  background: #694596;
+  content: '';
+}
+
+#fl-overview .tabs-title:nth-child(2).is-active > a::after {
+  background: #637300;
+}
+
+#fl-overview .tabs-title:nth-child(3).is-active > a::after {
+  background: #0069b3;
+}
+
+#fl-overview .tabs .tabs-content .tabs-panel {
+  padding-top: 1.25rem;
+}
+
+@media screen and (max-width: 47.9375em) {
+  #fl-overview .tabs .tabs-content .tabs-panel {
+    padding-top: 0.75rem;
+  }
+}
+
 
 /* =========================================================
    CONTRIBUTION SUMMARY
@@ -561,9 +615,9 @@ html {
 .contributions-summary {
   width: 100%;
   box-sizing: border-box;
-  background: var(--pastel-teal);
+  background: var(--pastel-purple);
   padding: 3.5rem 3rem;
-  color: #111;
+  color: #1c1c1c;
 }
 
 
@@ -593,7 +647,7 @@ html {
 }
 
 .total-value {
-  color: #2464bc;
+  color: #694596;
   font-size: 5rem;
   font-weight: 700;
   line-height: 0.8;
@@ -614,7 +668,7 @@ html {
   margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.3;
-  color: #111;
+  color: inherit;
 }
 
 
@@ -633,7 +687,7 @@ html {
 
 .increase strong {
   display: block;
-  color: #2464bc;
+  color: #694596;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1;
@@ -643,9 +697,9 @@ html {
   display: block;
   margin-top: 0.75rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.3;
-  color: #111;
+  color: inherit;
 }
 
 
@@ -681,11 +735,11 @@ html {
 }
 
 .breakdown-item + .breakdown-item {
-  border-left: 1px solid #d3dfeb;
+  border-left: 1px solid rgba(105, 69, 150, 0.2);
 }
 
 .breakdown-percent {
-  color: #2464bc;
+  color: #694596;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
@@ -697,18 +751,18 @@ html {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.15;
-  color: #111;
+  color: inherit;
 }
 
 .breakdown-value {
   display: inline-block;
   margin-top: 2.2rem;
   padding-top: 1rem;
-  border-top: 2px solid #2464bc;
+  border-top: 2px solid #694596;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.2;
-  color: #111;
+  color: inherit;
 }
 
 
@@ -899,20 +953,21 @@ html {
 
 #tab-2 .contributions-summary {
   background: var(--pastel-regular);
+  color: #1c1c1c;
 }
 
 #tab-2 .total-value,
 #tab-2 .increase strong,
 #tab-2 .breakdown-percent {
-  color: #3f7f45;
+  color: #637300;
 }
 
 #tab-2 .breakdown-value {
-  border-top-color: #3f7f45;
+  border-top-color: #637300;
 }
 
 #tab-2 .breakdown-item + .breakdown-item {
-  border-left-color: rgba(63, 127, 69, 0.18);
+  border-left-color: rgba(99, 115, 0, 0.22);
 }
 
 
@@ -933,6 +988,7 @@ html {
 
 #tab-3 .contributions-summary {
   background: var(--pastel-other);
+  color: #1c1c1c;
 
   padding: 8% 8%; 
   
@@ -1210,11 +1266,12 @@ html {
 
 .rr-signal-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 1rem;
 }
 
 .rr-stat-card {
+  border-top: 0.5rem solid #c3d51f;
   background: #f7f9e5;
   height: 100%;
   max-width: none;
@@ -1245,18 +1302,10 @@ html {
   line-height: 1.4;
 }
 
-.rr-stat-card:nth-child(2) {
-  background: #f4f7df;
-}
-
-.rr-stat-card:nth-child(3) {
-  background: #f0f4da;
-}
-
 .rr-stat-card.accent-blue:hover,
 .rr-stat-card.accent-green:hover,
 .rr-stat-card.accent-red:hover {
-  background-color: #eaf0c8;
+  background-color: #c3d51f;
   color: #1c1c1c;
 }
 
@@ -1317,7 +1366,6 @@ html {
 }
 
 .pledges-timeline {
-  --pledge-accent: #0069b3;
   --pledge-gap: clamp(0.75rem, 2vw, 1.75rem);
   --pledge-label-width: clamp(7.5rem, 17vw, 12rem);
   width: min(100%, 70rem);
@@ -1373,8 +1421,24 @@ html {
   align-self: stretch;
   margin: 0.18rem 0.2rem;
   border-radius: 0.14rem;
-  background: linear-gradient(90deg, #0076c0, var(--pledge-accent));
-  box-shadow: inset 0 0 0 1px rgba(0, 70, 120, 0.2);
+  background: #e8eea0;
+  box-shadow: inset 0 0 0 1px rgba(83, 96, 0, 0.16);
+}
+
+.pledges-timeline__period[style*="--span: 2"] {
+  background: #d7e56b;
+}
+
+.pledges-timeline__period[style*="--span: 3"] {
+  background: #c3d51f;
+}
+
+.pledges-timeline__period[style*="--span: 4"] {
+  background: #8d9e12;
+}
+
+.pledges-timeline__period[style*="--span: 5"] {
+  background: #536000;
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1389,12 +1453,21 @@ html {
   text-align: left;
 }
 
-.rr-contributor-table-block > h5 {
+.rr-contributor-table-block > h5,
+.rr-pledges-chart-block > h5 {
   margin: 0 0 4rem;
   color: #232e3d;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
   line-height: 1.25;
   text-align: center;
+}
+
+.rr-pledges-chart-block {
+  margin-top: clamp(4rem, 7vw, 6rem);
+}
+
+.rr-pledges-chart-block > h5 {
+  margin-bottom: 1.5rem;
 }
 
 .rr-contributor-table-grid {
@@ -1572,6 +1645,7 @@ html {
   .rr-modern .chart-wrapper {
     margin-inline: -0.5rem;
   }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1599,6 +1673,14 @@ html {
 .annual-table-launch h3,
 .annual-table-launch p {
   margin: 0;
+}
+
+.annual-table-launch h3,
+.or-table-block > h3 {
+  max-width: 60rem;
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .annual-table-launch p {
@@ -2000,7 +2082,7 @@ html {
 
 #fl-transparency {
   overflow: visible;
-  background: var(--pastel-other);
+  background: #f3ead3;
   color: #1c1c1c;
 }
 
@@ -2011,7 +2093,7 @@ html {
 
 #fl-transparency .fl-section-title {
   max-width: 30rem;
-  color: #1c1c1c;
+  color: #805e00;
 }
 
 .fl-trust-desktop {
@@ -2042,7 +2124,7 @@ html {
 }
 
 .fl-trust-row + .fl-trust-row {
-  border-top: 1px solid rgba(0, 105, 179, 0.22);
+  border-top: 1px solid rgba(128, 94, 0, 0.25);
 }
 
 .fl-trust-row h3 {
@@ -2261,7 +2343,7 @@ html {
 }
 
 .or-section-intro {
-  max-width: 68rem;
+  max-width: 76rem;
   margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
@@ -2283,10 +2365,14 @@ html {
 }
 
 .or-chart-title {
-  max-width: 58rem;
-  margin: 0 auto 1rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
   font-size: clamp(1rem, 1.35vw, 1.3rem);
   line-height: 1.25;
+  text-align: center;
   text-wrap: balance;
 }
 
@@ -2386,7 +2472,7 @@ html {
 .or-organization-card {
   width: auto;
   margin: 0;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(2rem, 3.5vw, 3rem);
   border: 1px solid rgba(255, 255, 255, 0.82);
   background: rgba(255, 255, 255, 0.58);
   box-shadow: 0 12px 30px rgba(0, 45, 90, 0.055);
@@ -2454,28 +2540,31 @@ html {
 .or-overview-highlight {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  justify-content: flex-start;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
   max-width: 68rem;
   margin: clamp(1.25rem, 2.5vw, 2rem) auto 0;
-  padding: clamp(1.25rem, 2.5vw, 2rem);
-  border: 1px solid #9bc7e3;
-  border-left: 6px solid #0069b3;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 0;
+  border-top: 0.6rem solid #0069b3;
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0, 61, 107, 0.1);
+  box-shadow: none;
   color: #003d6b;
-  font-size: clamp(1.2rem, 2vw, 1.65rem) !important;
-  font-weight: 600;
-  line-height: 1.32 !important;
+  font-size: clamp(1.1rem, 1.55vw, 1.3rem) !important;
+  font-weight: 300;
+  line-height: 1.4 !important;
   letter-spacing: -0.01em;
-  text-align: center;
-  text-wrap: balance;
+  text-align: left;
 }
 
-#or-overview .or-section-intro > p:first-child {
+#or-overview .or-overview-supporting {
   max-width: 68rem;
+  margin-top: 1rem;
   margin-right: auto;
   margin-left: auto;
+  color: #40576a;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.45;
   text-align: center;
   text-wrap: balance;
 }
@@ -2487,24 +2576,33 @@ html {
 }
 
 .or-overview-trend {
-  display: inline-grid;
+  display: inline-block;
   flex: 0 0 auto;
-  place-items: center;
-  width: clamp(3.5rem, 6vw, 4.75rem);
-  height: clamp(3.5rem, 6vw, 4.75rem);
-  border-radius: 50%;
-  background: #dceef8;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
   color: #00558f;
-  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-family: var(--undpds-font-family-sohnebreit);
+  font-size: clamp(4.25rem, 7.5vw, 6.25rem);
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 0.8;
   text-indent: 0;
 }
 
 .or-overview-highlight > span:last-child {
   max-width: 48rem;
+  font-weight: 400;
   text-align: left;
+}
+
+.or-overview-highlight strong {
+  display: inline;
+  font-family: var(--undpds-font-family-sohnebreit);
+  font-size: clamp(1.5rem, 2.35vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 #or-overview .or-chart-title {
@@ -2773,7 +2871,7 @@ html {
   }
 
   .or-chart-title {
-    text-align: left;
+    text-align: center;
   }
 
   .or-notes-panel,
@@ -2827,6 +2925,37 @@ html {
 .section-bg-gold { background-color: var(--pastel-gold); }
 .section-bg-regular { background-color: var(--pastel-regular); }
 .section-bg-other { background-color: var(--pastel-other); }
+
+/* Pair pastel section backgrounds with their darker chart-palette heading color. */
+.section-bg-teal :is(.fl-section-title, .or-section-title),
+.rr-section.section-bg-teal h4 {
+  color: #267878;
+}
+
+.section-bg-purple :is(.fl-section-title, .or-section-title),
+.rr-section.section-bg-purple h4 {
+  color: #694596;
+}
+
+.section-bg-orange :is(.fl-section-title, .or-section-title),
+.rr-section.section-bg-orange h4 {
+  color: #b94e1c;
+}
+
+.section-bg-gold :is(.fl-section-title, .or-section-title),
+.rr-section.section-bg-gold h4 {
+  color: #805e00;
+}
+
+.section-bg-regular :is(.fl-section-title, .or-section-title),
+.rr-section.section-bg-regular h4 {
+  color: #637300;
+}
+
+.section-bg-other :is(.fl-section-title, .or-section-title),
+.rr-section.section-bg-other h4 {
+  color: #0069b3;
+}
 
 /* =========================================================
    FUNDING COMPENDIUM HOMEPAGE

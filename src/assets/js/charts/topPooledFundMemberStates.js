@@ -59,7 +59,7 @@ export function initTopPooledFundMemberStates(el, echarts) {
         fontSize: 11,
         formatter: '{value}%'
       },
-      splitLine: { lineStyle: { color: '#E8EAED' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     yAxis: {
       type: 'category',

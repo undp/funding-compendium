@@ -39,8 +39,8 @@ export function initTopIfiRecipientCountries(el, echarts) {
       },
       backgroundColor: '#ffffff',
       borderColor: '#D8DDE3',
-      borderWidth: 1,
-      padding: 13,
+      borderWidth: 0,
+      padding: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#232E3D',
@@ -48,25 +48,21 @@ export function initTopIfiRecipientCountries(el, echarts) {
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
-        const directShare = totals[index] ? direct[index] / totals[index] * 100 : 0;
-        const indirectShare = totals[index] ? indirect[index] / totals[index] * 100 : 0;
-        let html = `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-size:14px;font-weight:700;margin-bottom:9px">${recipients[index]}</div>`;
+        const amount = (value) => `$${value.toFixed(1).replace(/\.0$/, '')}M`;
+        const share = (value) => formatTooltipPercent(value, totals[index]);
 
-        if (direct[index] > 0) {
-          html += `<div style="margin-bottom:5px">Direct: <strong>$${direct[index].toFixed(1)}M · ${directShare.toFixed(0)}%</strong></div>`;
-        }
-        if (indirect[index] > 0) {
-          html += `<div style="margin-bottom:5px">Indirect: <strong>$${indirect[index].toFixed(1)}M · ${indirectShare.toFixed(0)}%</strong></div>`;
-        }
-
-        return `${html}<div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}M</strong></div>`;
+        return detailedTooltip(recipients[index], amount(totals[index]), [
+          { label: 'IFI Direct', color: SECONDARY_COLORS[0], value: direct[index] > 0 ? amount(direct[index]) : '—', detail: direct[index] > 0 ? share(direct[index]) : null },
+          { label: 'IFI Indirect', color: SECONDARY_COLORS[1], value: indirect[index] > 0 ? amount(indirect[index]) : '—', detail: indirect[index] > 0 ? share(indirect[index]) : null }
+        ]);
       }
     },
     legend: {
-      top: 0,
-      left: 0,
-      itemWidth: 14,
-      itemHeight: 10,
+      bottom: 5,
+      left: 'center',
+      icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 24,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -78,8 +74,8 @@ export function initTopIfiRecipientCountries(el, echarts) {
     grid: {
       left: 190,
       right: 90,
-      top: 45,
-      bottom: 40
+      top: 15,
+      bottom: 70
     },
     xAxis: {
       type: 'value',
@@ -93,7 +89,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
         fontSize: 10,
         formatter: (value) => `$${value}M`
       },
-      splitLine: { lineStyle: { color: '#EDF0F2' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     yAxis: {
       type: 'category',
@@ -161,3 +157,4 @@ export function initTopIfiRecipientCountries(el, echarts) {
 
 export default initTopIfiRecipientCountries;
 import { SECONDARY_COLORS } from './chartColors';
+import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

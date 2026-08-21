@@ -47,8 +47,8 @@ export function initTrendsInResources(el, echarts) {
       },
       backgroundColor: '#ffffff',
       borderColor: '#d9d9d9',
-      borderWidth: 1,
-      padding: [12, 14],
+      borderWidth: 0,
+      padding: 0,
       textStyle: {
         color: '#222222',
         fontSize: 12,
@@ -57,46 +57,10 @@ export function initTrendsInResources(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
 
-        return `
-          <div style="min-width: 230px;">
-            <div style="
-              font-size: 14px;
-              font-weight: 700;
-              margin-bottom: 8px;
-            ">
-              ${years[index]}
-            </div>
-
-            <div style="margin-bottom: 6px;">
-              <span style="font-weight: 600;">
-                Regular resources
-              </span><br>
-              <span style="color: #666666;">
-                USD ${regularResources[index].toLocaleString()}M
-                (${regularPercentages[index]}%)
-              </span>
-            </div>
-
-            <div style="margin-bottom: 8px;">
-              <span style="font-weight: 600;">
-                Other resources
-              </span><br>
-              <span style="color: #666666;">
-                USD ${otherResources[index].toLocaleString()}M
-                (${otherPercentages[index]}%)
-              </span>
-            </div>
-
-            <div style="
-              border-top: 1px solid #e5e5e5;
-              padding-top: 7px;
-              font-size: 13px;
-              font-weight: 700;
-            ">
-              Total: USD ${totals[index].toLocaleString()}M
-            </div>
-          </div>
-        `;
+        return detailedTooltip(years[index], `$${totals[index].toLocaleString('en-US')}M`, [
+          { label: 'Regular resources', color: RESOURCE_COLORS.regular, value: `$${regularResources[index].toLocaleString('en-US')}M`, detail: `${regularPercentages[index]}%` },
+          { label: 'Other resources', color: RESOURCE_COLORS.other, value: `$${otherResources[index].toLocaleString('en-US')}M`, detail: `${otherPercentages[index]}%` }
+        ]);
       }
     },
 
@@ -104,8 +68,8 @@ export function initTrendsInResources(el, echarts) {
       bottom: 14,
       left: 'center',
       icon: 'rect',
-      itemWidth: 22,
-      itemHeight: 6,
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 24,
       textStyle: {
         color: '#555555',
@@ -114,7 +78,10 @@ export function initTrendsInResources(el, echarts) {
       data: [
         'Regular resources',
         'Other resources',
-        'Total'
+        {
+          name: 'Total',
+          icon: 'path://M0 3 H24 V5 H0 Z'
+        }
       ]
     },
 
@@ -141,7 +108,7 @@ export function initTrendsInResources(el, echarts) {
     yAxis: {
       type: 'value',
       min: 0,
-      max: 6000,
+      max: 5000,
       interval: 1000,
       name: 'USD M',
       nameLocation: 'middle',
@@ -169,7 +136,7 @@ export function initTrendsInResources(el, echarts) {
       splitLine: {
         show: true,
         lineStyle: {
-          color: '#dddddd',
+          color: '#C5CBD1',
           width: 1
         }
       }
@@ -179,6 +146,7 @@ export function initTrendsInResources(el, echarts) {
       {
         name: 'Regular resources',
         type: 'bar',
+        clip: false,
         stack: 'resources',
         barWidth: '66%',
         data: regularResources,
@@ -194,7 +162,7 @@ export function initTrendsInResources(el, echarts) {
           },
           rich: {
             percent: {
-              color: '#fff',
+              color: '#283000',
               fontSize: 16,
               fontWeight: 500,
               lineHeight: 16,
@@ -210,6 +178,7 @@ export function initTrendsInResources(el, echarts) {
       {
         name: 'Other resources',
         type: 'bar',
+        clip: false,
         stack: 'resources',
         barWidth: '66%',
         data: otherResources,
@@ -241,8 +210,10 @@ export function initTrendsInResources(el, echarts) {
       {
         name: 'Total',
         type: 'line',
+        clip: false,
         data: totals,
-        symbol: 'none',
+        symbol: 'circle',
+        symbolSize: 8,
         smooth: false,
         z: 10,
         lineStyle: {
@@ -257,7 +228,7 @@ export function initTrendsInResources(el, echarts) {
           position: 'top',
           distance: 12,
           formatter: function (params) {
-            return `{total|USD ${(params.value / 1000).toFixed(1)}B}`;
+            return `{total|$${(params.value / 1000).toFixed(1).replace(/\.0$/, '')}B}`;
           },
           rich: {
             total: {
@@ -291,4 +262,5 @@ export function initTrendsInResources(el, echarts) {
 }
 
 export default initTrendsInResources;
+import { detailedTooltip } from './detailedTooltip';
 import { RESOURCE_COLORS, SECONDARY_COLORS } from './chartColors';

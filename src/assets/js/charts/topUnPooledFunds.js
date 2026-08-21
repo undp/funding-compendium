@@ -83,7 +83,7 @@ export function initTopUnPooledFunds(el, echarts) {
     xAxis: {
       type: 'value',
       min: 0,
-      max: 45,
+      max: 40,
       interval: 10,
       axisLine: { show: false },
       axisTick: { show: false },
@@ -92,7 +92,7 @@ export function initTopUnPooledFunds(el, echarts) {
         fontSize: 11,
         formatter: '${value}M'
       },
-      splitLine: { lineStyle: { color: '#E8EAED' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     yAxis: {
       type: 'category',
@@ -112,6 +112,7 @@ export function initTopUnPooledFunds(el, echarts) {
     series: [{
       name: 'Net funded amount',
       type: 'bar',
+      clip: false,
       data: values,
       barWidth: 15,
       itemStyle: {

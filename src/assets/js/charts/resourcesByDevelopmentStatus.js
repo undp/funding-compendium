@@ -34,14 +34,25 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     tooltip: {
       trigger: 'item',
+      backgroundColor: '#ffffff',
+      borderWidth: 0,
+      padding: 0,
+      textStyle: {
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        color: '#232E3D',
+        fontSize: 12
+      },
+      extraCssText: 'border-radius:0;',
       formatter: function (params) {
         const pct = percentages[params.name];
 
-        return `
-          <strong>${params.name}</strong><br>
-          ${displayValues[params.name]}<br>
-          ${pct}% of programmatic resources
-        `;
+        return detailedTooltip(params.name, displayValues[params.name], [
+          {
+            label: 'Share of programmatic resources',
+            color: params.color,
+            value: `${pct}%`
+          }
+        ]);
       }
     },
 
@@ -95,7 +106,11 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
         labelLine: {
           show: true,
           length: 18,
-          length2: 20
+          length2: 20,
+          lineStyle: {
+            color: '#7A8491',
+            width: 1
+          }
         },
         data
       },
@@ -159,3 +174,4 @@ export function initResourcesByDevelopmentStatus(el, echarts) {
 
 export default initResourcesByDevelopmentStatus;
 import { RESOURCE_COLORS, SECONDARY_COLORS } from './chartColors';
+import { detailedTooltip } from './detailedTooltip';

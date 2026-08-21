@@ -47,15 +47,16 @@ export function initVerticalFundContributions(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         return `<div style="font-weight:700;margin-bottom:8px">${funds[index]}</div>
-          <div style="margin-bottom:4px">2024: <strong>$${values2024[index].toFixed(1)}M</strong></div>
-          <div>2025: <strong>$${values2025[index].toFixed(1)}M</strong></div>`;
+          <div style="margin-bottom:4px">2024: <strong>$${values2024[index].toFixed(1).replace(/\.0$/, '')}M</strong></div>
+          <div>2025: <strong>$${values2025[index].toFixed(1).replace(/\.0$/, '')}M</strong></div>`;
       }
     },
     legend: {
-      bottom: 0,
+      bottom: 5,
       left: 'center',
-      itemWidth: 12,
-      itemHeight: 12,
+      icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 18,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -73,7 +74,7 @@ export function initVerticalFundContributions(el, echarts) {
     xAxis: {
       type: 'value',
       min: 0,
-      max: 650,
+      max: 600,
       interval: 100,
       axisLine: { show: false },
       axisTick: { show: false },

@@ -36,7 +36,7 @@ const contributors = [
 ];
 
 const total = contributors.reduce((sum, item) => sum + item.value, 0);
-const formatUsd = (value) => `USD ${Number(value).toLocaleString('en-US')}`;
+const formatUsd = (value) => `$${Number(value).toLocaleString('en-US')}`;
 
 export function initRegularResourcesContributionsMap(el, echarts) {
   const chart = echarts.init(el);
@@ -95,7 +95,7 @@ export function initRegularResourcesContributionsMap(el, echarts) {
             <div style="font-size:14px;font-weight:700;margin-bottom:8px">${item.name}</div>
             <div style="display:flex;justify-content:space-between;gap:20px;margin-bottom:4px"><span style="color:#666">Ranking</span><strong>#${item.rank}</strong></div>
             <div style="display:flex;justify-content:space-between;gap:20px;margin-bottom:4px"><span style="color:#666">Contribution</span><strong>${formatUsd(item.value)}</strong></div>
-            <div style="display:flex;justify-content:space-between;gap:20px"><span style="color:#666">Share</span><strong>${share.toFixed(1)}%</strong></div>
+            <div style="display:flex;justify-content:space-between;gap:20px"><span style="color:#666">Share</span><strong>${share.toFixed(1).replace(/\.0$/, '')}%</strong></div>
           </div>`;
         }
       },
@@ -113,11 +113,11 @@ export function initRegularResourcesContributionsMap(el, echarts) {
           fontSize: 11
         },
         pieces: [
-          { min: 50000000, label: 'USD 50M+', color: RESOURCE_COLORS.regular },
-          { min: 25000000, max: 49999999, label: 'USD 25–50M', color: '#CDDC4C' },
-          { min: 10000000, max: 24999999, label: 'USD 10–25M', color: '#D8E478' },
-          { min: 1000000, max: 9999999, label: 'USD 1–10M', color: '#E4ECA5' },
-          { min: 1, max: 999999, label: 'Below USD 1M', color: '#EFF4D2' }
+          { min: 50000000, label: '$50M+', color: RESOURCE_COLORS.regular },
+          { min: 25000000, max: 49999999, label: '$25–50M', color: '#CDDC4C' },
+          { min: 10000000, max: 24999999, label: '$10–25M', color: '#D8E478' },
+          { min: 1000000, max: 9999999, label: '$1–10M', color: '#E4ECA5' },
+          { min: 1, max: 999999, label: 'Below $1M', color: '#EFF4D2' }
         ],
         outOfRange: { color: '#ECEFF1' }
       },

@@ -63,7 +63,7 @@ export function initTopPrivateSectorContributors(el, echarts) {
         fontSize: 10,
         formatter: (value) => `$${value}M`
       },
-      splitLine: { lineStyle: { color: '#ECEEF1' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     yAxis: {
       type: 'category',

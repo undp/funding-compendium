@@ -39,22 +39,36 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     tooltip: {
       trigger: 'item',
+      backgroundColor: '#ffffff',
+      borderWidth: 0,
+      padding: 0,
+      extraCssText: 'border-radius:0;box-shadow:0 4px 14px rgba(0,0,0,0.16);',
+      textStyle: {
+        color: '#263746',
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontSize: 13
+      },
       formatter: function (params) {
         const item = data[params.dataIndex];
 
-        return `
-          <strong>${item.name}</strong><br>
-          $${item.value.toLocaleString()}M<br>
-          ${item.percent}% of total
-        `;
+        return detailedTooltip(
+          item.name,
+          `$${item.value.toLocaleString('en-US')}M`,
+          [{
+            label: 'Share of total',
+            color: item.color,
+            value: `${item.percent}%`
+          }]
+        );
       }
     },
     legend: {
       orient: 'horizontal',
       left: 'center',
       bottom: 30,
-      itemWidth: 14,
-      itemHeight: 14,
+      icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 20,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -81,7 +95,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
 
             return (
               `{pct|${item.percent}%}\n` +
-              `{value|$${item.value.toLocaleString()}M}`
+              `{value|$${item.value.toLocaleString('en-US')}M}`
             );
           },
           rich: {
@@ -102,7 +116,11 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
         labelLine: {
           show: true,
           length: 32,
-          length2: 36
+          length2: 36,
+          lineStyle: {
+            color: '#7A8491',
+            width: 1
+          }
         },
         data: data.map((item) => ({
           value: item.value,
@@ -126,7 +144,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
         label: {
           show: true,
           position: 'center',
-          formatter: '{total|$950.0M}\n{caption|Total}',
+          formatter: '{total|$950M}\n{caption|Total}',
           rich: {
             total: {
               fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -171,3 +189,4 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
 
 export default initInstitutionalBudgetAllocation;
 import { SECONDARY_COLORS } from './chartColors';
+import { detailedTooltip } from './detailedTooltip';

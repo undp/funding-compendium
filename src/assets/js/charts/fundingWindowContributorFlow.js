@@ -115,7 +115,7 @@ export function initFundingWindowContributorFlow(el, echarts) {
       graphicText('75%', 151, '$55.5m', '700 13px', '#232E3D'),
       graphicCircle(210, SECONDARY_COLORS[0]),
       graphicText('75%', 206, 'Governance, Peacebuilding,\nCrisis and Resilience', '11px'),
-      graphicText('75%', 241, '$58.0m', '700 13px', '#232E3D'),
+      graphicText('75%', 241, '$58m', '700 13px', '#232E3D'),
       graphicCircle(300, SECONDARY_COLORS[2]),
       graphicText('75%', 296, "Gender Equality and\nWomen's Empowerment", '11px'),
       graphicText('75%', 331, '$1.34m', '700 13px', '#232E3D'),

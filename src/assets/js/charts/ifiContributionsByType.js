@@ -16,8 +16,8 @@ export function initIfiContributionsByType(el, echarts) {
       },
       backgroundColor: '#ffffff',
       borderColor: '#D8DDE3',
-      borderWidth: 1,
-      padding: 13,
+      borderWidth: 0,
+      padding: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#232E3D',
@@ -28,17 +28,18 @@ export function initIfiContributionsByType(el, echarts) {
         const indirectShare = indirect[index] / total[index] * 100;
         const directShare = direct[index] / total[index] * 100;
 
-        return `<div style="font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="display:flex;justify-content:space-between;gap:28px;margin-bottom:6px"><span>Indirect government financing</span><strong>$${indirect[index].toFixed(1)}M · ${indirectShare.toFixed(0)}%</strong></div>
-          <div style="display:flex;justify-content:space-between;gap:28px;margin-bottom:6px"><span>Direct contribution</span><strong>$${direct[index].toFixed(1)}M · ${directShare.toFixed(0)}%</strong></div>
-          <div style="margin-top:9px;padding-top:9px;border-top:1px solid #E5E7EB;display:flex;justify-content:space-between;gap:28px"><span>Total</span><strong>$${total[index].toFixed(1)}M</strong></div>`;
+        return detailedTooltip(years[index], `$${total[index].toFixed(1).replace(/\.0$/, '')}M`, [
+          { label: 'Indirect government financing', color: SECONDARY_COLORS[0], value: `$${indirect[index].toFixed(1).replace(/\.0$/, '')}M`, detail: `${indirectShare.toFixed(0)}%` },
+          { label: 'Direct contribution', color: SECONDARY_COLORS[1], value: `$${direct[index].toFixed(1).replace(/\.0$/, '')}M`, detail: `${directShare.toFixed(0)}%` }
+        ]);
       }
     },
     legend: {
-      bottom: 0,
+      bottom: 5,
       left: 'center',
-      itemWidth: 14,
-      itemHeight: 10,
+      icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 26,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -48,7 +49,15 @@ export function initIfiContributionsByType(el, echarts) {
       data: [
         'Indirect government financing',
         'Direct contribution',
-        'Total'
+        {
+          name: 'Total',
+          icon: 'path://M0,2 L24,2 L24,6 L0,6 Z',
+          itemStyle: {
+            color: '#1C1C1C',
+            borderColor: '#1C1C1C',
+            borderWidth: 0
+          }
+        }
       ]
     },
     grid: {
@@ -81,7 +90,7 @@ export function initIfiContributionsByType(el, echarts) {
       splitLine: {
         show: true,
         lineStyle: {
-          color: '#EDF0F2',
+          color: '#C5CBD1',
           width: 1
         }
       }
@@ -128,11 +137,11 @@ export function initIfiContributionsByType(el, echarts) {
         symbol: 'circle',
         symbolSize: 8,
         lineStyle: {
-          color: '#253746',
+          color: '#1C1C1C',
           width: 2.5
         },
         itemStyle: {
-          color: '#253746',
+          color: '#1C1C1C',
           borderColor: '#ffffff',
           borderWidth: 2
         },
@@ -141,7 +150,7 @@ export function initIfiContributionsByType(el, echarts) {
           position: 'top',
           distance: 10,
           formatter: (params) => `$${Math.round(params.value)}M`,
-          color: '#253746',
+          color: '#1C1C1C',
           fontSize: 12,
           fontWeight: 700
         },
@@ -161,3 +170,4 @@ export function initIfiContributionsByType(el, echarts) {
 
 export default initIfiContributionsByType;
 import { SECONDARY_COLORS } from './chartColors';
+import { detailedTooltip } from './detailedTooltip';

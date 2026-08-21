@@ -36,6 +36,34 @@ const data = [
 const names = data.map((item) => item[0]);
 const values = data.map((item) => item[1]);
 
+const flagCodes = {
+  Germany: 'de', Japan: 'jp', Sweden: 'se', Switzerland: 'ch', Norway: 'no',
+  'The Netherlands': 'nl', Canada: 'ca', Denmark: 'dk', 'Republic of Korea': 'kr',
+  'United Kingdom': 'gb', Belgium: 'be', Ireland: 'ie', Qatar: 'qa', Spain: 'es',
+  'New Zealand': 'nz', India: 'in', Luxembourg: 'lu', China: 'cn',
+  'Saudi Arabia': 'sa', Austria: 'at', 'Türkiye': 'tr', Finland: 'fi',
+  Thailand: 'th', Kuwait: 'kw', Singapore: 'sg', 'Government of Iceland': 'is',
+  'Viet Nam': 'vn', 'Government of Liechtenstein': 'li',
+  'Government of Portugal': 'pt', 'Cambodia**': 'kh', Philippines: 'ph', 'Samoa*': 'ws'
+};
+
+const flagUrls = Object.fromEntries(
+  Object.entries(flagCodes).map(([name, code]) => [name, `https://flagcdn.com/${code}.svg`])
+);
+
+const flagKey = (name) => `flag_${name.replace(/[^a-zA-Z0-9]/g, '_')}`;
+const flagStyles = Object.fromEntries(
+  Object.entries(flagUrls).map(([name, url]) => [flagKey(name), {
+    width: 28,
+    height: 18,
+    backgroundColor: { image: url },
+    borderColor: '#C5CBD1',
+    borderWidth: 1,
+    align: 'center',
+    verticalAlign: 'middle'
+  }])
+);
+
 function formatValue(value) {
   if (value >= 1000000) {
     return `$${(value / 1000000).toFixed(1).replace('.0', '')}M`;
@@ -52,23 +80,6 @@ export function initTopCoreContributors(el, echarts) {
   const option = {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     backgroundColor: '#ffffff',
-    title: {
-      text: 'Core contributions by country',
-      subtext: '2025',
-      left: 0,
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 24,
-        fontWeight: 700,
-        color: '#232E3D'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 14,
-        color: '#6B7280'
-      }
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
@@ -77,26 +88,27 @@ export function initTopCoreContributors(el, echarts) {
       borderWidth: 1,
       textStyle: {
         color: '#232E3D',
-        fontFamily: 'Proxima Nova, Arial, sans-serif'
+        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontSize: 14
       },
       formatter: function (params) {
         const item = params[0];
-        return `<strong>${item.name}</strong><br>Core contribution: <strong>$${item.value.toLocaleString()}</strong>`;
+        return `<strong>${item.name}</strong><br>Core contribution: <strong>$${item.value.toLocaleString('en-US')}</strong>`;
       }
     },
     grid: {
-      top: 85,
-      left: 190,
-      right: 90,
-      bottom: 35
+      top: 20,
+      left: 235,
+      right: 130,
+      bottom: 45
     },
     xAxis: {
       type: 'value',
-      max: 110000000,
-      splitNumber: 5,
+      max: 100000000,
+      interval: 20000000,
       axisLabel: {
         color: '#7A8491',
-        fontSize: 11,
+        fontSize: 12,
         formatter: function (value) {
           return value === 0 ? '$0' : `$${value / 1000000}M`;
         }
@@ -104,26 +116,53 @@ export function initTopCoreContributors(el, echarts) {
       axisLine: { show: false },
       axisTick: { show: false },
       splitLine: {
-        lineStyle: { color: '#E8EBEF' }
+        lineStyle: { color: '#C5CBD1' }
       }
     },
-    yAxis: {
-      type: 'category',
-      inverse: true,
-      data: names,
-      axisLine: { show: false },
-      axisTick: { show: false },
-      axisLabel: {
-        color: '#232E3D',
-        fontSize: 12,
-        margin: 14
+    yAxis: [
+      {
+        type: 'category',
+        inverse: true,
+        data: names,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          interval: 0,
+          width: 175,
+          align: 'right',
+          margin: 58,
+          color: '#232E3D',
+          fontFamily: 'Proxima Nova, Arial, sans-serif',
+          fontSize: 13,
+          lineHeight: 22
+        }
+      },
+      {
+        type: 'category',
+        inverse: true,
+        data: names,
+        position: 'left',
+        offset: 20,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          interval: 0,
+          width: 34,
+          align: 'center',
+          margin: 8,
+          formatter: function (name) {
+            return `{${flagKey(name)}|}`;
+          },
+          rich: flagStyles
+        }
       }
-    },
+    ],
     series: [{
       name: 'Core contribution',
       type: 'bar',
+      clip: false,
       data: values,
-      barWidth: 12,
+      barWidth: 22,
       itemStyle: {
         color: RESOURCE_COLORS.regular,
         borderRadius: 0
@@ -131,9 +170,9 @@ export function initTopCoreContributors(el, echarts) {
       label: {
         show: true,
         position: 'right',
-        distance: 7,
+        distance: 9,
         color: '#4B5563',
-        fontSize: 10,
+        fontSize: 12,
         formatter: function (params) {
           return formatValue(params.value);
         }
@@ -150,6 +189,12 @@ export function initTopCoreContributors(el, echarts) {
 
   const chart = echarts.init(el);
   chart.setOption(option);
+
+  Object.values(flagUrls).forEach((url) => {
+    const image = new Image();
+    image.addEventListener('load', () => chart.resize());
+    image.src = url;
+  });
 
   const resize = () => chart.resize();
   window.addEventListener('resize', resize);

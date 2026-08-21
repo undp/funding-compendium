@@ -63,7 +63,7 @@ export function initRegularResourcesAllocation(el, echarts) {
       },
 
       formatter: (params) => {
-        const percentage = ((params.value / total) * 100).toFixed(1);
+        const percentage = ((params.value / total) * 100).toFixed(1).replace(/\.0$/, '');
 
         return `
           <div style="
@@ -135,7 +135,7 @@ export function initRegularResourcesAllocation(el, echarts) {
               lineHeight: 18
             },
 
-            country: valueStyle(RESOURCE_COLORS.regular),
+            country: valueStyle('#637300'),
             regional: valueStyle(SECONDARY_COLORS[0]),
 
             // Slightly darker than the actual slice

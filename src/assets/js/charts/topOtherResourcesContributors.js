@@ -44,8 +44,66 @@ const values = [
   61.409719
 ];
 
+const flagUrls = {
+  'European Union': 'https://flagcdn.com/eu.svg',
+  Argentina: 'https://flagcdn.com/ar.svg',
+  Norway: 'https://flagcdn.com/no.svg',
+  Germany: 'https://flagcdn.com/de.svg',
+  Japan: 'https://flagcdn.com/jp.svg',
+  'Republic of Korea': 'https://flagcdn.com/kr.svg',
+  Gabon: 'https://flagcdn.com/ga.svg',
+  Sweden: 'https://flagcdn.com/se.svg',
+  Guatemala: 'https://flagcdn.com/gt.svg',
+  'Saudi Arabia': 'https://flagcdn.com/sa.svg',
+  Denmark: 'https://flagcdn.com/dk.svg',
+  Brazil: 'https://flagcdn.com/br.svg',
+  Colombia: 'https://flagcdn.com/co.svg',
+  'United Nations Agencies': 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_the_United_Nations.svg',
+  'United Kingdom': 'https://flagcdn.com/gb.svg'
+};
+
+const logoPaths = {
+  'Vertical fund—GEF': '../assets/img/logos/gef.png',
+  'Multi-Partner Trust Funds': '../assets/img/logos/mptf.png',
+  'Vertical fund - Green Climate Fund': '../assets/img/logos/green-climate-fund.jpeg',
+  'World Bank Group': '../assets/img/logos/wbg.jpg'
+};
+
+const logoSizes = {
+  'Vertical fund—GEF': [24, 32],
+  'Multi-Partner Trust Funds': [60, 23],
+  'Vertical fund - Green Climate Fund': [56, 30],
+  'World Bank Group': [54, 28]
+};
+
+const visualKey = (name) => `visual_${name.replace(/[^a-zA-Z0-9]/g, '_')}`;
+
+const flagStyles = Object.fromEntries(
+  Object.entries(flagUrls).map(([name, url]) => [visualKey(name), {
+    width: 28,
+    height: 18,
+    backgroundColor: { image: url },
+    borderColor: '#C5CBD1',
+    borderWidth: 1,
+    align: 'center',
+    verticalAlign: 'middle'
+  }])
+);
+
 export function initTopOtherResourcesContributors(el, echarts) {
   const chart = echarts.init(el);
+  const logoUrls = Object.fromEntries(
+    Object.entries(logoPaths).map(([name, path]) => [name, new URL(path, window.location.href).href])
+  );
+  const logoStyles = Object.fromEntries(
+    Object.entries(logoUrls).map(([name, url]) => [visualKey(name), {
+      width: logoSizes[name][0],
+      height: logoSizes[name][1],
+      backgroundColor: { image: url },
+      align: 'center',
+      verticalAlign: 'middle'
+    }])
+  );
 
   chart.setOption({
     
@@ -73,7 +131,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
       }
     },
     grid: {
-      left: 230,
+      left: 330,
       right: 100,
       top: 0,
       bottom: 45
@@ -90,23 +148,50 @@ export function initTopOtherResourcesContributors(el, echarts) {
         formatter: '${value}M'
       },
       splitLine: {
-        lineStyle: { color: '#E8EAED' }
+        lineStyle: { color: '#C5CBD1' }
       }
     },
-    yAxis: {
-      type: 'category',
-      inverse: true,
-      data: contributors,
-      axisLine: { show: false },
-      axisTick: { show: false },
-      axisLabel: {
-        color: '#2F3742',
-        fontSize: 12,
-        margin: 14,
-        width: 200,
-        overflow: 'truncate'
+    yAxis: [
+      {
+        type: 'category',
+        inverse: true,
+        data: contributors,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          interval: 0,
+          color: '#2F3742',
+          fontSize: 12,
+          lineHeight: 20,
+          margin: 84,
+          width: 245,
+          align: 'right',
+          overflow: 'truncate'
+        }
+      },
+      {
+        type: 'category',
+        inverse: true,
+        data: contributors,
+        position: 'left',
+        offset: 32,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: {
+          interval: 0,
+          width: 64,
+          margin: 10,
+          align: 'center',
+          formatter: function (name) {
+            return flagUrls[name] || logoUrls[name] ? `{${visualKey(name)}|}` : '';
+          },
+          rich: {
+            ...flagStyles,
+            ...logoStyles
+          }
+        }
       }
-    },
+    ],
     series: [{
       name: 'Other Resources',
       type: 'bar',
@@ -116,16 +201,22 @@ export function initTopOtherResourcesContributors(el, echarts) {
       label: {
         show: true,
         position: 'right',
-        distance: 8,
+        distance: 9,
         formatter: (params) => `$${Math.round(params.value)}M`,
-        color: '#46515D',
-        fontSize: 11,
-        fontWeight: 600
+        color: '#4B5563',
+        fontSize: 12,
+        fontWeight: 400
       },
       emphasis: {
         itemStyle: { color: RESOURCE_COLORS.other, opacity: 0.82 }
       }
     }]
+  });
+
+  [...Object.values(flagUrls), ...Object.values(logoUrls)].forEach((url) => {
+    const image = new Image();
+    image.addEventListener('load', () => chart.resize());
+    image.src = url;
   });
 
   const resize = () => chart.resize();

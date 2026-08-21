@@ -65,9 +65,13 @@ import { initRegularResourcesExperience } from './regularResourcesExperience';
 import { initFundingLandscapeExperience } from './fundingLandscapeExperience';
 import { initOtherResourcesExperience } from './otherResourcesExperience';
 import { initHomepageExperience } from './homepageExperience';
+import { applyNonBreakingCurrency } from './nonBreakingCurrency';
+import { protectBodyCopyWidows } from './bodyCopyWidows';
 
 // Initialize any charts declared via data-chart-type attributes
 document.addEventListener('DOMContentLoaded', function () {
+  applyNonBreakingCurrency();
+  protectBodyCopyWidows();
   chartManager.initCharts(document);
   initRegularResourcesExperience();
   initFundingLandscapeExperience();

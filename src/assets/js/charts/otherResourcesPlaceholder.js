@@ -30,7 +30,7 @@ export function initOtherResourcesPlaceholder(el, echarts) {
       type: 'value',
       axisLine: { show: false },
       axisTick: { show: false },
-      splitLine: { lineStyle: { color: '#E5E7EB' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     series: [{
       name: 'Placeholder data',

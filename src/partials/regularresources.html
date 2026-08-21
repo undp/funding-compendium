@@ -62,7 +62,6 @@
 
       <div class="cell small-12 medium-12 large-4">
         <h4>{{regular-resources-page.allocation.heading}}</h4>
-        <br>
         <p>{{regular-resources-page.allocation.copy}}</p>
       </div>
 
@@ -71,7 +70,7 @@
           <div
             class="echarts"
             data-chart-type="regular-resources-allocation"
-            style="width: 100%; height: 700px;"
+            style="width: 100%; height: 600px;"
           ></div>
         </div>
 
@@ -215,15 +214,13 @@
 
       <div class="padded cell small-12 medium-12 large-12">
         <h4>{{regular-resources-page.contributors.heading}}</h4>
-        <p>{{regular-resources-page.contributors.copy}}</p>
-
-        <br>
+        <p>{{{regular-resources-page.contributors.copy}}}</p>
 
         <div class="chart-wrapper">
           <div
             class="echarts"
             data-chart-type="top-core-contributors"
-            style="width: 100%; height: 700px;"
+            style="width: 100%; height: 1050px;"
           ></div>
         </div>
 
@@ -239,7 +236,7 @@
 
 <!-- ************************* Partners with multi-year pledges to regular resources ************************* -->
 
-<section class="section section-bg-purple rr-section" id="rr-pledges" padded>
+<section class="section section-bg-teal rr-section" id="rr-pledges" padded>
   <div class="grid-container section padded" data-rr-reveal>
     <div class="grid-x align-center align-middle">
 
@@ -308,12 +305,15 @@
         </div>
         <p class="chart-source">{{regular-resources-page.pledges.footnote}}</p>
 
-        <div class="chart-wrapper padded">
-          <div
-            class="echarts"
-            data-chart-type="multi-year-pledges"
-            style="width: 100%; height: 900px;"
-          ></div>
+        <div class="rr-pledges-chart-block">
+          <h5>{{regular-resources-page.pledges.income-heading}}</h5>
+          <div class="chart-wrapper">
+            <div
+              class="echarts"
+              data-chart-type="multi-year-pledges"
+              style="width: 100%; height: 500px;"
+            ></div>
+          </div>
         </div>
       </div>
 
@@ -334,12 +334,33 @@
       >
         <h4>{{regular-resources-page.map.heading}}</h4>
 
-        <div class="chart-wrapper">
-          <div
-            class="echarts"
-            data-chart-type="regular-resources-contributions-map"
-            style="width: 100%; height: 900px;"
-          ></div>
+        <div class="rr-contributor-table-block">
+          <h5>{{regular-resources-page.map.table-heading}}</h5>
+          <div class="rr-contributor-table-grid">
+            {{#each regular-resources-page.map.table-groups}}
+            <div class="rr-contributor-table-scroll" tabindex="0">
+              <table class="rr-contributor-table">
+                <caption class="show-for-sr">{{../regular-resources-page.map.table-aria-label}}</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">{{../regular-resources-page.map.table-columns.rank}}</th>
+                    <th scope="col">{{../regular-resources-page.map.table-columns.contributor}}</th>
+                    <th scope="col">{{../regular-resources-page.map.table-columns.usd}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each this.rows}}
+                  <tr>
+                    <td class="rr-contributor-rank">{{this.rank}}</td>
+                    <th scope="row"><span class="fi fi-{{this.flag}}" aria-hidden="true"></span>{{this.contributor}}</th>
+                    <td class="rr-contributor-usd">{{this.usd}}</td>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+            {{/each}}
+          </div>
         </div>
 
         {{#if regular-resources-page.map.source}}
@@ -362,13 +383,11 @@
         <h4>{{regular-resources-page.gloc.heading}}</h4>
         <p>{{regular-resources-page.gloc.copy}}</p>
 
-        <br>
-
         <div class="chart-wrapper">
           <div
             class="echarts"
             data-chart-type="top-gloc-contributors"
-            style="width: 100%; height: 900px;"
+            style="width: 100%; height: 500px;"
           ></div>
         </div>
       </div>

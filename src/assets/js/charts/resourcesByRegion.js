@@ -45,19 +45,7 @@ export function initResourcesByRegion(el, echarts) {
     },
 
     tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'shadow'
-      },
-      formatter: function (params) {
-        const item = data[params[0].dataIndex];
-
-        return `
-          <strong>${item.name}</strong><br>
-          $${item.value.toLocaleString()}M<br>
-          ${item.percent}% of programmatic resources
-        `;
-      }
+      show: false
     },
 
     xAxis: {
@@ -92,6 +80,7 @@ export function initResourcesByRegion(el, echarts) {
     series: [
       {
         type: 'bar',
+        silent: true,
 
         data: data.map((item) => ({
           value: item.percent,
@@ -100,13 +89,17 @@ export function initResourcesByRegion(el, echarts) {
           }
         })),
 
-        barWidth: 30,
-        barCategoryGap: '45%',
+        barWidth: 24,
+        barCategoryGap: '65%',
+
+        emphasis: {
+          disabled: true
+        },
 
         showBackground: true,
 
         backgroundStyle: {
-          color: '#F1F1F1'
+          color: '#FFFFFF'
         },
 
         label: {
@@ -119,7 +112,7 @@ export function initResourcesByRegion(el, echarts) {
 
             return (
               `{pct|${item.percent}%}  ` +
-              `{value|$${item.value.toLocaleString()}M}`
+              `{value|$${item.value.toLocaleString('en-US')}M}`
             );
           },
 

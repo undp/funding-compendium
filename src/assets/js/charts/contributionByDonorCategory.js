@@ -107,7 +107,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
     return Number.isInteger(rounded)
       ? `${rounded}%`
-      : `${rounded.toFixed(1)}%`;
+      : `${rounded.toFixed(1).replace(/\.0$/, '')}%`;
   };
 
   const option = {
@@ -123,8 +123,9 @@ export function initContributionByDonorCategory(el, echarts) {
       orient: 'vertical',
       left: '13%',
       bottom: 32,
-      itemWidth: 14,
-      itemHeight: 14,
+      icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 7,
       selectedMode: false,
       data: [
@@ -217,7 +218,7 @@ export function initContributionByDonorCategory(el, echarts) {
             </div>
 
             <div>
-              USD ${formatM(params.value)}M
+              $${formatM(params.value)}M
             </div>
 
             <div>

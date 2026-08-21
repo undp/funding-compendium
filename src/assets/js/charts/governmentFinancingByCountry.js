@@ -19,7 +19,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    backgroundColor: '#ffffff',
+    backgroundColor: 'transparent',
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       
@@ -66,7 +66,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
     xAxis: {
       type: 'value',
       min: 0,
-      max: 330,
+      max: 300,
       interval: 50,
       axisLine: { show: false },
       axisTick: { show: false },
@@ -75,7 +75,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
         fontSize: 11,
         formatter: '${value}M'
       },
-      splitLine: { lineStyle: { color: '#EEE9E5' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     yAxis: {
       type: 'category',
@@ -95,6 +95,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
     series: [{
       name: 'Government financing',
       type: 'bar',
+      clip: false,
       data: values,
       barWidth: 12,
       itemStyle: {
@@ -112,7 +113,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
         formatter: function (params) {
           return params.value >= 100
             ? `$${params.value.toFixed(0)}M`
-            : `$${params.value.toFixed(1)}M`;
+            : `$${params.value.toFixed(1).replace(/\.0$/, '')}M`;
         },
         color: '#514944',
         fontSize: 10,

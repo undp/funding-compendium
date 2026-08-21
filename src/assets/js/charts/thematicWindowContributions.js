@@ -5,7 +5,7 @@ export function initThematicWindowContributions(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    backgroundColor: '#ffffff',
+    backgroundColor: 'transparent',
     textStyle: {
       fontFamily: 'Proxima Nova, Arial, sans-serif'
     },
@@ -63,7 +63,7 @@ export function initThematicWindowContributions(el, echarts) {
     yAxis: {
       type: 'value',
       min: 100,
-      max: 135,
+      max: 130,
       interval: 10,
       axisLine: { show: false },
       axisTick: { show: false },
@@ -72,7 +72,7 @@ export function initThematicWindowContributions(el, echarts) {
         fontSize: 11,
         formatter: '${value}M'
       },
-      splitLine: { lineStyle: { color: '#E8EAED' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     series: [{
       name: 'Contributions',

@@ -14,7 +14,7 @@ export function initPooledFundContributions(el, echarts) {
     title: {
       
       subtext: '2022–2025 · $M',
-      left: 0,
+      left: 'center',
       top: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -30,11 +30,11 @@ export function initPooledFundContributions(el, echarts) {
     },
     tooltip: {
       trigger: 'axis',
-      axisPointer: { type: 'shadow' },
+      axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(35, 46, 61, 0.035)' } },
       backgroundColor: '#ffffff',
       borderColor: '#D8DDE3',
-      borderWidth: 1,
-      padding: 13,
+      borderWidth: 0,
+      padding: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#232E3D',
@@ -42,23 +42,23 @@ export function initPooledFundContributions(el, echarts) {
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
-        const humanitarianRow = humanitarian[index] > 0
-          ? `<div style="margin-bottom:5px">Humanitarian: <strong>$${humanitarian[index].toFixed(1)}M</strong></div>`
-          : '';
-
-        return `<div style="font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="margin-bottom:5px">Climate and environment: <strong>$${climate[index].toFixed(1)}M</strong></div>
-          <div style="margin-bottom:5px">Development: <strong>$${development[index].toFixed(1)}M</strong></div>
-          ${humanitarianRow}
-          <div style="margin-bottom:5px">Peace and transition: <strong>$${peace[index].toFixed(1)}M</strong></div>
-          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">UNDP Total: <strong>$${undpTotal[index]}M</strong></div>`;
+        const amount = (value) => `$${value.toFixed(1).replace(/\.0$/, '')}M`;
+        const compositionTotal = climate[index] + development[index] + humanitarian[index] + peace[index];
+        const share = (value) => formatTooltipPercent(value, compositionTotal);
+        return detailedTooltip(years[index], `$${undpTotal[index]}M`, [
+          { label: 'Climate and environment', color: SECONDARY_COLORS[0], value: amount(climate[index]), detail: share(climate[index]) },
+          { label: 'Development', color: SECONDARY_COLORS[1], value: amount(development[index]), detail: share(development[index]) },
+          { label: 'Humanitarian', color: SECONDARY_COLORS[2], value: humanitarian[index] > 0 ? amount(humanitarian[index]) : '—', detail: humanitarian[index] > 0 ? share(humanitarian[index]) : null },
+          { label: 'Peace and transition', color: SECONDARY_COLORS[3], value: amount(peace[index]), detail: share(peace[index]) }
+        ]);
       }
     },
     legend: {
-      top: 55,
-      left: 0,
-      itemWidth: 12,
-      itemHeight: 12,
+      bottom: 5,
+      left: 'center',
+      icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 20,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -75,8 +75,8 @@ export function initPooledFundContributions(el, echarts) {
     grid: {
       left: 65,
       right: 80,
-      top: 115,
-      bottom: 45,
+      top: 55,
+      bottom: 75,
       containLabel: true
     },
     xAxis: {
@@ -91,7 +91,7 @@ export function initPooledFundContributions(el, echarts) {
         fontSize: 11,
         formatter: '${value}M'
       },
-      splitLine: { lineStyle: { color: '#E8EAED' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     yAxis: {
       type: 'category',
@@ -171,3 +171,4 @@ export function initPooledFundContributions(el, echarts) {
 
 export default initPooledFundContributions;
 import { SECONDARY_COLORS } from './chartColors';
+import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

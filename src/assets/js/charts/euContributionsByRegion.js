@@ -11,12 +11,12 @@ export function initEuContributionsByRegion(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    backgroundColor: '#ffffff',
+    backgroundColor: 'transparent',
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     title: {
       
       subtext: '',
-      left: 0,
+      left: 'center',
       top: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -32,11 +32,11 @@ export function initEuContributionsByRegion(el, echarts) {
     },
     tooltip: {
       trigger: 'axis',
-      axisPointer: { type: 'shadow' },
+      axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(35, 46, 61, 0.035)' } },
       backgroundColor: '#ffffff',
       borderColor: '#D8DDE3',
-      borderWidth: 1,
-      padding: 13,
+      borderWidth: 0,
+      padding: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#232E3D',
@@ -44,21 +44,24 @@ export function initEuContributionsByRegion(el, echarts) {
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
-        return `<div style="font-size:14px;font-weight:700;margin-bottom:9px">${years[index]}</div>
-          <div style="margin-bottom:4px">Europe and the CIS: <strong>$${europeCIS[index].toFixed(1)}M</strong></div>
-          <div style="margin-bottom:4px">Asia and the Pacific: <strong>$${asiaPacific[index].toFixed(1)}M</strong></div>
-          <div style="margin-bottom:4px">Arab States: <strong>$${arabStates[index].toFixed(1)}M</strong></div>
-          <div style="margin-bottom:4px">Africa: <strong>$${africa[index].toFixed(1)}M</strong></div>
-          <div style="margin-bottom:4px">Latin America and the Caribbean: <strong>$${latinAmerica[index].toFixed(1)}M</strong></div>
-          <div style="margin-bottom:4px">Global: <strong>$${global[index].toFixed(1)}M</strong></div>
-          <div style="margin-top:8px;padding-top:8px;border-top:1px solid #E5E7EB">Total: <strong>$${totals[index].toFixed(1)}M</strong></div>`;
+        const amount = (value) => `$${value.toFixed(1).replace(/\.0$/, '')}M`;
+        const share = (value) => formatTooltipPercent(value, totals[index]);
+        return detailedTooltip(years[index], amount(totals[index]), [
+          { label: 'Europe and the CIS', color: CATEGORY_COLORS[0], value: amount(europeCIS[index]), detail: share(europeCIS[index]) },
+          { label: 'Asia and the Pacific', color: CATEGORY_COLORS[1], value: amount(asiaPacific[index]), detail: share(asiaPacific[index]) },
+          { label: 'Arab States', color: CATEGORY_COLORS[2], value: amount(arabStates[index]), detail: share(arabStates[index]) },
+          { label: 'Africa', color: CATEGORY_COLORS[3], value: amount(africa[index]), detail: share(africa[index]) },
+          { label: 'Latin America and the Caribbean', color: CATEGORY_COLORS[4], value: amount(latinAmerica[index]), detail: share(latinAmerica[index]) },
+          { label: 'Global', color: CATEGORY_COLORS[5], value: amount(global[index]), detail: share(global[index]) }
+        ]);
       }
     },
     legend: {
-      top: 58,
-      left: 0,
-      itemWidth: 12,
-      itemHeight: 12,
+      bottom: 5,
+      left: 'center',
+      icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
       itemGap: 16,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
@@ -72,14 +75,22 @@ export function initEuContributionsByRegion(el, echarts) {
         'Africa',
         'Latin America and the Caribbean',
         'Global',
-        'Total'
+        {
+          name: 'Total',
+          icon: 'path://M0,2 L24,2 L24,6 L0,6 Z',
+          itemStyle: {
+            color: '#1C1C1C',
+            borderColor: '#1C1C1C',
+            borderWidth: 0
+          }
+        }
       ]
     },
     grid: {
       left: 65,
       right: 35,
-      top: 130,
-      bottom: 50
+      top: 35,
+      bottom: 75
     },
     xAxis: {
       type: 'category',
@@ -105,7 +116,7 @@ export function initEuContributionsByRegion(el, echarts) {
         fontSize: 11,
         formatter: '${value}M'
       },
-      splitLine: { lineStyle: { color: '#E8EAED' } }
+      splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     series: [
       { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[0] } },
@@ -120,9 +131,9 @@ export function initEuContributionsByRegion(el, echarts) {
         data: totals,
         symbol: 'circle',
         symbolSize: 9,
-        lineStyle: { color: '#263746', width: 3 },
+        lineStyle: { color: '#1C1C1C', width: 3 },
         itemStyle: {
-          color: '#263746',
+          color: '#1C1C1C',
           borderColor: '#ffffff',
           borderWidth: 2
         },
@@ -151,3 +162,4 @@ export function initEuContributionsByRegion(el, echarts) {
 
 export default initEuContributionsByRegion;
 import { CATEGORY_COLORS } from './chartColors';
+import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

@@ -12,6 +12,11 @@ const data = [
 
 const colors = CATEGORY_COLORS.slice(0, data.length);
 
+const displayNames = {
+  'Development Bank of Latin America and the Caribbean (CAF)':
+    'CAF'
+};
+
 export function initIfiContributionsDonut(el, echarts) {
   const chart = echarts.init(el);
 
@@ -49,7 +54,7 @@ export function initIfiContributionsDonut(el, echarts) {
       formatter: function (params) {
         const item = data[params.dataIndex];
         return `<div style="font-weight:700;margin-bottom:7px">${item.name}</div>
-          <div style="margin-bottom:4px">Contribution: <strong>$${(item.value / 1000000).toFixed(1)}M</strong></div>
+          <div style="margin-bottom:4px">Contribution: <strong>$${(item.value / 1000000).toFixed(1).replace(/\.0$/, '')}M</strong></div>
           <div>Share: <strong>${item.percent}%</strong></div>`;
       }
     },
@@ -57,8 +62,8 @@ export function initIfiContributionsDonut(el, echarts) {
     series: [{
       name: 'IFI contributions',
       type: 'pie',
-      radius: ['42%', '68%'],
-      center: ['50%', '56%'],
+      radius: ['36%', '58%'],
+      center: ['50%', '54%'],
       startAngle: 90,
       clockwise: true,
       avoidLabelOverlap: true,
@@ -71,7 +76,7 @@ export function initIfiContributionsDonut(el, echarts) {
         position: 'outside',
         formatter: function (params) {
           const item = data[params.dataIndex];
-          return `{name|${item.name}}\n{percent|${item.percent}%}`;
+          return `{name|${displayNames[item.name] || item.name}}\n{percent|${item.percent}%}`;
         },
         rich: {
           name: {
@@ -96,7 +101,7 @@ export function initIfiContributionsDonut(el, echarts) {
         length: 15,
         length2: 12,
         lineStyle: {
-          color: '#B8BEC6',
+          color: '#7A8491',
           width: 1
         }
       },
@@ -111,7 +116,7 @@ export function initIfiContributionsDonut(el, echarts) {
     }, {
       type: 'pie',
       radius: [0, '1%'],
-      center: ['50%', '56%'],
+      center: ['50%', '54%'],
       silent: true,
       tooltip: { show: false },
       labelLine: { show: false },

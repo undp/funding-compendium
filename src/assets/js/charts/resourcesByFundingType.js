@@ -51,37 +51,15 @@ export function initResourcesByFundingType(el, echarts) {
     },
 
     tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'shadow'
-      },
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        color: '#222222',
-        fontSize: 12,
-        lineHeight: 20
-      },
-      formatter: function (params) {
-        const year = params[0]?.axisValue || '';
-
-        return [
-          `<strong>${year}</strong>`,
-          ...params.map((item) => {
-            const usd =
-              (usdValues[item.seriesName] || [])[item.dataIndex] || 0;
-
-            return (
-              `${item.marker}${item.seriesName}: ` +
-              `${item.value}% — USD ${formatUsd(usd)}M`
-            );
-          })
-        ].join('<br>');
-      }
+      show: false
     },
 
     legend: {
       top: 0,
       icon: 'rect',
+      itemWidth: 24,
+      itemHeight: 8,
+      itemGap: 24,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222222',
@@ -95,15 +73,13 @@ export function initResourcesByFundingType(el, echarts) {
       min: 0,
       max: 100,
       interval: 20,
-      name: 'Percentage of total resources',
-      nameLocation: 'middle',
-      nameGap: 30,
       axisLabel: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         formatter: '{value}%'
       },
       splitLine: {
-        show: true
+        show: true,
+        lineStyle: { color: '#C5CBD1' }
       }
     },
 
@@ -123,6 +99,7 @@ export function initResourcesByFundingType(el, echarts) {
       {
         name: 'Regular resources',
         type: 'bar',
+        silent: true,
         stack: 'total',
         barWidth: 56,
         data: regularPercentages,
@@ -141,37 +118,38 @@ export function initResourcesByFundingType(el, echarts) {
 
             return (
               `{percent|${params.value}%}\n` +
-              `{amount|USD ${formatUsd(usd)}M}`
+              `{amount|$${formatUsd(usd)}M}`
             );
           },
 
           rich: {
             percent: {
               fontFamily: 'Proxima Nova, Arial, sans-serif',
-              color: '#ffffff',
-              fontSize: 10,
+              color: '#283000',
+              fontSize: 14,
               fontWeight: 'bold',
-              lineHeight: 17,
+              lineHeight: 20,
               align: 'center'
             },
             amount: {
               fontFamily: 'Proxima Nova, Arial, sans-serif',
-              color: '#ffffff',
-              fontSize: 11,
-              lineHeight: 15,
+              color: '#283000',
+              fontSize: 13,
+              lineHeight: 17,
               align: 'center'
             }
           }
         },
 
         emphasis: {
-          focus: 'series'
+          disabled: true
         }
       },
 
       {
         name: 'Other resources',
         type: 'bar',
+        silent: true,
         stack: 'total',
         barWidth: 56,
         data: otherPercentages,
@@ -190,7 +168,7 @@ export function initResourcesByFundingType(el, echarts) {
 
             return (
               `{percent|${params.value}%}\n` +
-              `{amount|USD ${formatUsd(usd)}M}`
+              `{amount|$${formatUsd(usd)}M}`
             );
           },
 
@@ -198,7 +176,7 @@ export function initResourcesByFundingType(el, echarts) {
             percent: {
               fontFamily: 'Proxima Nova, Arial, sans-serif',
               color: '#ffffff',
-              fontSize: 16,
+              fontSize: 14,
               fontWeight: 'bold',
               lineHeight: 20,
               align: 'center'
@@ -214,7 +192,7 @@ export function initResourcesByFundingType(el, echarts) {
         },
 
         emphasis: {
-          focus: 'series'
+          disabled: true
         }
       }
     ]
