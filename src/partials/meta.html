@@ -3,23 +3,26 @@
 {{#if this.meta.keywords}}
   <meta name="keywords" content="{{this.meta.keywords}}" />
 {{/if}}
-<link rel="canonical" href="{{this.canonical}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}/{{/ifequal}}" />
+<link rel="canonical" href="{{this.canonical}}{{@root.canonicalPath}}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{this.meta.ogtitle}}" />
-<meta property="og:site_name" content="{{this.logo}}" />
-<meta property="og:url" content="{{this.canonical}}{{#ifequal this.lang "en"}}{{else}}{{this.lang}}/{{/ifequal}}" />
+<meta property="og:site_name" content="UNDP" />
+<meta property="og:url" content="{{this.canonical}}{{@root.canonicalPath}}" />
 <meta property="og:description" content="{{this.meta.description}}" />
 <meta property="og:image" content="{{this.canonical}}assets/img/{{this.meta.image}}" />
-<meta property="og:image:width" content="1440" />
-<meta property="og:image:height" content="768" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@undp" />
+<meta name="twitter:title" content="{{this.meta.ogtitle}}" />
+<meta name="twitter:description" content="{{this.meta.description}}" />
+<meta name="twitter:image" content="{{this.canonical}}assets/img/{{this.meta.image}}" />
 <link rel="alternate" hreflang="en" href="{{@root.root}}" />
 <link rel="alternate" hreflang="fr" href="{{@root.root}}fr/" />
 <link rel="alternate" hreflang="es" href="{{@root.root}}es/" />
 
 
-<link rel="icon" href="https://www.undp.org/sites/g/files/zskgke326/files/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="{{@root.root}}assets/img/favicon.ico" sizes="16x16" type="image/x-icon">
 
 
 {{#each @root.ds}}
