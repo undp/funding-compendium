@@ -2843,6 +2843,22 @@ body:has(.annual-table-page) {
   line-height: 1.55;
 }
 
+.fl-trust-row a,
+.fl-trust-accordion .accordion__panel a {
+  background-image:
+    linear-gradient(var(--undpds-color-dark-red, #d12800), var(--undpds-color-dark-red, #d12800)),
+    linear-gradient(var(--undpds-color-dark-red, #d12800), var(--undpds-color-dark-red, #d12800));
+  background-position: 100% 100%, -30px 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px, 0 2px;
+  text-decoration: none;
+}
+
+.fl-trust-row a:hover,
+.fl-trust-accordion .accordion__panel a:hover {
+  animation: lineLoop-animation 2s linear infinite;
+}
+
 .fl-trust-mobile {
   display: none;
 }

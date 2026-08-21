@@ -64,16 +64,23 @@ const flagUrls = {
 
 const logoPaths = {
   'Vertical fund—GEF': '../assets/img/logos/gef.png',
+  'Vertical Fund—GFATM': '../assets/img/logos/gfatm.png',
   'Multi-Partner Trust Funds': '../assets/img/logos/mptf.png',
-  'Vertical fund - Green Climate Fund': '../assets/img/logos/green-climate-fund.jpeg',
-  'World Bank Group': '../assets/img/logos/wbg.jpg'
+  'Vertical fund - Green Climate Fund': '../assets/img/logos/green-climate-fund.png',
+  'World Bank Group': '../assets/img/logos/wbg.png'
 };
 
 const logoSizes = {
   'Vertical fund—GEF': [24, 32],
+  'Vertical Fund—GFATM': [25, 30],
   'Multi-Partner Trust Funds': [60, 23],
   'Vertical fund - Green Climate Fund': [56, 30],
   'World Bank Group': [54, 28]
+};
+
+const tooltipNames = {
+  'Vertical fund—GEF': 'Global Environment Facility',
+  'Vertical Fund—GFATM': 'The Global Fund to Fight AIDS, Tuberculosis and Malaria'
 };
 
 const visualKey = (name) => `visual_${name.replace(/[^a-zA-Z0-9]/g, '_')}`;
@@ -125,8 +132,9 @@ export function initTopOtherResourcesContributors(el, echarts) {
       formatter: function (params) {
         const item = params[0];
         const exactValue = Math.round(item.value * 1000000).toLocaleString('en-US');
+        const displayName = tooltipNames[item.name] || item.name;
 
-        return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${item.name}</div>
+        return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${displayName}</div>
           <div style="font-family:'Proxima Nova',Arial,sans-serif">Other resources: <strong>$${exactValue}</strong></div>`;
       }
     },

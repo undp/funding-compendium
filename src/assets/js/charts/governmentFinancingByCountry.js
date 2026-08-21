@@ -45,7 +45,10 @@ export function initGovernmentFinancingByCountry(el, echarts) {
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
-      axisPointer: { type: 'shadow' },
+      axisPointer: {
+        type: 'shadow',
+        shadowStyle: { color: 'transparent' }
+      },
       backgroundColor: '#ffffff',
       borderColor: '#DDD6D0',
       borderWidth: 1,
@@ -63,9 +66,9 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       }
     },
     grid: {
-      left: 330,
-      right: 315,
-      top: 48,
+      left: 260,
+      right: 110,
+      top: 40,
       bottom: 45
     },
     xAxis: {
@@ -145,6 +148,52 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       }
     }]
   });
+
+  // Argentina exceeds the $300M axis. Draw one continuous hover band through
+  // the true bar endpoint while keeping the final axis line at $300M.
+  const rowHighlightId = 'government-country-row-highlight';
+  chart.on('mouseover', (params) => {
+    if (params.seriesType !== 'bar') return;
+
+    const axisStart = chart.convertToPixel({ xAxisIndex: 0 }, 0);
+    const axisEnd = chart.convertToPixel({ xAxisIndex: 0 }, 300);
+    const highlightEnd = params.dataIndex === 0
+      ? chart.convertToPixel({ xAxisIndex: 0 }, values[0])
+      : axisEnd;
+    const rowCenter = chart.convertToPixel({ yAxisIndex: 0 }, countries[params.dataIndex]);
+    const adjacentIndex = params.dataIndex === countries.length - 1
+      ? params.dataIndex - 1
+      : params.dataIndex + 1;
+    const nextRowCenter = chart.convertToPixel({ yAxisIndex: 0 }, countries[adjacentIndex]);
+    const rowHeight = Math.abs(nextRowCenter - rowCenter);
+
+    chart.setOption({
+      graphic: [{
+        id: rowHighlightId,
+        type: 'rect',
+        silent: true,
+        z: 1,
+        shape: {
+          x: axisStart,
+          y: rowCenter - rowHeight / 2,
+          width: Math.max(0, highlightEnd - axisStart),
+          height: rowHeight
+        },
+        style: { fill: 'rgba(150, 150, 150, 0.3)' }
+      }]
+    });
+  });
+
+  const clearRowHighlight = () => {
+    chart.setOption({
+      graphic: [{ id: rowHighlightId, $action: 'remove' }]
+    });
+  };
+
+  chart.on('mouseout', (params) => {
+    if (params.seriesType === 'bar') clearRowHighlight();
+  });
+  chart.on('globalout', clearRowHighlight);
 
   const resize = () => chart.resize();
   window.addEventListener('resize', resize);

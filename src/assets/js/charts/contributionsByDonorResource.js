@@ -95,8 +95,8 @@ export function initContributionsByDonorResource(el, echarts) {
   const logoUrls = {
     'Vertical fund – GEF': '../assets/img/logos/gef.png',
     MPTF: '../assets/img/logos/mptf.png',
-    'Vertical fund – Green Climate Fund': '../assets/img/logos/green-climate-fund.jpeg',
-    'World Bank Group': '../assets/img/logos/wbg.jpg'
+    'Vertical fund – Green Climate Fund': '../assets/img/logos/green-climate-fund.png',
+    'World Bank Group': '../assets/img/logos/wbg.png'
   };
 
   const logoSizes = {
@@ -119,8 +119,8 @@ export function initContributionsByDonorResource(el, echarts) {
       backgroundColor: {
         image: url
       },
-      borderColor: '#cccccc',
-      borderWidth: 0,
+      borderColor: '#C5CBD1',
+      borderWidth: 1,
       align: 'center',
       verticalAlign: 'middle'
     };
