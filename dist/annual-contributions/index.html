@@ -318,6 +318,10 @@
           const formatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
           const mobileAccordion = window.matchMedia('(max-width: 63.9375em)');
           const flagAliases = {
+            'benin': 'bj', 'china': 'cn', 'france': 'fr', 'serbia': 'rs',
+            'united kingdom': 'gb',
+            'bolivia': 'bo', 'congo': 'cg', 'iran islamic republic of': 'ir',
+            'tanzania': 'tz', 'timor leste': 'tl', 'venezuela': 've',
             'bahamas': 'bs', 'the bahamas': 'bs', 'gambia': 'gm', 'the gambia': 'gm',
             'bosnia and herzegovina': 'ba',
             'bolivia plurinational state of': 'bo', 'cape verde': 'cv', 'congo the': 'cg',
@@ -335,6 +339,16 @@
             'united republic of tanzania': 'tz', 'united states of america': 'us',
             'sudan the': 'sd', 'turkiye': 'tr',
             'venezuela bolivarian republic of': 've', 'viet nam': 'vn'
+          };
+          const countryDisplayNames = {
+            'Bolivia, Plurinational State of': 'Bolivia',
+            'Congo (the)': 'Congo',
+            'Iran, (Islamic Republic of) (the)': 'Iran (Islamic Republic of)',
+            'Montserrat d/': 'Montserrat',
+            'Samoa (1)': 'Samoa',
+            'Timor0Leste': 'Timor-Leste',
+            'United Republic of Tanzania': 'Tanzania',
+            'Venezuela, Bolivarian Republic of': 'Venezuela'
           };
           const normalizeCountry = (name) => String(name || '')
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -441,9 +455,11 @@
                         .replace(/\s+[abc]$/, '');
                     }
                     if (index === 0) {
-                      const label = String(value || '')
+                      const rawLabel = String(value || '')
                         .replace(/^TOTAL\s+e\/$/, 'TOTAL')
-                        .replace(/^Sudan\s+\(the\)$/i, 'Sudan');
+                        .replace(/^Sudan\s+\(the\)$/i, 'Sudan')
+                        .trim();
+                      const label = countryDisplayNames[rawLabel] || rawLabel;
                       if (isTotal) {
                         cell.textContent = label;
                       } else {
@@ -461,6 +477,12 @@
                         const buttonLabel = document.createElement('span');
                         buttonLabel.className = 'annual-country-name';
                         buttonLabel.textContent = label;
+                        if (rawLabel === 'Montserrat d/') {
+                          buttonLabel.appendChild(document.createTextNode(' '));
+                          const note = document.createElement('sup');
+                          note.textContent = 'd';
+                          buttonLabel.appendChild(note);
+                        }
                         button.appendChild(buttonLabel);
                         cell.appendChild(button);
                       }
