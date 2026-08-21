@@ -104,7 +104,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         fontSize: 10,
         formatter: (value) => value === 99 ? '' : `$${value}M`
       },
-      splitLine: { show: false }
+      splitLine: { show: true, lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' } }
     },
     series: [
       {
@@ -114,13 +114,6 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         data: privateCompanies,
         barWidth: 86,
         itemStyle: { color: SECONDARY_COLORS[0] },
-        markLine: {
-          silent: true,
-          symbol: 'none',
-          label: { show: false },
-          lineStyle: { color: '#C5CBD1', width: 1 },
-          data: [0, 25, 50, 75].map((value) => ({ yAxis: value }))
-        },
         label: {
           show: true,
           position: 'inside',

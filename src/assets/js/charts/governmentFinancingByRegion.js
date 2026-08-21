@@ -97,7 +97,7 @@ export function initGovernmentFinancingByRegion(el, echarts) {
     yAxis: {
       type: 'value',
       min: 0,
-      max: 1599,
+      max: 1500,
       interval: 400,
       axisLine: { show: false },
       axisTick: { show: false },
@@ -117,7 +117,7 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 62, itemStyle: { color: regionColors.arab } },
       { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 62, itemStyle: { color: regionColors.asia } },
       {
-        name: 'Total',
+        name: '',
         type: 'bar',
         data: totals,
         barWidth: 62,

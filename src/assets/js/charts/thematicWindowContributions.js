@@ -95,7 +95,7 @@ export function initThematicWindowContributions(el, echarts) {
         distance: 10,
         formatter: '${c}M',
         color: '#36434D',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 700
       },
       areaStyle: {

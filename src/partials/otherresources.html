@@ -78,23 +78,20 @@
 <!--************************* Thematic funds *************************  -->
 <section class="section or-section" id="or-thematic">
   <div class="grid-container section padded" data-or-reveal>
-    <div class="grid-x grid-margin-x">
-      <div class="cell small-12 or-section-intro">
+    <div class="grid-x grid-margin-x or-thematic-overview">
+      <div class="cell small-12 large-4 or-section-intro">
         <h2 class="or-section-title">{{other-resources-page.thematic.heading}}</h2>
         <p>{{other-resources-page.thematic.copy}}</p>
       </div>
-      <div class="cell small-12 or-chart-block">
+      <div class="cell small-12 large-8 or-chart-block or-thematic-overview__chart padded">
         <h5 class="or-chart-title">{{other-resources-page.thematic.chart}}</h5>
-        <div class="echarts or-thematic-window-chart" data-chart-type="thematic-window-contributions" style="width:100%;height:420px;"></div>
-
-        <div class="or-chart-block">
-          <h5 class="or-chart-title">{{other-resources-page.thematic.flow-chart}}</h5>
-          <div class="echarts" data-chart-type="funding-window-contributor-flow" style="width:100%;height:560px;"></div>
-        </div>
+        <div class="echarts or-thematic-window-chart" data-chart-type="thematic-window-contributions" style="width:100%;height:320px;"></div>
       </div>
     </div>
-
-
+    <div class="or-chart-block or-thematic-flow-chart">
+      <h5 class="or-chart-title">{{other-resources-page.thematic.flow-chart}}</h5>
+      <div class="echarts" data-chart-type="funding-window-contributor-flow" style="width:100%;height:560px;"></div>
+    </div>
   </div>
 </section>
 
@@ -186,7 +183,7 @@
 <!--************************* Third-party cost-sharing *************************  -->
 <section class="section or-section" id="or-cost-sharing">
   <div class="grid-container section padded" data-or-reveal>
-    <div class="grid-x grid-margin-x">
+    <div class="grid-x grid-margin-x align-middle">
       <div class="cell small-12 or-section-intro">
         <h2 class="or-section-title">{{other-resources-page.cost-sharing.heading}}</h2>
         <p>{{other-resources-page.cost-sharing.intro}}</p>
@@ -198,8 +195,8 @@
       </div>
 
       <div class="cell small-12 large-7">
-        <h5 class="or-chart-title">{{other-resources-page.cost-sharing.eu-chart}}</h5>
-        <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:500px;"></div>
+        <h5 class="or-chart-title">{{other-resources-page.cost-sharing.eu-chart}}</h5><br>
+        <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:300px;"></div>
       </div>
 
 
@@ -244,7 +241,7 @@
   <div class="grid-container section padded" data-or-reveal>
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 or-section-intro">
-        <h2 class="or-section-title">{{other-resources-page.private-sector.heading}}</h2>
+        <h2 class="or-section-title">{{{other-resources-page.private-sector.heading}}}</h2>
         <p>{{other-resources-page.private-sector.copy1}}</p>
         <p>{{other-resources-page.private-sector.copy2}}</p>
       </div>
@@ -376,13 +373,23 @@
           </a>
         </p>
       </div>
-      <a class="button button-secondary button-without-arrow annual-table-launch__link" href="{{@root.root}}annual-contributions/index.html" target="_blank" rel="noopener noreferrer">
-        {{other-resources-page.annual-contributions.member-state-table-link}}
+      <a class="button button-primary button-external-link annual-table-launch__link" href="{{@root.root}}annual-contributions/index.html" target="_blank" rel="noopener noreferrer">
+        {{other-resources-page.annual-contributions.member-state-table-link}}<span class="external-link-animated" aria-hidden="true"><i></i></span>
       </a>
     </div>
 
-    <div class="or-table-block">
-      <h3>{{other-resources-page.annual-contributions.table-heading}}</h3>
+    <details class="annual-table-disclosure">
+      <summary class="annual-table-launch annual-table-launch--disclosure">
+        <div>
+          <h3>{{other-resources-page.annual-contributions.table-heading}}</h3>
+          <p>{{other-resources-page.annual-contributions.table-copy}}</p>
+        </div>
+        <span class="button button-secondary button-without-arrow annual-table-launch__link" aria-hidden="true">
+          <span class="annual-table-disclosure__open-label">{{other-resources-page.annual-contributions.table-link}}</span>
+          <span class="annual-table-disclosure__close-label">{{other-resources-page.annual-contributions.table-close}}</span>
+        </span>
+      </summary>
+      <div class="or-table-block annual-table-disclosure__content">
       <div class="or-table-scroll" tabindex="0" role="region" aria-label="{{other-resources-page.annual-contributions.table-aria-label}}">
         <table class="or-contributions-table">
           <thead>
@@ -395,9 +402,9 @@
           </thead>
           <tbody>
             {{#each other-resources-page.annual-contributions.rows}}
-            <tr><th scope="row">{{this.partner}}{{#if this.marker}} <sup class="or-note-marker">{{this.marker}}</sup>{{/if}}</th><td>{{this.regular}}</td><td>{{this.other}}</td><td>{{this.total}}</td></tr>
+            <tr><th scope="row">{{this.partner}}{{#if this.marker}} <sup class="or-note-marker">{{this.marker}}</sup>{{/if}}</th><td>{{#if this.regular}}{{this.regular}}{{else}}—{{/if}}</td><td>{{#if this.other}}{{this.other}}{{else}}—{{/if}}</td><td>{{#if this.total}}{{this.total}}{{else}}—{{/if}}</td></tr>
             {{/each}}
-            <tr class="or-table-subtotal"><th scope="row">{{other-resources-page.annual-contributions.subtotal.partner}}</th><td>{{other-resources-page.annual-contributions.subtotal.regular}}</td><td>{{other-resources-page.annual-contributions.subtotal.other}}</td><td>{{other-resources-page.annual-contributions.subtotal.total}}</td></tr>
+            <tr class="or-table-subtotal"><th scope="row">{{other-resources-page.annual-contributions.subtotal.partner}}</th><td>{{#if other-resources-page.annual-contributions.subtotal.regular}}{{other-resources-page.annual-contributions.subtotal.regular}}{{else}}—{{/if}}</td><td>{{#if other-resources-page.annual-contributions.subtotal.other}}{{other-resources-page.annual-contributions.subtotal.other}}{{else}}—{{/if}}</td><td>{{#if other-resources-page.annual-contributions.subtotal.total}}{{other-resources-page.annual-contributions.subtotal.total}}{{else}}—{{/if}}</td></tr>
             <tr class="or-table-total">
               <th scope="row">{{other-resources-page.annual-contributions.total-row.partner}} <sup class="or-note-marker">{{other-resources-page.annual-contributions.total-row.marker}}</sup></th>
               <td>{{other-resources-page.annual-contributions.total-row.regular}}</td>
@@ -408,21 +415,21 @@
         </table>
       </div>
 
-    </div>
-
-    <aside class="or-notes-panel" aria-labelledby="or-member-state-notes">
-      <h4 id="or-member-state-notes">{{other-resources-page.annual-contributions.notes-heading}}</h4>
-      <div class="or-notes-content">
-        <div class="or-notes-group">
-          <h5>{{other-resources-page.annual-contributions.table-notes-heading}}</h5>
-          <ul>
-            {{#each other-resources-page.annual-contributions.table-notes}}
-            <li><sup class="or-note-marker">{{this.marker}}</sup> {{this.copy}}</li>
-            {{/each}}
-          </ul>
-        </div>
       </div>
-    </aside>
+
+      <aside class="or-notes-panel" aria-labelledby="or-partner-group-notes">
+        <h4 id="or-partner-group-notes">{{other-resources-page.annual-contributions.notes-heading}}</h4>
+        <div class="or-notes-content">
+          <div class="or-notes-group">
+            <ul>
+              {{#each other-resources-page.annual-contributions.table-notes}}
+              <li><sup class="or-note-marker">{{this.marker}}</sup> {{this.copy}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </details>
   </div>
 </section>
 

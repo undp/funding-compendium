@@ -68,7 +68,8 @@ export function initVerticalFundContributions(el, echarts) {
         formatter: (value) => value === 599 ? '' : `$${value}M`
       },
       splitLine: {
-        show: false
+        show: true,
+        lineStyle: { color: 'rgba(126, 73, 48, 0.24)', width: 1, type: 'solid' }
       }
     },
     yAxis: {
@@ -95,13 +96,6 @@ export function initVerticalFundContributions(el, echarts) {
         barGap: '15%',
         barCategoryGap: '38%',
         itemStyle: { color: CATEGORY_COLORS[6] },
-        markLine: {
-          silent: true,
-          symbol: 'none',
-          label: { show: false },
-          lineStyle: { color: 'rgba(126, 73, 48, 0.24)', width: 1 },
-          data: [0, 100, 200, 300, 400, 500].map((value) => ({ xAxis: value }))
-        },
         label: {
           show: true,
           position: 'right',

@@ -53,8 +53,8 @@ export function initTopIfiRecipientCountries(el, echarts) {
         const share = (value) => formatTooltipPercent(value, totals[index]);
 
         return detailedTooltip(recipients[index], amount(totals[index]), [
-          { label: 'IFI Direct', color: ifiColors[0], value: direct[index] > 0 ? amount(direct[index]) : '—', detail: direct[index] > 0 ? share(direct[index]) : null },
-          { label: 'IFI Indirect', color: ifiColors[1], value: indirect[index] > 0 ? amount(indirect[index]) : '—', detail: indirect[index] > 0 ? share(indirect[index]) : null }
+          { label: 'IFI Indirect', color: ifiColors[1], value: indirect[index] > 0 ? amount(indirect[index]) : '—', detail: indirect[index] > 0 ? share(indirect[index]) : null },
+          { label: 'IFI Direct', color: ifiColors[0], value: direct[index] > 0 ? amount(direct[index]) : '—', detail: direct[index] > 0 ? share(direct[index]) : null }
         ]);
       }
     },
@@ -70,7 +70,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
         fontSize: 11,
         color: '#4B5563'
       },
-      data: ['IFI Direct', 'IFI Indirect']
+      data: ['IFI Indirect', 'IFI Direct']
     },
     grid: {
       left: 190,
@@ -109,21 +109,21 @@ export function initTopIfiRecipientCountries(el, echarts) {
     },
     series: [
       {
-        name: 'IFI Direct',
-        type: 'bar',
-        stack: 'total',
-        data: direct,
-        barWidth: 20,
-        itemStyle: { color: ifiColors[0] },
-        emphasis: { focus: 'series' }
-      },
-      {
         name: 'IFI Indirect',
         type: 'bar',
         stack: 'total',
         data: indirect,
         barWidth: 20,
         itemStyle: { color: ifiColors[1] },
+        emphasis: { focus: 'series' }
+      },
+      {
+        name: 'IFI Direct',
+        type: 'bar',
+        stack: 'total',
+        data: direct,
+        barWidth: 20,
+        itemStyle: { color: ifiColors[0] },
         emphasis: { focus: 'series' }
       },
       {

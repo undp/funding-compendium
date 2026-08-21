@@ -307,23 +307,20 @@
       <!--************************* Thematic funds *************************  -->
       <section class="section or-section" id="or-thematic">
         <div class="grid-container section padded" data-or-reveal>
-          <div class="grid-x grid-margin-x">
-            <div class="cell small-12 or-section-intro">
+          <div class="grid-x grid-margin-x or-thematic-overview">
+            <div class="cell small-12 large-4 or-section-intro">
               <h2 class="or-section-title">Thematic funds</h2>
               <p>The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $133 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.</p>
             </div>
-            <div class="cell small-12 or-chart-block">
+            <div class="cell small-12 large-8 or-chart-block or-thematic-overview__chart padded">
               <h5 class="or-chart-title">Funding window contributions, 2022–2025</h5>
-              <div class="echarts or-thematic-window-chart" data-chart-type="thematic-window-contributions" style="width:100%;height:420px;"></div>
-      
-              <div class="or-chart-block">
-                <h5 class="or-chart-title">Contributions by funding window and contributor</h5>
-                <div class="echarts" data-chart-type="funding-window-contributor-flow" style="width:100%;height:560px;"></div>
-              </div>
+              <div class="echarts or-thematic-window-chart" data-chart-type="thematic-window-contributions" style="width:100%;height:320px;"></div>
             </div>
           </div>
-      
-      
+          <div class="or-chart-block or-thematic-flow-chart">
+            <h5 class="or-chart-title">Contributions by funding window and contributor</h5>
+            <div class="echarts" data-chart-type="funding-window-contributor-flow" style="width:100%;height:560px;"></div>
+          </div>
         </div>
       </section>
       
@@ -415,7 +412,7 @@
       <!--************************* Third-party cost-sharing *************************  -->
       <section class="section or-section" id="or-cost-sharing">
         <div class="grid-container section padded" data-or-reveal>
-          <div class="grid-x grid-margin-x">
+          <div class="grid-x grid-margin-x align-middle">
             <div class="cell small-12 or-section-intro">
               <h2 class="or-section-title">Third-party cost-sharing</h2>
               <p>Earmarked contributions to a specific programme or project continue to account for the largest share of UNDP resources. In 2025, these contributions amounted to $1.95 billion (39 percent of total resources).</p>
@@ -427,8 +424,8 @@
             </div>
       
             <div class="cell small-12 large-7">
-              <h5 class="or-chart-title">Contributions from the European Union, 2022–2025</h5>
-              <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:500px;"></div>
+              <h5 class="or-chart-title">Contributions from the European Union, 2022–2025</h5><br>
+              <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:300px;"></div>
             </div>
       
       
@@ -473,7 +470,8 @@
         <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
             <div class="cell small-12 or-section-intro">
-              <h2 class="or-section-title">Partnering with private companies, foundations, NGOs and academic institutions</h2>
+              <h2 class="or-section-title">Partnering with private companies, foundations, NGOs <br>and academic institutions
+      </h2>
               <p>Contributions from the private sector, foundations, non-governmental organizations and academic, training and research institutions decreased to $89 million in 2025, down by 5 percent from $94 million in 2024.</p>
               <p>Partnerships with the private sector accelerate progress towards the SDGs by mobilizing capital, innovation and technology. Through its Finance Moonshot, UNDP leveraged $920 billion in public and private finance for the SDGs, helping countries mobilize investment for development priorities. Through the timbuktoo initiative, a flagship partnership to mobilize capital for innovation across Africa, UNDP is working to raise $1 billion over the next decade to support 10,000 start-ups and scale 1,000 ventures to generate $10 billion and positively impact 100 million lives.</p>
             </div>
@@ -499,7 +497,8 @@
         <div class="grid-container section padded" data-or-reveal>
           <div class="grid-x grid-margin-x">
             <div class="cell small-12 medium-12 large-12">
-              <h2 class="or-section-title">Support to United Nations system programmes, offices and initiatives</h2>
+              <h2 class="or-section-title">Support to United Nations system<br>programmes, offices and&nbsp;initiatives
+      </h2>
               <p>In 2025, UNDP continued to serve as the institutional platform for four UN entities, delivering critical services across the UN system.</p>
             </div>
           </div>
@@ -536,7 +535,7 @@
                 </div>
                 <!-- Text -->
                 <div class="cell small-12 medium-auto small-text-center medium-text-left">
-                  <p>In 2025, the <strong>UN Capital Development Fund</strong> provided $6 million in loans and $3.1 million in guarantees, leveraging and catalysing a total of $50 million in financing to support development solutions in 19 countries. Through UNCDF-enabled solutions, 3.3 million people were reached, of whom two-thirds were women.</p>
+                  <p>In 2025, the <strong>UN Capital Development Fund</strong> provided $6 million in loans and $3.1 million in guarantees, leveraging and catalysing a total of $50 million in financing to support development solutions in 19 countries. Through UNCDF-enabled solutions, 3.3&nbsp;million people were reached, of whom two-thirds were women.</p>
                 </div>
               </div>
             </article>
@@ -606,13 +605,23 @@
                 </a>
               </p>
             </div>
-            <a class="button button-secondary button-without-arrow annual-table-launch__link" href="../annual-contributions/index.html" target="_blank" rel="noopener noreferrer">
-              View full Member State table
+            <a class="button button-primary button-external-link annual-table-launch__link" href="../annual-contributions/index.html" target="_blank" rel="noopener noreferrer">
+              View full Member State table<span class="external-link-animated" aria-hidden="true"><i></i></span>
             </a>
           </div>
       
-          <div class="or-table-block">
-            <h3>Contributions to UNDP from non-government partner groups</h3>
+          <details class="annual-table-disclosure">
+            <summary class="annual-table-launch annual-table-launch--disclosure">
+              <div>
+                <h3>Contributions to UNDP from non-government partner groups</h3>
+                <p>View the complete non-government partner group contributions table and accompanying notes.</p>
+              </div>
+              <span class="button button-secondary button-without-arrow annual-table-launch__link" aria-hidden="true">
+                <span class="annual-table-disclosure__open-label">Expand partner group table</span>
+                <span class="annual-table-disclosure__close-label">Collapse partner group table</span>
+              </span>
+            </summary>
+            <div class="or-table-block annual-table-disclosure__content">
             <div class="or-table-scroll" tabindex="0" role="region" aria-label="Contributions from non-government partner groups table">
               <table class="or-contributions-table">
                 <thead>
@@ -624,18 +633,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><th scope="row">European Union</th><td></td><td>312,784,472</td><td></td></tr>
-                  <tr><th scope="row">Financial Institutions <sup class="or-note-marker">a</sup></th><td></td><td>98,363,895</td><td></td></tr>
-                  <tr><th scope="row">Other Multilaterals</th><td></td><td>11,019,073</td><td></td></tr>
-                  <tr><th scope="row">Private companies</th><td></td><td>39,816,444</td><td></td></tr>
-                  <tr><th scope="row">Foundations</th><td></td><td>28,967,314</td><td></td></tr>
-                  <tr><th scope="row">NGOs</th><td></td><td>19,918,648</td><td></td></tr>
-                  <tr><th scope="row">Academic, training &amp; research institutions</th><td></td><td>728,344</td><td></td></tr>
-                  <tr><th scope="row">UN Agencies</th><td></td><td>69,396,342</td><td></td></tr>
-                  <tr><th scope="row">UN pooled Funds</th><td></td><td>233,741,124</td><td></td></tr>
-                  <tr><th scope="row">Vertical Funds</th><td></td><td>825,262,999</td><td></td></tr>
-                  <tr><th scope="row">Others</th><td></td><td>377,220</td><td></td></tr>
-                  <tr class="or-table-subtotal"><th scope="row">Total Non-government partner group</th><td></td><td>1,640,375,875</td><td></td></tr>
+                  <tr><th scope="row">European Union</th><td>—</td><td>312,784,472</td><td>—</td></tr>
+                  <tr><th scope="row">Financial Institutions <sup class="or-note-marker">a</sup></th><td>—</td><td>98,363,895</td><td>—</td></tr>
+                  <tr><th scope="row">Other Multilaterals</th><td>—</td><td>11,019,073</td><td>—</td></tr>
+                  <tr><th scope="row">Private companies</th><td>—</td><td>39,816,444</td><td>—</td></tr>
+                  <tr><th scope="row">Foundations</th><td>—</td><td>28,967,314</td><td>—</td></tr>
+                  <tr><th scope="row">NGOs</th><td>—</td><td>19,918,648</td><td>—</td></tr>
+                  <tr><th scope="row">Academic, training &amp; research institutions</th><td>—</td><td>728,344</td><td>—</td></tr>
+                  <tr><th scope="row">UN Agencies</th><td>—</td><td>69,396,342</td><td>—</td></tr>
+                  <tr><th scope="row">UN pooled Funds</th><td>—</td><td>233,741,124</td><td>—</td></tr>
+                  <tr><th scope="row">Vertical Funds</th><td>—</td><td>825,262,999</td><td>—</td></tr>
+                  <tr><th scope="row">Others</th><td>—</td><td>377,220</td><td>—</td></tr>
+                  <tr class="or-table-subtotal"><th scope="row">Total Non-government partner group</th><td>—</td><td>1,640,375,875</td><td>—</td></tr>
                   <tr class="or-table-total">
                     <th scope="row">2025 Contributions Total <sup class="or-note-marker">b</sup></th>
                     <td>$442M</td>
@@ -646,20 +655,20 @@
               </table>
             </div>
       
-          </div>
-      
-          <aside class="or-notes-panel" aria-labelledby="or-member-state-notes">
-            <h4 id="or-member-state-notes">Notes</h4>
-            <div class="or-notes-content">
-              <div class="or-notes-group">
-                <h5></h5>
-                <ul>
-                  <li><sup class="or-note-marker">a</sup> Reflects direct grants received by UNDP; excludes loans extended to programme country governments and received by UNDP as government financing, and grants received from the German Development Bank (KfW), which are reported under Germany.</li>
-                  <li><sup class="or-note-marker">b</sup> Amounts are rounded to the nearest million. Includes core contributions for 2024 received in 2025 and core contributions for 2026 received in 2025.</li>
-                </ul>
-              </div>
             </div>
-          </aside>
+      
+            <aside class="or-notes-panel" aria-labelledby="or-partner-group-notes">
+              <h4 id="or-partner-group-notes">Notes</h4>
+              <div class="or-notes-content">
+                <div class="or-notes-group">
+                  <ul>
+                    <li><sup class="or-note-marker">a</sup> Reflects direct grants received by UNDP; excludes loans extended to programme country governments and received by UNDP as government financing, and grants received from the German Development Bank (KfW), which are reported under Germany.</li>
+                    <li><sup class="or-note-marker">b</sup> Amounts are rounded to the nearest million. Includes core contributions for 2024 received in 2025 and core contributions for 2026 received in 2025.</li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </details>
         </div>
       </section>
       

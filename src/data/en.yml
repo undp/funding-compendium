@@ -202,7 +202,8 @@ homepage:
 
 un-system-support:
   unds:
-    heading: Support to United Nations system programmes, offices and initiatives
+    heading: >
+      Support to United Nations system<br>programmes, offices and&nbsp;initiatives
     copy:
       para1: In 2025, UNDP continued to serve as the institutional platform for four UN entities, delivering critical services across the UN system.
       para2: "<strong>Support to United Nations organizations: </strong> UNDP continued to be the operational backbone of the UN system in 2025. It disbursed $2.3 billion in 109 currencies through its payroll system, 54 percent of which was on behalf of partner UN organizations. UNDP supported $3.2 billion in financial transactions for 70 UN entities and other agencies in 170 countries. In addition, UNDP provided common premises for other agencies in 130 countries, enabling them to access common services, including travel management. \n"
@@ -215,7 +216,7 @@ un-system-support:
       logo: uncdf.png
       alt: UNCDF logo
       title: UN Capital Development Fund
-      copy: In 2025, the <strong>UN Capital Development Fund</strong> provided $6 million in loans and $3.1 million in guarantees, leveraging and catalysing a total of $50 million in financing to support development solutions in 19 countries. Through UNCDF-enabled solutions, 3.3 million people were reached, of whom two-thirds were women.
+      copy: In 2025, the <strong>UN Capital Development Fund</strong> provided $6 million in loans and $3.1 million in guarantees, leveraging and catalysing a total of $50 million in financing to support development solutions in 19 countries. Through UNCDF-enabled solutions, 3.3&nbsp;million people were reached, of whom two-thirds were women.
     mptf:
       logo: mptf.png
       alt: Multi-Partner Trust Fund Office logo
@@ -297,7 +298,7 @@ landscape-page:
     longstanding:
       heading: A long-standing commitment to transparency
       copy: |-
-        <p>As a member of the International Aid Transparency Initiative (IATI) since its creation in 2008, UNDP has led outreach efforts with partner countries and UN agencies to champion the aid transparency standard and make it relevant to national development planning, public financial management and mutual accountability for aid, development and humanitarian funding. UNDP ranked <strong>sixth overall</strong> in the <a href="https://www.publishwhatyoufund.org/the-index/2024/" target="_blank" rel="noopener noreferrer">2024 Aid Transparency Index</a> and was the <strong>second-most-transparent UN agency</strong>.</p>
+        <p>As a member of the International Aid Transparency Initiative (IATI) since its creation in 2008, UNDP has led outreach efforts with partner countries and UN agencies to champion the aid transparency standard and make it relevant to national development planning, public financial management and mutual accountability for aid, development and humanitarian funding. UNDP ranked <strong>sixth overall</strong> in the <a href="https://www.publishwhatyoufund.org/the-index/2024/" target="_blank" rel="noopener noreferrer">2024 Aid Transparency Index</a> and was the <strong>second-most-transparent UN agency.</strong></p>
         <br>
         <p>UNDP’s <a href="https://open.undp.org/" target="_blank">Transparency Portal</a> allows open, comprehensive public access to data on over 4,000 UNDP projects, with links to profile pages for every donor. The portal also shows UNDP’s contribution to the SDGs and offers an online training platform on the IATI Standard.</p>
     un-system:
@@ -552,7 +553,8 @@ other-resources-page:
     recipients-chart: Top 10 recipients of IFI funding, 2025
   # Private sector, foundations, NGOs and academia
   private-sector:
-    heading: Partnering with private companies, foundations, NGOs and academic institutions
+    heading: >
+      Partnering with private companies, foundations, NGOs <br>and academic institutions
     copy1: Contributions from the private sector, foundations, non-governmental organizations and academic, training and research institutions decreased to $89 million in 2025, down by 5 percent from $94 million in 2024.
     copy2: Partnerships with the private sector accelerate progress towards the SDGs by mobilizing capital, innovation and technology. Through its Finance Moonshot, UNDP leveraged $920 billion in public and private finance for the SDGs, helping countries mobilize investment for development priorities. Through the timbuktoo initiative, a flagship partnership to mobilize capital for innovation across Africa, UNDP is working to raise $1 billion over the next decade to support 10,000 start-ups and scale 1,000 ventures to generate $10 billion and positively impact 100 million lives.
     contributors-chart: Top 10 contributors, 2025
@@ -583,6 +585,9 @@ other-resources-page:
     source-label: 'Source:'
     source: '<a href="https://www.undp.org/sites/g/files/zskgke326/files/2026-07/annex-i-appendix-6.pdf" target="_blank" rel="noopener noreferrer">Appendix VI of Annex 1 to DP/2026/26</a>.'
     table-heading: Contributions to UNDP from non-government partner groups
+    table-copy: View the complete non-government partner group contributions table and accompanying notes.
+    table-link: Expand partner group table
+    table-close: Collapse partner group table
     table-aria-label: Contributions from non-government partner groups table
     columns:
       partner: Non-government partner group

@@ -119,7 +119,7 @@ export function initEuContributionsByRegion(el, echarts) {
         fontSize: 11,
         formatter: (value) => value === 400 ? '' : `$${value}M`
       },
-      splitLine: { show: false }
+      splitLine: { show: true, lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' } }
     },
     series: [
       {
@@ -128,14 +128,7 @@ export function initEuContributionsByRegion(el, echarts) {
         stack: 'total',
         data: europeCIS,
         barWidth: 90,
-        itemStyle: { color: regionColors.europe },
-        markLine: {
-          silent: true,
-          symbol: 'none',
-          label: { show: false },
-          lineStyle: { color: '#C5CBD1', width: 1 },
-          data: [0, 100, 200, 300].map((value) => ({ yAxis: value }))
-        }
+        itemStyle: { color: regionColors.europe }
       },
       { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: regionColors.asia } },
       { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 90, itemStyle: { color: regionColors.arab } },

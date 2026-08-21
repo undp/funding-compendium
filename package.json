@@ -5,7 +5,8 @@
   "main": "gulpfile.mjs",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --production"
+    "build": "gulp build --production",
+    "export:landscape-svg": "node scripts/export-landscape-svgs.mjs"
   },
   "author": "Jura Khrapunov <jura.khrapunov@undp.org>",
   "license": "MIT",

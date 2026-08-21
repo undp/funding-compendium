@@ -50,7 +50,7 @@ export function initPooledFundContributions(el, echarts) {
       itemGap: 20,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 11,
+        fontSize: 12,
         color: '#4B5563'
       },
       data: [
