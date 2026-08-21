@@ -82,7 +82,12 @@ export function initTopCoreContributors(el, echarts) {
     backgroundColor: '#ffffff',
     tooltip: {
       trigger: 'axis',
-      axisPointer: { type: 'shadow' },
+      // A custom band below preserves one continuous highlight for Germany,
+      // whose bar extends beyond the $100M plotting boundary.
+      axisPointer: {
+        type: 'shadow',
+        shadowStyle: { color: 'transparent' }
+      },
       backgroundColor: '#ffffff',
       borderColor: '#E5E7EB',
       borderWidth: 1,
@@ -189,6 +194,52 @@ export function initTopCoreContributors(el, echarts) {
 
   const chart = echarts.init(el);
   chart.setOption(option);
+
+  // Draw one continuous row highlight. Germany exceeds the $100M axis, so its
+  // band ends at the true bar value while all other bands end at the grid edge.
+  const rowHighlightId = 'core-contributor-row-highlight';
+  chart.on('mouseover', (params) => {
+    if (params.seriesType !== 'bar') return;
+
+    const axisStart = chart.convertToPixel({ xAxisIndex: 0 }, 0);
+    const axisEnd = chart.convertToPixel({ xAxisIndex: 0 }, 100000000);
+    const highlightEnd = params.dataIndex === 0
+      ? chart.convertToPixel({ xAxisIndex: 0 }, values[0])
+      : axisEnd;
+    const rowCenter = chart.convertToPixel({ yAxisIndex: 0 }, names[params.dataIndex]);
+    const adjacentIndex = params.dataIndex === names.length - 1
+      ? params.dataIndex - 1
+      : params.dataIndex + 1;
+    const nextRowCenter = chart.convertToPixel({ yAxisIndex: 0 }, names[adjacentIndex]);
+    const rowHeight = Math.abs(nextRowCenter - rowCenter);
+
+    chart.setOption({
+      graphic: [{
+        id: rowHighlightId,
+        type: 'rect',
+        silent: true,
+        z: 1,
+        shape: {
+          x: axisStart,
+          y: rowCenter - rowHeight / 2,
+          width: Math.max(0, highlightEnd - axisStart),
+          height: rowHeight
+        },
+        style: { fill: 'rgba(150, 150, 150, 0.3)' }
+      }]
+    });
+  });
+
+  const clearRowHighlight = () => {
+    chart.setOption({
+      graphic: [{ id: rowHighlightId, $action: 'remove' }]
+    });
+  };
+
+  chart.on('mouseout', (params) => {
+    if (params.seriesType === 'bar') clearRowHighlight();
+  });
+  chart.on('globalout', clearRowHighlight);
 
   Object.values(flagUrls).forEach((url) => {
     const image = new Image();

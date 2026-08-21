@@ -67,7 +67,7 @@ export function initTopGlocContributors(el, echarts) {
     },
     tooltip: {
       trigger: 'axis',
-      axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(35, 46, 61, 0.035)' } },
+      axisPointer: { type: 'shadow', shadowStyle: { color: 'transparent' } },
       backgroundColor: '#ffffff',
       borderColor: '#D1D5DB',
       borderWidth: 0,
@@ -209,6 +209,52 @@ export function initTopGlocContributors(el, echarts) {
 
   const chart = echarts.init(el);
   chart.setOption(option);
+
+  // South Sudan extends beyond the $4M axis. Use one continuous custom row
+  // band so its hover state reaches the true end of the stacked bar.
+  const rowHighlightId = 'gloc-contributor-row-highlight';
+  chart.on('mouseover', (params) => {
+    if (params.seriesType !== 'bar' || params.seriesName === undefined) return;
+
+    const axisStart = chart.convertToPixel({ xAxisIndex: 0 }, 0);
+    const axisEnd = chart.convertToPixel({ xAxisIndex: 0 }, 4);
+    const highlightEnd = params.dataIndex === 0
+      ? chart.convertToPixel({ xAxisIndex: 0 }, totals[0])
+      : axisEnd;
+    const rowCenter = chart.convertToPixel({ yAxisIndex: 0 }, countries[params.dataIndex]);
+    const adjacentIndex = params.dataIndex === countries.length - 1
+      ? params.dataIndex - 1
+      : params.dataIndex + 1;
+    const nextRowCenter = chart.convertToPixel({ yAxisIndex: 0 }, countries[adjacentIndex]);
+    const rowHeight = Math.abs(nextRowCenter - rowCenter);
+
+    chart.setOption({
+      graphic: [{
+        id: rowHighlightId,
+        type: 'rect',
+        silent: true,
+        z: 1,
+        shape: {
+          x: axisStart,
+          y: rowCenter - rowHeight / 2,
+          width: Math.max(0, highlightEnd - axisStart),
+          height: rowHeight
+        },
+        style: { fill: 'rgba(35, 46, 61, 0.035)' }
+      }]
+    });
+  });
+
+  const clearRowHighlight = () => {
+    chart.setOption({
+      graphic: [{ id: rowHighlightId, $action: 'remove' }]
+    });
+  };
+
+  chart.on('mouseout', (params) => {
+    if (params.seriesType === 'bar') clearRowHighlight();
+  });
+  chart.on('globalout', clearRowHighlight);
 
   Object.values(flagUrls).forEach((url) => {
     const image = new Image();

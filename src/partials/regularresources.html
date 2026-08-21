@@ -60,7 +60,7 @@
       <h3 id="rr-case-slider-heading" class="rr-case-slider__title">{{regular-resources-page.case-for-core-heading}}</h3>
     </div>
     <div class="rr-case-slider__track">
-    <div class="stats-slider swiper-slider-0" data-swiper-slides-view-mobile="1.2" data-swiper-slides-view-tablet="2.2" data-swiper-slides-view-desktop="3.2" data-swiper-offset="0">
+    <div class="stats-slider swiper-slider-0" data-swiper-slides-view-mobile="1.2" data-swiper-slides-view-tablet="2.2" data-swiper-slides-view-desktop="3" data-swiper-offset="0">
       <div class="swiper-wrapper sp-swiper">
         <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.flexible-foundation.title}}</h4><p>{{homepage.action.swiper.flexible-foundation.body}}</p></div></div></div>
         <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.reaching-most-in-need.title}}</h4><p>{{homepage.action.swiper.reaching-most-in-need.body}}</p></div></div></div>
@@ -435,9 +435,19 @@
     if (!statsSlider) return;
 
     const statsSwiper = new Swiper(statsSlider, {
-      slidesPerView: 'auto',
+      slidesPerView: 1.2,
       centeredSlides: false,
-      spaceBetween: 0,
+      spaceBetween: 12,
+      breakpoints: {
+        641: {
+          slidesPerView: 2.2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
       scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,

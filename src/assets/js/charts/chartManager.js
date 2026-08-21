@@ -305,12 +305,12 @@ function addResponsiveChartOptions(chart, type) {
     ];
     const regionHeadings = [
       { text: 'Africa', color: '#657300', top: 7 },
-      { text: 'Asia and the Pacific', color: '#267f7f', top: 75 },
-      { text: 'Arab States', color: '#6f49a4', top: 143 },
-      { text: 'Latin America and the Caribbean', color: '#bd4817', top: 211 },
-      { text: 'Europe and the CIS', color: '#806000', top: 279 }
+      { text: 'Asia and the Pacific', color: '#267f7f', top: 82 },
+      { text: 'Arab States', color: '#6f49a4', top: 157 },
+      { text: 'Latin America and the Caribbean', color: '#bd4817', top: 232 },
+      { text: 'Europe and the CIS', color: '#806000', top: 307 }
     ];
-    mobile.grid = { left: 8, right: 76, top: 6, bottom: 6, containLabel: false };
+    mobile.grid = { left: 16, right: 40, top: -10, bottom: 6, containLabel: false };
     mobile.graphic = regionHeadings.map((heading) => ({
       type: 'text',
       left: 'center',

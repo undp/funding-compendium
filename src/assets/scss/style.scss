@@ -1129,7 +1129,11 @@ html {
 /* ================================================================================================================== */
 
 .resource-grid {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.fl-channel-chart-wrap {
+  margin-bottom: 0.75rem;
 }
 
 .resource-item {
@@ -1288,27 +1292,27 @@ html {
 }
 
 .resource-cost-sharing {
-  --resource-color: #00518a;
+  --resource-color: #267878;
 }
 
 .resource-government {
-  --resource-color: #003b66;
+  --resource-color: #ad7f00;
 }
 
 .resource-vertical {
-  --resource-color: #378bc3;
+  --resource-color: #e86b2e;
 }
 
 .resource-pooled {
-  --resource-color: #0069b3;
+  --resource-color: #003b66;
 }
 
 .resource-reimbursable {
-  --resource-color: #579dcd;
+  --resource-color: #8964bc;
 }
 
 .resource-thematic {
-  --resource-color: #197abb;
+  --resource-color: #3d9999;
 }
 
 .chart-source {
@@ -1411,11 +1415,12 @@ html {
 }
 
 .rr-case-slider__track {
-  padding: 2rem 0 3.5rem max(1rem, calc((100vw - 75rem) / 2));
+  padding: 2rem 0 3.5rem;
 }
 
 .rr-case-slider .stats-slider {
-  padding: 0 max(1rem, calc((100vw - 75rem) / 2)) 5rem 0;
+  width: 100%;
+  padding: 0 0 5rem;
 }
 
 .rr-case-slider .sp-swiper {
@@ -1423,9 +1428,7 @@ html {
 }
 
 .rr-case-slider .swiper-slide {
-  width: 31.5%;
   height: auto;
-  padding-right: 1.5rem;
 }
 
 .rr-case-slider .sp-swiper .stats-card {
@@ -1435,7 +1438,7 @@ html {
   min-height: 20rem;
   height: 100%;
   padding: 2rem;
-  border-top: 0.5rem solid #c3d51f;
+  border-top: 0;
   border-radius: 0;
   background: #f7f7f7;
   box-shadow: none;
@@ -1468,15 +1471,6 @@ html {
   }
 }
 
-.rr-case-slider .sp-swiper .swiper-slide-active .stats-card {
-  background: #c3d51f;
-  color: #1c1c1c;
-}
-
-.rr-case-slider .sp-swiper .swiper-slide-active h4 {
-  color: #405000;
-}
-
 .rr-case-slider .swiper-scrollbar {
   bottom: 1rem;
   background: rgb(102 122 0 / 18%);
@@ -1492,12 +1486,6 @@ html {
   display: none;
 }
 
-@media screen and (max-width: 1023px) {
-  .rr-case-slider .swiper-slide {
-    width: 46%;
-  }
-}
-
 @media screen and (max-width: 640px) {
   .rr-case-slider {
     padding-top: 2rem;
@@ -1510,11 +1498,6 @@ html {
 
   .rr-case-slider__track {
     padding-top: 1.5rem;
-  }
-
-  .rr-case-slider .swiper-slide {
-    width: 84%;
-    padding-right: 0.75rem;
   }
 
   .rr-case-slider .sp-swiper .stats-card {
@@ -1986,11 +1969,11 @@ html {
   }
 
   #rr-regions .rr-regions-chart-title strong::after {
-    content: ',';
+    content: ',\00a0';
   }
 
   #rr-regions [data-chart-type='resources-by-region'] {
-    height: 350px !important;
+    height: 370px !important;
   }
 
   .responsive-chart-scroll[data-chart-scroll-type='resources-by-region'],
@@ -2664,17 +2647,19 @@ body:has(.annual-table-page) {
   }
 
   .annual-member-table .annual-table-total td:last-child {
-    align-items: center;
+    align-items: flex-start;
     background: #003b64 !important;
     color: #fff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 1.2rem;
     font-weight: 700;
+    gap: 0.35rem;
     grid-column: 1 / -1;
-    justify-content: space-between;
+    justify-content: flex-start;
     order: -1;
     padding: 0.9rem 0.85rem 1.15rem;
+    text-align: left;
   }
 
   .annual-member-table .annual-table-total td:last-child::before {
@@ -3217,7 +3202,7 @@ body:has(.annual-table-page) {
   #fl-channels [data-chart-type='resources-by-funding-channel'] {
     height: 610px !important;
     margin-top: 0.5rem;
-    margin-bottom: 2.5rem !important;
+    margin-bottom: 0.75rem !important;
   }
 
   .fl-channel-chart-wrap {

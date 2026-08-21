@@ -80,14 +80,23 @@ export function initResourcesByFundingChannel(el, echarts) {
   // COLORS
   // ======================================================
 
+  const channelColors = {
+    'Third-party cost-sharing': '#267878',
+    'Government financing': '#AD7F00',
+    'Vertical funds': '#E86B2E',
+    'United Nations pooled funds': '#003B66',
+    'Reimbursable support services': '#8964BC',
+    'Thematic funds': '#3D9999'
+  };
+
   const colors = {
-    'Third-party cost-sharing': CATEGORY_COLORS[0],
-    'Government financing': CATEGORY_COLORS[1],
-    'Vertical funds': CATEGORY_COLORS[2],
+    'Third-party cost-sharing': channelColors['Third-party cost-sharing'],
+    'Government financing': channelColors['Government financing'],
+    'Vertical funds': channelColors['Vertical funds'],
     'Regular resources': RESOURCE_COLORS.regular,
-    'United Nations pooled funds': CATEGORY_COLORS[3],
-    'Reimbursable support services': CATEGORY_COLORS[4],
-    'Thematic funds': CATEGORY_COLORS[5]
+    'United Nations pooled funds': channelColors['United Nations pooled funds'],
+    'Reimbursable support services': channelColors['Reimbursable support services'],
+    'Thematic funds': channelColors['Thematic funds']
   };
 
   const seriesOrder = [
@@ -1070,5 +1079,5 @@ export function initResourcesByFundingChannel(el, echarts) {
 
   return myChart;
 }
-import { RESOURCE_COLORS, CATEGORY_COLORS } from './chartColors';
+import { RESOURCE_COLORS } from './chartColors';
 import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';
