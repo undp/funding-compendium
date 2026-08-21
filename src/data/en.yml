@@ -53,6 +53,8 @@ homepage:
   # Hero
   hero:
     title: Funding Compen&shy;dium 2025
+    desktop-title: Funding Compendium
+    year: 2025
     subtitle: Sustaining Trust in an Era of Uncertainty
   # Report navigation cards
   explore:

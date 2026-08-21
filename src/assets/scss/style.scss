@@ -4286,6 +4286,17 @@ body:has(.annual-table-page) {
   transform: translateY(0);
 }
 
+.homepage-hero-title-desktop {
+  display: block;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.homepage-hero-title-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 63.9375em) {
   .fc-partner-grid .cell + .cell {
     margin-top: 1.5rem;
@@ -4330,6 +4341,14 @@ body:has(.annual-table-page) {
     line-height: 0.98;
     hyphens: manual;
     overflow-wrap: normal;
+  }
+
+  .homepage-hero-title-desktop {
+    display: none;
+  }
+
+  .homepage-hero-title-mobile {
+    display: block;
   }
 
   .fc-explore,

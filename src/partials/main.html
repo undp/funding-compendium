@@ -8,7 +8,10 @@
   </div>
   <div class="grid-x homepage-hero-content">
     <div class="cell large-7 medium-9 medium-offset-1">
-      <h1 class="color-black" tabindex="0" data-viewport="true">{{{homepage.hero.title}}}</h1>
+      <h1 class="color-black" tabindex="0" data-viewport="true">
+        <span class="homepage-hero-title-desktop">{{homepage.hero.desktop-title}}<br>{{homepage.hero.year}}</span>
+        <span class="homepage-hero-title-mobile">{{{homepage.hero.title}}}</span>
+      </h1>
       <h4 class="color-black" tabindex="0" data-viewport="true">{{{homepage.hero.subtitle}}}</h4>
       <h4 class="color-black" tabindex="0" data-viewport="true"></h4>
       <a class="button" role="button" style="visibility: hidden;"></a>
