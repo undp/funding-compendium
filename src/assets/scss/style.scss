@@ -1397,6 +1397,142 @@ html {
   gap: 1rem;
 }
 
+.rr-case-slider {
+  overflow: hidden;
+  padding: 2.5rem 0 0;
+  background: #fff;
+}
+
+.rr-case-slider__title {
+  margin: 0;
+  color: #667a00;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.rr-case-slider__track {
+  padding: 2rem 0 3.5rem max(1rem, calc((100vw - 75rem) / 2));
+}
+
+.rr-case-slider .stats-slider {
+  padding: 0 max(1rem, calc((100vw - 75rem) / 2)) 5rem 0;
+}
+
+.rr-case-slider .sp-swiper {
+  align-items: stretch;
+}
+
+.rr-case-slider .swiper-slide {
+  width: 31.5%;
+  height: auto;
+  padding-right: 1.5rem;
+}
+
+.rr-case-slider .sp-swiper .stats-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  min-height: 20rem;
+  height: 100%;
+  padding: 2rem;
+  border-top: 0.5rem solid #c3d51f;
+  border-radius: 0;
+  background: #f7f7f7;
+  box-shadow: none;
+  color: #1c1c1c;
+}
+
+.rr-case-slider .sp-swiper .stats-card-content {
+  height: 100%;
+}
+
+.rr-case-slider .sp-swiper h4,
+.rr-case-slider .sp-swiper .stats-card:hover h4 {
+  margin: 0 0 1.5rem;
+  color: #667a00;
+  font-size: 1.5625rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.rr-case-slider .sp-swiper p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rr-case-slider .sp-swiper .stats-card:hover {
+    background: #eaf2bd;
+    color: #1c1c1c;
+  }
+}
+
+.rr-case-slider .sp-swiper .swiper-slide-active .stats-card {
+  background: #c3d51f;
+  color: #1c1c1c;
+}
+
+.rr-case-slider .sp-swiper .swiper-slide-active h4 {
+  color: #405000;
+}
+
+.rr-case-slider .swiper-scrollbar {
+  bottom: 1rem;
+  background: rgb(102 122 0 / 18%);
+}
+
+.rr-case-slider .swiper-scrollbar-drag {
+  background: #667a00;
+}
+
+/* The case-for-core slider now lives on the regular-resources page. */
+#fl-channels > .stats-slider,
+#fl-channels .funding-types-channels-heading {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .rr-case-slider .swiper-slide {
+    width: 46%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .rr-case-slider {
+    padding-top: 2rem;
+  }
+
+  .rr-case-slider__title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .rr-case-slider__track {
+    padding-top: 1.5rem;
+  }
+
+  .rr-case-slider .swiper-slide {
+    width: 84%;
+    padding-right: 0.75rem;
+  }
+
+  .rr-case-slider .sp-swiper .stats-card {
+    min-height: 17rem;
+    padding: 1.5rem;
+  }
+
+  .rr-case-slider .sp-swiper h4,
+  .rr-case-slider .sp-swiper .stats-card:hover h4 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .rr-case-slider .sp-swiper p {
+    font-size: 0.875rem;
+  }
+}
+
 .rr-stat-card {
   border-top: 0.5rem solid #c3d51f;
   background: #f7f9e5;
@@ -1988,6 +2124,13 @@ html {
 
 .annual-table-launch p {
   margin-top: 0.35rem;
+}
+
+.annual-table-launch .annual-table-launch__appendix {
+  color: #4f5b66;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  margin-top: 0.5rem;
 }
 
 .annual-table-launch__link {

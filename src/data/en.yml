@@ -50,7 +50,7 @@ homepage:
   # Hero
   hero:
     title: Funding Compen&shy;dium 2025
-    subtitle: Investing in a stable and sustainable future
+    subtitle: Sustaining Trust in an Era of Uncertainty
   # Report navigation cards
   explore:
     heading: Explore the report
@@ -79,7 +79,7 @@ homepage:
       windows:
         overline: 14% decrease in
         heading: funding windows
-        copy: Contributions from thematic funding windows decreased to $115 million in 2025, down from $126 million in 2024.
+        copy: Contributions from thematic funding windows decreased to $115 million in 2025, down from $133 million in 2024.
       government:
         overline: 17% increase in
         heading: government development financing
@@ -92,6 +92,7 @@ homepage:
         multi-year pledges to contribute 
         <br> 
         to regular resources
+      note: '*Australia had a multi-year core agreement in 2025 but did not contribute to core funding.'
       partners:
         - name: Belgium
           code: be
@@ -361,13 +362,13 @@ regular-resources-page:
     title: Regular resources
   chapter-nav:
     aria-label: Regular resources chapters
-    allocation: Programme allocation
-    country-focus: Country priorities
-    regions: Regional share
+    case-for-core: Case for core
+    allocation: Core allocation
+    country-focus: Reach by country
+    regions: Reach by region
     budget: Institutional budget
     contributors: Core contributors
     pledges: Multi-year pledges
-    map: Contributor table
     gloc: GLOC contributors
   highlights:
     aria-label: Regular resources highlights
@@ -384,6 +385,7 @@ regular-resources-page:
         accent: accent-red
         title: Largest share to Africa
         copy: Share of programmatic resources allocated across the region.
+  case-for-core-heading: The case for core resources in 2025
   # Core-resource allocation
   allocation:
     heading: Lion’s share goes to programmes
@@ -498,7 +500,7 @@ other-resources-page:
   # Thematic funding windows
   thematic:
     heading: Thematic funds
-    copy: The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $126 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.
+    copy: The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $133 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.
     chart: Funding window contributions, 2022–2025
     flow-chart: Contributions by funding window and contributor
   # UN pooled funds
@@ -554,6 +556,8 @@ other-resources-page:
     heading: Annual contributions to UNDP, 2025
     member-state-table-heading: Contributions to UNDP from Member States
     member-state-table-copy: View the complete Member State contributions table on a dedicated page designed for easier reading.
+    member-state-appendix-label: Appendix VI of Annex 1 to DP/2026/26
+    member-state-appendix-url: https://www.undp.org/sites/g/files/zskgke326/files/2026-07/annex-i-appendix-6.pdf
     member-state-table-link: View full Member State table
     notes-heading: Notes
     member-state-notes:

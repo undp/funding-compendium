@@ -16,7 +16,7 @@ const countries = [
   'Belgium'
 ];
 
-const values = [14, 6, 5, 5, 4, 4, 4, 3, 2, 2, 1, 1, 1, 1, 1];
+const values = [18, 14, 8, 6, 5, 5, 4, 4, 4, 3, 2, 2, 1, 1, 1];
 const flagCodes = {
   Norway: 'no', Germany: 'de', 'The Netherlands': 'nl', Australia: 'au',
   'United Kingdom': 'gb', Canada: 'ca', Spain: 'es', Sweden: 'se',
@@ -61,7 +61,7 @@ export function initTopPooledFundMemberStates(el, echarts) {
     xAxis: {
       type: 'value',
       min: 0,
-      max: 15,
+      max: 20,
       interval: 5,
       axisLine: { show: false },
       axisTick: { show: false },

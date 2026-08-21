@@ -92,7 +92,7 @@ export function initTopPrivateSectorContributors(el, echarts) {
         show: true,
         position: 'right',
         distance: 8,
-        formatter: (params) => `$${Math.floor(params.value)}M`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
         color: '#303944',
         fontSize: 11,
         fontWeight: 700

@@ -295,9 +295,15 @@ export function initContributionByDonorCategory(el, echarts) {
           position: 'inside',
 
           formatter: function (params) {
+            const roundedInnerPercentages = {
+              'Donor country\ngovernments': '36%',
+              'Programme country\ngovernments': '32%',
+              Multilateral: '32%'
+            };
+
             return (
               `{name|${params.name}}\n` +
-              `{percent|${formatPercent(params.percent)}}`
+              `{percent|${roundedInnerPercentages[params.name] || formatPercent(params.percent)}}`
             );
           },
 

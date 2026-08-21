@@ -26,18 +26,19 @@
 
 <nav class="rr-chapter-nav" aria-label="{{regular-resources-page.chapter-nav.aria-label}}">
   <div class="grid-container rr-chapter-nav__inner">
+    <a href="#rr-case-core">{{regular-resources-page.chapter-nav.case-for-core}}</a>
     <a href="#rr-allocation">{{regular-resources-page.chapter-nav.allocation}}</a>
     <a href="#rr-country-focus">{{regular-resources-page.chapter-nav.country-focus}}</a>
     <a href="#rr-regions">{{regular-resources-page.chapter-nav.regions}}</a>
     <a href="#rr-budget">{{regular-resources-page.chapter-nav.budget}}</a>
     <a href="#rr-contributors">{{regular-resources-page.chapter-nav.contributors}}</a>
     <a href="#rr-pledges">{{regular-resources-page.chapter-nav.pledges}}</a>
-    <a href="#rr-map">{{regular-resources-page.chapter-nav.map}}</a>
     <a href="#rr-gloc">{{regular-resources-page.chapter-nav.gloc}}</a>
   </div>
 </nav>
 
 <main class="rr-modern">
+  <section class="rr-case-core" id="rr-case-core" aria-labelledby="rr-case-slider-heading">
   <aside class="rr-signal-strip" aria-label="{{regular-resources-page.highlights.aria-label}}" data-rr-reveal>
     <div class="grid-container">
       <div class="rr-signal-grid">
@@ -53,6 +54,32 @@
       </div>
     </div>
   </aside>
+
+  <div class="rr-case-slider">
+    <div class="grid-container">
+      <h3 id="rr-case-slider-heading" class="rr-case-slider__title">{{regular-resources-page.case-for-core-heading}}</h3>
+    </div>
+    <div class="rr-case-slider__track">
+    <div class="stats-slider swiper-slider-0" data-swiper-slides-view-mobile="1.2" data-swiper-slides-view-tablet="2.2" data-swiper-slides-view-desktop="3.2" data-swiper-offset="0">
+      <div class="swiper-wrapper sp-swiper">
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.flexible-foundation.title}}</h4><p>{{homepage.action.swiper.flexible-foundation.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.reaching-most-in-need.title}}</h4><p>{{homepage.action.swiper.reaching-most-in-need.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.multiplier-effect.title}}</h4><p>{{homepage.action.swiper.multiplier-effect.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.crisis-readiness.title}}</h4><p>{{homepage.action.swiper.crisis-readiness.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.pioneering-innovation.title}}</h4><p>{{homepage.action.swiper.pioneering-innovation.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.governance-electoral.title}}</h4><p>{{homepage.action.swiper.governance-electoral.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.digital-transformation.title}}</h4><p>{{homepage.action.swiper.digital-transformation.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.climate-action.title}}</h4><p>{{homepage.action.swiper.climate-action.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.operational-excellence.title}}</h4><p>{{homepage.action.swiper.operational-excellence.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.efficiency-un-system.title}}</h4><p>{{homepage.action.swiper.efficiency-un-system.body}}</p></div></div></div>
+        <div class="swiper-slide"><div class="stats-card small"><div class="stats-card-content"><h4>{{homepage.action.swiper.trust-transformation.title}}</h4><p>{{homepage.action.swiper.trust-transformation.body}}</p></div></div></div>
+      </div>
+      <div class="swiper-scrollbar swiper-scrollbar-horizontal"><div class="swiper-scrollbar-drag"></div></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+    </div>
+  </div>
+  </section>
 
 <!-- ************************* Lion’s share goes to programmes ************************* -->
 
@@ -324,7 +351,7 @@
 
 <!-- ************************* Map ************************* -->
 
-<section class="section rr-section" id="rr-map" padded>
+<!--  <section class="section rr-section" id="rr-map" padded>
   <div class="grid-container section-" data-rr-reveal>
     <div class="grid-x align-center align-middle">
 
@@ -371,6 +398,7 @@
     </div>
   </div>
 </section>
+-->
 
 
 <!-- ************************* GLOC contributors ************************* -->
@@ -403,7 +431,10 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const statsSwiper = new Swiper('.stats-slider', {
+    const statsSlider = document.querySelector('.rr-case-slider .stats-slider');
+    if (!statsSlider) return;
+
+    const statsSwiper = new Swiper(statsSlider, {
       slidesPerView: 'auto',
       centeredSlides: false,
       spaceBetween: 0,
@@ -411,6 +442,35 @@
         el: '.swiper-scrollbar',
         draggable: true,
       },
+    });
+
+    const swiperWrapper = statsSlider.querySelector('.swiper-wrapper');
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const arrowCursor = (direction) => {
+      const path = direction === 'left'
+        ? 'M12 1L2 10M2 10L12 19M2 10H81.5'
+        : 'M69.5 1L79.5 10M79.5 10L69.5 19M79.5 10H0';
+      const width = direction === 'left' ? 82 : 81;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20" viewBox="0 0 ${width} 20"><path d="${path}" fill="none" stroke="black" stroke-width="2"/></svg>`;
+      return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 40 10, auto`;
+    };
+    const cursors = { left: arrowCursor('left'), right: arrowCursor('right') };
+    const directionAt = (clientX) => {
+      const bounds = statsSlider.getBoundingClientRect();
+      if (statsSwiper.isBeginning) return 'right';
+      if (statsSwiper.isEnd) return 'left';
+      return clientX - bounds.left < bounds.width / 2 ? 'left' : 'right';
+    };
+
+    swiperWrapper.addEventListener('mousemove', function (event) {
+      if (finePointer.matches) swiperWrapper.style.cursor = cursors[directionAt(event.clientX)];
+    });
+    swiperWrapper.addEventListener('mouseleave', function () { swiperWrapper.style.cursor = 'auto'; });
+    swiperWrapper.addEventListener('click', function (event) {
+      if (event.target.closest('a, button, [class*="swiper-button"]') || !statsSwiper.allowClick) return;
+      event.preventDefault();
+      directionAt(event.clientX) === 'left' ? statsSwiper.slidePrev() : statsSwiper.slideNext();
+      if (finePointer.matches) swiperWrapper.style.cursor = cursors[directionAt(event.clientX)];
     });
   });
 

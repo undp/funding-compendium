@@ -1,7 +1,7 @@
 import { detailedTooltip } from './detailedTooltip';
 
 const years = ['2022', '2023', '2024', '2025'];
-const values = [119, 126, 126, 115];
+const values = [119, 126, 133, 115];
 
 export function initThematicWindowContributions(el, echarts) {
   const chart = echarts.init(el);
@@ -25,6 +25,11 @@ export function initThematicWindowContributions(el, echarts) {
       formatter: function (params) {
         const item = params[0];
         const index = item.dataIndex;
+
+        if (index === 0) {
+          return null;
+        }
+
         const previous = index > 0 ? values[index - 1] : null;
         const change = previous === null ? '' : ((item.value - previous) / previous) * 100;
         const comparison = previous === null
@@ -58,14 +63,14 @@ export function initThematicWindowContributions(el, echarts) {
     yAxis: {
       type: 'value',
       min: 100,
-      max: 129,
+      max: 139,
       interval: 10,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: (value) => value === 129 ? '' : `$${value}M`
+        formatter: (value) => value === 139 ? '' : `$${value}M`
       },
       splitLine: { show: false }
     },
@@ -101,7 +106,7 @@ export function initThematicWindowContributions(el, echarts) {
         symbol: 'none',
         label: { show: false },
         lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' },
-        data: [{ yAxis: 100 }, { yAxis: 110 }, { yAxis: 120 }]
+        data: [{ yAxis: 100 }, { yAxis: 110 }, { yAxis: 120 }, { yAxis: 130 }]
       },
       emphasis: { scale: 1.3 }
     }]
