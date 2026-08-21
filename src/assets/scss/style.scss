@@ -4286,14 +4286,8 @@ body:has(.annual-table-page) {
   transform: translateY(0);
 }
 
-.homepage-hero-title-desktop {
-  display: block;
-  hyphens: none;
-  overflow-wrap: normal;
-  word-break: normal;
-}
-
-.homepage-hero-title-mobile {
+.homepage-hero-title-shy,
+.homepage-hero-title-space {
   display: none;
 }
 
@@ -4343,12 +4337,13 @@ body:has(.annual-table-page) {
     overflow-wrap: normal;
   }
 
-  .homepage-hero-title-desktop {
-    display: none;
+  .homepage-hero-title-shy,
+  .homepage-hero-title-space {
+    display: inline;
   }
 
-  .homepage-hero-title-mobile {
-    display: block;
+  .homepage-hero-title-break {
+    display: none;
   }
 
   .fc-explore,

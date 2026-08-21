@@ -24,10 +24,10 @@ const data = [
   ['Thailand', 865112],
   ['Kuwait', 570000],
   ['Singapore', 300000],
-  ['Government of Iceland', 238186],
+  ['Iceland', 238186],
   ['Viet Nam', 70000],
-  ['Government of Liechtenstein', 60729],
-  ['Government of Portugal', 50000],
+  ['Liechtenstein', 60729],
+  ['Portugal', 50000],
   ['Cambodia**', 10000],
   ['Philippines', 10000],
   ['Samoa*', 6000]
@@ -42,9 +42,9 @@ const flagCodes = {
   'United Kingdom': 'gb', Belgium: 'be', Ireland: 'ie', Qatar: 'qa', Spain: 'es',
   'New Zealand': 'nz', India: 'in', Luxembourg: 'lu', China: 'cn',
   'Saudi Arabia': 'sa', Austria: 'at', 'Türkiye': 'tr', Finland: 'fi',
-  Thailand: 'th', Kuwait: 'kw', Singapore: 'sg', 'Government of Iceland': 'is',
-  'Viet Nam': 'vn', 'Government of Liechtenstein': 'li',
-  'Government of Portugal': 'pt', 'Cambodia**': 'kh', Philippines: 'ph', 'Samoa*': 'ws'
+  Thailand: 'th', Kuwait: 'kw', Singapore: 'sg', Iceland: 'is',
+  'Viet Nam': 'vn', Liechtenstein: 'li', Portugal: 'pt',
+  'Cambodia**': 'kh', Philippines: 'ph', 'Samoa*': 'ws'
 };
 
 const flagUrls = Object.fromEntries(

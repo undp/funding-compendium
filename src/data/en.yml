@@ -52,8 +52,9 @@ header:
 homepage:
   # Hero
   hero:
-    title: Funding Compen&shy;dium 2025
-    desktop-title: Funding Compendium
+    title-prefix: Funding
+    title-word-start: Compen
+    title-word-end: dium
     year: 2025
     subtitle: Sustaining Trust in an Era of Uncertainty
   # Report navigation cards
@@ -415,7 +416,7 @@ regular-resources-page:
     source:
   # Core contributors
   contributors:
-    heading: Top core contributors
+    heading: Core contributors
     copy: In 2025, UNDP received $442 million in core contributions,<br>of which 37 percent were backed by multi-year commitments, down from 40 percent in 2024.
     footnote: '*Includes core contributions for 2024 received in 2025<br>**Includes core contributions for 2026 received in 2025'
   # Multi-year pledges

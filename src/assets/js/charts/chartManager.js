@@ -369,12 +369,6 @@ function addResponsiveChartOptions(chart, type) {
           fontSize: 10,
           lineHeight: 12,
           overflow: 'break',
-          formatter: function (name) {
-            return name
-              .replace('Government of Liechtenstein', 'Government of\nLiechtenstein')
-              .replace('Government of Iceland', 'Government of\nIceland')
-              .replace('Government of Portugal', 'Government of\nPortugal');
-          }
         }
       },
       { show: false }
