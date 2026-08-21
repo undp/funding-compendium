@@ -108,7 +108,10 @@
 
             <li class="tabs-title is-active" role="tab" aria-selected="true" aria-controls="tab-1" id="tablist_1-tab-1"
               tabindex="-1">
-              <a href="#tab-1">{{{landscape-page.summary-tabs.total.label}}}</a>
+              <a href="#tab-1">
+                <span class="fl-tab-label-desktop">{{{landscape-page.summary-tabs.total.label}}}</span>
+                <span class="fl-tab-label-mobile">{{landscape-page.summary-tabs.total.mobile-label}}</span>
+              </a>
             </li>
 
             <li class="tabs-title" role="tab" aria-selected="false" aria-controls="tab-2" id="tablist_1-tab-2"
@@ -427,7 +430,6 @@
       <div class="cell small-12 medium-12 large-12">
 
         <h2 class="fl-section-title">{{landscape-page.funding-type.heading}}</h2>
-        <h4>{{landscape-page.funding-type.subheading}}</h4>
       </div>
 
 
@@ -437,7 +439,7 @@
 
       <div class="cell small-12 medium-12 large-4">
         <div>
-          <br><br><br>
+          <br>
           {{{landscape-page.funding-type.summary}}}
         </div>
       </div>
@@ -484,7 +486,6 @@
 
       <div class="cell small-12 medium-12 large-6">
         <h2 class="fl-section-title">{{landscape-page.funding-partner.heading}}</h2>
-        <h4>{{landscape-page.funding-partner.subheading}}</h4>
         <p>{{landscape-page.funding-partner.copy}}</p>
       </div>
 
@@ -527,8 +528,10 @@
       <div class="cell small-12 medium-12 large-12">
         <h2 class="fl-section-title">{{landscape-page.funding-channel.heading}}</h2>
         <p>{{landscape-page.funding-channel.copy}}</p>
-
-        <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;margin-bottom:4rem;"></div>
+        <div class="fl-channel-chart-wrap">
+          <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;margin-bottom:4rem;"></div>
+          <p class="fl-chart-mobile-instruction">{{landscape-page.funding-channel.mobile-instruction}}</p>
+        </div>
 
          <div class="cell small-12 medium-12 large-12">
         <br><br>
@@ -701,7 +704,7 @@
           <!-- REGULAR RESOURCES -->
           <div class="resource-item resource-primary resource-regular">
             <div class="resource-icon">
-                            <img src="/assets/img/icons/core-funding.svg" alt="">
+                            <img src="{{@root.root}}assets/img/icons/core-funding.svg" alt="">
 
             </div>
 
@@ -715,7 +718,7 @@
           <!-- OTHER RESOURCES -->
           <div class="resource-item resource-primary resource-other">
             <div class="resource-icon">
-                            <img src="/assets/img/icons/other-resources-target.svg" alt="">
+                            <img src="{{@root.root}}assets/img/icons/other-resources-target.svg" alt="">
 
             </div>
 
@@ -738,7 +741,7 @@
           <!-- GOVERNMENT FINANCING -->
           <div class="resource-item resource-sub resource-government">
             <div class="resource-icon">
-              <img src="/assets/img/icons/government.svg" alt="">
+              <img src="{{@root.root}}assets/img/icons/government.svg" alt="">
             </div>
 
             <div class="resource-content">
@@ -751,7 +754,7 @@
           <!-- THEMATIC FUNDS -->
           <div class="resource-item resource-sub resource-thematic">
             <div class="resource-icon">
-              <img src="/assets/img/icons/thematic.svg" alt="">
+              <img src="{{@root.root}}assets/img/icons/thematic.svg" alt="">
 
             </div>
 
@@ -765,7 +768,7 @@
           <!-- THIRD-PARTY COST-SHARING -->
           <div class="resource-item resource-sub resource-cost-sharing">
             <div class="resource-icon">
-              <img src="/assets/img/icons/third-party.svg" alt="">
+              <img src="{{@root.root}}assets/img/icons/third-party.svg" alt="">
             </div>
 
             <div class="resource-content">
@@ -783,7 +786,7 @@
           <!-- UN POOLED FUNDS -->
           <div class="resource-item resource-sub resource-pooled">
             <div class="resource-icon">
-              <img src="/assets/img/icons/united-nations.svg" alt="">
+              <img src="{{@root.root}}assets/img/icons/united-nations.svg" alt="">
 
             </div>
 
@@ -797,7 +800,7 @@
           <!-- VERTICAL FUNDS -->
           <div class="resource-item resource-sub resource-vertical">
             <div class="resource-icon">
-              <img src="/assets/img/icons/vertical-badge.svg" alt="">
+              <img src="{{@root.root}}assets/img/icons/vertical-badge.svg" alt="">
 
             </div>
 
@@ -811,7 +814,7 @@
           <!-- REIMBURSABLE SUPPORT SERVICES -->
           <div class="resource-item resource-sub resource-reimbursable">
             <div class="resource-icon">
-              <img src="/assets/img/icons/reimbursable.svg" alt="">
+              <img src="{{@root.root}}assets/img/icons/reimbursable.svg" alt="">
 
             </div>
 
@@ -841,7 +844,8 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const statsSwiper = new Swiper('.stats-slider', {
+    const statsSlider = document.querySelector('.stats-slider');
+    const statsSwiper = new Swiper(statsSlider, {
       slidesPerView: "auto",
       centeredSlides: false,
       spaceBetween: 0,
@@ -850,6 +854,57 @@
         draggable: true,
       },
     });
+
+    const swiperWrapper = statsSlider && statsSlider.querySelector('.swiper-wrapper');
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const arrowCursor = (direction) => {
+      const path = direction === 'left'
+        ? 'M12 1L2 10M2 10L12 19M2 10H81.5'
+        : 'M69.5 1L79.5 10M79.5 10L69.5 19M79.5 10H0';
+      const width = direction === 'left' ? 82 : 81;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20" viewBox="0 0 ${width} 20"><path d="${path}" fill="none" stroke="black" stroke-width="2"/></svg>`;
+      return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 40 10, auto`;
+    };
+    const cursors = {
+      left: arrowCursor('left'),
+      right: arrowCursor('right')
+    };
+
+    const directionAt = (clientX) => {
+      const bounds = statsSlider.getBoundingClientRect();
+      const onLeft = clientX - bounds.left < bounds.width / 2;
+
+      if (statsSwiper.isBeginning) return 'right';
+      if (statsSwiper.isEnd) return 'left';
+      return onLeft ? 'left' : 'right';
+    };
+
+    if (swiperWrapper) {
+      swiperWrapper.addEventListener('mousemove', function (event) {
+        if (!finePointer.matches) return;
+        swiperWrapper.style.cursor = cursors[directionAt(event.clientX)];
+      });
+
+      swiperWrapper.addEventListener('mouseleave', function () {
+        swiperWrapper.style.cursor = 'auto';
+      });
+
+      swiperWrapper.addEventListener('click', function (event) {
+        if (event.target.closest('a, button, [class*="swiper-button"]')) return;
+        if (!statsSwiper.allowClick) return;
+
+        event.preventDefault();
+        const direction = directionAt(event.clientX);
+        if (direction === 'left') {
+          statsSwiper.slidePrev();
+        } else {
+          statsSwiper.slideNext();
+        }
+        if (finePointer.matches) {
+          swiperWrapper.style.cursor = cursors[directionAt(event.clientX)];
+        }
+      });
+    }
   });
 
 

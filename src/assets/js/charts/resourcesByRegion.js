@@ -108,7 +108,10 @@ export function initResourcesByRegion(el, echarts) {
           distance: 8,
 
           formatter: function (params) {
-            const item = data[params.dataIndex];
+            const originalIndex = params.data && Number.isInteger(params.data.originalIndex)
+              ? params.data.originalIndex
+              : params.dataIndex;
+            const item = data[originalIndex];
 
             return (
               `{pct|${item.percent}%}  ` +

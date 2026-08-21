@@ -39,22 +39,6 @@ export function initTopUnPooledFunds(el, echarts) {
 
   chart.setOption({
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
-    title: {
-      subtext: 'Net funded amount · $M',
-      left: 0,
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#232E3D'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
-        color: '#7A838F'
-      }
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
@@ -77,7 +61,7 @@ export function initTopUnPooledFunds(el, echarts) {
     grid: {
       left: 265,
       right: 85,
-      top: 55,
+      top: 16,
       bottom: 40
     },
     xAxis: {
@@ -116,7 +100,10 @@ export function initTopUnPooledFunds(el, echarts) {
       data: values,
       barWidth: 15,
       itemStyle: {
-        color: SECONDARY_COLORS[1]
+        color: function (params) {
+          const lightness = 31 + (params.dataIndex * 2.7);
+          return `hsl(266, 43%, ${lightness}%)`;
+        }
       },
       label: {
         show: true,

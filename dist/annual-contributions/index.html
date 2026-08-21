@@ -232,7 +232,7 @@
             <li aria-current="page">Annual contributions from member states</li>
           </ul>
           </nav>
-          <h1>Annual contributions to UNDP<br>from Member States, 2025</h1>
+          <h1>Annual contributions to UNDP <br>from Member States, 2025</h1>
         </div>
       </header>
       
@@ -261,6 +261,8 @@
               <option value="asc">Lowest to highest</option>
             </select>
           </div>
+      
+          <a class="annual-total-jump" href="#annual-contributions-total">Jump to totals <span aria-hidden="true">↓</span></a>
       
           <div class="annual-table-shell" tabindex="0" role="region" aria-label="Annual contributions to UNDP from Member States in 2025">
             <table class="annual-member-table" id="annual-member-table">
@@ -310,6 +312,42 @@
           if (!table) return;
       
           const formatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+          const mobileAccordion = window.matchMedia('(max-width: 63.9375em)');
+          const flagAliases = {
+            'bahamas': 'bs', 'the bahamas': 'bs', 'gambia': 'gm', 'the gambia': 'gm',
+            'bosnia and herzegovina': 'ba',
+            'bolivia plurinational state of': 'bo', 'cape verde': 'cv', 'congo the': 'cg',
+            'czech republic': 'cz',
+            'democratic peoples republic of korea': 'kp', 'democratic people s republic of korea': 'kp',
+            'democratic republic of the congo': 'cd',
+            'iran islamic republic of the': 'ir', 'kosovo': 'xk', 'lao peoples democratic republic': 'la',
+            'lao people s democratic republic': 'la', 'micronesia federated states of': 'fm',
+            'montserrat d': 'ms', 'myanmar': 'mm', 'the netherlands': 'nl',
+            'palestine state of': 'ps', 'republic of korea': 'kr', 'republic of moldova': 'md',
+            'republic of north macedonia': 'mk', 'russian federation': 'ru',
+            'saint vincent and the grenadines': 'vc', 'samoa 1': 'ws', 'sao tome and principe': 'st',
+            'sikkim': 'in', 'slovak republic': 'sk', 'timor0leste': 'tl',
+            'trinidad and tobago': 'tt',
+            'united republic of tanzania': 'tz', 'united states of america': 'us',
+            'sudan the': 'sd', 'turkiye': 'tr',
+            'venezuela bolivarian republic of': 've', 'viet nam': 'vn'
+          };
+          const normalizeCountry = (name) => String(name || '')
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/gi, ' ').trim().toLowerCase();
+          const regionCodes = (() => {
+            const names = new Intl.DisplayNames(['en'], { type: 'region' });
+            const map = new Map();
+            for (let first = 65; first <= 90; first += 1) {
+              for (let second = 65; second <= 90; second += 1) {
+                const code = String.fromCharCode(first, second);
+                const displayName = names.of(code);
+                if (displayName && displayName !== code) map.set(normalizeCountry(displayName), code.toLowerCase());
+              }
+            }
+            return map;
+          })();
+          const flagCode = (name) => flagAliases[normalizeCountry(name)] || regionCodes.get(normalizeCountry(name));
           const headerLayout = [
             ['Member State'],
             ['Regular resources', 'a'],
@@ -356,11 +394,39 @@
               const categorySelect = document.getElementById('annual-sort-category');
               const directionSelect = document.getElementById('annual-sort-direction');
       
+              const syncAccordionState = () => {
+                table.querySelectorAll('.annual-country-toggle').forEach((button) => {
+                  const row = button.closest('tr');
+                  if (mobileAccordion.matches) {
+                    row.classList.remove('is-open');
+                    button.setAttribute('aria-expanded', 'false');
+                  } else {
+                    row.classList.add('is-open');
+                    button.setAttribute('aria-expanded', 'true');
+                  }
+                });
+              };
+      
+              table.tBodies[0].addEventListener('click', (event) => {
+                const button = event.target.closest('.annual-country-toggle');
+                if (!button || !mobileAccordion.matches) return;
+                const row = button.closest('tr');
+                const isOpen = row.classList.toggle('is-open');
+                button.setAttribute('aria-expanded', String(isOpen));
+              });
+      
+              mobileAccordion.addEventListener('change', syncAccordionState);
+      
               const renderRows = (sortedRows) => {
                 const fragment = document.createDocumentFragment();
                 [...sortedRows, totalRow].filter(Boolean).forEach((row) => {
                   const tr = document.createElement('tr');
-                  if (String(row[0]).startsWith('TOTAL')) tr.className = 'annual-table-total';
+                  const isTotal = String(row[0]).startsWith('TOTAL');
+                  if (isTotal) {
+                    tr.className = 'annual-table-total';
+                    tr.id = 'annual-contributions-total';
+                  }
+                  else tr.className = 'annual-country-row';
       
                   row.forEach((value, index) => {
                     const cell = document.createElement(index === 0 ? 'th' : 'td');
@@ -371,12 +437,36 @@
                         .replace(/\s+[abc]$/, '');
                     }
                     if (index === 0) {
-                      cell.textContent = String(value || '').replace(/^TOTAL\s+e\/$/, 'TOTAL');
+                      const label = String(value || '')
+                        .replace(/^TOTAL\s+e\/$/, 'TOTAL')
+                        .replace(/^Sudan\s+\(the\)$/i, 'Sudan');
+                      if (isTotal) {
+                        cell.textContent = label;
+                      } else {
+                        const button = document.createElement('button');
+                        button.className = 'annual-country-toggle';
+                        button.type = 'button';
+                        button.setAttribute('aria-expanded', String(!mobileAccordion.matches));
+                        const code = flagCode(label);
+                        if (code) {
+                          const flag = document.createElement('span');
+                          flag.className = `fi fi-${code} annual-country-flag`;
+                          flag.setAttribute('aria-hidden', 'true');
+                          button.appendChild(flag);
+                        }
+                        const buttonLabel = document.createElement('span');
+                        buttonLabel.className = 'annual-country-name';
+                        buttonLabel.textContent = label;
+                        button.appendChild(buttonLabel);
+                        cell.appendChild(button);
+                      }
                     } else if (value === null || value === '' || value === 0) {
                       cell.textContent = '\u2014';
                       cell.className = value === 0 ? 'is-zero' : 'is-empty';
                     } else {
-                      cell.textContent = formatter.format(value);
+                      cell.textContent = value < 0
+                        ? `-$${formatter.format(Math.abs(value))}`
+                        : `$${formatter.format(value)}`;
                       if (value < 0) cell.className = 'is-negative';
                     }
                     tr.appendChild(cell);
@@ -384,6 +474,7 @@
                   fragment.appendChild(tr);
                 });
                 table.tBodies[0].replaceChildren(fragment);
+                syncAccordionState();
               };
       
               const sortRows = () => {

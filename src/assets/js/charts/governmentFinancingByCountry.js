@@ -15,29 +15,34 @@ const values = [
   14.306534, 13.297705, 11.371325, 11.245327, 9.865238, 9.387963
 ];
 
+const flagCodes = {
+  Argentina: 'ar', Gabon: 'ga', Guatemala: 'gt', Colombia: 'co', Brazil: 'br',
+  Panama: 'pa', Honduras: 'hn', Dominica: 'dm', Haiti: 'ht', 'Saudi Arabia': 'sa',
+  Cuba: 'cu', Uruguay: 'uy', Angola: 'ao', Egypt: 'eg', Turkmenistan: 'tm',
+  Morocco: 'ma', Serbia: 'rs', Montenegro: 'me', Indonesia: 'id', India: 'in',
+  'Dominican Republic': 'do', Paraguay: 'py', 'Türkiye': 'tr', Bolivia: 'bo',
+  Ethiopia: 'et', Zambia: 'zm', Cameroon: 'cm', Kazakhstan: 'kz', Peru: 'pe', Chile: 'cl'
+};
+
+const flagKey = (name) => `flag_${name.replace(/[^a-zA-Z0-9]/g, '_')}`;
+const flagStyles = Object.fromEntries(countries.map((name) => [flagKey(name), {
+  backgroundColor: {
+    image: `https://flagcdn.com/${flagCodes[name]}.svg`
+  },
+  borderColor: '#c7cdd1',
+  borderWidth: 0.5,
+  height: 20,
+  width: 30,
+  verticalAlign: 'middle'
+}]));
+
 export function initGovernmentFinancingByCountry(el, echarts) {
   const chart = echarts.init(el);
+  const mobileView = window.matchMedia('(max-width: 39.9375em)');
 
   chart.setOption({
     backgroundColor: 'transparent',
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
-    title: {
-      
-      subtext: '$M · Last updated 26 June 2026',
-      left: 0,
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#2B2A29'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
-        color: '#807973'
-      }
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
@@ -58,9 +63,9 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       }
     },
     grid: {
-      left: 215,
-      right: 85,
-      top: 90,
+      left: 330,
+      right: 315,
+      top: 48,
       bottom: 45
     },
     xAxis: {
@@ -72,7 +77,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#877F79',
-        fontSize: 11,
+        fontSize: 13,
         formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -86,10 +91,28 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       axisLabel: {
         color: '#3B3734',
         fontSize: 11,
-        lineHeight: 14,
-        margin: 13,
-        width: 185,
-        overflow: 'break'
+        lineHeight: 22,
+        margin: 24,
+        width: 290,
+        overflow: 'truncate',
+        formatter: function (name) {
+          if (mobileView.matches) return name;
+          return `{country|${name}}{gap|}{${flagKey(name)}|}`;
+        },
+        rich: {
+          country: {
+            color: '#3B3734',
+            fontSize: 13,
+            lineHeight: 22,
+            width: 225,
+            align: 'right',
+            verticalAlign: 'middle'
+          },
+          gap: {
+            width: 15
+          },
+          ...flagStyles
+        }
       }
     },
     series: [{
@@ -97,13 +120,11 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       type: 'bar',
       clip: false,
       data: values,
-      barWidth: 12,
+      barWidth: 16,
       itemStyle: {
         color: function (params) {
-          if (params.dataIndex === 0) return '#D95F59';
-          if (params.dataIndex <= 4) return '#E48269';
-          if (params.dataIndex <= 9) return '#D99A77';
-          return '#D8B49A';
+          const lightness = 27 + (params.dataIndex * 1.65);
+          return `hsl(204, 72%, ${lightness}%)`;
         }
       },
       label: {
@@ -116,11 +137,11 @@ export function initGovernmentFinancingByCountry(el, echarts) {
             : `$${params.value.toFixed(1).replace(/\.0$/, '')}M`;
         },
         color: '#514944',
-        fontSize: 10,
+        fontSize: 12,
         fontWeight: 600
       },
       emphasis: {
-        itemStyle: { color: '#C94C46' }
+        itemStyle: { color: '#003b64' }
       }
     }]
   });

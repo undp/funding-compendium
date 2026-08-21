@@ -17,6 +17,17 @@ const countries = [
 ];
 
 const values = [14, 6, 5, 5, 4, 4, 4, 3, 2, 2, 1, 1, 1, 1, 1];
+const flagCodes = {
+  Norway: 'no', Germany: 'de', 'The Netherlands': 'nl', Australia: 'au',
+  'United Kingdom': 'gb', Canada: 'ca', Spain: 'es', Sweden: 'se',
+  'European Union': 'eu', Denmark: 'dk', Switzerland: 'ch', Ireland: 'ie',
+  'Republic of Korea': 'kr', Italy: 'it', Belgium: 'be'
+};
+const flagKey = (name) => `flag_${name.replace(/[^a-zA-Z0-9]/g, '_')}`;
+const flagStyles = Object.fromEntries(countries.map((name) => [flagKey(name), {
+  backgroundColor: { image: `https://flagcdn.com/${flagCodes[name]}.svg` },
+  borderColor: '#c7cdd1', borderWidth: 0.5, height: 20, width: 30
+}]));
 
 export function initTopPooledFundMemberStates(el, echarts) {
   const chart = echarts.init(el);
@@ -42,7 +53,7 @@ export function initTopPooledFundMemberStates(el, echarts) {
       }
     },
     grid: {
-      left: 135,
+      left: 205,
       right: 55,
       top: 20,
       bottom: 35
@@ -69,20 +80,24 @@ export function initTopPooledFundMemberStates(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#2F3742',
-        fontSize: 12,
-        margin: 13
+        fontSize: 13,
+        margin: 15,
+        formatter: (name) => `{country|${name}}  {${flagKey(name)}|}`,
+        rich: {
+          country: { color: '#2F3742', fontSize: 13, lineHeight: 20, width: 145, align: 'right' },
+          ...flagStyles
+        }
       }
     },
     series: [{
       name: 'Share of total',
       type: 'bar',
       data: values,
-      barWidth: 15,
+      barWidth: 18,
       itemStyle: {
         color: function (params) {
-          if (params.dataIndex === 0) return SECONDARY_COLORS[0];
-          if (params.dataIndex <= 3) return SECONDARY_COLORS[1];
-          return SECONDARY_COLORS[2];
+          const lightness = 29 + (params.dataIndex * 3.25);
+          return `hsl(205, 72%, ${lightness}%)`;
         }
       },
       label: {
@@ -91,11 +106,11 @@ export function initTopPooledFundMemberStates(el, echarts) {
         distance: 7,
         formatter: '{c}%',
         color: '#36434D',
-        fontSize: 11,
+        fontSize: 12,
         fontWeight: 700
       },
       emphasis: {
-        itemStyle: { color: SECONDARY_COLORS[3] }
+        itemStyle: { opacity: 0.82 }
       }
     }]
   });

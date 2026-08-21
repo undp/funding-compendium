@@ -344,7 +344,10 @@
       
                   <li class="tabs-title is-active" role="tab" aria-selected="true" aria-controls="tab-1" id="tablist_1-tab-1"
                     tabindex="-1">
-                    <a href="#tab-1">total annual contributions<sup>1</sup> to UNDP</a>
+                    <a href="#tab-1">
+                      <span class="fl-tab-label-desktop">total annual contributions<sup>1</sup> to UNDP</span>
+                      <span class="fl-tab-label-mobile">total annual contributions to UNDP</span>
+                    </a>
                   </li>
       
                   <li class="tabs-title" role="tab" aria-selected="false" aria-controls="tab-2" id="tablist_1-tab-2"
@@ -707,7 +710,6 @@
             <div class="cell small-12 medium-12 large-12">
       
               <h2 class="fl-section-title">Resources by funding type</h2>
-              <h4>Regular and other resources, 2025</h4>
             </div>
       
       
@@ -717,10 +719,10 @@
       
             <div class="cell small-12 medium-12 large-4">
               <div>
-                <br><br><br>
+                <br>
                 <p><strong>Annual contributions increased to $5 billion in 2025,</strong> up by 2 percent from $4.9 billion in 2024.</p>
-      <p><strong style="color: #637300;">Annual contributions to regular resources decreased to $442 million,</strong> down by 24 percent from $581 million in 2024.</p>
-      <p><strong style="color: #0069B3;">Annual contributions to other resources increased to $4.6 billion,</strong> up by 6 percent from $4.3 billion in 2024.</p>
+      <p class="fl-funding-summary-item fl-funding-summary-regular"><span class="fl-funding-summary-key" aria-hidden="true"></span><strong>Annual contributions to regular resources decreased to $442 million,</strong> down by 24 percent from $581 million in 2024.</p>
+      <p class="fl-funding-summary-item fl-funding-summary-other"><span class="fl-funding-summary-key" aria-hidden="true"></span><strong>Annual contributions to other resources increased to $4.6 billion,</strong> up by 6 percent from $4.3 billion in 2024.</p>
               </div>
             </div>
       
@@ -766,7 +768,6 @@
       
             <div class="cell small-12 medium-12 large-6">
               <h2 class="fl-section-title">Resources by funding partner</h2>
-              <h4>Regular and other resources, 2025</h4>
               <p>UNDP values all types of funding received from its partners—including Member States, multilateral organizations, non-governmental organizations, private and philanthropic organizations and financing institutions—as these resources enable it to deliver on its commitments. In 2025, UNDP received total annual contributions of $5 billion. Of this total, 36 percent was contributed by donor country governments, 32 percent by multilateral organizations, and 32 percent by programme country governments.</p>
             </div>
       
@@ -809,8 +810,10 @@
             <div class="cell small-12 medium-12 large-12">
               <h2 class="fl-section-title">Resources by funding channel</h2>
               <p>In 2025, UNDP benefited from increases in government development financing (17 percent) and third-party cost-sharing (7 percent).</p>
-      
-              <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;margin-bottom:4rem;"></div>
+              <div class="fl-channel-chart-wrap">
+                <div class="echarts" data-chart-type="resources-by-funding-channel" style="width:100%;height:600px;margin-bottom:4rem;"></div>
+                <p class="fl-chart-mobile-instruction">Tap a year in the chart to view its funding breakdown.</p>
+              </div>
       
                <div class="cell small-12 medium-12 large-12">
               <br><br>
@@ -983,7 +986,7 @@
                 <!-- REGULAR RESOURCES -->
                 <div class="resource-item resource-primary resource-regular">
                   <div class="resource-icon">
-                                  <img src="/assets/img/icons/core-funding.svg" alt="">
+                                  <img src="../assets/img/icons/core-funding.svg" alt="">
       
                   </div>
       
@@ -997,7 +1000,7 @@
                 <!-- OTHER RESOURCES -->
                 <div class="resource-item resource-primary resource-other">
                   <div class="resource-icon">
-                                  <img src="/assets/img/icons/other-resources-target.svg" alt="">
+                                  <img src="../assets/img/icons/other-resources-target.svg" alt="">
       
                   </div>
       
@@ -1020,7 +1023,7 @@
                 <!-- GOVERNMENT FINANCING -->
                 <div class="resource-item resource-sub resource-government">
                   <div class="resource-icon">
-                    <img src="/assets/img/icons/government.svg" alt="">
+                    <img src="../assets/img/icons/government.svg" alt="">
                   </div>
       
                   <div class="resource-content">
@@ -1033,7 +1036,7 @@
                 <!-- THEMATIC FUNDS -->
                 <div class="resource-item resource-sub resource-thematic">
                   <div class="resource-icon">
-                    <img src="/assets/img/icons/thematic.svg" alt="">
+                    <img src="../assets/img/icons/thematic.svg" alt="">
       
                   </div>
       
@@ -1047,7 +1050,7 @@
                 <!-- THIRD-PARTY COST-SHARING -->
                 <div class="resource-item resource-sub resource-cost-sharing">
                   <div class="resource-icon">
-                    <img src="/assets/img/icons/third-party.svg" alt="">
+                    <img src="../assets/img/icons/third-party.svg" alt="">
                   </div>
       
                   <div class="resource-content">
@@ -1065,7 +1068,7 @@
                 <!-- UN POOLED FUNDS -->
                 <div class="resource-item resource-sub resource-pooled">
                   <div class="resource-icon">
-                    <img src="/assets/img/icons/united-nations.svg" alt="">
+                    <img src="../assets/img/icons/united-nations.svg" alt="">
       
                   </div>
       
@@ -1079,7 +1082,7 @@
                 <!-- VERTICAL FUNDS -->
                 <div class="resource-item resource-sub resource-vertical">
                   <div class="resource-icon">
-                    <img src="/assets/img/icons/vertical-badge.svg" alt="">
+                    <img src="../assets/img/icons/vertical-badge.svg" alt="">
       
                   </div>
       
@@ -1093,7 +1096,7 @@
                 <!-- REIMBURSABLE SUPPORT SERVICES -->
                 <div class="resource-item resource-sub resource-reimbursable">
                   <div class="resource-icon">
-                    <img src="/assets/img/icons/reimbursable.svg" alt="">
+                    <img src="../assets/img/icons/reimbursable.svg" alt="">
       
                   </div>
       
@@ -1123,7 +1126,8 @@
       
       <script>
         document.addEventListener('DOMContentLoaded', function () {
-          const statsSwiper = new Swiper('.stats-slider', {
+          const statsSlider = document.querySelector('.stats-slider');
+          const statsSwiper = new Swiper(statsSlider, {
             slidesPerView: "auto",
             centeredSlides: false,
             spaceBetween: 0,
@@ -1132,6 +1136,57 @@
               draggable: true,
             },
           });
+      
+          const swiperWrapper = statsSlider && statsSlider.querySelector('.swiper-wrapper');
+          const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+          const arrowCursor = (direction) => {
+            const path = direction === 'left'
+              ? 'M12 1L2 10M2 10L12 19M2 10H81.5'
+              : 'M69.5 1L79.5 10M79.5 10L69.5 19M79.5 10H0';
+            const width = direction === 'left' ? 82 : 81;
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20" viewBox="0 0 ${width} 20"><path d="${path}" fill="none" stroke="black" stroke-width="2"/></svg>`;
+            return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 40 10, auto`;
+          };
+          const cursors = {
+            left: arrowCursor('left'),
+            right: arrowCursor('right')
+          };
+      
+          const directionAt = (clientX) => {
+            const bounds = statsSlider.getBoundingClientRect();
+            const onLeft = clientX - bounds.left < bounds.width / 2;
+      
+            if (statsSwiper.isBeginning) return 'right';
+            if (statsSwiper.isEnd) return 'left';
+            return onLeft ? 'left' : 'right';
+          };
+      
+          if (swiperWrapper) {
+            swiperWrapper.addEventListener('mousemove', function (event) {
+              if (!finePointer.matches) return;
+              swiperWrapper.style.cursor = cursors[directionAt(event.clientX)];
+            });
+      
+            swiperWrapper.addEventListener('mouseleave', function () {
+              swiperWrapper.style.cursor = 'auto';
+            });
+      
+            swiperWrapper.addEventListener('click', function (event) {
+              if (event.target.closest('a, button, [class*="swiper-button"]')) return;
+              if (!statsSwiper.allowClick) return;
+      
+              event.preventDefault();
+              const direction = directionAt(event.clientX);
+              if (direction === 'left') {
+                statsSwiper.slidePrev();
+              } else {
+                statsSwiper.slideNext();
+              }
+              if (finePointer.matches) {
+                swiperWrapper.style.cursor = cursors[directionAt(event.clientX)];
+              }
+            });
+          }
         });
       
       

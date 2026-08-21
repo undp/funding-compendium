@@ -73,7 +73,7 @@ export function initTrendsInResources(el, echarts) {
       itemGap: 24,
       textStyle: {
         color: '#555555',
-        fontSize: 11
+        fontSize: 15
       },
       data: [
         'Regular resources',

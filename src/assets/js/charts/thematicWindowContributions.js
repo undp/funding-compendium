@@ -1,3 +1,5 @@
+import { detailedTooltip } from './detailedTooltip';
+
 const years = ['2022', '2023', '2024', '2025'];
 const values = [119, 126, 126, 115];
 
@@ -9,29 +11,12 @@ export function initThematicWindowContributions(el, echarts) {
     textStyle: {
       fontFamily: 'Proxima Nova, Arial, sans-serif'
     },
-    title: {
-      text: '',
-      subtext: '$M',
-      left: 0,
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#232E3D'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
-        color: '#7A838F'
-      }
-    },
     tooltip: {
       trigger: 'axis',
       backgroundColor: '#ffffff',
       borderColor: '#D8DDE3',
-      borderWidth: 1,
-      padding: 10,
+      borderWidth: 0,
+      padding: 0,
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#232E3D',
@@ -39,13 +24,23 @@ export function initThematicWindowContributions(el, echarts) {
       },
       formatter: function (params) {
         const item = params[0];
-        return `<strong>${item.axisValue}</strong><br>$${item.value}M`;
+        const index = item.dataIndex;
+        const previous = index > 0 ? values[index - 1] : null;
+        const change = previous === null ? '' : ((item.value - previous) / previous) * 100;
+        const comparison = previous === null
+          ? 'Starting year'
+          : change === 0
+            ? `No change from ${years[index - 1]}`
+            : `${change > 0 ? 'Up' : 'Down'} ${Math.abs(change).toFixed(1).replace(/\.0$/, '')}% from ${years[index - 1]}`;
+        return detailedTooltip(item.axisValue, `$${item.value}M`, [
+          { label: 'Change from previous year', value: comparison }
+        ]);
       }
     },
     grid: {
       left: 55,
       right: 35,
-      top: 90,
+      top: 24,
       bottom: 45
     },
     xAxis: {
@@ -56,23 +51,23 @@ export function initThematicWindowContributions(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#59636E',
-        fontSize: 12,
+        fontSize: 14,
         margin: 12
       }
     },
     yAxis: {
       type: 'value',
       min: 100,
-      max: 130,
+      max: 129,
       interval: 10,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}M'
+        formatter: (value) => value === 129 ? '' : `$${value}M`
       },
-      splitLine: { lineStyle: { color: '#C5CBD1' } }
+      splitLine: { show: false }
     },
     series: [{
       name: 'Contributions',
@@ -100,6 +95,13 @@ export function initThematicWindowContributions(el, echarts) {
       },
       areaStyle: {
         color: 'rgba(61, 153, 153, 0.10)'
+      },
+      markLine: {
+        silent: true,
+        symbol: 'none',
+        label: { show: false },
+        lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' },
+        data: [{ yAxis: 100 }, { yAxis: 110 }, { yAxis: 120 }]
       },
       emphasis: { scale: 1.3 }
     }]

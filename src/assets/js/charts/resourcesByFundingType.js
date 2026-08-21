@@ -46,8 +46,8 @@ export function initResourcesByFundingType(el, echarts) {
     grid: {
       left: 70,
       right: 25,
-      top: 55,
-      bottom: 45
+      top: 10,
+      bottom: 60
     },
 
     tooltip: {
@@ -55,7 +55,8 @@ export function initResourcesByFundingType(el, echarts) {
     },
 
     legend: {
-      top: 0,
+      top: 'auto',
+      bottom: 0,
       icon: 'rect',
       itemWidth: 24,
       itemHeight: 8,
@@ -63,7 +64,7 @@ export function initResourcesByFundingType(el, echarts) {
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#222222',
-        fontSize: 11
+        fontSize: 15
       },
       data: ['Regular resources', 'Other resources']
     },

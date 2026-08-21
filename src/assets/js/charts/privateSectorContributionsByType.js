@@ -67,13 +67,18 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         'Private companies',
         'Foundations',
         'NGOs',
-        'Academic, training & research institutions'
+        'Academic, training & research institutions',
+        {
+          name: 'Total',
+          icon: 'path://M0,2 L24,2 L24,6 L0,6 Z',
+          itemStyle: { color: '#1C1C1C', borderColor: '#1C1C1C', borderWidth: 0 }
+        }
       ]
     },
     grid: {
       left: 60,
       right: 35,
-      top: 95,
+      top: 22,
       bottom: 75
     },
     xAxis: {
@@ -90,16 +95,16 @@ export function initPrivateSectorContributionsByType(el, echarts) {
     yAxis: {
       type: 'value',
       min: 0,
-      max: 100,
+      max: 99,
       interval: 25,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
         fontSize: 10,
-        formatter: (value) => `$${value}M`
+        formatter: (value) => value === 99 ? '' : `$${value}M`
       },
-      splitLine: { lineStyle: { color: '#C5CBD1' } }
+      splitLine: { show: false }
     },
     series: [
       {
@@ -109,6 +114,13 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         data: privateCompanies,
         barWidth: 86,
         itemStyle: { color: SECONDARY_COLORS[0] },
+        markLine: {
+          silent: true,
+          symbol: 'none',
+          label: { show: false },
+          lineStyle: { color: '#C5CBD1', width: 1 },
+          data: [0, 25, 50, 75].map((value) => ({ yAxis: value }))
+        },
         label: {
           show: true,
           position: 'inside',

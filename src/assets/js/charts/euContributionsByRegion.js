@@ -6,6 +6,9 @@ const africa = [36.805815, 87.067348, 42.136036, 54.721618];
 const latinAmerica = [8.304391, 19.182275, 20.524953, 20.360354];
 const global = [18.469002, 21.419253, 11.049183, 17.180990];
 const totals = [363.049926, 301.217771, 304.944809, 312.784472];
+const regionColors = {
+  africa: '#C3D51F', asia: '#3D9999', arab: '#8964BC', lac: '#E86B2E', europe: '#AD7F00', global: '#8A949E'
+};
 
 export function initEuContributionsByRegion(el, echarts) {
   const chart = echarts.init(el);
@@ -47,12 +50,12 @@ export function initEuContributionsByRegion(el, echarts) {
         const amount = (value) => `$${value.toFixed(1).replace(/\.0$/, '')}M`;
         const share = (value) => formatTooltipPercent(value, totals[index]);
         return detailedTooltip(years[index], amount(totals[index]), [
-          { label: 'Europe and the CIS', color: CATEGORY_COLORS[0], value: amount(europeCIS[index]), detail: share(europeCIS[index]) },
-          { label: 'Asia and the Pacific', color: CATEGORY_COLORS[1], value: amount(asiaPacific[index]), detail: share(asiaPacific[index]) },
-          { label: 'Arab States', color: CATEGORY_COLORS[2], value: amount(arabStates[index]), detail: share(arabStates[index]) },
-          { label: 'Africa', color: CATEGORY_COLORS[3], value: amount(africa[index]), detail: share(africa[index]) },
-          { label: 'Latin America and the Caribbean', color: CATEGORY_COLORS[4], value: amount(latinAmerica[index]), detail: share(latinAmerica[index]) },
-          { label: 'Global', color: CATEGORY_COLORS[5], value: amount(global[index]), detail: share(global[index]) }
+          { label: 'Europe and the CIS', color: regionColors.europe, value: amount(europeCIS[index]), detail: share(europeCIS[index]) },
+          { label: 'Asia and the Pacific', color: regionColors.asia, value: amount(asiaPacific[index]), detail: share(asiaPacific[index]) },
+          { label: 'Arab States', color: regionColors.arab, value: amount(arabStates[index]), detail: share(arabStates[index]) },
+          { label: 'Africa', color: regionColors.africa, value: amount(africa[index]), detail: share(africa[index]) },
+          { label: 'Latin America and the Caribbean', color: regionColors.lac, value: amount(latinAmerica[index]), detail: share(latinAmerica[index]) },
+          { label: 'Global', color: regionColors.global, value: amount(global[index]), detail: share(global[index]) }
         ]);
       }
     },
@@ -89,7 +92,7 @@ export function initEuContributionsByRegion(el, echarts) {
     grid: {
       left: 65,
       right: 35,
-      top: 35,
+      top: 8,
       bottom: 75
     },
     xAxis: {
@@ -114,17 +117,31 @@ export function initEuContributionsByRegion(el, echarts) {
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}M'
+        formatter: (value) => value === 400 ? '' : `$${value}M`
       },
-      splitLine: { lineStyle: { color: '#C5CBD1' } }
+      splitLine: { show: false }
     },
     series: [
-      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[0] } },
-      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[1] } },
-      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[2] } },
-      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[3] } },
-      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[4] } },
-      { name: 'Global', type: 'bar', stack: 'total', data: global, barWidth: 90, itemStyle: { color: CATEGORY_COLORS[5] } },
+      {
+        name: 'Europe and the CIS',
+        type: 'bar',
+        stack: 'total',
+        data: europeCIS,
+        barWidth: 90,
+        itemStyle: { color: regionColors.europe },
+        markLine: {
+          silent: true,
+          symbol: 'none',
+          label: { show: false },
+          lineStyle: { color: '#C5CBD1', width: 1 },
+          data: [0, 100, 200, 300].map((value) => ({ yAxis: value }))
+        }
+      },
+      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: regionColors.asia } },
+      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 90, itemStyle: { color: regionColors.arab } },
+      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 90, itemStyle: { color: regionColors.africa } },
+      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 90, itemStyle: { color: regionColors.lac } },
+      { name: 'Global', type: 'bar', stack: 'total', data: global, barWidth: 90, itemStyle: { color: regionColors.global } },
       {
         name: 'Total',
         type: 'line',

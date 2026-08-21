@@ -49,7 +49,7 @@ header:
 homepage:
   # Hero
   hero:
-    title: Funding Compendium 2025
+    title: Funding Compen&shy;dium 2025
     subtitle: Investing in a stable and sustainable future
   # Report navigation cards
   explore:
@@ -240,6 +240,7 @@ landscape-page:
   summary-tabs:
     total:
       label: total annual contributions<sup>1</sup> to UNDP
+      mobile-label: total annual contributions to UNDP
       marker: 1
       amount: $5
       unit: billion
@@ -304,8 +305,8 @@ landscape-page:
     subheading: Regular and other resources, 2025
     summary: |-
       <p><strong>Annual contributions increased to $5 billion in 2025,</strong> up by 2 percent from $4.9 billion in 2024.</p>
-      <p><strong style="color: #637300;">Annual contributions to regular resources decreased to $442 million,</strong> down by 24 percent from $581 million in 2024.</p>
-      <p><strong style="color: #0069B3;">Annual contributions to other resources increased to $4.6 billion,</strong> up by 6 percent from $4.3 billion in 2024.</p>
+      <p class="fl-funding-summary-item fl-funding-summary-regular"><span class="fl-funding-summary-key" aria-hidden="true"></span><strong>Annual contributions to regular resources decreased to $442 million,</strong> down by 24 percent from $581 million in 2024.</p>
+      <p class="fl-funding-summary-item fl-funding-summary-other"><span class="fl-funding-summary-key" aria-hidden="true"></span><strong>Annual contributions to other resources increased to $4.6 billion,</strong> up by 6 percent from $4.3 billion in 2024.</p>
     core-copy: Regular resources are critical to UNDP’s ability to prioritize countries’ needs, respond swiftly in crises and maintain high standards of accountability and transparency. They also allow UNDP to sustain country presence and upstream policy expertise that other types of funding cannot support. Regular resources also carry strong catalytic value, mobilizing additional other resources (non-core). Insufficient regular resources would therefore severely compromise UNDP’s unique ability to respond rapidly to emergencies and address critical needs that other funding sources do not cover. The decline in regular resources also has serious implications for UNDP’s ability to deliver the intended results of the Strategic Plan, restore and accelerate progress towards the Sustainable Development Goals (SDGs) and maintain robust oversight and accountability systems.
     trends-heading: Trends in regular and other resources, 2022–2025
     trends-copy: UNDP maintained broadly stable annual contributions throughout the period covered by the 2022–2025 Strategic Plan, averaging approximately $4.9 billion per year. Annual contributions reached a peak of $5.0 billion in both 2023 and 2025.
@@ -320,6 +321,7 @@ landscape-page:
   funding-channel:
     heading: Resources by funding channel
     copy: In 2025, UNDP benefited from increases in government development financing (17 percent) and third-party cost-sharing (7 percent).
+    mobile-instruction: Tap a year in the chart to view its funding breakdown.
     case-heading: UNDP Funding Types and Channels
     types-heading: The case for regular (core) resources in 2025
     types:
@@ -498,6 +500,7 @@ other-resources-page:
     heading: Thematic funds
     copy: The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $126 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.
     chart: Funding window contributions, 2022–2025
+    flow-chart: Contributions by funding window and contributor
   # UN pooled funds
   pooled:
     heading: UN pooled funds

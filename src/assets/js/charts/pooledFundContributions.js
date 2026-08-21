@@ -4,6 +4,11 @@ const development = [78.697794, 45.339076, 69.668037, 77.134571];
 const humanitarian = [0.203308, 0.466253, 0, 0];
 const peace = [132.144448, 137.714204, 115.829064, 105.183506];
 const undpTotal = [249, 224, 251, 234];
+const totalLabelAnchors = years.map((_, index) => Math.max(
+  undpTotal[index],
+  climate[index] + development[index] + humanitarian[index] + peace[index]
+));
+const pooledColors = ['#267878', '#3D9999', '#E86B2E', '#C3D51F'];
 
 export function initPooledFundContributions(el, echarts) {
   const chart = echarts.init(el);
@@ -11,23 +16,6 @@ export function initPooledFundContributions(el, echarts) {
   chart.setOption({
    
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
-    title: {
-      
-      subtext: '2022–2025 · $M',
-      left: 'center',
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#232E3D'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
-        color: '#7A838F'
-      }
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(35, 46, 61, 0.035)' } },
@@ -46,10 +34,10 @@ export function initPooledFundContributions(el, echarts) {
         const compositionTotal = climate[index] + development[index] + humanitarian[index] + peace[index];
         const share = (value) => formatTooltipPercent(value, compositionTotal);
         return detailedTooltip(years[index], `$${undpTotal[index]}M`, [
-          { label: 'Climate and environment', color: SECONDARY_COLORS[0], value: amount(climate[index]), detail: share(climate[index]) },
-          { label: 'Development', color: SECONDARY_COLORS[1], value: amount(development[index]), detail: share(development[index]) },
-          { label: 'Humanitarian', color: SECONDARY_COLORS[2], value: humanitarian[index] > 0 ? amount(humanitarian[index]) : '—', detail: humanitarian[index] > 0 ? share(humanitarian[index]) : null },
-          { label: 'Peace and transition', color: SECONDARY_COLORS[3], value: amount(peace[index]), detail: share(peace[index]) }
+          { label: 'Climate and environment', color: pooledColors[0], value: amount(climate[index]), detail: share(climate[index]) },
+          { label: 'Development', color: pooledColors[1], value: amount(development[index]), detail: share(development[index]) },
+          { label: 'Humanitarian', color: pooledColors[2], value: humanitarian[index] > 0 ? amount(humanitarian[index]) : '—', detail: humanitarian[index] > 0 ? share(humanitarian[index]) : null },
+          { label: 'Peace and transition', color: pooledColors[3], value: amount(peace[index]), detail: share(peace[index]) }
         ]);
       }
     },
@@ -75,23 +63,26 @@ export function initPooledFundContributions(el, echarts) {
     grid: {
       left: 65,
       right: 80,
-      top: 55,
+      top: 20,
       bottom: 75,
       containLabel: true
     },
     xAxis: {
       type: 'value',
       min: 0,
-      max: 300,
+      max: 299,
       interval: 50,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}M'
+        formatter: (value) => value === 299 ? '' : `$${value}M`
       },
-      splitLine: { lineStyle: { color: '#C5CBD1' } }
+      splitLine: {
+        show: true,
+        lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' }
+      }
     },
     yAxis: {
       type: 'category',
@@ -113,7 +104,7 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: climate,
-        itemStyle: { color: SECONDARY_COLORS[0] }
+        itemStyle: { color: pooledColors[0] }
       },
       {
         name: 'Development',
@@ -121,7 +112,7 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: development,
-        itemStyle: { color: SECONDARY_COLORS[1] }
+        itemStyle: { color: pooledColors[1] }
       },
       {
         name: 'Humanitarian',
@@ -129,7 +120,7 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: humanitarian,
-        itemStyle: { color: SECONDARY_COLORS[2] }
+        itemStyle: { color: pooledColors[2] }
       },
       {
         name: 'Peace and transition',
@@ -137,12 +128,12 @@ export function initPooledFundContributions(el, echarts) {
         stack: 'total',
         barWidth: 32,
         data: peace,
-        itemStyle: { color: SECONDARY_COLORS[3] }
+        itemStyle: { color: pooledColors[3] }
       },
       {
-        name: 'UNDP Total',
+        name: '',
         type: 'bar',
-        data: undpTotal,
+        data: totalLabelAnchors,
         barWidth: 32,
         barGap: '-100%',
         silent: true,
@@ -151,7 +142,7 @@ export function initPooledFundContributions(el, echarts) {
           show: true,
           position: 'right',
           distance: 9,
-          formatter: (params) => `$${params.value}M`,
+          formatter: (params) => `$${undpTotal[params.dataIndex]}M`,
           color: '#232E3D',
           fontSize: 12,
           fontWeight: 700

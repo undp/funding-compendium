@@ -5,6 +5,9 @@ const arabStates = [123.588728, 115.094551, 113.531771, 108.717443];
 const africa = [207.700913, 126.318559, 130.999067, 248.314057];
 const asiaPacific = [98.178461, 58.449892, 48.127073, 60.160570];
 const totals = [1124.037568, 1194.290257, 1167.303461, 1425.934731];
+const regionColors = {
+  africa: '#C3D51F', asia: '#3D9999', arab: '#8964BC', lac: '#E86B2E', europe: '#AD7F00'
+};
 
 export function initGovernmentFinancingByRegion(el, echarts) {
   const chart = echarts.init(el);
@@ -45,11 +48,11 @@ export function initGovernmentFinancingByRegion(el, echarts) {
         const amount = (value) => `$${value.toFixed(1).replace(/\.0$/, '')}M`;
         const share = (value) => formatTooltipPercent(value, totals[index]);
         return detailedTooltip(years[index], `$${(totals[index] / 1000).toFixed(2)}B`, [
-          { label: 'Latin America and the Caribbean', color: CATEGORY_COLORS[0], value: amount(latinAmerica[index]), detail: share(latinAmerica[index]) },
-          { label: 'Africa', color: CATEGORY_COLORS[1], value: amount(africa[index]), detail: share(africa[index]) },
-          { label: 'Europe and the CIS', color: CATEGORY_COLORS[2], value: amount(europeCIS[index]), detail: share(europeCIS[index]) },
-          { label: 'Arab States', color: CATEGORY_COLORS[3], value: amount(arabStates[index]), detail: share(arabStates[index]) },
-          { label: 'Asia and the Pacific', color: CATEGORY_COLORS[4], value: amount(asiaPacific[index]), detail: share(asiaPacific[index]) }
+          { label: 'Latin America and the Caribbean', color: regionColors.lac, value: amount(latinAmerica[index]), detail: share(latinAmerica[index]) },
+          { label: 'Africa', color: regionColors.africa, value: amount(africa[index]), detail: share(africa[index]) },
+          { label: 'Europe and the CIS', color: regionColors.europe, value: amount(europeCIS[index]), detail: share(europeCIS[index]) },
+          { label: 'Arab States', color: regionColors.arab, value: amount(arabStates[index]), detail: share(arabStates[index]) },
+          { label: 'Asia and the Pacific', color: regionColors.asia, value: amount(asiaPacific[index]), detail: share(asiaPacific[index]) }
         ]);
       }
     },
@@ -76,7 +79,7 @@ export function initGovernmentFinancingByRegion(el, echarts) {
     grid: {
       left: 65,
       right: 35,
-      top: 35,
+      top: 16,
       bottom: 75
     },
     xAxis: {
@@ -94,7 +97,7 @@ export function initGovernmentFinancingByRegion(el, echarts) {
     yAxis: {
       type: 'value',
       min: 0,
-      max: 1600,
+      max: 1599,
       interval: 400,
       axisLine: { show: false },
       axisTick: { show: false },
@@ -108,11 +111,11 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     series: [
-      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[0] } },
-      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[1] } },
-      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[2] } },
-      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[3] } },
-      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 62, itemStyle: { color: CATEGORY_COLORS[4] } },
+      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 62, itemStyle: { color: regionColors.lac } },
+      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 62, itemStyle: { color: regionColors.africa } },
+      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 62, itemStyle: { color: regionColors.europe } },
+      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 62, itemStyle: { color: regionColors.arab } },
+      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 62, itemStyle: { color: regionColors.asia } },
       {
         name: 'Total',
         type: 'bar',

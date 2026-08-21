@@ -148,8 +148,8 @@ export function initContributionByDonorCategory(el, echarts) {
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#333333',
-        fontSize: 13,
-        lineHeight: 17
+        fontSize: 15,
+        lineHeight: 19
       }
     },
 
@@ -847,6 +847,10 @@ export function initContributionByDonorCategory(el, echarts) {
 
   el.__echartsInstance =
     chart;
+
+  el.__echartsResizeHandler = resize;
+
+  return chart;
 }
 
 export default initContributionByDonorCategory;

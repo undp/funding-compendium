@@ -25,6 +25,7 @@ const totals = [
   70.688079, 36.561612, 26.255504, 22.055319, 19.048081,
   18.496085, 16.860748, 15.313088, 15, 12.473148
 ];
+const ifiColors = ['#B7862B', '#7E492F'];
 
 export function initTopIfiRecipientCountries(el, echarts) {
   const chart = echarts.init(el);
@@ -52,8 +53,8 @@ export function initTopIfiRecipientCountries(el, echarts) {
         const share = (value) => formatTooltipPercent(value, totals[index]);
 
         return detailedTooltip(recipients[index], amount(totals[index]), [
-          { label: 'IFI Direct', color: SECONDARY_COLORS[0], value: direct[index] > 0 ? amount(direct[index]) : '—', detail: direct[index] > 0 ? share(direct[index]) : null },
-          { label: 'IFI Indirect', color: SECONDARY_COLORS[1], value: indirect[index] > 0 ? amount(indirect[index]) : '—', detail: indirect[index] > 0 ? share(indirect[index]) : null }
+          { label: 'IFI Direct', color: ifiColors[0], value: direct[index] > 0 ? amount(direct[index]) : '—', detail: direct[index] > 0 ? share(direct[index]) : null },
+          { label: 'IFI Indirect', color: ifiColors[1], value: indirect[index] > 0 ? amount(indirect[index]) : '—', detail: indirect[index] > 0 ? share(indirect[index]) : null }
         ]);
       }
     },
@@ -74,7 +75,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
     grid: {
       left: 190,
       right: 90,
-      top: 15,
+      top: 8,
       bottom: 70
     },
     xAxis: {
@@ -86,7 +87,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 10,
+        fontSize: 12,
         formatter: (value) => `$${value}M`
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -99,7 +100,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#303944',
-        fontSize: 11,
+        fontSize: 12,
         margin: 14,
         width: 165,
         overflow: 'break',
@@ -113,7 +114,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
         stack: 'total',
         data: direct,
         barWidth: 20,
-        itemStyle: { color: SECONDARY_COLORS[0] },
+        itemStyle: { color: ifiColors[0] },
         emphasis: { focus: 'series' }
       },
       {
@@ -122,7 +123,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
         stack: 'total',
         data: indirect,
         barWidth: 20,
-        itemStyle: { color: SECONDARY_COLORS[1] },
+        itemStyle: { color: ifiColors[1] },
         emphasis: { focus: 'series' }
       },
       {
@@ -139,7 +140,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
           distance: 8,
           formatter: (params) => `$${Math.floor(params.value)}M`,
           color: '#303944',
-          fontSize: 11,
+          fontSize: 12,
           fontWeight: 700
         },
         z: 10

@@ -691,6 +691,8 @@ export function initResourcesByFundingChannel(el, echarts) {
 
     legend: {
 
+      id: 'funding-channel-legend',
+
       orient: 'vertical',
 
       right: 22,
@@ -806,6 +808,8 @@ export function initResourcesByFundingChannel(el, echarts) {
     xAxis: {
 
       type: 'category',
+
+      triggerEvent: true,
 
       boundaryGap: false,
 
@@ -928,6 +932,8 @@ export function initResourcesByFundingChannel(el, echarts) {
 
   myChart.on('mouseover', function (params) {
 
+    if (window.matchMedia('(max-width: 39.9375em)').matches) return;
+
     if (
       params.componentType !== 'series' ||
       !seriesOrder.includes(params.seriesName)
@@ -966,6 +972,8 @@ export function initResourcesByFundingChannel(el, echarts) {
 
   myChart.on('mouseout', function (params) {
 
+    if (window.matchMedia('(max-width: 39.9375em)').matches) return;
+
     if (
       params.componentType !== 'series' ||
       !seriesOrder.includes(params.seriesName)
@@ -988,6 +996,8 @@ export function initResourcesByFundingChannel(el, echarts) {
 
   myChart.on('globalout', function () {
 
+    if (window.matchMedia('(max-width: 39.9375em)').matches) return;
+
     seriesOrder.forEach(category => {
 
       myChart.dispatchAction({
@@ -1002,6 +1012,63 @@ export function initResourcesByFundingChannel(el, echarts) {
     });
 
   });
+
+  // Touch devices do not have a persistent hover state. Tapping a band
+  // reveals that category's annual values across all four years.
+  let activeMobileYear = null;
+  myChart.on('click', function (params) {
+    const isMobile = window.matchMedia('(max-width: 39.9375em)').matches;
+
+    if (isMobile) {
+      if (params.componentType === 'xAxis' && years.includes(String(params.value))) {
+        const selectedYear = String(params.value);
+        const chartWrap = el.closest('.fl-channel-chart-wrap');
+
+        if (activeMobileYear === selectedYear) {
+          activeMobileYear = null;
+          myChart.dispatchAction({ type: 'hideTip' });
+          myChart.dispatchAction({ type: 'updateAxisPointer', currTrigger: 'leave' });
+          chartWrap?.classList.remove('is-tooltip-open');
+          return;
+        }
+
+        activeMobileYear = selectedYear;
+        myChart.dispatchAction({
+          type: 'showTip',
+          seriesIndex: areaSeriesIndex[seriesOrder[0]],
+          dataIndex: years.indexOf(selectedYear)
+        });
+        chartWrap?.classList.add('is-tooltip-open');
+      }
+      return;
+    }
+
+    if (
+      params.componentType !== 'series' ||
+      !seriesOrder.includes(params.seriesName)
+    ) {
+      return;
+    }
+
+    seriesOrder.forEach(category => {
+      myChart.dispatchAction({
+        type: 'downplay',
+        seriesIndex: hoverLabelSeriesIndex[category]
+      });
+    });
+
+    myChart.dispatchAction({
+      type: 'highlight',
+      seriesIndex: hoverLabelSeriesIndex[params.seriesName]
+    });
+  });
+
+  el.__echartsInstance = myChart;
+  const resize = () => myChart.resize();
+  window.addEventListener('resize', resize);
+  el.__echartsResizeHandler = resize;
+
+  return myChart;
 }
 import { RESOURCE_COLORS, CATEGORY_COLORS } from './chartColors';
 import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

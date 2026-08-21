@@ -188,7 +188,7 @@ export function initContributionsByDonorResource(el, echarts) {
       textStyle: {
         fontFamily: 'Proxima Nova, Arial, sans-serif',
         color: '#555555',
-        fontSize: 13
+        fontSize: 15
       }
     },
 
@@ -396,6 +396,47 @@ export function initContributionsByDonorResource(el, echarts) {
 
   window.addEventListener('resize', resize);
   el.__echartsInstance = chart;
+  el.__echartsResizeHandler = resize;
+
+  chart.setOption({
+    media: [{
+      query: { maxWidth: 600 },
+      option: {
+        grid: { left: 118, right: 34, top: 50, bottom: 56 },
+        legend: {
+          top: 8,
+          itemWidth: 18,
+          itemHeight: 7,
+          itemGap: 12,
+          textStyle: { fontSize: 10 }
+        },
+        xAxis: { axisLabel: { fontSize: 9, margin: 8 } },
+        yAxis: [
+          {
+            axisLabel: {
+              width: 108,
+              margin: 10,
+              fontSize: 10,
+              lineHeight: 13,
+              overflow: 'truncate'
+            }
+          },
+          {
+            show: false,
+            offset: 22,
+            axisLabel: { width: 38, margin: 5 }
+          }
+        ],
+        series: [
+          { barWidth: 14 },
+          { barWidth: 14 },
+          { label: { fontSize: 10, distance: 5 } }
+        ]
+      }
+    }]
+  });
+
+  return chart;
 }
 
 export default initContributionsByDonorResource;

@@ -2,6 +2,7 @@ const years = ['2022', '2023', '2024', '2025'];
 const indirect = [183.380526, 138.235831, 127.851205, 113.326189];
 const direct = [119.260389, 219.046226, 215.964761, 202.966471];
 const total = [302.640915, 357.282057, 343.815966, 316.292660];
+const ifiColors = ['#B7862B', '#7E492F'];
 
 export function initIfiContributionsByType(el, echarts) {
   const chart = echarts.init(el);
@@ -29,8 +30,8 @@ export function initIfiContributionsByType(el, echarts) {
         const directShare = direct[index] / total[index] * 100;
 
         return detailedTooltip(years[index], `$${total[index].toFixed(1).replace(/\.0$/, '')}M`, [
-          { label: 'Indirect government financing', color: SECONDARY_COLORS[0], value: `$${indirect[index].toFixed(1).replace(/\.0$/, '')}M`, detail: `${indirectShare.toFixed(0)}%` },
-          { label: 'Direct contribution', color: SECONDARY_COLORS[1], value: `$${direct[index].toFixed(1).replace(/\.0$/, '')}M`, detail: `${directShare.toFixed(0)}%` }
+          { label: 'Indirect government financing', color: ifiColors[1], value: `$${indirect[index].toFixed(1).replace(/\.0$/, '')}M`, detail: `${indirectShare.toFixed(0)}%` },
+          { label: 'Direct contribution', color: ifiColors[0], value: `$${direct[index].toFixed(1).replace(/\.0$/, '')}M`, detail: `${directShare.toFixed(0)}%` }
         ]);
       }
     },
@@ -63,7 +64,7 @@ export function initIfiContributionsByType(el, echarts) {
     grid: {
       left: 25,
       right: 25,
-      top: 25,
+      top: 10,
       bottom: 75,
       containLabel: true
     },
@@ -86,7 +87,12 @@ export function initIfiContributionsByType(el, echarts) {
       interval: 100,
       axisLine: { show: false },
       axisTick: { show: false },
-      axisLabel: { show: false },
+      axisLabel: {
+        show: true,
+        color: '#7A838F',
+        fontSize: 11,
+        formatter: (value) => `$${value}M`
+      },
       splitLine: {
         show: true,
         lineStyle: {
@@ -103,12 +109,12 @@ export function initIfiContributionsByType(el, echarts) {
         barWidth: 66,
         barGap: '8%',
         barCategoryGap: '28%',
-        itemStyle: { color: SECONDARY_COLORS[0] },
+        itemStyle: { color: ifiColors[1] },
         label: {
           show: true,
           position: 'inside',
           formatter: (params) => `$${Math.round(params.value)}M`,
-          color: '#17372A',
+          color: '#ffffff',
           fontSize: 11,
           fontWeight: 700
         },
@@ -119,7 +125,7 @@ export function initIfiContributionsByType(el, echarts) {
         type: 'bar',
         data: direct,
         barWidth: 66,
-        itemStyle: { color: SECONDARY_COLORS[1] },
+        itemStyle: { color: ifiColors[0] },
         label: {
           show: true,
           position: 'inside',

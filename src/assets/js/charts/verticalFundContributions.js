@@ -16,22 +16,6 @@ export function initVerticalFundContributions(el, echarts) {
   chart.setOption({
     
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
-    title: {
-
-      left: 0,
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#232E3D'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
-        color: '#7A838F'
-      }
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
@@ -68,22 +52,24 @@ export function initVerticalFundContributions(el, echarts) {
     grid: {
       left: 190,
       right: 85,
-      top: 90,
+      top: 18,
       bottom: 60
     },
     xAxis: {
       type: 'value',
       min: 0,
-      max: 600,
+      max: 599,
       interval: 100,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
         fontSize: 11,
-        formatter: '${value}M'
+        formatter: (value) => value === 599 ? '' : `$${value}M`
       },
-      splitLine: { show: false }
+      splitLine: {
+        show: false
+      }
     },
     yAxis: {
       type: 'category',
@@ -108,12 +94,19 @@ export function initVerticalFundContributions(el, echarts) {
         barWidth: 20,
         barGap: '15%',
         barCategoryGap: '38%',
-        itemStyle: { color: SECONDARY_COLORS[0] },
+        itemStyle: { color: CATEGORY_COLORS[6] },
+        markLine: {
+          silent: true,
+          symbol: 'none',
+          label: { show: false },
+          lineStyle: { color: 'rgba(126, 73, 48, 0.24)', width: 1 },
+          data: [0, 100, 200, 300, 400, 500].map((value) => ({ xAxis: value }))
+        },
         label: {
           show: true,
           position: 'right',
           distance: 7,
-          formatter: (params) => `$${Math.round(params.value)}`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#303944',
           fontSize: 10,
           fontWeight: 600
@@ -124,12 +117,12 @@ export function initVerticalFundContributions(el, echarts) {
         type: 'bar',
         data: values2025,
         barWidth: 20,
-        itemStyle: { color: SECONDARY_COLORS[1] },
+        itemStyle: { color: CATEGORY_COLORS[10] },
         label: {
           show: true,
           position: 'right',
           distance: 7,
-          formatter: (params) => `$${Math.round(params.value)}`,
+          formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#303944',
           fontSize: 10,
           fontWeight: 600
@@ -147,4 +140,4 @@ export function initVerticalFundContributions(el, echarts) {
 }
 
 export default initVerticalFundContributions;
-import { SECONDARY_COLORS } from './chartColors';
+import { CATEGORY_COLORS } from './chartColors';

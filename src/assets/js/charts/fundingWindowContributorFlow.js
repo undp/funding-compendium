@@ -55,11 +55,11 @@ const graphicText = (left, top, text, font, fill = '#303944') => ({
   }
 });
 
-const graphicCircle = (top, color) => ({
-  type: 'circle',
+const graphicMarker = (top, color) => ({
+  type: 'rect',
   left: '73%',
   top,
-  shape: { cx: 5, cy: 5, r: 5 },
+  shape: { x: 0, y: 0, width: 18, height: 8 },
   style: { fill: color }
 });
 
@@ -67,25 +67,8 @@ export function initFundingWindowContributorFlow(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    backgroundColor: '#ffffff',
+    backgroundColor: 'transparent',
     textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
-    title: {
-      text: 'Contributions by funding window and contributor',
-      subtext: '',
-      left: 0,
-      top: 0,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 20,
-        fontWeight: 700,
-        color: '#232E3D'
-      },
-      subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
-        color: '#7A838F'
-      }
-    },
     tooltip: {
       trigger: 'item',
       backgroundColor: '#ffffff',
@@ -108,29 +91,29 @@ export function initFundingWindowContributorFlow(el, echarts) {
       }
     },
     graphic: [
-      graphicText(30, 82, 'CONTRIBUTORS', '700 11px', '#7A838F'),
-      graphicText('73%', 82, 'FUNDING WINDOWS', '700 11px', '#7A838F'),
-      graphicCircle(120, SECONDARY_COLORS[1]),
-      graphicText('75%', 116, 'Nature, Climate\nand Energy', '11px'),
-      graphicText('75%', 151, '$55.5m', '700 13px', '#232E3D'),
-      graphicCircle(210, SECONDARY_COLORS[0]),
-      graphicText('75%', 206, 'Governance, Peacebuilding,\nCrisis and Resilience', '11px'),
-      graphicText('75%', 241, '$58m', '700 13px', '#232E3D'),
-      graphicCircle(300, SECONDARY_COLORS[2]),
-      graphicText('75%', 296, "Gender Equality and\nWomen's Empowerment", '11px'),
-      graphicText('75%', 331, '$1.34m', '700 13px', '#232E3D'),
-      graphicCircle(390, SECONDARY_COLORS[3]),
-      graphicText('75%', 386, 'Poverty and Inequality', '11px'),
-      graphicText('75%', 411, '$0.22m', '700 13px', '#232E3D')
+      graphicText(24, 28, 'CONTRIBUTORS', '700 12px', '#52636F'),
+      graphicText('76%', 28, 'FUNDING WINDOWS', '700 12px', '#52636F'),
+      graphicMarker(74, SECONDARY_COLORS[1]),
+      graphicText('79%', 68, 'Nature, Climate\nand Energy', '12px'),
+      graphicText('79%', 104, '$55.5M', '700 14px', '#232E3D'),
+      graphicMarker(170, SECONDARY_COLORS[0]),
+      graphicText('79%', 164, 'Governance, Peacebuilding,\nCrisis and Resilience', '12px'),
+      graphicText('79%', 200, '$58M', '700 14px', '#232E3D'),
+      graphicMarker(274, SECONDARY_COLORS[2]),
+      graphicText('79%', 268, "Gender Equality and\nWomen's Empowerment", '12px'),
+      graphicText('79%', 304, '$1.34M', '700 14px', '#232E3D'),
+      graphicMarker(370, SECONDARY_COLORS[3]),
+      graphicText('79%', 364, 'Poverty and Inequality', '12px'),
+      graphicText('79%', 390, '$0.22M', '700 14px', '#232E3D')
     ],
     series: [{
       type: 'sankey',
-      left: 170,
-      right: '30%',
-      top: 115,
-      bottom: 45,
-      nodeWidth: 16,
-      nodeGap: 18,
+      left: 150,
+      right: '27%',
+      top: 62,
+      bottom: 30,
+      nodeWidth: 18,
+      nodeGap: 20,
       layoutIterations: 32,
       data: nodes,
       links,
@@ -145,8 +128,8 @@ export function initFundingWindowContributorFlow(el, echarts) {
         position: 'left',
         distance: 10,
         fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 11,
-        lineHeight: 15,
+        fontSize: 13,
+        lineHeight: 17,
         formatter: function (params) {
           if ([GOV, NATURE, GENDER, POVERTY].includes(params.name)) return '';
           return `{name|${params.name}}\n{value|$${contributorTotals[params.name].toFixed(2)}M}`;
@@ -154,17 +137,17 @@ export function initFundingWindowContributorFlow(el, echarts) {
         rich: {
           name: {
             fontFamily: 'Proxima Nova, Arial, sans-serif',
-            fontSize: 11,
+            fontSize: 13,
             fontWeight: 600,
-            lineHeight: 15,
+            lineHeight: 17,
             color: '#303944',
             align: 'right'
           },
           value: {
             fontFamily: 'Proxima Nova, Arial, sans-serif',
-            fontSize: 11,
+            fontSize: 12,
             fontWeight: 700,
-            lineHeight: 16,
+            lineHeight: 17,
             color: '#52636F',
             align: 'right'
           }
