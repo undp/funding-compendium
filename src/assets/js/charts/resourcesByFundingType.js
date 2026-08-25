@@ -39,7 +39,7 @@ export function initResourcesByFundingType(el, echarts) {
 
   const option = {
     textStyle: {
-      fontFamily: 'Proxima Nova, Arial, sans-serif',
+      fontFamily: 'ProximaNova, Arial, sans-serif',
       color: '#222222'
     },
 
@@ -62,7 +62,7 @@ export function initResourcesByFundingType(el, echarts) {
       itemHeight: 8,
       itemGap: 24,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#222222',
         fontSize: 15
       },
@@ -75,7 +75,7 @@ export function initResourcesByFundingType(el, echarts) {
       max: 100,
       interval: 20,
       axisLabel: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         formatter: '{value}%'
       },
       splitLine: {
@@ -125,7 +125,7 @@ export function initResourcesByFundingType(el, echarts) {
 
           rich: {
             percent: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               color: '#283000',
               fontSize: 14,
               fontWeight: 'bold',
@@ -133,7 +133,7 @@ export function initResourcesByFundingType(el, echarts) {
               align: 'center'
             },
             amount: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               color: '#283000',
               fontSize: 13,
               lineHeight: 17,
@@ -175,7 +175,7 @@ export function initResourcesByFundingType(el, echarts) {
 
           rich: {
             percent: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               color: '#ffffff',
               fontSize: 14,
               fontWeight: 'bold',
@@ -183,7 +183,7 @@ export function initResourcesByFundingType(el, echarts) {
               align: 'center'
             },
             amount: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               color: '#ffffff',
               fontSize: 13,
               lineHeight: 17,

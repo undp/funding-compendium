@@ -2,13 +2,13 @@ const years = ['2022', '2023', '2024', '2025'];
 const indirect = [183.380526, 138.235831, 127.851205, 113.326189];
 const direct = [119.260389, 219.046226, 215.964761, 202.966471];
 const total = [302.640915, 357.282057, 343.815966, 316.292660];
-const ifiColors = ['#B7862B', '#7E492F'];
+const ifiColors = [IFI_COLORS.direct, IFI_COLORS.indirect];
 
 export function initIfiContributionsByType(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -20,9 +20,9 @@ export function initIfiContributionsByType(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
@@ -43,8 +43,8 @@ export function initIfiContributionsByType(el, echarts) {
       itemHeight: 8,
       itemGap: 26,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 11,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 13,
         color: '#4B5563'
       },
       data: [
@@ -75,7 +75,7 @@ export function initIfiContributionsByType(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#303944',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 600,
         margin: 13
       }
@@ -90,7 +90,7 @@ export function initIfiContributionsByType(el, echarts) {
       axisLabel: {
         show: true,
         color: '#7A838F',
-        fontSize: 11,
+        fontSize: 13,
         formatter: (value) => `$${value}M`
       },
       splitLine: {
@@ -105,17 +105,16 @@ export function initIfiContributionsByType(el, echarts) {
       {
         name: 'Indirect government financing',
         type: 'bar',
+        stack: 'total',
         data: indirect,
-        barWidth: 66,
-        barGap: '8%',
-        barCategoryGap: '28%',
+        barWidth: 90,
         itemStyle: { color: ifiColors[1] },
         label: {
           show: true,
           position: 'inside',
           formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#ffffff',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 700
         },
         emphasis: { itemStyle: { opacity: 0.82 } }
@@ -123,15 +122,16 @@ export function initIfiContributionsByType(el, echarts) {
       {
         name: 'Direct contribution',
         type: 'bar',
+        stack: 'total',
         data: direct,
-        barWidth: 66,
+        barWidth: 90,
         itemStyle: { color: ifiColors[0] },
         label: {
           show: true,
           position: 'inside',
           formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#ffffff',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 700
         },
         emphasis: { itemStyle: { opacity: 0.82 } }
@@ -141,23 +141,19 @@ export function initIfiContributionsByType(el, echarts) {
         type: 'line',
         data: total,
         symbol: 'circle',
-        symbolSize: 8,
+        symbolSize: 6,
         lineStyle: {
           color: '#1C1C1C',
           width: 2.5
         },
-        itemStyle: {
-          color: '#1C1C1C',
-          borderColor: '#ffffff',
-          borderWidth: 2
-        },
+        itemStyle: { color: '#1C1C1C', borderWidth: 0 },
         label: {
           show: true,
           position: 'top',
           distance: 10,
           formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#1C1C1C',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700
         },
         emphasis: { scale: 1.25 },
@@ -175,5 +171,5 @@ export function initIfiContributionsByType(el, echarts) {
 }
 
 export default initIfiContributionsByType;
-import { SECONDARY_COLORS } from './chartColors';
+import { IFI_COLORS } from './chartColors';
 import { detailedTooltip } from './detailedTooltip';

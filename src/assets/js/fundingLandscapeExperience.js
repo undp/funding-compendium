@@ -10,6 +10,57 @@ export function initFundingLandscapeExperience() {
   const sections = links
     .map((link) => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
+  const summaryTabs = page.querySelector('#fl-overview .tabs');
+
+  const prepareSummaryNumbers = (panel) => {
+    if (!panel) return;
+
+    const numbers = Array.from(
+      panel.querySelectorAll('.total-value, .increase strong, .breakdown-percent')
+    );
+
+    numbers.forEach((number, index) => {
+      number.style.setProperty('--fl-number-order', index);
+    });
+
+    panel.classList.remove('is-number-sequence');
+    panel.classList.add('is-number-pending');
+  };
+
+  const animateSummaryNumbers = (panel) => {
+    if (!panel) return;
+
+    prepareSummaryNumbers(panel);
+    void panel.offsetWidth;
+    panel.classList.remove('is-number-pending');
+    panel.classList.add('is-number-sequence');
+  };
+
+  if (summaryTabs) {
+    const summaryObserver = new IntersectionObserver(
+      (entries, observer) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+
+        const activePanel = summaryTabs.querySelector('.tabs-panel.is-active');
+        prepareSummaryNumbers(activePanel);
+        window.setTimeout(() => {
+          animateSummaryNumbers(activePanel);
+        }, 250);
+        observer.unobserve(summaryTabs);
+      },
+      { threshold: 0.25 }
+    );
+
+    summaryObserver.observe(summaryTabs);
+
+    summaryTabs.querySelectorAll('.tabs-title > a[href^="#tab-"]').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const panel = summaryTabs.querySelector(tab.getAttribute('href'));
+        prepareSummaryNumbers(panel);
+        requestAnimationFrame(() => animateSummaryNumbers(panel));
+      });
+    });
+  }
 
   revealItems.forEach((item) => {
     let steps;

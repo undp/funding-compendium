@@ -115,7 +115,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
   chart.setOption({
     
     textStyle: {
-      fontFamily: 'Proxima Nova, Arial, sans-serif'
+      fontFamily: 'ProximaNova, Arial, sans-serif'
     },
     tooltip: {
       trigger: 'axis',
@@ -125,7 +125,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
       borderWidth: 1,
       padding: 12,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
         fontSize: 13
       },
@@ -134,8 +134,8 @@ export function initTopOtherResourcesContributors(el, echarts) {
         const exactValue = Math.round(item.value * 1000000).toLocaleString('en-US');
         const displayName = tooltipNames[item.name] || item.name;
 
-        return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${displayName}</div>
-          <div style="font-family:'Proxima Nova',Arial,sans-serif">Other resources: <strong>$${exactValue}</strong></div>`;
+        return `<div style="font-family:'ProximaNova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${displayName}</div>
+          <div style="font-family:'ProximaNova',Arial,sans-serif">Other resources: <strong>$${exactValue}</strong></div>`;
       }
     },
     grid: {
@@ -152,7 +152,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 11,
+        fontSize: 13,
         formatter: '${value}M'
       },
       splitLine: {
@@ -169,7 +169,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
         axisLabel: {
           interval: 0,
           color: '#2F3742',
-          fontSize: 12,
+          fontSize: 14,
           lineHeight: 20,
           margin: 84,
           width: 245,
@@ -212,7 +212,7 @@ export function initTopOtherResourcesContributors(el, echarts) {
         distance: 9,
         formatter: (params) => `$${Math.round(params.value)}M`,
         color: '#4B5563',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 400
       },
       emphasis: {

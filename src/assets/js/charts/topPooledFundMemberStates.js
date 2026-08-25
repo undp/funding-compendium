@@ -23,17 +23,25 @@ const flagCodes = {
   'European Union': 'eu', Denmark: 'dk', Switzerland: 'ch', Ireland: 'ie',
   'Republic of Korea': 'kr', Italy: 'it', Belgium: 'be'
 };
+const swissFlagInStandardSlot = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20"><rect x="5.25" y="0.25" width="19.5" height="19.5" fill="#D52B1E" stroke="#c7cdd1" stroke-width="0.5"/><path fill="#fff" d="M13 4h4v4h4v4h-4v4h-4v-4H9V8h4z"/></svg>'
+)}`;
 const flagKey = (name) => `flag_${name.replace(/[^a-zA-Z0-9]/g, '_')}`;
 const flagStyles = Object.fromEntries(countries.map((name) => [flagKey(name), {
-  backgroundColor: { image: `https://flagcdn.com/${flagCodes[name]}.svg` },
-  borderColor: '#c7cdd1', borderWidth: 0.5, height: 20, width: 30
+  backgroundColor: {
+    image: name === 'Switzerland'
+      ? swissFlagInStandardSlot
+      : `https://flagcdn.com/${flagCodes[name]}.svg`
+  },
+  borderColor: '#c7cdd1', borderWidth: name === 'Switzerland' ? 0 : 0.5, height: 20, width: 30,
+  align: 'center', verticalAlign: 'middle'
 }]));
 
 export function initTopPooledFundMemberStates(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
@@ -42,14 +50,14 @@ export function initTopPooledFundMemberStates(el, echarts) {
       borderWidth: 1,
       padding: 11,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const item = params[0];
-        return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:5px">${item.name}</div>
-          <div style="font-family:'Proxima Nova',Arial,sans-serif">Share of total: <strong>${item.value}%</strong></div>`;
+        return `<div style="font-family:'ProximaNova',Arial,sans-serif;font-weight:700;margin-bottom:5px">${item.name}</div>
+          <div style="font-family:'ProximaNova',Arial,sans-serif">Share of total: <strong>${item.value}%</strong></div>`;
       }
     },
     grid: {
@@ -67,7 +75,7 @@ export function initTopPooledFundMemberStates(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 11,
+        fontSize: 13,
         formatter: '{value}%'
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -82,6 +90,7 @@ export function initTopPooledFundMemberStates(el, echarts) {
         color: '#2F3742',
         fontSize: 13,
         margin: 15,
+        align: 'right',
         formatter: (name) => `{country|${name}}  {${flagKey(name)}|}`,
         rich: {
           country: { color: '#2F3742', fontSize: 13, lineHeight: 20, width: 145, align: 'right' },
@@ -106,11 +115,33 @@ export function initTopPooledFundMemberStates(el, echarts) {
         distance: 7,
         formatter: '{c}%',
         color: '#36434D',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 700
       },
       emphasis: {
         itemStyle: { opacity: 0.82 }
+      }
+    }],
+    media: [{
+      query: { maxWidth: 639 },
+      option: {
+        grid: { left: 108, right: 38, top: 20, bottom: 35 },
+        xAxis: { axisLabel: { fontSize: 10 } },
+        yAxis: {
+          axisLabel: {
+            fontSize: 10,
+            lineHeight: 12,
+            margin: 8,
+            width: 96,
+            overflow: 'break',
+            formatter: (name) => name,
+            rich: {}
+          }
+        },
+        series: [{
+          barWidth: 14,
+          label: { distance: 4, fontSize: 10 }
+        }]
       }
     }]
   });

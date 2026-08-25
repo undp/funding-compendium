@@ -6,7 +6,7 @@ export function initOtherResourcesPlaceholder(el, echarts) {
 
   chart.setOption({
     textStyle: {
-      fontFamily: 'Proxima Nova, Arial, sans-serif',
+      fontFamily: 'ProximaNova, Arial, sans-serif',
       color: '#232E3D'
     },
     tooltip: {

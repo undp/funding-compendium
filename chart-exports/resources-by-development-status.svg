@@ -1,0 +1,73 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 900 500">
+<rect width="900" height="500" x="0" y="0" fill="none"></rect>
+<polyline points="547.7 393.8 556.7 409.3 787 409.3" fill="none" pointer-events="visible" stroke="#7A8491" class="zr6-cls-147"></polyline>
+<polyline points="352.3 56.2 343.3 40.7 99 40.7" fill="none" pointer-events="visible" stroke="#7A8491" class="zr6-cls-147"></polyline>
+<path d="M450 30A195 195 0 1 1 280.9 127.9L332.9 157.8A135 135 0 1 0 450 90Z" fill="#C3D51F" stroke="#fff" stroke-width="3" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" transform-origin="450px 225px" class="zr6-cls-148 zr6-cls-149"></path>
+<path d="M280.9 127.9A195 195 0 0 1 450 30L450 90A135 135 0 0 0 332.9 157.8Z" fill="#3D9999" stroke="#fff" stroke-width="3" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" transform-origin="450px 225px" class="zr6-cls-150 zr6-cls-151"></path>
+<path d="M450 222.5A2.5 2.5 0 1 1 449.8 222.5A2.5 2.5 0 0 1 450 222.5Z" fill="none" pointer-events="visible" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" ecmeta_silent="true" transform-origin="450px 225px" class="zr6-cls-152 zr6-cls-153"></path>
+<path d="M-28 -7l28 0l0 7l-28 0Z" transform="translate(890 409.3321)" fill="none" pointer-events="visible" class="zr6-cls-147"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:15px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-3.5" transform="translate(890 409.3321)" fill="#333">LDCs</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="10" transform="translate(890 409.3321)" fill="#333">83.3%</text>
+<text dominant-baseline="central" text-anchor="end" style="font: normal normal 12px ProximaNova, Arial, sans-serif" xml:space="preserve" x="-35" y="10" transform="translate(890 409.3321)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">  </text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;" x="-49" y="10" transform="translate(890 409.3321)" fill="#555">$1.062B</text>
+<path d="M0 -7l56 0l0 7l-56 0Z" transform="translate(10 40.6679)" fill="none" pointer-events="visible" class="zr6-cls-147"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:15px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-3.5" transform="translate(10 40.6679)" fill="#333">Non-LDCs</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;" y="10" transform="translate(10 40.6679)" fill="#555">$213M</text>
+<text dominant-baseline="central" text-anchor="start" style="font: normal normal 12px ProximaNova, Arial, sans-serif" xml:space="preserve" x="35" y="10" transform="translate(10 40.6679)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" x="49" y="10" transform="translate(10 40.6679)" fill="#333">16.7%</text>
+<path d="M-24.5 -14.5l49 0l0 7l-49 0Z" transform="translate(450 225)" fill="none" pointer-events="visible" class="zr6-cls-153"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:26px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-11" transform="translate(450 225)" fill="#333">$1.275B</text>
+<path d="M-17.5 13.5l35 0l0 7l-35 0Z" transform="translate(450 225)" fill="none" pointer-events="visible" class="zr6-cls-153"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="17" transform="translate(450 225)" fill="#777">Total</text>
+<style ><![CDATA[
+.zr6-cls-147:hover {
+cursor:pointer;
+}
+.zr6-cls-148 {
+animation:zr6-ani-0 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr6-cls-149:hover {
+cursor:pointer;
+fill:rgba(214,234,34,1);
+}
+.zr6-cls-150 {
+animation:zr6-ani-1 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr6-cls-151:hover {
+cursor:pointer;
+fill:rgba(67,168,168,1);
+}
+.zr6-cls-152 {
+animation:zr6-ani-2 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr6-cls-153:hover {
+pointer-events:none;
+}
+@keyframes zr6-ani-0 {
+0% {
+transform:scale(0,0);
+}
+100% {
+
+}
+}
+@keyframes zr6-ani-1 {
+0% {
+transform:scale(0,0);
+}
+100% {
+
+}
+}
+@keyframes zr6-ani-2 {
+0% {
+transform:scale(0,0);
+}
+100% {
+
+}
+}
+]]>
+
+</style>
+</svg>

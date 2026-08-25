@@ -10,33 +10,102 @@ const data = [
   { name: 'Others', value: 9734086, percent: 3 }
 ];
 
-const colors = CATEGORY_COLORS.slice(0, data.length);
+const colors = [
+  '#C3D51F',
+  '#3D9999',
+  '#E86B2E',
+  '#B94E1C',
+  '#9BBE22',
+  '#6EB3B3',
+  '#D8E55C',
+  '#B94E1C',
+  '#267878'
+];
 
 const displayNames = {
   'Development Bank of Latin America and the Caribbean (CAF)':
     'CAF'
 };
 
+const mobileDisplayNames = {
+  'KfW': 'Kreditanstalt für Wiederaufbau (KfW)',
+  'Development Bank of Latin America and the Caribbean (CAF)':
+    'Development Bank of Latin America and the Caribbean (CAF)',
+  'IFAD': 'International Fund for Agricultural Development (IFAD)'
+};
+
 export function initIfiContributionsDonut(el, echarts) {
+  el.parentElement?.querySelector('.ifi-contributions-mobile')?.remove();
+
+  const mobile = document.createElement('div');
+  mobile.className = 'rr-allocation-mobile ifi-contributions-mobile';
+  mobile.setAttribute('role', 'group');
+  mobile.setAttribute('aria-label', 'Total contributions by international financial institution');
+  let cumulativePercent = 0;
+  const gradientStops = data.map((item, index) => {
+    const start = cumulativePercent;
+    cumulativePercent += item.percent;
+    return `${colors[index]} ${start}% ${cumulativePercent}%`;
+  }).join(', ');
+
+  mobile.innerHTML = `
+    <div class="rr-allocation-mobile__donut" style="--donut-gradient:${gradientStops}" aria-hidden="true">
+      <div><strong>$316M</strong><span>Total</span></div>
+    </div>
+    <div class="rr-allocation-mobile__total">
+      <span>Total contributions</span><strong>$316M</strong>
+    </div>
+    <div class="rr-allocation-mobile__list"></div>
+  `;
+
+  const list = mobile.querySelector('.rr-allocation-mobile__list');
+  data.forEach((item, index) => {
+    const row = document.createElement('div');
+    row.className = 'rr-allocation-mobile__row';
+    if (index >= 2) row.hidden = true;
+    row.innerHTML = `
+      <div class="rr-allocation-mobile__label">
+        <span><i style="--key-color:${colors[index]}" aria-hidden="true"></i>${mobileDisplayNames[item.name] || item.name}</span>
+        <strong>${item.percent}%</strong>
+      </div>
+      <span class="rr-allocation-mobile__value">$${(item.value / 1000000).toFixed(1).replace(/\.0$/, '')}M</span>
+    `;
+    list.appendChild(row);
+  });
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'rr-allocation-mobile__toggle';
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.innerHTML = '<span class="show-more">Show more</span><span class="show-less">Show less</span>';
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    mobile.classList.toggle('is-list-expanded', !expanded);
+    Array.from(list.children).slice(2).forEach((row) => { row.hidden = expanded; });
+  });
+  mobile.appendChild(toggle);
+  el.insertAdjacentElement('afterend', mobile);
+
   const chart = echarts.init(el);
 
   chart.setOption({
     
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     title: {
       
       subtext: '',
       left: 0,
       top: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 20,
         fontWeight: 700,
         color: '#232E3D'
       },
       subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#7A838F'
       }
     },
@@ -47,9 +116,9 @@ export function initIfiContributionsDonut(el, echarts) {
       borderWidth: 1,
       padding: 12,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const item = data[params.dataIndex];
@@ -63,7 +132,7 @@ export function initIfiContributionsDonut(el, echarts) {
       name: 'IFI contributions',
       type: 'pie',
       radius: ['36%', '58%'],
-      center: ['50%', '54%'],
+      center: ['63%', '54%'],
       startAngle: 90,
       clockwise: true,
       avoidLabelOverlap: true,
@@ -80,15 +149,15 @@ export function initIfiContributionsDonut(el, echarts) {
         },
         rich: {
           name: {
-            fontFamily: 'Proxima Nova, Arial, sans-serif',
-            fontSize: 11,
+            fontFamily: 'ProximaNova, Arial, sans-serif',
+            fontSize: 13,
             lineHeight: 16,
             color: '#4B5563',
             width: 155,
             overflow: 'break'
           },
           percent: {
-            fontFamily: 'Proxima Nova, Arial, sans-serif',
+            fontFamily: 'ProximaNova, Arial, sans-serif',
             fontSize: 13,
             lineHeight: 19,
             fontWeight: 700,
@@ -116,7 +185,7 @@ export function initIfiContributionsDonut(el, echarts) {
     }, {
       type: 'pie',
       radius: [0, '1%'],
-      center: ['50%', '54%'],
+      center: ['63%', '54%'],
       silent: true,
       tooltip: { show: false },
       labelLine: { show: false },
@@ -126,7 +195,7 @@ export function initIfiContributionsDonut(el, echarts) {
         formatter: '{total|$316}\n{caption|million}',
         rich: {
           total: {
-            fontFamily: 'Proxima Nova, Arial, sans-serif',
+            fontFamily: 'ProximaNova, Arial, sans-serif',
             fontSize: 28,
             fontWeight: 700,
             color: '#232E3D',
@@ -134,7 +203,7 @@ export function initIfiContributionsDonut(el, echarts) {
             align: 'center'
           },
           caption: {
-            fontFamily: 'Proxima Nova, Arial, sans-serif',
+            fontFamily: 'ProximaNova, Arial, sans-serif',
             fontSize: 14,
             fontWeight: 600,
             color: '#4B5563',
@@ -156,4 +225,3 @@ export function initIfiContributionsDonut(el, echarts) {
 }
 
 export default initIfiContributionsDonut;
-import { CATEGORY_COLORS } from './chartColors';

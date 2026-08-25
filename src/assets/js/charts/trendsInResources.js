@@ -26,7 +26,7 @@ export function initTrendsInResources(el, echarts) {
     animationDuration: 700,
 
     textStyle: {
-      fontFamily: 'Proxima Nova, Arial, sans-serif',
+      fontFamily: 'ProximaNova, Arial, sans-serif',
       color: '#222222'
     },
 
@@ -51,7 +51,7 @@ export function initTrendsInResources(el, echarts) {
       padding: 0,
       textStyle: {
         color: '#222222',
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: 20
       },
       formatter: function (params) {
@@ -99,7 +99,7 @@ export function initTrendsInResources(el, echarts) {
       },
       axisLabel: {
         color: '#333333',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 500,
         margin: 11
       }
@@ -116,7 +116,7 @@ export function initTrendsInResources(el, echarts) {
       nameRotate: 90,
       nameTextStyle: {
         color: '#555555',
-        fontSize: 11,
+        fontSize: 13,
         fontWeight: 500
       },
       axisLine: {
@@ -127,7 +127,7 @@ export function initTrendsInResources(el, echarts) {
       },
       axisLabel: {
         color: '#666666',
-        fontSize: 11,
+        fontSize: 13,
         margin: 12,
         formatter: function (value) {
           return value.toLocaleString('en-US');
@@ -233,7 +233,7 @@ export function initTrendsInResources(el, echarts) {
           rich: {
             total: {
               color: '#222222',
-              fontSize: 12,
+              fontSize: 14,
               fontWeight: 700,
               lineHeight: 16,
               padding: [2, 0, 2, 0]

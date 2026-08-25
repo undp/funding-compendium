@@ -6,30 +6,28 @@ const africa = [36.805815, 87.067348, 42.136036, 54.721618];
 const latinAmerica = [8.304391, 19.182275, 20.524953, 20.360354];
 const global = [18.469002, 21.419253, 11.049183, 17.180990];
 const totals = [363.049926, 301.217771, 304.944809, 312.784472];
-const regionColors = {
-  africa: '#C3D51F', asia: '#3D9999', arab: '#8964BC', lac: '#E86B2E', europe: '#AD7F00', global: '#8A949E'
-};
+const regionColors = REGION_COLORS;
 
 export function initEuContributionsByRegion(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
     backgroundColor: 'transparent',
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     title: {
       
       subtext: '',
       left: 'center',
       top: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 20,
         fontWeight: 700,
         color: '#232E3D'
       },
       subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#7A838F'
       }
     },
@@ -41,9 +39,9 @@ export function initEuContributionsByRegion(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
@@ -51,49 +49,58 @@ export function initEuContributionsByRegion(el, echarts) {
         const share = (value) => formatTooltipPercent(value, totals[index]);
         return detailedTooltip(years[index], amount(totals[index]), [
           { label: 'Europe and the CIS', color: regionColors.europe, value: amount(europeCIS[index]), detail: share(europeCIS[index]) },
-          { label: 'Asia and the Pacific', color: regionColors.asia, value: amount(asiaPacific[index]), detail: share(asiaPacific[index]) },
           { label: 'Arab States', color: regionColors.arab, value: amount(arabStates[index]), detail: share(arabStates[index]) },
           { label: 'Africa', color: regionColors.africa, value: amount(africa[index]), detail: share(africa[index]) },
+          { label: 'Asia and the Pacific', color: regionColors.asia, value: amount(asiaPacific[index]), detail: share(asiaPacific[index]) },
           { label: 'Latin America and the Caribbean', color: regionColors.lac, value: amount(latinAmerica[index]), detail: share(latinAmerica[index]) },
           { label: 'Global', color: regionColors.global, value: amount(global[index]), detail: share(global[index]) }
         ]);
       }
     },
-    legend: {
-      bottom: 5,
-      left: 'center',
-      icon: 'rect',
-      itemWidth: 24,
-      itemHeight: 8,
-      itemGap: 16,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 11,
-        color: '#4B5563'
+    legend: [
+      {
+        bottom: 31,
+        left: 'center',
+        icon: 'rect',
+        itemWidth: 24,
+        itemHeight: 8,
+        itemGap: 16,
+        textStyle: {
+          fontFamily: 'ProximaNova, Arial, sans-serif',
+          fontSize: 13,
+          color: '#4B5563'
+        },
+        data: ['Europe and the CIS', 'Arab States', 'Africa']
       },
-      data: [
-        'Europe and the CIS',
-        'Asia and the Pacific',
-        'Arab States',
-        'Africa',
-        'Latin America and the Caribbean',
-        'Global',
-        {
-          name: 'Total',
-          icon: 'path://M0,2 L24,2 L24,6 L0,6 Z',
-          itemStyle: {
-            color: '#1C1C1C',
-            borderColor: '#1C1C1C',
-            borderWidth: 0
+      {
+        bottom: 5,
+        left: 'center',
+        icon: 'rect',
+        itemWidth: 24,
+        itemHeight: 8,
+        itemGap: 16,
+        textStyle: {
+          fontFamily: 'ProximaNova, Arial, sans-serif',
+          fontSize: 13,
+          color: '#4B5563'
+        },
+        data: [
+          'Asia and the Pacific',
+          'Latin America and the Caribbean',
+          'Global',
+          {
+            name: 'Total',
+            icon: 'path://M0,3 L24,3 L24,5 L0,5 Z',
+            itemStyle: { color: '#1C1C1C', borderColor: '#1C1C1C', borderWidth: 0 }
           }
-        }
-      ]
-    },
+        ]
+      }
+    ],
     grid: {
       left: 65,
       right: 35,
-      top: 8,
-      bottom: 75
+      top: 34,
+      bottom: 112
     },
     xAxis: {
       type: 'category',
@@ -102,7 +109,7 @@ export function initEuContributionsByRegion(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#303944',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 600,
         margin: 12
       }
@@ -116,23 +123,16 @@ export function initEuContributionsByRegion(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 11,
-        formatter: (value) => value === 400 ? '' : `$${value}M`
+        fontSize: 13,
+        formatter: (value) => `$${value}M`
       },
       splitLine: { show: true, lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' } }
     },
     series: [
-      {
-        name: 'Europe and the CIS',
-        type: 'bar',
-        stack: 'total',
-        data: europeCIS,
-        barWidth: 90,
-        itemStyle: { color: regionColors.europe }
-      },
-      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: regionColors.asia } },
+      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 90, itemStyle: { color: regionColors.europe } },
       { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 90, itemStyle: { color: regionColors.arab } },
       { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 90, itemStyle: { color: regionColors.africa } },
+      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: regionColors.asia } },
       { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 90, itemStyle: { color: regionColors.lac } },
       { name: 'Global', type: 'bar', stack: 'total', data: global, barWidth: 90, itemStyle: { color: regionColors.global } },
       {
@@ -140,20 +140,16 @@ export function initEuContributionsByRegion(el, echarts) {
         type: 'line',
         data: totals,
         symbol: 'circle',
-        symbolSize: 9,
-        lineStyle: { color: '#1C1C1C', width: 3 },
-        itemStyle: {
-          color: '#1C1C1C',
-          borderColor: '#ffffff',
-          borderWidth: 2
-        },
+        symbolSize: 6,
+        lineStyle: { color: '#1C1C1C', width: 2.5 },
+        itemStyle: { color: '#1C1C1C', borderWidth: 0 },
         label: {
           show: true,
           position: 'top',
           distance: 10,
           formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#232E3D',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700
         },
         emphasis: { scale: 1.3 },
@@ -171,5 +167,5 @@ export function initEuContributionsByRegion(el, echarts) {
 }
 
 export default initEuContributionsByRegion;
-import { CATEGORY_COLORS } from './chartColors';
 import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';
+import { REGION_COLORS } from './chartColors';

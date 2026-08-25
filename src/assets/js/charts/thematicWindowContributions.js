@@ -9,7 +9,7 @@ export function initThematicWindowContributions(el, echarts) {
   chart.setOption({
     backgroundColor: 'transparent',
     textStyle: {
-      fontFamily: 'Proxima Nova, Arial, sans-serif'
+      fontFamily: 'ProximaNova, Arial, sans-serif'
     },
     tooltip: {
       trigger: 'axis',
@@ -18,7 +18,7 @@ export function initThematicWindowContributions(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
         fontSize: 13
       },
@@ -69,10 +69,13 @@ export function initThematicWindowContributions(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 11,
+        fontSize: 13,
         formatter: (value) => value === 139 ? '' : `$${value}M`
       },
-      splitLine: { show: false }
+      splitLine: {
+        show: true,
+        lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' }
+      }
     },
     series: [{
       name: 'Contributions',
@@ -100,13 +103,6 @@ export function initThematicWindowContributions(el, echarts) {
       },
       areaStyle: {
         color: 'rgba(61, 153, 153, 0.10)'
-      },
-      markLine: {
-        silent: true,
-        symbol: 'none',
-        label: { show: false },
-        lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' },
-        data: [{ yAxis: 100 }, { yAxis: 110 }, { yAxis: 120 }, { yAxis: 130 }]
       },
       emphasis: { scale: 1.3 }
     }]

@@ -1,0 +1,283 @@
+<svg width="900" height="540" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 900 540">
+<rect width="900" height="540" x="0" y="0" fill="none"></rect>
+<path d="M108.5 20L108.5 450" fill="none" pointer-events="visible" stroke="#C5CBD1" class="zr18-cls-354"></path>
+<path d="M226.5 20L226.5 450" fill="none" pointer-events="visible" stroke="#C5CBD1" class="zr18-cls-354"></path>
+<path d="M345.5 20L345.5 450" fill="none" pointer-events="visible" stroke="#C5CBD1" class="zr18-cls-354"></path>
+<path d="M464.5 20L464.5 450" fill="none" pointer-events="visible" stroke="#C5CBD1" class="zr18-cls-354"></path>
+<path d="M582.5 20L582.5 450" fill="none" pointer-events="visible" stroke="#C5CBD1" class="zr18-cls-354"></path>
+<path d="M701.5 20L701.5 450" fill="none" pointer-events="visible" stroke="#C5CBD1" class="zr18-cls-354"></path>
+<path d="M820.5 20L820.5 450" fill="none" pointer-events="visible" stroke="#C5CBD1" class="zr18-cls-354"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(93 73.75)" fill="#232E3D">2022</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(93 181.25)" fill="#232E3D">2023</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(93 288.75)" fill="#232E3D">2024</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(93 396.25)" fill="#232E3D">2025</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;" y="3.5" transform="translate(108 458)" fill="#7A838F">$0M</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;" y="3.5" transform="translate(226.6667 458)" fill="#7A838F">$50M</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;" y="3.5" transform="translate(345.3333 458)" fill="#7A838F">$100M</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;" y="3.5" transform="translate(464 458)" fill="#7A838F">$150M</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;" y="3.5" transform="translate(582.6667 458)" fill="#7A838F">$200M</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;" y="3.5" transform="translate(701.3333 458)" fill="#7A838F">$250M</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;" y="3.5" transform="translate(820 458)" fill="#7A838F">$300M</text>
+<path d="M108 57.8l111.9 0l0 32l-111.9 0Z" fill="#267878" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr18-cls-355 zr18-cls-356"></path>
+<path d="M108 165.3l86.6 0l0 32l-86.6 0Z" fill="#267878" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr18-cls-357 zr18-cls-356"></path>
+<path d="M108 272.8l152.1 0l0 32l-152.1 0Z" fill="#267878" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr18-cls-358 zr18-cls-356"></path>
+<path d="M108 380.3l122 0l0 32l-122 0Z" fill="#267878" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr18-cls-359 zr18-cls-356"></path>
+<path d="M219.9 57.8l186.8 0l0 32l-186.8 0Z" fill="#3D9999" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr18-cls-360 zr18-cls-361"></path>
+<path d="M194.6 165.3l107.6 0l0 32l-107.6 0Z" fill="#3D9999" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr18-cls-362 zr18-cls-361"></path>
+<path d="M260.1 272.8l165.3 0l0 32l-165.3 0Z" fill="#3D9999" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr18-cls-363 zr18-cls-361"></path>
+<path d="M230 380.3l183.1 0l0 32l-183.1 0Z" fill="#3D9999" ecmeta_series_index="1" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr18-cls-364 zr18-cls-361"></path>
+<path d="M406.7 57.8l0.5 0l0 32l-0.5 0Z" fill="#E86B2E" ecmeta_series_index="2" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr18-cls-365 zr18-cls-366"></path>
+<path d="M302.2 165.3l1.1 0l0 32l-1.1 0Z" fill="#E86B2E" ecmeta_series_index="2" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr18-cls-367 zr18-cls-366"></path>
+<path d="M425.4 272.8l0 0l0 32l0 0Z" fill="#E86B2E" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr18-cls-366"></path>
+<path d="M413.1 380.3l0 0l0 32l0 0Z" fill="#E86B2E" ecmeta_series_index="2" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr18-cls-366"></path>
+<path d="M407.1 57.8l313.6 0l0 32l-313.6 0Z" fill="#C3D51F" ecmeta_series_index="3" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr18-cls-368 zr18-cls-369"></path>
+<path d="M303.3 165.3l326.8 0l0 32l-326.8 0Z" fill="#C3D51F" ecmeta_series_index="3" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr18-cls-370 zr18-cls-369"></path>
+<path d="M425.4 272.8l274.9 0l0 32l-274.9 0Z" fill="#C3D51F" ecmeta_series_index="3" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr18-cls-371 zr18-cls-369"></path>
+<path d="M413.1 380.3l249.6 0l0 32l-249.6 0Z" fill="#C3D51F" ecmeta_series_index="3" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr18-cls-372 zr18-cls-369"></path>
+<path d="M-5 -5l648 0l0 18l-648 0Z" transform="translate(131 522)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#b7b9be" stroke-width="0" class="zr18-cls-354"></path>
+<path d="M0 0l24 0l0 8l-24 0Z" transform="translate(131 522)" fill="#267878" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr18-cls-354"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;" xml:space="preserve" x="29" y="4" transform="translate(131 522)" fill="#4B5563">Climate and environment</text>
+<path d="M0 0l190 0l0 8l-190 0Z" transform="translate(131 522)" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" class="zr18-cls-373"></path>
+<path d="M0 0l24 0l0 8l-24 0Z" transform="translate(341 522)" fill="#3D9999" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr18-cls-354"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;" x="29" y="4" transform="translate(341 522)" fill="#4B5563">Development</text>
+<path d="M0 0l106 0l0 8l-106 0Z" transform="translate(341 522)" fill="none" pointer-events="visible" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="legend" class="zr18-cls-373"></path>
+<path d="M0 0l24 0l0 8l-24 0Z" transform="translate(467 522)" fill="#E86B2E" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr18-cls-354"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;" x="29" y="4" transform="translate(467 522)" fill="#4B5563">Humanitarian</text>
+<path d="M0 0l113 0l0 8l-113 0Z" transform="translate(467 522)" fill="none" pointer-events="visible" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="legend" class="zr18-cls-373"></path>
+<path d="M0 0l24 0l0 8l-24 0Z" transform="translate(600 522)" fill="#C3D51F" ecmeta_series_index="3" ecmeta_data_index="3" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr18-cls-354"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;" xml:space="preserve" x="29" y="4" transform="translate(600 522)" fill="#4B5563">Peace and transition</text>
+<path d="M0 0l169 0l0 8l-169 0Z" transform="translate(600 522)" fill="none" pointer-events="visible" ecmeta_series_index="3" ecmeta_data_index="3" ecmeta_ssr_type="legend" class="zr18-cls-373"></path>
+<path d="M108 57.8l612.8 0l0 32l-612.8 0Z" fill="none" pointer-events="visible" ecmeta_series_index="4" ecmeta_data_index="0" ecmeta_ssr_type="chart" ecmeta_silent="true" class="zr18-cls-374 zr18-cls-354"></path>
+<path d="M108 165.3l531.6 0l0 32l-531.6 0Z" fill="none" pointer-events="visible" ecmeta_series_index="4" ecmeta_data_index="1" ecmeta_ssr_type="chart" ecmeta_silent="true" class="zr18-cls-375 zr18-cls-354"></path>
+<path d="M108 272.8l595.7 0l0 32l-595.7 0Z" fill="none" pointer-events="visible" ecmeta_series_index="4" ecmeta_data_index="2" ecmeta_ssr_type="chart" ecmeta_silent="true" class="zr18-cls-376 zr18-cls-354"></path>
+<path d="M108 380.3l555.4 0l0 32l-555.4 0Z" fill="none" pointer-events="visible" ecmeta_series_index="4" ecmeta_data_index="3" ecmeta_ssr_type="chart" ecmeta_silent="true" class="zr18-cls-377 zr18-cls-354"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(729.7603 73.75)" fill="#232E3D">$249M</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(648.6267 181.25)" fill="#232E3D">$224M</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(712.7067 288.75)" fill="#232E3D">$251M</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" transform="translate(672.36 396.25)" fill="#232E3D">$234M</text>
+<style ><![CDATA[
+.zr18-cls-354:hover {
+pointer-events:none;
+}
+.zr18-cls-355 {
+animation:zr18-ani-0 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-356:hover {
+cursor:pointer;
+fill:rgba(41,132,132,1);
+}
+.zr18-cls-357 {
+animation:zr18-ani-1 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-358 {
+animation:zr18-ani-2 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-359 {
+animation:zr18-ani-3 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-360 {
+animation:zr18-ani-4 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-361:hover {
+cursor:pointer;
+fill:rgba(67,168,168,1);
+}
+.zr18-cls-362 {
+animation:zr18-ani-5 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-363 {
+animation:zr18-ani-6 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-364 {
+animation:zr18-ani-7 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-365 {
+animation:zr18-ani-8 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-366:hover {
+cursor:pointer;
+fill:rgba(255,117,50,1);
+}
+.zr18-cls-367 {
+animation:zr18-ani-9 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-368 {
+animation:zr18-ani-10 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-369:hover {
+cursor:pointer;
+fill:rgba(214,234,34,1);
+}
+.zr18-cls-370 {
+animation:zr18-ani-11 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-371 {
+animation:zr18-ani-12 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-372 {
+animation:zr18-ani-13 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-373:hover {
+cursor:pointer;
+fill:rgba(0,0,0,0);
+}
+.zr18-cls-374 {
+animation:zr18-ani-14 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-375 {
+animation:zr18-ani-15 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-376 {
+animation:zr18-ani-16 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr18-cls-377 {
+animation:zr18-ani-17 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+@keyframes zr18-ani-0 {
+0% {
+d:path("M108 57.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 57.8l111.9 0l0 32l-111.9 0Z");
+}
+}
+@keyframes zr18-ani-1 {
+0% {
+d:path("M108 165.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 165.3l86.6 0l0 32l-86.6 0Z");
+}
+}
+@keyframes zr18-ani-2 {
+0% {
+d:path("M108 272.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 272.8l152.1 0l0 32l-152.1 0Z");
+}
+}
+@keyframes zr18-ani-3 {
+0% {
+d:path("M108 380.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 380.3l122 0l0 32l-122 0Z");
+}
+}
+@keyframes zr18-ani-4 {
+0% {
+d:path("M219.9 57.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M219.9 57.8l186.8 0l0 32l-186.8 0Z");
+}
+}
+@keyframes zr18-ani-5 {
+0% {
+d:path("M194.6 165.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M194.6 165.3l107.6 0l0 32l-107.6 0Z");
+}
+}
+@keyframes zr18-ani-6 {
+0% {
+d:path("M260.1 272.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M260.1 272.8l165.3 0l0 32l-165.3 0Z");
+}
+}
+@keyframes zr18-ani-7 {
+0% {
+d:path("M230 380.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M230 380.3l183.1 0l0 32l-183.1 0Z");
+}
+}
+@keyframes zr18-ani-8 {
+0% {
+d:path("M406.7 57.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M406.7 57.8l0.5 0l0 32l-0.5 0Z");
+}
+}
+@keyframes zr18-ani-9 {
+0% {
+d:path("M302.2 165.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M302.2 165.3l1.1 0l0 32l-1.1 0Z");
+}
+}
+@keyframes zr18-ani-10 {
+0% {
+d:path("M407.1 57.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M407.1 57.8l313.6 0l0 32l-313.6 0Z");
+}
+}
+@keyframes zr18-ani-11 {
+0% {
+d:path("M303.3 165.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M303.3 165.3l326.8 0l0 32l-326.8 0Z");
+}
+}
+@keyframes zr18-ani-12 {
+0% {
+d:path("M425.4 272.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M425.4 272.8l274.9 0l0 32l-274.9 0Z");
+}
+}
+@keyframes zr18-ani-13 {
+0% {
+d:path("M413.1 380.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M413.1 380.3l249.6 0l0 32l-249.6 0Z");
+}
+}
+@keyframes zr18-ani-14 {
+0% {
+d:path("M108 57.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 57.8l612.8 0l0 32l-612.8 0Z");
+}
+}
+@keyframes zr18-ani-15 {
+0% {
+d:path("M108 165.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 165.3l531.6 0l0 32l-531.6 0Z");
+}
+}
+@keyframes zr18-ani-16 {
+0% {
+d:path("M108 272.8l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 272.8l595.7 0l0 32l-595.7 0Z");
+}
+}
+@keyframes zr18-ani-17 {
+0% {
+d:path("M108 380.3l0 0l0 32l0 0Z");
+}
+100% {
+d:path("M108 380.3l555.4 0l0 32l-555.4 0Z");
+}
+}
+]]>
+
+</style>
+</svg>

@@ -54,7 +54,7 @@ const flagUrls = Object.fromEntries(
 const flagKey = (name) => `flag_${name.replace(/[^a-zA-Z0-9]/g, '_')}`;
 const flagStyles = Object.fromEntries(
   Object.entries(flagUrls).map(([name, url]) => [flagKey(name), {
-    width: 28,
+    width: name === 'Switzerland' ? 18 : 28,
     height: 18,
     backgroundColor: { image: url },
     borderColor: '#C5CBD1',
@@ -78,7 +78,7 @@ function formatValue(value) {
 
 export function initTopCoreContributors(el, echarts) {
   const option = {
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     backgroundColor: '#ffffff',
     tooltip: {
       trigger: 'axis',
@@ -93,7 +93,7 @@ export function initTopCoreContributors(el, echarts) {
       borderWidth: 1,
       textStyle: {
         color: '#232E3D',
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 14
       },
       formatter: function (params) {
@@ -113,7 +113,7 @@ export function initTopCoreContributors(el, echarts) {
       interval: 20000000,
       axisLabel: {
         color: '#7A8491',
-        fontSize: 12,
+        fontSize: 14,
         formatter: function (value) {
           return value === 0 ? '$0' : `$${value / 1000000}M`;
         }
@@ -137,7 +137,7 @@ export function initTopCoreContributors(el, echarts) {
           align: 'right',
           margin: 58,
           color: '#232E3D',
-          fontFamily: 'Proxima Nova, Arial, sans-serif',
+          fontFamily: 'ProximaNova, Arial, sans-serif',
           fontSize: 13,
           lineHeight: 22
         }
@@ -177,7 +177,7 @@ export function initTopCoreContributors(el, echarts) {
         position: 'right',
         distance: 9,
         color: '#4B5563',
-        fontSize: 12,
+        fontSize: 14,
         formatter: function (params) {
           return formatValue(params.value);
         }

@@ -8,7 +8,7 @@ const multiYearLineColor = '#005F61';
 
 export function initMultiYearPledges(el, echarts) {
   const option = {
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
 
     tooltip: {
       trigger: 'axis',
@@ -19,7 +19,7 @@ export function initMultiYearPledges(el, echarts) {
       padding: 0,
       textStyle: {
         color: '#232E3D',
-        fontSize: 13
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
@@ -37,8 +37,8 @@ export function initMultiYearPledges(el, echarts) {
       itemHeight: 8,
       itemGap: 24,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#4B5563'
       },
       data: [
@@ -63,8 +63,8 @@ export function initMultiYearPledges(el, echarts) {
       axisLine: { lineStyle: { color: '#9CA3AF' } },
       axisTick: { show: false },
       axisLabel: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#4B5563',
         margin: 12
       }
@@ -78,13 +78,13 @@ export function initMultiYearPledges(el, echarts) {
       nameGap: 15,
       nameTextStyle: {
         color: '#6B7280',
-        fontSize: 11
+        fontSize: 13
       },
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#6B7280',
-        fontSize: 11,
+        fontSize: 13,
         formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -102,7 +102,7 @@ export function initMultiYearPledges(el, echarts) {
           position: 'inside',
           formatter: (params) => `$${params.value}M`,
           color: '#ffffff',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 600
         },
         emphasis: { focus: 'series' }
@@ -119,7 +119,7 @@ export function initMultiYearPledges(el, echarts) {
           position: 'inside',
           formatter: (params) => `$${params.value}M`,
           color: '#ffffff',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 600
         },
         emphasis: { focus: 'series' }
@@ -138,7 +138,7 @@ export function initMultiYearPledges(el, echarts) {
           distance: 8,
           formatter: (params) => `$${params.value}M`,
           color: '#232E3D',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700
         },
         z: 10
@@ -167,7 +167,7 @@ export function initMultiYearPledges(el, echarts) {
           backgroundColor: 'rgba(255, 255, 255, 0.92)',
           borderRadius: 0,
           padding: [3, 5],
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 800
         },
         z: 20

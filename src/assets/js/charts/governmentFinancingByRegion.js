@@ -5,29 +5,27 @@ const arabStates = [123.588728, 115.094551, 113.531771, 108.717443];
 const africa = [207.700913, 126.318559, 130.999067, 248.314057];
 const asiaPacific = [98.178461, 58.449892, 48.127073, 60.160570];
 const totals = [1124.037568, 1194.290257, 1167.303461, 1425.934731];
-const regionColors = {
-  africa: '#C3D51F', asia: '#3D9999', arab: '#8964BC', lac: '#E86B2E', europe: '#AD7F00'
-};
+const regionColors = REGION_COLORS;
 
 export function initGovernmentFinancingByRegion(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
     backgroundColor: 'transparent',
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     title: {
      
       left: 'center',
       top: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 20,
         fontWeight: 700,
         color: '#232E3D'
       },
       subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#7A838F'
       }
     },
@@ -39,9 +37,9 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
@@ -56,31 +54,57 @@ export function initGovernmentFinancingByRegion(el, echarts) {
         ]);
       }
     },
-    legend: {
-      bottom: 5,
-      left: 'center',
-      icon: 'rect',
-      itemWidth: 24,
-      itemHeight: 8,
-      itemGap: 18,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 11,
-        color: '#4B5563'
+    legend: [
+      {
+        bottom: 31,
+        left: 'center',
+        icon: 'rect',
+        itemWidth: 24,
+        itemHeight: 8,
+        itemGap: 16,
+        textStyle: {
+          fontFamily: 'ProximaNova, Arial, sans-serif',
+          fontSize: 13,
+          color: '#4B5563'
+        },
+        data: [
+          'Latin America and the Caribbean',
+          'Africa',
+          'Europe and the CIS'
+        ]
       },
-      data: [
-        'Latin America and the Caribbean',
-        'Africa',
-        'Europe and the CIS',
-        'Arab States',
-        'Asia and the Pacific'
-      ]
-    },
+      {
+        bottom: 5,
+        left: 'center',
+        icon: 'rect',
+        itemWidth: 24,
+        itemHeight: 8,
+        itemGap: 16,
+        textStyle: {
+          fontFamily: 'ProximaNova, Arial, sans-serif',
+          fontSize: 13,
+          color: '#4B5563'
+        },
+        data: [
+          'Arab States',
+          'Asia and the Pacific',
+          {
+            name: 'Total',
+            icon: 'path://M0,3 L24,3 L24,5 L0,5 Z',
+            itemStyle: {
+              color: '#1C1C1C',
+              borderColor: '#1C1C1C',
+              borderWidth: 0
+            }
+          }
+        ]
+      }
+    ],
     grid: {
       left: 65,
       right: 35,
-      top: 16,
-      bottom: 75
+      top: 34,
+      bottom: 112
     },
     xAxis: {
       type: 'category',
@@ -89,7 +113,7 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#303944',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 600,
         margin: 12
       }
@@ -98,12 +122,12 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       type: 'value',
       min: 0,
       max: 1500,
-      interval: 400,
+      interval: 500,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 11,
+        fontSize: 13,
         formatter: function (value) {
           return value >= 1000 ? `$${(value / 1000).toFixed(1).replace(/\.0$/, '')}B` : `$${value}M`;
         }
@@ -111,28 +135,29 @@ export function initGovernmentFinancingByRegion(el, echarts) {
       splitLine: { lineStyle: { color: '#C5CBD1' } }
     },
     series: [
-      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 62, itemStyle: { color: regionColors.lac } },
-      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 62, itemStyle: { color: regionColors.africa } },
-      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 62, itemStyle: { color: regionColors.europe } },
-      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 62, itemStyle: { color: regionColors.arab } },
-      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 62, itemStyle: { color: regionColors.asia } },
+      { name: 'Latin America and the Caribbean', type: 'bar', stack: 'total', data: latinAmerica, barWidth: 90, itemStyle: { color: regionColors.lac } },
+      { name: 'Africa', type: 'bar', stack: 'total', data: africa, barWidth: 90, itemStyle: { color: regionColors.africa } },
+      { name: 'Europe and the CIS', type: 'bar', stack: 'total', data: europeCIS, barWidth: 90, itemStyle: { color: regionColors.europe } },
+      { name: 'Arab States', type: 'bar', stack: 'total', data: arabStates, barWidth: 90, itemStyle: { color: regionColors.arab } },
+      { name: 'Asia and the Pacific', type: 'bar', stack: 'total', data: asiaPacific, barWidth: 90, itemStyle: { color: regionColors.asia } },
       {
-        name: '',
-        type: 'bar',
+        name: 'Total',
+        type: 'line',
         data: totals,
-        barWidth: 62,
-        barGap: '-100%',
-        silent: true,
-        itemStyle: { color: 'transparent' },
+        symbol: 'circle',
+        symbolSize: 6,
+        lineStyle: { color: '#1C1C1C', width: 2.5 },
+        itemStyle: { color: '#1C1C1C', borderWidth: 0 },
         label: {
           show: true,
           position: 'top',
           distance: 10,
           formatter: (params) => `$${(params.value / 1000).toFixed(2)}B`,
           color: '#232E3D',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700
         },
+        emphasis: { scale: 1.25 },
         z: 20
       }
     ]
@@ -147,5 +172,5 @@ export function initGovernmentFinancingByRegion(el, echarts) {
 }
 
 export default initGovernmentFinancingByRegion;
-import { CATEGORY_COLORS } from './chartColors';
 import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';
+import { REGION_COLORS } from './chartColors';

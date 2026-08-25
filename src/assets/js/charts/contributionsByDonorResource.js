@@ -3,7 +3,7 @@ export function initContributionsByDonorResource(el, echarts) {
     { donor: 'Vertical fund – GEF', other: 371578945, regular: 0 },
     { donor: 'Germany', other: 221601868, regular: 105197907 },
     { donor: 'European Union', other: 312784472, regular: 0 },
-    { donor: 'Vertical Fund', other: 310762558, regular: 0 },
+    { donor: 'Vertical Fund—GFATM', other: 310762558, regular: 0 },
     { donor: 'Argentina', other: 305781408, regular: 0 },
     { donor: 'Norway', other: 225463048, regular: 37343097 },
     { donor: 'Japan', other: 208745006, regular: 45391094 },
@@ -79,7 +79,7 @@ export function initContributionsByDonorResource(el, echarts) {
     'United Kingdom': 'https://flagcdn.com/gb.svg',
     Brazil: 'https://flagcdn.com/br.svg',
     Colombia: 'https://flagcdn.com/co.svg',
-    Switzerland: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Civil_Ensign_of_Switzerland_%28Pantone%29.svg/250px-Civil_Ensign_of_Switzerland_%28Pantone%29.svg.png',
+    Switzerland: 'https://flagcdn.com/ch.svg',
     Italy: 'https://flagcdn.com/it.svg',
     Qatar: 'https://flagcdn.com/qa.svg',
     Panama: 'https://flagcdn.com/pa.svg',
@@ -94,6 +94,7 @@ export function initContributionsByDonorResource(el, echarts) {
 
   const logoUrls = {
     'Vertical fund – GEF': '../assets/img/logos/gef.png',
+    'Vertical Fund—GFATM': '../assets/img/logos/gfatm.png',
     MPTF: '../assets/img/logos/mptf.png',
     'Vertical fund – Green Climate Fund': '../assets/img/logos/green-climate-fund.png',
     'World Bank Group': '../assets/img/logos/wbg.png'
@@ -101,6 +102,7 @@ export function initContributionsByDonorResource(el, echarts) {
 
   const logoSizes = {
     'Vertical fund – GEF': [24, 32],
+    'Vertical Fund—GFATM': [25, 30],
     MPTF: [60, 23],
     'Vertical fund – Green Climate Fund': [56, 30],
     'World Bank Group': [54, 28]
@@ -114,7 +116,7 @@ export function initContributionsByDonorResource(el, echarts) {
 
   Object.entries(flagUrls).forEach(([donor, url]) => {
     richFlagStyles[getFlagKey(donor)] = {
-      width: 30,
+      width: donor === 'Switzerland' ? 20 : 30,
       height: 20,
       backgroundColor: {
         image: url
@@ -151,7 +153,7 @@ export function initContributionsByDonorResource(el, echarts) {
     animationDuration: 700,
 
     textStyle: {
-      fontFamily: 'Proxima Nova, Arial, sans-serif',
+      fontFamily: 'ProximaNova, Arial, sans-serif',
       color: '#222222'
     },
 
@@ -160,7 +162,7 @@ export function initContributionsByDonorResource(el, echarts) {
       left: 0,
       top: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#333333',
         fontSize: 26,
         fontWeight: 700
@@ -186,7 +188,7 @@ export function initContributionsByDonorResource(el, echarts) {
         'Other resources'
       ],
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#555555',
         fontSize: 15
       }
@@ -203,7 +205,7 @@ export function initContributionsByDonorResource(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#222222',
         fontSize: 13,
         lineHeight: 21
@@ -231,7 +233,7 @@ export function initContributionsByDonorResource(el, echarts) {
       nameGap: 48,
 
       nameTextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#666666',
         fontSize: 13,
         fontWeight: 600
@@ -247,7 +249,7 @@ export function initContributionsByDonorResource(el, echarts) {
 
       axisLabel: {
         color: '#666666',
-        fontSize: 12,
+        fontSize: 14,
         margin: 12,
         formatter: function (value) {
           return value === 0
@@ -278,7 +280,7 @@ export function initContributionsByDonorResource(el, echarts) {
           align: 'right',
           overflow: 'truncate',
           color: '#333333',
-          fontFamily: 'Proxima Nova, Arial, sans-serif',
+          fontFamily: 'ProximaNova, Arial, sans-serif',
           fontSize: 13,
           lineHeight: 20
         }
@@ -373,7 +375,7 @@ export function initContributionsByDonorResource(el, echarts) {
           color: '#222222',
           fontSize: 13,
           fontWeight: 700,
-          fontFamily: 'Proxima Nova, Arial, sans-serif'
+          fontFamily: 'ProximaNova, Arial, sans-serif'
         },
 
         tooltip: {
@@ -408,7 +410,7 @@ export function initContributionsByDonorResource(el, echarts) {
           itemWidth: 18,
           itemHeight: 7,
           itemGap: 12,
-          textStyle: { fontSize: 10 }
+          textStyle: { fontSize: 12 }
         },
         xAxis: { axisLabel: { fontSize: 9, margin: 8 } },
         yAxis: [
@@ -416,7 +418,7 @@ export function initContributionsByDonorResource(el, echarts) {
             axisLabel: {
               width: 108,
               margin: 10,
-              fontSize: 10,
+              fontSize: 12,
               lineHeight: 13,
               overflow: 'truncate'
             }
@@ -430,7 +432,7 @@ export function initContributionsByDonorResource(el, echarts) {
         series: [
           { barWidth: 14 },
           { barWidth: 14 },
-          { label: { fontSize: 10, distance: 5 } }
+          { label: { fontSize: 12, distance: 5 } }
         ]
       }
     }]

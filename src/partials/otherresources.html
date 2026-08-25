@@ -1,7 +1,7 @@
 <!-- ************************* Page Hero ************************* -->
 <div class="pagehero-full funding-pagehero" data-undpds-component="expandToSize" data-selector=".pagehero-full">
   <div class="overlay-grey">
-    <img class="mobile-position-center" src="{{@root.root}}assets/img/cover.jpg" alt="">
+    <img class="mobile-position-center" src="{{@root.root}}assets/img/other-res.jpg" alt="">
   </div>
 
   <nav aria-label="{{breadcrumbs.aria-label}}" data-viewport="true" class="breadcrumb medium-offset-1">
@@ -47,7 +47,7 @@
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 or-section-intro">
         <p class="or-overview-highlight">
-          <span class="or-overview-trend" aria-hidden="true">↗</span>
+          <span class="or-overview-trend" aria-hidden="true">&#x2197;&#xFE0E;</span>
           <span>{{{other-resources-page.overview.copy2}}}</span>
         </p>
         <p class="or-overview-supporting">{{other-resources-page.overview.copy1}}</p>
@@ -64,11 +64,13 @@
      <div class="grid-x grid-margin-x grid-margin-y or-overview-chart-group">
       <div class="cell small-12 large-12 or-chart-block">
         <h5 class="or-chart-title">{{other-resources-page.overview.recipients-chart}}</h5>
-        <img
-          class="or-recipient-map-image"
-          src="{{@root.root}}assets/img/Top-15-recipient%20countries-of-other%20-resources.svg"
-          alt="Top 15 recipient countries of other resources, 2025"
-        >
+        <div class="or-recipient-map-frame">
+          <img
+            class="or-recipient-map-image"
+            src="{{@root.root}}assets/img/Top-15-recipient%20countries-of-other%20-resources.svg"
+            alt="Top 15 recipient countries of other resources, 2025"
+          >
+        </div>
       </div>
 
     </div>
@@ -90,7 +92,14 @@
     </div>
     <div class="or-chart-block or-thematic-flow-chart">
       <h5 class="or-chart-title">{{other-resources-page.thematic.flow-chart}}</h5>
-      <div class="echarts" data-chart-type="funding-window-contributor-flow" style="width:100%;height:560px;"></div>
+      <p class="or-chart-instruction">Hover or tap a contributor, funding window or flow to see its breakdown.</p>
+      <ul class="or-sankey-mobile-key" aria-label="Funding windows">
+        <li><span style="--key-color:#0069B3"></span>Governance, Peacebuilding, Crisis and Resilience</li>
+        <li><span style="--key-color:#3D9999"></span>Nature, Climate and Energy</li>
+        <li><span style="--key-color:#8964BC"></span>Gender Equality and Women’s Empowerment</li>
+        <li><span style="--key-color:#E86B2E"></span>Poverty and Inequality</li>
+      </ul>
+      <div class="echarts" data-chart-type="funding-window-contributor-flow" style="width:100%;height:600px;"></div>
     </div>
   </div>
 </section>
@@ -164,7 +173,7 @@
 </section>
 
 <!--************************* Vertical funds *************************  -->
-<section class="section section-bg-orange or-section" id="or-vertical">
+<section class="section section-bg-purple or-section" id="or-vertical">
   <div class="grid-container section padded" data-or-reveal>
     <div class="grid-x grid-margin-x grid-margin-y align-middle or-split-feature">
       <div class="cell small-12 large-5">
@@ -196,7 +205,7 @@
 
       <div class="cell small-12 large-7">
         <h5 class="or-chart-title">{{other-resources-page.cost-sharing.eu-chart}}</h5><br>
-        <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:300px;"></div>
+        <div class="echarts" data-chart-type="eu-contributions-by-region" style="width:100%;height:420px;"></div>
       </div>
 
 
@@ -205,18 +214,18 @@
 </section>
 
 <!--************************* Financing institutions *************************  -->
-<section class="section section-bg-gold or-section" id="or-institutions">
+<section class="section section-bg-ifi-transition or-section" id="or-institutions">
   <div class="grid-container section padded" data-or-reveal>
     <div class="grid-x grid-margin-x grid-margin-y align-middle or-split-feature">
 
 
-      <div class="cell small-12 large-5">
+      <div class="cell small-12 large-6">
         <h2 class="or-section-title">{{other-resources-page.institutions.heading}}</h2>
         <p>{{other-resources-page.institutions.copy1}}</p>
         <p>{{other-resources-page.institutions.copy2}}</p>
       </div>
 
-      <div class="cell small-12 large-7">
+      <div class="cell small-12 large-6 or-ifi-total-chart">
         <h5 class="or-chart-title">{{other-resources-page.institutions.total-chart}}</h5>
         <div class="echarts" data-chart-type="ifi-contributions-donut" style="width:100%;height:520px;"></div>
       </div>
@@ -262,7 +271,7 @@
 
 
 <!--************************* UNDS *************************  -->
-<section class="section section-bg-teal or-section" id="or-un-system">
+<section class="section section-bg-other or-section" id="or-un-system">
 
   <div class="grid-container section padded" data-or-reveal>
     <div class="grid-x grid-margin-x">
@@ -275,7 +284,7 @@
 
 </section>
 
-<section class="section unds-highlights center-text-mobile section-bg-teal or-section or-un-system-highlights">
+<section class="section unds-highlights center-text-mobile section-bg-other or-section or-un-system-highlights">
   <div class="grid-container" data-or-reveal>
     <div class="or-organization-list">
 
@@ -402,14 +411,23 @@
           </thead>
           <tbody>
             {{#each other-resources-page.annual-contributions.rows}}
-            <tr><th scope="row">{{this.partner}}{{#if this.marker}} <sup class="or-note-marker">{{this.marker}}</sup>{{/if}}</th><td>{{#if this.regular}}{{this.regular}}{{else}}—{{/if}}</td><td>{{#if this.other}}{{this.other}}{{else}}—{{/if}}</td><td>{{#if this.total}}{{this.total}}{{else}}—{{/if}}</td></tr>
+            <tr class="or-partner-row">
+              <th scope="row">
+                <span class="or-partner-toggle">
+                  <span>{{this.partner}}{{#if this.marker}} <sup class="or-note-marker">{{this.marker}}</sup>{{/if}}</span>
+                </span>
+              </th>
+              <td{{#unless this.regular}} class="is-empty"{{/unless}} data-label="Reg. resources">{{#if this.regular}}{{this.regular}}{{else}}—{{/if}}</td>
+              <td{{#unless this.other}} class="is-empty"{{/unless}} data-label="Other resources">{{#if this.other}}{{this.other}}{{else}}—{{/if}}</td>
+              <td{{#unless this.total}} class="is-empty"{{/unless}} data-label="Total">{{#if this.total}}{{this.total}}{{else}}—{{/if}}</td>
+            </tr>
             {{/each}}
-            <tr class="or-table-subtotal"><th scope="row">{{other-resources-page.annual-contributions.subtotal.partner}}</th><td>{{#if other-resources-page.annual-contributions.subtotal.regular}}{{other-resources-page.annual-contributions.subtotal.regular}}{{else}}—{{/if}}</td><td>{{#if other-resources-page.annual-contributions.subtotal.other}}{{other-resources-page.annual-contributions.subtotal.other}}{{else}}—{{/if}}</td><td>{{#if other-resources-page.annual-contributions.subtotal.total}}{{other-resources-page.annual-contributions.subtotal.total}}{{else}}—{{/if}}</td></tr>
+            <tr class="or-table-subtotal"><th scope="row">{{other-resources-page.annual-contributions.subtotal.partner}}</th><td{{#unless other-resources-page.annual-contributions.subtotal.regular}} class="is-empty"{{/unless}} data-label="Reg. resources">{{#if other-resources-page.annual-contributions.subtotal.regular}}{{other-resources-page.annual-contributions.subtotal.regular}}{{else}}—{{/if}}</td><td{{#unless other-resources-page.annual-contributions.subtotal.other}} class="is-empty"{{/unless}} data-label="Other resources">{{#if other-resources-page.annual-contributions.subtotal.other}}{{other-resources-page.annual-contributions.subtotal.other}}{{else}}—{{/if}}</td><td{{#unless other-resources-page.annual-contributions.subtotal.total}} class="is-empty"{{/unless}} data-label="{{other-resources-page.annual-contributions.columns.total}}">{{#if other-resources-page.annual-contributions.subtotal.total}}{{other-resources-page.annual-contributions.subtotal.total}}{{else}}—{{/if}}</td></tr>
             <tr class="or-table-total">
               <th scope="row">{{other-resources-page.annual-contributions.total-row.partner}} <sup class="or-note-marker">{{other-resources-page.annual-contributions.total-row.marker}}</sup></th>
-              <td>{{other-resources-page.annual-contributions.total-row.regular}}</td>
-              <td>{{other-resources-page.annual-contributions.total-row.other}}</td>
-              <td>{{other-resources-page.annual-contributions.total-row.total}}</td>
+              <td data-label="Reg. resources">{{other-resources-page.annual-contributions.total-row.regular}}</td>
+              <td data-label="Other resources">{{other-resources-page.annual-contributions.total-row.other}}</td>
+              <td data-label="{{other-resources-page.annual-contributions.columns.total}}">{{other-resources-page.annual-contributions.total-row.total}}</td>
             </tr>
           </tbody>
         </table>

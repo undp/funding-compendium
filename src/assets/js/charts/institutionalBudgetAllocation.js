@@ -35,8 +35,68 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
     }
   ];
 
+  const total = data.reduce((sum, item) => sum + item.value, 0);
+
+  const renderMobileAllocation = () => {
+    el.parentElement?.querySelector('.institutional-allocation-mobile')?.remove();
+
+    let cumulativePercent = 0;
+    const gradientStops = data.map((item) => {
+      const start = cumulativePercent;
+      cumulativePercent += (item.value / total) * 100;
+      return `${item.color} ${start}% ${cumulativePercent}%`;
+    }).join(', ');
+
+    const mobile = document.createElement('div');
+    mobile.className = 'rr-allocation-mobile institutional-allocation-mobile';
+    mobile.setAttribute('role', 'group');
+    mobile.setAttribute('aria-label', 'Institutional budget allocation');
+    mobile.innerHTML = `
+      <div class="rr-allocation-mobile__donut" style="--donut-gradient:${gradientStops}" aria-hidden="true">
+        <div>
+          <strong>$${Math.round(total)}M</strong>
+          <span>Total</span>
+        </div>
+      </div>
+      <div class="rr-allocation-mobile__list"></div>
+    `;
+
+    const list = mobile.querySelector('.rr-allocation-mobile__list');
+
+    data.forEach((item, index) => {
+      const row = document.createElement('div');
+      row.className = 'rr-allocation-mobile__row';
+      if (index >= 2) row.hidden = true;
+      row.innerHTML = `
+        <div class="rr-allocation-mobile__label">
+          <span><i style="--key-color:${item.color}" aria-hidden="true"></i>${item.name}</span>
+          <strong>${item.percent}%</strong>
+        </div>
+        <span class="rr-allocation-mobile__value">$${item.value.toLocaleString('en-US')}M</span>
+      `;
+      list.appendChild(row);
+    });
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'rr-allocation-mobile__toggle';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<span class="show-more">Show more</span><span class="show-less">Show less</span>';
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      mobile.classList.toggle('is-list-expanded', !expanded);
+      Array.from(list.children).slice(2).forEach((row) => { row.hidden = expanded; });
+    });
+    mobile.appendChild(toggle);
+
+    el.insertAdjacentElement('afterend', mobile);
+  };
+
+  renderMobileAllocation();
+
   const option = {
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'item',
       backgroundColor: '#ffffff',
@@ -45,7 +105,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
       extraCssText: 'border-radius:0;box-shadow:0 4px 14px rgba(0,0,0,0.16);',
       textStyle: {
         color: '#263746',
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 13
       },
       formatter: function (params) {
@@ -71,7 +131,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
       itemHeight: 8,
       itemGap: 20,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 13,
         color: '#333',
         lineHeight: 18
@@ -100,14 +160,14 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
           },
           rich: {
             pct: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               fontSize: 15,
               fontWeight: 700,
               color: '#333',
               lineHeight: 20
             },
             value: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               fontSize: 13,
               color: '#666'
             }
@@ -147,7 +207,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
           formatter: '{total|$950M}\n{caption|Total}',
           rich: {
             total: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               fontSize: 24,
               fontWeight: 700,
               color: '#333',
@@ -155,7 +215,7 @@ export function initInstitutionalBudgetAllocation(el, echarts) {
               align: 'center'
             },
             caption: {
-              fontFamily: 'Proxima Nova, Arial, sans-serif',
+              fontFamily: 'ProximaNova, Arial, sans-serif',
               fontSize: 13,
               color: '#777',
               lineHeight: 20,

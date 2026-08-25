@@ -4,26 +4,27 @@ const foundations = [25.071339, 28.387937, 37.686066, 28.967314];
 const ngos = [5.554821, 7.552502, 15.446611, 19.918648];
 const academic = [0.491626, 0.520953, 1.169130, 0.728344];
 const totals = [63.926338, 86.636961, 94.268717, 89.430750];
+const privateSectorColors = ['#0069B3', '#8964BC', '#E86B2E', '#AD7F00'];
 
 export function initPrivateSectorContributionsByType(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
     
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     title: {
 
       left: 0,
       top: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 20,
         fontWeight: 700,
         color: '#232E3D'
       },
       subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#7A838F'
       }
     },
@@ -35,51 +36,64 @@ export function initPrivateSectorContributionsByType(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
         const amount = (value) => `$${value.toFixed(1).replace(/\.0$/, '')}M`;
         const share = (value) => formatTooltipPercent(value, totals[index]);
         return detailedTooltip(years[index], amount(totals[index]), [
-          { label: 'Private companies', color: SECONDARY_COLORS[0], value: amount(privateCompanies[index]), detail: share(privateCompanies[index]) },
-          { label: 'Foundations', color: SECONDARY_COLORS[1], value: amount(foundations[index]), detail: share(foundations[index]) },
-          { label: 'NGOs', color: SECONDARY_COLORS[2], value: amount(ngos[index]), detail: share(ngos[index]) },
-          { label: 'Academic, training &amp; research', color: SECONDARY_COLORS[3], value: amount(academic[index]), detail: share(academic[index]) }
+          { label: 'Private companies', color: privateSectorColors[0], value: amount(privateCompanies[index]), detail: share(privateCompanies[index]) },
+          { label: 'Foundations', color: privateSectorColors[1], value: amount(foundations[index]), detail: share(foundations[index]) },
+          { label: 'NGOs', color: privateSectorColors[2], value: amount(ngos[index]), detail: share(ngos[index]) },
+          { label: 'Academic, training &amp; research', color: privateSectorColors[3], value: amount(academic[index]), detail: share(academic[index]) }
         ]);
       }
     },
-    legend: {
-      bottom: 5,
-      left: 'center',
-      icon: 'rect',
-      itemWidth: 24,
-      itemHeight: 8,
-      itemGap: 22,
-      textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 11,
-        color: '#4B5563'
+    legend: [
+      {
+        bottom: 31,
+        left: 'center',
+        icon: 'rect',
+        itemWidth: 24,
+        itemHeight: 8,
+        itemGap: 22,
+        textStyle: {
+          fontFamily: 'ProximaNova, Arial, sans-serif',
+          fontSize: 13,
+          color: '#4B5563'
+        },
+        data: ['Private companies', 'Foundations', 'NGOs']
       },
-      data: [
-        'Private companies',
-        'Foundations',
-        'NGOs',
-        'Academic, training & research institutions',
-        {
-          name: 'Total',
-          icon: 'path://M0,2 L24,2 L24,6 L0,6 Z',
-          itemStyle: { color: '#1C1C1C', borderColor: '#1C1C1C', borderWidth: 0 }
-        }
-      ]
-    },
+      {
+        bottom: 5,
+        left: 'center',
+        icon: 'rect',
+        itemWidth: 24,
+        itemHeight: 8,
+        itemGap: 22,
+        textStyle: {
+          fontFamily: 'ProximaNova, Arial, sans-serif',
+          fontSize: 13,
+          color: '#4B5563'
+        },
+        data: [
+          'Academic, training & research institutions',
+          {
+            name: 'Total',
+            icon: 'path://M0,3 L24,3 L24,5 L0,5 Z',
+            itemStyle: { color: '#253746', borderColor: '#253746', borderWidth: 0 }
+          }
+        ]
+      }
+    ],
     grid: {
       left: 60,
       right: 35,
       top: 22,
-      bottom: 75
+      bottom: 112
     },
     xAxis: {
       type: 'category',
@@ -88,21 +102,21 @@ export function initPrivateSectorContributionsByType(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#4B5563',
-        fontSize: 12,
+        fontSize: 14,
         margin: 12
       }
     },
     yAxis: {
       type: 'value',
       min: 0,
-      max: 99,
+      max: 100,
       interval: 25,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 10,
-        formatter: (value) => value === 99 ? '' : `$${value}M`
+        fontSize: 12,
+        formatter: (value) => `$${value}M`
       },
       splitLine: { show: true, lineStyle: { color: '#C5CBD1', width: 1, type: 'solid' } }
     },
@@ -113,13 +127,13 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: privateCompanies,
         barWidth: 86,
-        itemStyle: { color: SECONDARY_COLORS[0] },
+        itemStyle: { color: privateSectorColors[0] },
         label: {
           show: true,
           position: 'inside',
           formatter: (params) => `$${Math.round(params.value)}`,
           color: '#ffffff',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 600
         }
       },
@@ -129,13 +143,13 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: foundations,
         barWidth: 86,
-        itemStyle: { color: SECONDARY_COLORS[1] },
+        itemStyle: { color: privateSectorColors[1] },
         label: {
           show: true,
           position: 'inside',
           formatter: (params) => `$${Math.round(params.value)}`,
           color: '#ffffff',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 600
         }
       },
@@ -145,13 +159,13 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: ngos,
         barWidth: 86,
-        itemStyle: { color: SECONDARY_COLORS[2] },
+        itemStyle: { color: privateSectorColors[2] },
         label: {
           show: true,
           position: 'inside',
           formatter: (params) => `$${Math.round(params.value)}`,
           color: '#ffffff',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 600
         }
       },
@@ -161,7 +175,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
         stack: 'total',
         data: academic,
         barWidth: 86,
-        itemStyle: { color: SECONDARY_COLORS[3] },
+        itemStyle: { color: privateSectorColors[3] },
         label: { show: false }
       },
       {
@@ -178,7 +192,7 @@ export function initPrivateSectorContributionsByType(el, echarts) {
           distance: 8,
           formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#253746',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 700
         },
         z: 20
@@ -195,5 +209,4 @@ export function initPrivateSectorContributionsByType(el, echarts) {
 }
 
 export default initPrivateSectorContributionsByType;
-import { SECONDARY_COLORS } from './chartColors';
 import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

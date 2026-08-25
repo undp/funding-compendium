@@ -42,7 +42,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
 
   chart.setOption({
     backgroundColor: 'transparent',
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -54,15 +54,15 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       borderWidth: 1,
       padding: 12,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#2B2A29',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const item = params[0];
         const exact = Math.round(item.value * 1000000).toLocaleString('en-US');
-        return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${item.name}</div>
-          <div style="font-family:'Proxima Nova',Arial,sans-serif">Government financing: <strong>$${exact}</strong></div>`;
+        return `<div style="font-family:'ProximaNova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${item.name}</div>
+          <div style="font-family:'ProximaNova',Arial,sans-serif">Government financing: <strong>$${exact}</strong></div>`;
       }
     },
     grid: {
@@ -93,7 +93,7 @@ export function initGovernmentFinancingByCountry(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#3B3734',
-        fontSize: 11,
+        fontSize: 13,
         lineHeight: 22,
         margin: 24,
         width: 290,
@@ -140,11 +140,36 @@ export function initGovernmentFinancingByCountry(el, echarts) {
             : `$${params.value.toFixed(1).replace(/\.0$/, '')}M`;
         },
         color: '#514944',
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 600
       },
       emphasis: {
         itemStyle: { color: '#003b64' }
+      }
+    }],
+    media: [{
+      query: { maxWidth: 639 },
+      option: {
+        grid: { left: 104, right: 54, top: 40, bottom: 45 },
+        xAxis: {
+          interval: 100,
+          axisLabel: { fontSize: 10 }
+        },
+        yAxis: {
+          axisLabel: {
+            fontSize: 10,
+            lineHeight: 12,
+            margin: 8,
+            width: 92,
+            overflow: 'break',
+            formatter: (name) => name,
+            rich: {}
+          }
+        },
+        series: [{
+          barWidth: 12,
+          label: { distance: 4, fontSize: 10 }
+        }]
       }
     }]
   });

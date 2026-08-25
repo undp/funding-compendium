@@ -77,6 +77,12 @@
       <h3 id="highlights-title">{{homepage.financial-highlights.heading}}</h3>
       <div class="grid-x grid-margin-x small-up-1 medium-up-3 fc-highlight-grid">
         <div class="cell">
+          <article class="fc-highlight-card fc-highlight-blue">
+            <h3><span>{{homepage.financial-highlights.cards.government.overline}}</span> {{homepage.financial-highlights.cards.government.heading}}</h3>
+            <p>{{homepage.financial-highlights.cards.government.copy}}</p>
+          </article>
+        </div>
+        <div class="cell">
           <article class="fc-highlight-card fc-highlight-orange">
             <h3><span>{{homepage.financial-highlights.cards.core.overline}}</span> {{homepage.financial-highlights.cards.core.heading}} <span class="fc-highlight-resource-type">(regular resources)</span></h3>
             <p>{{{homepage.financial-highlights.cards.core.copy}}}</p>
@@ -88,24 +94,18 @@
             <p>{{homepage.financial-highlights.cards.windows.copy}}</p>
           </article>
         </div>
-        <div class="cell">
-          <article class="fc-highlight-card fc-highlight-blue">
-            <h3><span>{{homepage.financial-highlights.cards.government.overline}}</span> {{homepage.financial-highlights.cards.government.heading}}</h3>
-            <p>{{homepage.financial-highlights.cards.government.copy}}</p>
-          </article>
-        </div>
       </div>
 
       <div class="grid-x grid-margin-x fc-partner-grid">
         <div class="cell large-7">
           <article class="fc-partner-card fc-partner-dark">
             <h3><span>{{homepage.partner-highlights.multi-year.overline}}</span> {{{homepage.partner-highlights.multi-year.heading}}}</h3>
-            <p>{{homepage.partner-highlights.multi-year.note}}</p>
             <ul class="fc-partners" aria-label="Multi-year pledge partners">
               {{#each homepage.partner-highlights.multi-year.partners}}
               <li><span class="fi fi-{{this.code}}" aria-hidden="true"></span>{{this.name}}</li>
               {{/each}}
             </ul>
+            <p class="fc-partner-footnote">{{homepage.partner-highlights.multi-year.note}}</p>
           </article>
         </div>
         <div class="cell large-5">

@@ -122,8 +122,8 @@ export function initTopOtherResourcesRecipients(el, echarts) {
             return `{amount|$${params.data.actualValue}M}\n{country|${params.data.labelName}}`;
           },
           rich: {
-            amount: { fontFamily: 'Proxima Nova, Arial, sans-serif', color: TEXT_COLOR, fontSize: 16, fontWeight: 700, lineHeight: 20 },
-            country: { fontFamily: 'Proxima Nova, Arial, sans-serif', color: TEXT_COLOR, fontSize: 13, fontWeight: 500, lineHeight: 16 }
+            amount: { fontFamily: 'ProximaNova, Arial, sans-serif', color: TEXT_COLOR, fontSize: 16, fontWeight: 700, lineHeight: 20 },
+            country: { fontFamily: 'ProximaNova, Arial, sans-serif', color: TEXT_COLOR, fontSize: 13, fontWeight: 500, lineHeight: 16 }
           }
         },
         labelLayout: { hideOverlap: false },

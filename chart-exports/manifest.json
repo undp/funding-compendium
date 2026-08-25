@@ -1,0 +1,204 @@
+[
+  {
+    "type": "resources-by-funding-type",
+    "filename": "resources-by-funding-type.svg",
+    "width": 1000,
+    "height": 360,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "trends-in-resources",
+    "filename": "trends-in-resources.svg",
+    "width": 1000,
+    "height": 480,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "contribution-by-donor-category",
+    "filename": "contribution-by-donor-category.svg",
+    "width": 1200,
+    "height": 650,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "contributions-by-donor-resource",
+    "filename": "contributions-by-donor-resource.svg",
+    "width": 1200,
+    "height": 1200,
+    "inlinedVectorFlags": 25
+  },
+  {
+    "type": "resources-by-funding-channel",
+    "filename": "resources-by-funding-channel.svg",
+    "width": 1100,
+    "height": 650,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "regular-resources-allocation",
+    "filename": "regular-resources-allocation.svg",
+    "width": 1000,
+    "height": 560,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "resources-by-development-status",
+    "filename": "resources-by-development-status.svg",
+    "width": 900,
+    "height": 500,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "resources-by-country-typology",
+    "filename": "resources-by-country-typology.svg",
+    "width": 900,
+    "height": 500,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "resources-by-region",
+    "filename": "resources-by-region.svg",
+    "width": 1100,
+    "height": 580,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "institutional-budget-allocation",
+    "filename": "institutional-budget-allocation.svg",
+    "width": 1000,
+    "height": 500,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "top-core-contributors",
+    "filename": "top-core-contributors.svg",
+    "width": 1200,
+    "height": 750,
+    "inlinedVectorFlags": 32
+  },
+  {
+    "type": "multi-year-pledges",
+    "filename": "multi-year-pledges.svg",
+    "width": 1200,
+    "height": 600,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "top-gloc-contributors",
+    "filename": "top-gloc-contributors.svg",
+    "width": 1200,
+    "height": 520,
+    "inlinedVectorFlags": 10
+  },
+  {
+    "type": "top-other-resources-contributors",
+    "filename": "top-other-resources-contributors.svg",
+    "width": 1200,
+    "height": 720,
+    "inlinedVectorFlags": 15
+  },
+  {
+    "type": "thematic-window-contributions",
+    "filename": "thematic-window-contributions.svg",
+    "width": 1000,
+    "height": 360,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "funding-window-contributor-flow",
+    "filename": "funding-window-contributor-flow.svg",
+    "width": 1100,
+    "height": 650,
+    "inlinedVectorFlags": 8
+  },
+  {
+    "type": "top-un-pooled-funds",
+    "filename": "top-un-pooled-funds.svg",
+    "width": 1100,
+    "height": 650,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "top-pooled-fund-member-states",
+    "filename": "top-pooled-fund-member-states.svg",
+    "width": 900,
+    "height": 540,
+    "inlinedVectorFlags": 15
+  },
+  {
+    "type": "pooled-fund-contributions",
+    "filename": "pooled-fund-contributions.svg",
+    "width": 900,
+    "height": 540,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "government-financing-by-country",
+    "filename": "government-financing-by-country.svg",
+    "width": 1100,
+    "height": 1080,
+    "inlinedVectorFlags": 30
+  },
+  {
+    "type": "government-financing-by-region",
+    "filename": "government-financing-by-region.svg",
+    "width": 1000,
+    "height": 520,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "vertical-fund-contributions",
+    "filename": "vertical-fund-contributions.svg",
+    "width": 1000,
+    "height": 480,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "eu-contributions-by-region",
+    "filename": "eu-contributions-by-region.svg",
+    "width": 1000,
+    "height": 450,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "ifi-contributions-donut",
+    "filename": "ifi-contributions-donut.svg",
+    "width": 900,
+    "height": 540,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "ifi-contributions-by-type",
+    "filename": "ifi-contributions-by-type.svg",
+    "width": 900,
+    "height": 450,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "top-ifi-recipient-countries",
+    "filename": "top-ifi-recipient-countries.svg",
+    "width": 900,
+    "height": 450,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "top-private-sector-contributors",
+    "filename": "top-private-sector-contributors.svg",
+    "width": 900,
+    "height": 450,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "private-sector-contributions-by-type",
+    "filename": "private-sector-contributions-by-type.svg",
+    "width": 900,
+    "height": 450,
+    "inlinedVectorFlags": 0
+  },
+  {
+    "type": "top-15-recipient-countries-of-other-resources",
+    "filename": "top-15-recipient-countries-of-other-resources.svg",
+    "width": 1200,
+    "height": 800
+  }
+]

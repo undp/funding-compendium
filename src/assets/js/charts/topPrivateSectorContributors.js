@@ -16,13 +16,16 @@ const values = [
   3.465347, 2.620811, 2.3, 2.217801, 2.130149
 ];
 
-const palette = CATEGORY_COLORS.slice(0, donors.length);
+const palette = [
+  '#0069B3', '#3D9999', '#8964BC', '#E86B2E', '#AD7F00',
+  '#4C8FC0', '#6EB3B3', '#A58ACB', '#EE8C5B', '#C69E2D'
+];
 
 export function initTopPrivateSectorContributors(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -34,15 +37,15 @@ export function initTopPrivateSectorContributors(el, echarts) {
       borderWidth: 1,
       padding: 12,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const item = params[0];
         const exact = Math.round(item.value * 1000000).toLocaleString('en-US');
-        return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-size:13px;font-weight:700;margin-bottom:6px">${item.name}</div>
-          <div style="font-family:'Proxima Nova',Arial,sans-serif">Contribution: <strong>$${exact}</strong></div>`;
+        return `<div style="font-family:'ProximaNova',Arial,sans-serif;font-size:13px;font-weight:700;margin-bottom:6px">${item.name}</div>
+          <div style="font-family:'ProximaNova',Arial,sans-serif">Contribution: <strong>$${exact}</strong></div>`;
       }
     },
     grid: {
@@ -60,7 +63,7 @@ export function initTopPrivateSectorContributors(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 10,
+        fontSize: 12,
         formatter: (value) => `$${value}M`
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -73,7 +76,7 @@ export function initTopPrivateSectorContributors(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#303944',
-        fontSize: 11,
+        fontSize: 13,
         lineHeight: 14,
         margin: 14,
         width: 240,
@@ -94,10 +97,33 @@ export function initTopPrivateSectorContributors(el, echarts) {
         distance: 8,
           formatter: (params) => `$${Math.round(params.value)}M`,
         color: '#303944',
-        fontSize: 11,
+        fontSize: 13,
         fontWeight: 700
       },
       emphasis: { itemStyle: { opacity: 0.8 } }
+    }],
+    media: [{
+      query: { maxWidth: 639 },
+      option: {
+        grid: { left: 116, right: 48, top: 25, bottom: 40 },
+        xAxis: {
+          interval: 5,
+          axisLabel: { fontSize: 10 }
+        },
+        yAxis: {
+          axisLabel: {
+            fontSize: 10,
+            lineHeight: 12,
+            margin: 8,
+            width: 102,
+            overflow: 'break'
+          }
+        },
+        series: [{
+          barWidth: 14,
+          label: { distance: 4, fontSize: 10 }
+        }]
+      }
     }]
   });
 
@@ -110,4 +136,3 @@ export function initTopPrivateSectorContributors(el, echarts) {
 }
 
 export default initTopPrivateSectorContributors;
-import { CATEGORY_COLORS } from './chartColors';

@@ -1,3 +1,5 @@
+import { CATEGORY_COLORS } from './chartColors';
+
 const funds = [
   'Peacebuilding Fund',
   'Somalia Joint Fund',
@@ -38,7 +40,7 @@ export function initTopUnPooledFunds(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
@@ -47,15 +49,15 @@ export function initTopUnPooledFunds(el, echarts) {
       borderWidth: 1,
       padding: 12,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const item = params[0];
         const exact = Math.round(item.value * 1000000).toLocaleString('en-US');
-        return `<div style="font-family:'Proxima Nova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${item.name}</div>
-          <div style="font-family:'Proxima Nova',Arial,sans-serif">Net funded amount: <strong>$${exact}</strong></div>`;
+        return `<div style="font-family:'ProximaNova',Arial,sans-serif;font-weight:700;margin-bottom:6px">${item.name}</div>
+          <div style="font-family:'ProximaNova',Arial,sans-serif">Net funded amount: <strong>$${exact}</strong></div>`;
       }
     },
     grid: {
@@ -73,7 +75,7 @@ export function initTopUnPooledFunds(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 11,
+        fontSize: 13,
         formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -86,8 +88,8 @@ export function initTopUnPooledFunds(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#2F3742',
-        fontSize: 11,
-        lineHeight: 14,
+        fontSize: 13,
+        lineHeight: 16,
         margin: 14,
         width: 235,
         overflow: 'break'
@@ -111,11 +113,31 @@ export function initTopUnPooledFunds(el, echarts) {
         distance: 7,
         formatter: (params) => `$${Math.round(params.value)}M`,
         color: '#3B4650',
-        fontSize: 11,
+        fontSize: 13,
         fontWeight: 600
       },
       emphasis: {
         itemStyle: { color: CATEGORY_COLORS[9] }
+      }
+    }],
+    media: [{
+      query: { maxWidth: 639 },
+      option: {
+        grid: { left: 116, right: 52, top: 16, bottom: 40 },
+        xAxis: { axisLabel: { fontSize: 10 } },
+        yAxis: {
+          axisLabel: {
+            fontSize: 10,
+            lineHeight: 12,
+            margin: 8,
+            width: 100,
+            overflow: 'break'
+          }
+        },
+        series: [{
+          barWidth: 12,
+          label: { distance: 4, fontSize: 10 }
+        }]
       }
     }]
   });
@@ -129,4 +151,3 @@ export function initTopUnPooledFunds(el, echarts) {
 }
 
 export default initTopUnPooledFunds;
-import { SECONDARY_COLORS, CATEGORY_COLORS } from './chartColors';

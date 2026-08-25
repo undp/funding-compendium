@@ -48,19 +48,19 @@ const flagStyles = Object.fromEntries(
 
 export function initTopGlocContributors(el, echarts) {
   const option = {
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     
     title: {
       left: 0,
       top: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 20,
         fontWeight: 700,
         color: '#232E3D'
       },
       subtextStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         fontSize: 13,
         color: '#6B7280'
       }
@@ -74,7 +74,7 @@ export function initTopGlocContributors(el, echarts) {
       padding: 0,
       textStyle: {
         color: '#232E3D',
-        fontSize: 13
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
@@ -96,8 +96,8 @@ export function initTopGlocContributors(el, echarts) {
       itemHeight: 8,
       itemGap: 22,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#4B5563'
       }
     },
@@ -115,7 +115,7 @@ export function initTopGlocContributors(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#6B7280',
-        fontSize: 11,
+        fontSize: 13,
         formatter: '${value}M'
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -132,8 +132,8 @@ export function initTopGlocContributors(el, echarts) {
           width: 160,
           align: 'right',
           color: '#232E3D',
-          fontSize: 12,
-          lineHeight: 20,
+          fontSize: 14,
+          lineHeight: 21,
           margin: 58
         }
       },
@@ -199,7 +199,7 @@ export function initTopGlocContributors(el, echarts) {
           distance: 8,
           formatter: (params) => `$${params.value.toFixed(2)}M`,
           color: '#232E3D',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700
         },
         z: 10

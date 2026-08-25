@@ -35,7 +35,7 @@ const PRODUCTION = process.argv.includes('--production');
 // Build the "docs" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, javascript, images, favicon, copy), sassBuild, publish)
+  gulp.series(clean, gulp.parallel(pages, javascript, images, favicon, copy, rootFiles), sassBuild, publish)
 );
 
 // Build the site, run the server, and watch for file changes
@@ -58,6 +58,12 @@ function clean(done) {
 function copy() {
   return gulp.src(PATH_ASSETS, { encoding: false })
     .pipe(gulp.dest(PATH_DIST + '/assets'));
+}
+
+// Preserve root-level hosting files when dist and docs are rebuilt.
+function rootFiles() {
+  return gulp.src('src/CNAME', { encoding: false })
+    .pipe(gulp.dest(PATH_DIST));
 }
 
 // copy compiled assets to final destination

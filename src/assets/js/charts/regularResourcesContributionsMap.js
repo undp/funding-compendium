@@ -50,7 +50,7 @@ export function initRegularResourcesContributionsMap(el, echarts) {
   chart.setOption({
       animationDuration: 700,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#222'
       },
       title: {
@@ -59,14 +59,14 @@ export function initRegularResourcesContributionsMap(el, echarts) {
         left: 'center',
         top: 32,
         textStyle: {
-          fontFamily: 'Proxima Nova, Arial, sans-serif',
+          fontFamily: 'ProximaNova, Arial, sans-serif',
           fontSize: 20,
           fontWeight: 700,
           color: '#333'
         },
         subtextStyle: {
-          fontFamily: 'Proxima Nova, Arial, sans-serif',
-          fontSize: 12,
+          fontFamily: 'ProximaNova, Arial, sans-serif',
+          fontSize: 14,
           color: '#666',
           lineHeight: 18
         }
@@ -79,19 +79,19 @@ export function initRegularResourcesContributionsMap(el, echarts) {
         borderWidth: 1,
         padding: [12, 14],
         textStyle: {
-          fontFamily: 'Proxima Nova, Arial, sans-serif',
+          fontFamily: 'ProximaNova, Arial, sans-serif',
           color: '#222',
-          fontSize: 12,
+          fontSize: 14,
           lineHeight: 19
         },
         formatter: function (params) {
           const item = contributors.find((country) => (country.mapName || country.name) === params.name);
           if (!item) {
-            return `<div style="font-family:'Proxima Nova',Arial,sans-serif"><strong>${params.name}</strong><br><span style="color:#777">No contribution shown</span></div>`;
+            return `<div style="font-family:'ProximaNova',Arial,sans-serif"><strong>${params.name}</strong><br><span style="color:#777">No contribution shown</span></div>`;
           }
 
           const share = (item.value / total) * 100;
-          return `<div style="min-width:210px;font-family:'Proxima Nova',Arial,sans-serif">
+          return `<div style="min-width:210px;font-family:'ProximaNova',Arial,sans-serif">
             <div style="font-size:14px;font-weight:700;margin-bottom:8px">${item.name}</div>
             <div style="display:flex;justify-content:space-between;gap:20px;margin-bottom:4px"><span style="color:#666">Ranking</span><strong>#${item.rank}</strong></div>
             <div style="display:flex;justify-content:space-between;gap:20px;margin-bottom:4px"><span style="color:#666">Contribution</span><strong>${formatUsd(item.value)}</strong></div>
@@ -108,9 +108,9 @@ export function initRegularResourcesContributionsMap(el, echarts) {
         itemHeight: 10,
         itemGap: 14,
         textStyle: {
-          fontFamily: 'Proxima Nova, Arial, sans-serif',
+          fontFamily: 'ProximaNova, Arial, sans-serif',
           color: '#555',
-          fontSize: 11
+          fontSize: 13
         },
         pieces: [
           { min: 50000000, label: '$50M+', color: RESOURCE_COLORS.regular },
@@ -140,8 +140,8 @@ export function initRegularResourcesContributionsMap(el, echarts) {
         emphasis: {
           label: {
             show: true,
-            fontFamily: 'Proxima Nova, Arial, sans-serif',
-            fontSize: 11,
+            fontFamily: 'ProximaNova, Arial, sans-serif',
+            fontSize: 13,
             fontWeight: 700,
             color: '#111',
             formatter: function (params) {

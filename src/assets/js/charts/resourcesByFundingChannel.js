@@ -86,7 +86,7 @@ export function initResourcesByFundingChannel(el, echarts) {
     'Vertical funds': '#E86B2E',
     'United Nations pooled funds': '#003B66',
     'Reimbursable support services': '#8964BC',
-    'Thematic funds': '#3D9999'
+    'Thematic funds': '#6AB7B7'
   };
 
   const colors = {
@@ -155,6 +155,73 @@ export function initResourcesByFundingChannel(el, echarts) {
       'B'
     );
   }
+
+  function renderMobileFundingChannels() {
+    el.parentElement?.querySelector('.fl-channel-mobile')?.remove();
+
+    const mobile = document.createElement('div');
+    mobile.className = 'fl-channel-mobile';
+    mobile.setAttribute('role', 'group');
+    mobile.setAttribute('aria-label', 'Resources by funding channel and year');
+    mobile.innerHTML = `
+      <div class="fl-channel-mobile__years" role="group" aria-label="Select a year"></div>
+      <div class="fl-channel-mobile__summary" aria-live="polite"></div>
+      <div class="fl-channel-mobile__breakdown"></div>
+    `;
+
+    const yearControls = mobile.querySelector('.fl-channel-mobile__years');
+    const summary = mobile.querySelector('.fl-channel-mobile__summary');
+    const breakdown = mobile.querySelector('.fl-channel-mobile__breakdown');
+    let selectedIndex = years.length - 1;
+
+    const update = () => {
+      yearControls.querySelectorAll('button').forEach((button, index) => {
+        button.setAttribute('aria-pressed', String(index === selectedIndex));
+      });
+
+      summary.innerHTML = `
+        <span>${years[selectedIndex]} total</span>
+        <strong>${formatTotal(totals[selectedIndex])}</strong>
+      `;
+      breakdown.innerHTML = '<h3>Funding breakdown</h3>';
+
+      seriesOrder
+        .map((name) => ({ name, value: data[name][selectedIndex] }))
+        .sort((a, b) => b.value - a.value)
+        .forEach(({ name, value }) => {
+          const percent = (value / totals[selectedIndex]) * 100;
+          const row = document.createElement('div');
+          row.className = 'fl-channel-mobile__row';
+          row.innerHTML = `
+            <div class="fl-channel-mobile__label">
+              <span>${name}</span>
+              <strong>${Math.round(percent)}%</strong>
+            </div>
+            <div class="fl-channel-mobile__track" aria-hidden="true">
+              <span style="--bar-width:${percent}%;--bar-color:${colors[name]}"></span>
+            </div>
+            <span class="fl-channel-mobile__value">${formatM(value)}</span>
+          `;
+          breakdown.appendChild(row);
+        });
+    };
+
+    years.forEach((year, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.innerHTML = `<span>${year}</span><strong>${formatTotal(totals[index])}</strong>`;
+      button.addEventListener('click', () => {
+        selectedIndex = index;
+        update();
+      });
+      yearControls.appendChild(button);
+    });
+
+    update();
+    el.insertAdjacentElement('afterend', mobile);
+  }
+
+  renderMobileFundingChannels();
 
   // ======================================================
   // BUILD SERIES
@@ -328,7 +395,7 @@ export function initResourcesByFundingChannel(el, echarts) {
             color: '#303030',
 
             fontFamily:
-              'Proxima Nova, Arial, sans-serif',
+              'ProximaNova, Arial, sans-serif',
 
             fontSize: 14,
 
@@ -346,9 +413,9 @@ export function initResourcesByFundingChannel(el, echarts) {
             color: '#303030',
 
             fontFamily:
-              'Proxima Nova, Arial, sans-serif',
+              'ProximaNova, Arial, sans-serif',
 
-            fontSize: 12,
+            fontSize: 14,
 
             fontWeight: 700,
 
@@ -364,9 +431,9 @@ export function initResourcesByFundingChannel(el, echarts) {
             color: '#303030',
 
             fontFamily:
-              'Proxima Nova, Arial, sans-serif',
+              'ProximaNova, Arial, sans-serif',
 
-            fontSize: 10,
+            fontSize: 12,
 
             fontWeight: 700,
 
@@ -473,9 +540,9 @@ export function initResourcesByFundingChannel(el, echarts) {
               color: '#777777',
 
               fontFamily:
-                'Proxima Nova, Arial, sans-serif',
+                'ProximaNova, Arial, sans-serif',
 
-              fontSize: 10,
+              fontSize: 12,
 
               fontWeight: 500,
 
@@ -490,7 +557,7 @@ export function initResourcesByFundingChannel(el, echarts) {
               color: '#222222',
 
               fontFamily:
-                'Proxima Nova, Arial, sans-serif',
+                'ProximaNova, Arial, sans-serif',
 
               fontSize: 14,
 
@@ -557,7 +624,7 @@ export function initResourcesByFundingChannel(el, echarts) {
       color: '#263746',
 
       fontFamily:
-        'Proxima Nova, Arial, sans-serif',
+        'ProximaNova, Arial, sans-serif',
 
       fontSize: 14,
 
@@ -578,7 +645,7 @@ export function initResourcesByFundingChannel(el, echarts) {
   // ======================================================
 
   const option = {
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
 
     animation: false,
     color:
@@ -625,7 +692,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           margin: 8,
 
           fontFamily:
-            'Proxima Nova, Arial, sans-serif',
+            'ProximaNova, Arial, sans-serif',
 
           fontSize: 13,
 
@@ -652,7 +719,7 @@ export function initResourcesByFundingChannel(el, echarts) {
         color: '#222222',
 
         fontFamily:
-          'Proxima Nova, Arial, sans-serif',
+          'ProximaNova, Arial, sans-serif',
 
         fontSize: 13
 
@@ -727,7 +794,7 @@ export function initResourcesByFundingChannel(el, echarts) {
       textStyle: {
 
         fontFamily:
-          'Proxima Nova, Arial, sans-serif',
+          'ProximaNova, Arial, sans-serif',
 
         fontSize: 15,
 
@@ -744,7 +811,7 @@ export function initResourcesByFundingChannel(el, echarts) {
             width: 220,
 
             fontFamily:
-              'Proxima Nova, Arial, sans-serif',
+              'ProximaNova, Arial, sans-serif',
 
             fontSize: 14,
 
@@ -759,7 +826,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           value: {
 
             fontFamily:
-              'Proxima Nova, Arial, sans-serif',
+              'ProximaNova, Arial, sans-serif',
 
             fontSize: 13,
 
@@ -774,9 +841,9 @@ export function initResourcesByFundingChannel(el, echarts) {
           share: {
 
             fontFamily:
-              'Proxima Nova, Arial, sans-serif',
+              'ProximaNova, Arial, sans-serif',
 
-            fontSize: 12,
+            fontSize: 14,
 
             fontWeight: 400,
 
@@ -846,7 +913,7 @@ export function initResourcesByFundingChannel(el, echarts) {
         color: '#111111',
 
         fontFamily:
-          'Proxima Nova, Arial, sans-serif',
+          'ProximaNova, Arial, sans-serif',
 
         fontSize: 16
 
@@ -879,7 +946,7 @@ export function initResourcesByFundingChannel(el, echarts) {
           borderRadius: 0,
 
           fontFamily:
-            'Proxima Nova, Arial, sans-serif',
+            'ProximaNova, Arial, sans-serif',
 
           fontSize: 13,
 

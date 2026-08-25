@@ -25,13 +25,13 @@ const totals = [
   70.688079, 36.561612, 26.255504, 22.055319, 19.048081,
   18.496085, 16.860748, 15.313088, 15, 12.473148
 ];
-const ifiColors = ['#B7862B', '#7E492F'];
+const ifiColors = [IFI_COLORS.direct, IFI_COLORS.indirect];
 
 export function initTopIfiRecipientCountries(el, echarts) {
   const chart = echarts.init(el);
 
   chart.setOption({
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -43,9 +43,9 @@ export function initTopIfiRecipientCountries(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
@@ -66,8 +66,8 @@ export function initTopIfiRecipientCountries(el, echarts) {
       itemHeight: 8,
       itemGap: 24,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 11,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 13,
         color: '#4B5563'
       },
       data: ['IFI Indirect', 'IFI Direct']
@@ -87,7 +87,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 12,
+        fontSize: 14,
         formatter: (value) => `$${value}M`
       },
       splitLine: { lineStyle: { color: '#C5CBD1' } }
@@ -100,7 +100,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
       axisTick: { show: false },
       axisLabel: {
         color: '#303944',
-        fontSize: 12,
+        fontSize: 14,
         margin: 14,
         width: 165,
         overflow: 'break',
@@ -140,7 +140,7 @@ export function initTopIfiRecipientCountries(el, echarts) {
           distance: 8,
           formatter: (params) => `$${Math.round(params.value)}M`,
           color: '#303944',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700
         },
         z: 10
@@ -157,5 +157,5 @@ export function initTopIfiRecipientCountries(el, echarts) {
 }
 
 export default initTopIfiRecipientCountries;
-import { SECONDARY_COLORS } from './chartColors';
+import { IFI_COLORS } from './chartColors';
 import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

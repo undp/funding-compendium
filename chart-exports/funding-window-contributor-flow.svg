@@ -1,0 +1,140 @@
+<svg width="1100" height="650" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1100 650">
+<rect width="1100" height="650" x="0" y="0" fill="none"></rect>
+<g clip-path="url(#zr15-c0)">
+<path d="M16 0C247.8 0 267.2 0 499 0L499 16.2C267.2 16.2 247.8 16.2 16 16.2Z" transform="translate(205 24)" fill="#0069B3" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M16 16.2C247.8 16.2 267.2 176.1 499 176.1L499 260.2C267.2 260.2 247.8 100.3 16 100.3Z" transform="translate(205 24)" fill="#3D9999" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M16 152.3C247.8 152.3 267.2 16.2 499 16.2L499 79.4C267.2 79.4 247.8 215.5 16 215.5Z" transform="translate(205 24)" fill="#0069B3" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M16 215.5C247.8 215.5 267.2 260.2 499 260.2L499 268.1C267.2 268.1 247.8 223.5 16 223.5Z" transform="translate(205 24)" fill="#3D9999" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M16 275.5C247.8 275.5 267.2 79.4 499 79.4L499 109.3C267.2 109.3 247.8 305.4 16 305.4Z" transform="translate(205 24)" fill="#0069B3" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M16 305.4C247.8 305.4 267.2 268.1 499 268.1L499 280.4C267.2 280.4 247.8 317.7 16 317.7Z" transform="translate(205 24)" fill="#3D9999" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M16 369.7C247.8 369.7 267.2 109.3 499 109.3L499 111.6C267.2 111.6 247.8 372 16 372Z" transform="translate(205 24)" fill="#0069B3" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M16 372C247.8 372 267.2 280.4 499 280.4L499 281.4C267.2 281.4 247.8 373 16 373Z" transform="translate(205 24)" fill="#3D9999" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M16 372.9C247.8 372.9 267.2 415.5 499 415.5L499 418.3C267.2 418.3 247.8 375.7 16 375.7Z" transform="translate(205 24)" fill="#8964BC" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="zr15-cls-302"></path>
+<path d="M16 375.7C247.8 375.7 267.2 600.1 499 600.1L499 601.1C267.2 601.1 247.8 376.7 16 376.7Z" transform="translate(205 24)" fill="#E86B2E" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="zr15-cls-303"></path>
+<path d="M16 428.1C247.8 428.1 267.2 111.6 499 111.6L499 115.5C267.2 115.5 247.8 432 16 432Z" transform="translate(205 24)" fill="#0069B3" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M16 432C247.8 432 267.2 281.4 499 281.4L499 282.9C267.2 282.9 247.8 433.6 16 433.6Z" transform="translate(205 24)" fill="#3D9999" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M16 485.6C247.8 485.6 267.2 115.5 499 115.5L499 116.5C267.2 116.5 247.8 486.6 16 486.6Z" transform="translate(205 24)" fill="#0069B3" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M16 486.4C247.8 486.4 267.2 282.9 499 282.9L499 287.5C267.2 287.5 247.8 491 16 491Z" transform="translate(205 24)" fill="#3D9999" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M16 543C247.8 543 267.2 116.3 499 116.3L499 119.9C267.2 119.9 247.8 546.6 16 546.6Z" transform="translate(205 24)" fill="#0069B3" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M16 598.6C247.8 598.6 267.2 287.5 499 287.5L499 291C267.2 291 247.8 602 16 602Z" transform="translate(205 24)" fill="#3D9999" fill-opacity="0.52" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M0 0l16 0l0 100.3l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M0 152.3l16 0l0 71.1l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M0 275.5l16 0l0 42.2l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M0 369.7l16 0l0 6.5l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M0 428.1l16 0l0 5.5l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M0 485.6l16 0l0 5.4l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M0 543l16 0l0 3.6l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M0 598.6l16 0l0 3.4l-16 0Z" transform="translate(205 24)" fill="#526D7D" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="zr15-cls-304"></path>
+<path d="M499 0l16 0l0 119.9l-16 0Z" transform="translate(205 24)" fill="#0069B3" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="zr15-cls-300"></path>
+<path d="M499 176.1l16 0l0 114.9l-16 0Z" transform="translate(205 24)" fill="#3D9999" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="zr15-cls-301"></path>
+<path d="M499 415.5l16 0l0 2.8l-16 0Z" transform="translate(205 24)" fill="#8964BC" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="zr15-cls-302"></path>
+<path d="M499 600.1l16 0l0 0.5l-16 0Z" transform="translate(205 24)" fill="#E86B2E" stroke="#ffffff" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="zr15-cls-303"></path>
+<path d="M-49 -13.5l49 0l0 7l-49 0Z" transform="translate(154.5 74.1571)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-10" transform="translate(154.5 74.1571)" fill="#303944">Germany</text>
+<path d="M-49 6.5l49 0l0 7l-49 0Z" transform="translate(154.5 74.1571)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 74.1571)" fill="#303944">$48.49M</text>
+<path d="M-49 -13.5l49 0l0 7l-49 0Z" transform="translate(154.5 211.883)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-10" transform="translate(154.5 211.883)" fill="#303944">Denmark</text>
+<path d="M-49 6.5l49 0l0 7l-49 0Z" transform="translate(154.5 211.883)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 211.883)" fill="#303944">$34.39M</text>
+<path d="M-42 -13.5l42 0l0 7l-42 0Z" transform="translate(154.5 320.5629)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-10" transform="translate(154.5 320.5629)" fill="#303944">Sweden</text>
+<path d="M-49 6.5l49 0l0 7l-49 0Z" transform="translate(154.5 320.5629)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 320.5629)" fill="#303944">$20.41M</text>
+<path d="M-70 -13.5l70 0l0 7l-70 0Z" transform="translate(154.5 396.9086)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-10" transform="translate(154.5 396.9086)" fill="#303944">Luxembourg</text>
+<path d="M-42 6.5l42 0l0 7l-42 0Z" transform="translate(154.5 396.9086)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 396.9086)" fill="#303944">$3.13M</text>
+<path d="M-119 -13.5l119 0l0 7l-119 0Z" transform="translate(154.5 454.8682)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" xml:space="preserve" y="-10" transform="translate(154.5 454.8682)" fill="#303944">Republic of Korea</text>
+<path d="M-42 6.5l42 0l0 7l-42 0Z" transform="translate(154.5 454.8682)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 454.8682)" fill="#303944">$2.63M</text>
+<path d="M-49 -13.5l49 0l0 7l-49 0Z" transform="translate(154.5 512.2862)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-10" transform="translate(154.5 512.2862)" fill="#303944">Iceland</text>
+<path d="M-42 6.5l42 0l0 7l-42 0Z" transform="translate(154.5 512.2862)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 512.2862)" fill="#303944">$2.60M</text>
+<path d="M-77 -13.5l77 0l0 7l-77 0Z" transform="translate(154.5 568.7736)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" y="-10" transform="translate(154.5 568.7736)" fill="#303944">Switzerland</text>
+<path d="M-42 6.5l42 0l0 7l-42 0Z" transform="translate(154.5 568.7736)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 568.7736)" fill="#303944">$1.74M</text>
+<path d="M-98 -13.5l98 0l0 7l-98 0Z" transform="translate(154.5 624.2841)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" xml:space="preserve" y="-10" transform="translate(154.5 624.2841)" fill="#303944">United Kingdom</text>
+<path d="M-42 6.5l42 0l0 7l-42 0Z" transform="translate(154.5 624.2841)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:400;" y="10" transform="translate(154.5 624.2841)" fill="#303944">$1.66M</text>
+<path d="M0 -15l10 0l0 10l-10 0Z" transform="translate(734.5 83.955)" fill="#0069B3" class="zr15-cls-300"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:ProximaNova, Arial, sans-serif;" xml:space="preserve" y="-10" transform="translate(734.5 83.955)" fill="#333"> </text>
+<text dominant-baseline="central" text-anchor="start" style="font: normal normal 12px ProximaNova, Arial, sans-serif" xml:space="preserve" x="10" y="-10" transform="translate(734.5 83.955)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">  </text>
+<path d="M24 -13.5l336 0l0 7l-336 0Z" transform="translate(734.5 83.955)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" xml:space="preserve" x="24" y="-10" transform="translate(734.5 83.955)" fill="#0069B3">Governance, Peacebuilding, Crisis and Resilience</text>
+<path d="M0 5.5l67 0l0 7l-67 0Z" transform="translate(734.5 83.955)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" x="18" y="9" transform="translate(734.5 83.955)" fill="#263746">$57.96M</text>
+<path d="M0 -15l10 0l0 10l-10 0Z" transform="translate(734.5 257.5328)" fill="#3D9999" class="zr15-cls-301"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:ProximaNova, Arial, sans-serif;" xml:space="preserve" y="-10" transform="translate(734.5 257.5328)" fill="#333"> </text>
+<text dominant-baseline="central" text-anchor="start" style="font: normal normal 12px ProximaNova, Arial, sans-serif" xml:space="preserve" x="10" y="-10" transform="translate(734.5 257.5328)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">  </text>
+<path d="M24 -13.5l182 0l0 7l-182 0Z" transform="translate(734.5 257.5328)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" xml:space="preserve" x="24" y="-10" transform="translate(734.5 257.5328)" fill="#3D9999">Nature, Climate and Energy</text>
+<path d="M0 5.5l67 0l0 7l-67 0Z" transform="translate(734.5 257.5328)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" x="18" y="9" transform="translate(734.5 257.5328)" fill="#263746">$55.52M</text>
+<path d="M0 -15l10 0l0 10l-10 0Z" transform="translate(734.5 440.9084)" fill="#8964BC" class="zr15-cls-302"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:ProximaNova, Arial, sans-serif;" xml:space="preserve" y="-10" transform="translate(734.5 440.9084)" fill="#333"> </text>
+<text dominant-baseline="central" text-anchor="start" style="font: normal normal 12px ProximaNova, Arial, sans-serif" xml:space="preserve" x="10" y="-10" transform="translate(734.5 440.9084)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">  </text>
+<path d="M24 -13.5l273 0l0 7l-273 0Z" transform="translate(734.5 440.9084)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" xml:space="preserve" x="24" y="-10" transform="translate(734.5 440.9084)" fill="#8964BC">Gender Equality and Women&#39;s Empowerment</text>
+<path d="M0 5.5l60 0l0 7l-60 0Z" transform="translate(734.5 440.9084)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" x="18" y="9" transform="translate(734.5 440.9084)" fill="#263746">$1.34M</text>
+<path d="M0 -15l10 0l0 10l-10 0Z" transform="translate(734.5 624.2841)" fill="#E86B2E" class="zr15-cls-303"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:ProximaNova, Arial, sans-serif;" xml:space="preserve" y="-10" transform="translate(734.5 624.2841)" fill="#333"> </text>
+<text dominant-baseline="central" text-anchor="start" style="font: normal normal 12px ProximaNova, Arial, sans-serif" xml:space="preserve" x="10" y="-10" transform="translate(734.5 624.2841)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">  </text>
+<path d="M24 -13.5l154 0l0 7l-154 0Z" transform="translate(734.5 624.2841)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:13px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" xml:space="preserve" x="24" y="-10" transform="translate(734.5 624.2841)" fill="#E86B2E">Poverty and Inequality</text>
+<path d="M0 5.5l60 0l0 7l-60 0Z" transform="translate(734.5 624.2841)" fill="none" pointer-events="visible" class="zr15-cls-305"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:14px;font-family:ProximaNova, Arial, sans-serif;font-weight:700;" x="18" y="9" transform="translate(734.5 624.2841)" fill="#263746">$0.22M</text>
+</g>
+<defs >
+<clipPath id="zr15-c0">
+<path d="M-10.5 -10.5l536 0l0 623l-536 0Z" transform="translate(205 24)" fill="#000" class="zr15-cls-298 zr15-cls-299"></path>
+</clipPath>
+</defs>
+<style ><![CDATA[
+.zr15-cls-298 {
+animation:zr15-ani-0 1s linear both;
+}
+.zr15-cls-299:hover {
+cursor:pointer;
+fill:rgba(0,0,0,1);
+}
+.zr15-cls-300:hover {
+cursor:pointer;
+fill:rgba(0,115,196,1);
+}
+.zr15-cls-301:hover {
+cursor:pointer;
+fill:rgba(67,168,168,1);
+}
+.zr15-cls-302:hover {
+cursor:pointer;
+fill:rgba(150,110,206,1);
+}
+.zr15-cls-303:hover {
+cursor:pointer;
+fill:rgba(255,117,50,1);
+}
+.zr15-cls-304:hover {
+cursor:pointer;
+fill:rgba(90,119,137,1);
+}
+.zr15-cls-305:hover {
+cursor:pointer;
+}
+@keyframes zr15-ani-0 {
+0% {
+d:path("M-10.5 -10.5l0 0l0 623l0 0Z");
+}
+100% {
+d:path("M-10.5 -10.5l536 0l0 623l-536 0Z");
+}
+}
+]]>
+
+</style>
+<svg x="169" y="65.15712881708228" width="28" height="18" viewBox="0 0 5 3" preserveAspectRatio="xMidYMid meet" overflow="hidden"><path d="M0 0h5v3H0z"/><path fill="#D00" d="M0 1h5v2H0z"/><path fill="#FFCE00" d="M0 2h5v1H0z"/></svg><svg x="169" y="202.88298630359193" width="28" height="18" viewBox="0 0 37 28" preserveAspectRatio="xMidYMid meet" overflow="hidden"><path fill="#c8102e" d="M0 0h37v28H0Z"/><path stroke="#fff" stroke-width="4" d="M0 14h37M14 0v28"/></svg><svg x="169" y="311.56290388262136" width="28" height="18" viewBox="0 0 8 5" preserveAspectRatio="xMidYMid meet" overflow="hidden"><path fill="#005293" d="M0 0h8v5H0Z"/><path stroke="#fecb00" d="M0 2.5h8M3 0v5"/></svg><svg x="169" y="387.9085917826176" width="28" height="18" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" overflow="hidden"><path fill="#00A1DE" d="M0 300h1000v300H0z"/><path fill="#ed2939" d="M0 0h1000v300H0z"/><path fill="#fff" d="M0 200h1000v200H0z"/></svg><svg x="169" y="445.868219354995" width="28" height="18" viewBox="-72 -48 144 96" preserveAspectRatio="xMidYMid meet" overflow="hidden"><path fill="#fff" d="M-72-48v96H72v-96z"/><g stroke="#000" stroke-width="4"><path d="M-34.946-37.72-48.26-17.75m4.992 3.328 13.313-19.97m4.992 3.329-13.312 19.969m63.236 42.157 6.101-9.152m1.11-1.664 6.101-9.153m4.993 3.328-6.102 9.153m-1.11 1.664-6.101 9.152m4.992 3.329 6.102-9.153m1.11-1.664 6.1-9.153M-48.259 17.75l13.313 19.97m4.992-3.329-6.102-9.152m-1.109-1.664-6.102-9.153m4.993-3.328 13.312 19.97m63.236-42.158-6.101-9.153m-1.11-1.664-6.101-9.152m4.992-3.328 13.313 19.969m4.992-3.328-6.102-9.153m-1.11-1.664-6.1-9.153"/></g><path fill="#cd2e3a" d="M9.985 6.656A18 18 0 1 1-19.97-13.313a24 24 0 1 1 39.938 26.626"/><path fill="#0047a0" d="M0 0a12 12 0 1 1 19.97 13.313 24 24 0 1 1-39.94-26.626A12 12 0 1 0 0 0"/></svg><svg x="169" y="503.28618963820236" width="28" height="18" viewBox="0 0 25 18" preserveAspectRatio="xMidYMid meet" overflow="hidden"><path d="M0 0h25v18H0Z" fill="#02529C"/><path d="M0 9h25M9 0v18" stroke-width="4" stroke="#FFF"/><path d="M0 9h25M9 0v18" stroke-width="2" stroke="#DC1E35"/></svg><svg x="175" y="559.7736088860155" width="18" height="18" viewBox="0 0 32 32" preserveAspectRatio="xMidYMid meet" overflow="hidden"><path d="M0 0h32v32H0z" fill="red"/><path d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z" fill="#fff"/></svg><svg x="169" y="615.2840932163022" width="28" height="18" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid meet" overflow="hidden"><clipPath id="embedded-flag-8-a"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="embedded-flag-8-b"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(#embedded-flag-8-a)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" clip-path="url(#embedded-flag-8-b)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg></svg>

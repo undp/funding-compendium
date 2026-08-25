@@ -15,7 +15,7 @@ export function initPooledFundContributions(el, echarts) {
 
   chart.setOption({
    
-    textStyle: { fontFamily: 'Proxima Nova, Arial, sans-serif' },
+    textStyle: { fontFamily: 'ProximaNova, Arial, sans-serif' },
     tooltip: {
       trigger: 'axis',
       axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(35, 46, 61, 0.035)' } },
@@ -24,9 +24,9 @@ export function initPooledFundContributions(el, echarts) {
       borderWidth: 0,
       padding: 0,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#232E3D',
-        fontSize: 12
+        fontSize: 14
       },
       formatter: function (params) {
         const index = params[0].dataIndex;
@@ -49,8 +49,8 @@ export function initPooledFundContributions(el, echarts) {
       itemHeight: 8,
       itemGap: 20,
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
-        fontSize: 12,
+        fontFamily: 'ProximaNova, Arial, sans-serif',
+        fontSize: 14,
         color: '#4B5563'
       },
       data: [
@@ -70,14 +70,14 @@ export function initPooledFundContributions(el, echarts) {
     xAxis: {
       type: 'value',
       min: 0,
-      max: 299,
+      max: 300,
       interval: 50,
       axisLine: { show: false },
       axisTick: { show: false },
       axisLabel: {
         color: '#7A838F',
-        fontSize: 11,
-        formatter: (value) => value === 299 ? '' : `$${value}M`
+        fontSize: 13,
+        formatter: (value) => `$${value}M`
       },
       splitLine: {
         show: true,
@@ -144,7 +144,7 @@ export function initPooledFundContributions(el, echarts) {
           distance: 9,
           formatter: (params) => `$${undpTotal[params.dataIndex]}M`,
           color: '#232E3D',
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 700
         },
         z: 20
@@ -161,5 +161,4 @@ export function initPooledFundContributions(el, echarts) {
 }
 
 export default initPooledFundContributions;
-import { SECONDARY_COLORS } from './chartColors';
 import { detailedTooltip, formatTooltipPercent } from './detailedTooltip';

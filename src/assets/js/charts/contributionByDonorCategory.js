@@ -110,11 +110,165 @@ export function initContributionByDonorCategory(el, echarts) {
       : `${rounded.toFixed(1).replace(/\.0$/, '')}%`;
   };
 
+  const makeMobileRow = ({ label, value, color, scaleTotal, context }) => {
+    const percentOfTotal = (value / total) * 100;
+    const percentOfScale = (value / scaleTotal) * 100;
+    const width = Math.max(2, (value / scaleTotal) * 100);
+    const row = document.createElement('div');
+
+    row.className = 'donor-category-mobile__row';
+    row.innerHTML = `
+      <div class="donor-category-mobile__label">
+        <span>${label}</span>
+        <strong>${formatPercent(context ? percentOfScale : percentOfTotal)}</strong>
+      </div>
+      <div class="donor-category-mobile__track" aria-hidden="true">
+        <span style="--bar-width:${width}%;--bar-color:${color}"></span>
+      </div>
+      <div class="donor-category-mobile__meta">
+        <span>$${formatM(value)}M</span>
+        ${context ? `<span>${formatPercent(percentOfTotal)} of total contributions</span>` : ''}
+      </div>
+    `;
+
+    return row;
+  };
+
+  const renderMobileBreakdown = () => {
+    el.parentElement?.querySelector('.donor-category-mobile')?.remove();
+
+    const mobile = document.createElement('div');
+    mobile.className = 'donor-category-mobile';
+    mobile.setAttribute('role', 'group');
+    mobile.setAttribute('aria-label', 'Contribution by donor category');
+    mobile.innerHTML = '<h3 class="donor-category-mobile__heading">Share of total contributions</h3>';
+
+    [
+      ['Donor country governments', donorGovernments, CATEGORY_COLORS[0]]
+    ].forEach(([label, value, color]) => {
+      const card = document.createElement('div');
+      card.className = 'donor-category-mobile__primary-card';
+      card.appendChild(makeMobileRow({ label, value, color, scaleTotal: total }));
+      mobile.appendChild(card);
+    });
+
+    const multilateralGroup = document.createElement('div');
+    multilateralGroup.className = 'donor-category-mobile__accordion';
+
+    const multilateralSummary = document.createElement('button');
+    multilateralSummary.type = 'button';
+    multilateralSummary.className = 'donor-category-mobile__accordion-trigger';
+    multilateralSummary.setAttribute('aria-expanded', 'false');
+    multilateralSummary.setAttribute('aria-controls', 'multilateral-mobile-breakdown');
+    multilateralSummary.appendChild(makeMobileRow({
+      label: 'Multilateral partners',
+      value: multilateral,
+      color: '#E86B2E',
+      scaleTotal: total
+    }));
+    multilateralSummary.insertAdjacentHTML(
+      'beforeend',
+      '<span class="donor-category-mobile__accordion-action"><span class="show-more">Show more</span><span class="show-less">Show less</span></span>'
+    );
+    multilateralGroup.appendChild(multilateralSummary);
+
+    const multilateralContent = document.createElement('div');
+    multilateralContent.className = 'donor-category-mobile__accordion-content';
+    multilateralContent.id = 'multilateral-mobile-breakdown';
+    multilateralContent.hidden = true;
+    multilateralContent.innerHTML = '<p>Share of multilateral funding</p>';
+
+    [
+      ['Vertical funds', verticalFunds, '#7F2704'],
+      ['European Union', europeanUnion, '#C85118']
+    ].forEach(([label, value, color]) => {
+      multilateralContent.appendChild(makeMobileRow({
+        label, value, color, scaleTotal: multilateral,
+        context: 'of multilateral funding'
+      }));
+    });
+
+    const otherGroup = document.createElement('div');
+    otherGroup.className = 'donor-category-mobile__accordion donor-category-mobile__accordion--nested';
+
+    const otherSummary = document.createElement('button');
+    otherSummary.type = 'button';
+    otherSummary.className = 'donor-category-mobile__accordion-trigger';
+    otherSummary.setAttribute('aria-expanded', 'false');
+    otherSummary.setAttribute('aria-controls', 'other-multilaterals-mobile-breakdown');
+    otherSummary.appendChild(makeMobileRow({
+      label: 'Other multilaterals',
+      value: otherMultilaterals,
+      color: '#F08A54',
+      scaleTotal: multilateral,
+      context: 'of multilateral funding'
+    }));
+    otherSummary.insertAdjacentHTML(
+      'beforeend',
+      '<span class="donor-category-mobile__accordion-action"><span class="show-more">Show more</span><span class="show-less">Show less</span></span>'
+    );
+    otherGroup.appendChild(otherSummary);
+
+    const otherContent = document.createElement('div');
+    otherContent.className = 'donor-category-mobile__accordion-content';
+    otherContent.id = 'other-multilaterals-mobile-breakdown';
+    otherContent.hidden = true;
+    otherContent.innerHTML = '<p>Share of “Other multilaterals”</p>';
+
+    [
+      ['Private sector, foundations, NGOs, academic institutions and others', privateSectorAndOthers, '#F8C3A2'],
+      ['Financial institutions', financialInstitutions, '#D9672C'],
+      ['UN agencies', unAgencies, '#F3A06F']
+    ].forEach(([label, value, color]) => {
+      otherContent.appendChild(makeMobileRow({
+        label, value, color, scaleTotal: otherMultilaterals,
+        context: 'of Other multilaterals'
+      }));
+    });
+
+    otherGroup.appendChild(otherContent);
+    multilateralContent.appendChild(otherGroup);
+    multilateralContent.appendChild(makeMobileRow({
+      label: 'UN pooled funds',
+      value: pooledFunds,
+      color: '#A63A0B',
+      scaleTotal: multilateral,
+      context: 'of multilateral funding'
+    }));
+    multilateralGroup.appendChild(multilateralContent);
+    mobile.appendChild(multilateralGroup);
+    const programmeCard = document.createElement('div');
+    programmeCard.className = 'donor-category-mobile__primary-card';
+    programmeCard.appendChild(makeMobileRow({
+      label: 'Programme country governments',
+      value: programmeGovernments,
+      color: CATEGORY_COLORS[1],
+      scaleTotal: total
+    }));
+    mobile.appendChild(programmeCard);
+
+    [
+      [multilateralSummary, multilateralGroup, multilateralContent],
+      [otherSummary, otherGroup, otherContent]
+    ].forEach(([trigger, accordion, content]) => {
+      trigger.addEventListener('click', () => {
+        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+        accordion.classList.toggle('is-open', !isOpen);
+        content.hidden = isOpen;
+      });
+    });
+
+    el.insertAdjacentElement('afterend', mobile);
+  };
+
+  renderMobileBreakdown();
+
   const option = {
     animationDuration: 600,
 
     textStyle: {
-      fontFamily: 'Proxima Nova, Arial, sans-serif',
+      fontFamily: 'ProximaNova, Arial, sans-serif',
       color: '#222222'
     },
 
@@ -146,7 +300,7 @@ export function initContributionByDonorCategory(el, echarts) {
         return labels[name] || name;
       },
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#333333',
         fontSize: 15,
         lineHeight: 19
@@ -163,7 +317,7 @@ export function initContributionByDonorCategory(el, echarts) {
       padding: [12, 14],
 
       textStyle: {
-        fontFamily: 'Proxima Nova, Arial, sans-serif',
+        fontFamily: 'ProximaNova, Arial, sans-serif',
         color: '#222',
         fontSize: 13,
         lineHeight: 21
@@ -204,7 +358,7 @@ export function initContributionByDonorCategory(el, echarts) {
           <div
             style="
               min-width: 210px;
-              font-family: 'Proxima Nova', Arial, sans-serif;
+              font-family: 'ProximaNova', Arial, sans-serif;
             "
           >
             <div
@@ -310,11 +464,11 @@ export function initContributionByDonorCategory(el, echarts) {
           rich: {
             name: {
               fontFamily:
-                'Proxima Nova, Arial, sans-serif',
+                'ProximaNova, Arial, sans-serif',
 
               color: '#fff',
 
-              fontSize: 12,
+              fontSize: 14,
 
               fontWeight: 400,
               
@@ -326,7 +480,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             percent: {
               fontFamily:
-                'Proxima Nova, Arial, sans-serif',
+                'ProximaNova, Arial, sans-serif',
 
               color: '#fff',
 
@@ -481,7 +635,7 @@ export function initContributionByDonorCategory(el, echarts) {
           rich: {
             name: {
               fontFamily:
-                'Proxima Nova, Arial, sans-serif',
+                'ProximaNova, Arial, sans-serif',
 
               color:
                 '#222',
@@ -498,7 +652,7 @@ export function initContributionByDonorCategory(el, echarts) {
 
             percent: {
               fontFamily:
-                'Proxima Nova, Arial, sans-serif',
+                'ProximaNova, Arial, sans-serif',
 
               color:
                 '#555',
