@@ -1,7 +1,8 @@
 const data = [
   { name: 'KfW', value: 104602576, percent: 33 },
   { name: 'World Bank Group', value: 88113014, percent: 28 },
-  { name: 'Inter-American Development Bank', value: 29975774, percent: 9 },
+  // Balanced whole-number rounding keeps the displayed shares at 100%.
+  { name: 'Inter-American Development Bank', value: 29975774, percent: 10 },
   { name: 'Islamic Development Bank', value: 19732831, percent: 6 },
   { name: 'Development Bank of Latin America and the Caribbean (CAF)', value: 18601822, percent: 6 },
   { name: 'European Investment Bank', value: 17768782, percent: 6 },
