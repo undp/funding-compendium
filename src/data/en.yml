@@ -45,6 +45,7 @@ header:
   language_button_label: Select Language
   menu_icon_label: Toggle Navigation Menu
   nav_toggle: Menu
+  download_button: Download
 # =============================================================================
 # HOMEPAGE
 # =============================================================================

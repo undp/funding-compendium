@@ -1,10 +1,14 @@
 const years = ['2022', '2023', '2024', '2025'];
 const latinAmerica = [584.680275, 780.357845, 712.149669, 883.609210];
-const europeCIS = [109.872041, 114.048656, 162.312050, 125.223176];
-const arabStates = [123.588728, 115.094551, 113.531771, 108.717443];
-const africa = [207.700913, 126.318559, 130.999067, 248.314057];
+const africa = [109.872041, 114.048656, 162.312050, 125.223176];
+const europeCIS = [123.588728, 115.094551, 113.531771, 108.717443];
+const arabStates = [207.700913, 126.318559, 130.999067, 248.314057];
 const asiaPacific = [98.178461, 58.449892, 48.127073, 60.160570];
-const totals = [1124.037568, 1194.290257, 1167.303461, 1425.934731];
+const regionSeries = [latinAmerica, europeCIS, arabStates, africa, asiaPacific];
+const totals = years.map((_, index) => regionSeries.reduce(
+  (total, series) => total + series[index],
+  0
+));
 const regionColors = REGION_COLORS;
 
 export function initGovernmentFinancingByRegion(el, echarts) {

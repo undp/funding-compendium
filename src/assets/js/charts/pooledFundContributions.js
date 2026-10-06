@@ -3,11 +3,12 @@ const climate = [47.139971, 36.479248, 64.069679, 51.423047];
 const development = [78.697794, 45.339076, 69.668037, 77.134571];
 const humanitarian = [0.203308, 0.466253, 0, 0];
 const peace = [132.144448, 137.714204, 115.829064, 105.183506];
-const undpTotal = [249, 224, 251, 234];
-const totalLabelAnchors = years.map((_, index) => Math.max(
-  undpTotal[index],
-  climate[index] + development[index] + humanitarian[index] + peace[index]
+const rawSeries = [climate, development, humanitarian, peace];
+const compositionTotals = years.map((_, index) => rawSeries.reduce(
+  (total, series) => total + series[index],
+  0
 ));
+const undpTotal = compositionTotals.map((total) => Math.round(total));
 const pooledColors = ['#267878', '#3D9999', '#E86B2E', '#C3D51F'];
 
 export function initPooledFundContributions(el, echarts) {
@@ -31,7 +32,7 @@ export function initPooledFundContributions(el, echarts) {
       formatter: function (params) {
         const index = params[0].dataIndex;
         const amount = (value) => `$${value.toFixed(1).replace(/\.0$/, '')}M`;
-        const compositionTotal = climate[index] + development[index] + humanitarian[index] + peace[index];
+        const compositionTotal = compositionTotals[index];
         const share = (value) => formatTooltipPercent(value, compositionTotal);
         return detailedTooltip(years[index], `$${undpTotal[index]}M`, [
           { label: 'Climate and environment', color: pooledColors[0], value: amount(climate[index]), detail: share(climate[index]) },
@@ -133,7 +134,7 @@ export function initPooledFundContributions(el, echarts) {
       {
         name: '',
         type: 'bar',
-        data: totalLabelAnchors,
+        data: compositionTotals,
         barWidth: 32,
         barGap: '-100%',
         silent: true,
