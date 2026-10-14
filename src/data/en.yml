@@ -511,7 +511,8 @@ other-resources-page:
   # Thematic funding windows
   thematic:
     heading: Thematic funds
-    copy: The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $133 million in 2024. UNDP is grateful for the continued support of our partners for the funding windows.
+    copy: >
+      The funding windows remain UNDP’s principal flexible funding instrument after regular resources, providing critical support for integrated programming. In 2025, contributions to the funding windows declined to $115 million from $133 million in 2024. UNDP is grateful for the continued support of our partners for the <a href="https://www.undp.org/publications/funding-windows-annual-report-2025" target="_blank">funding windows</a>.
     chart: Funding window contributions, 2022–2025
     flow-chart: Contributions by funding window and contributor
   # UN pooled funds
